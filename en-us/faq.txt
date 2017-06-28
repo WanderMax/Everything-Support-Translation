@@ -23,9 +23,9 @@ __TOC__
 全新安装的 Windows 10 (大约 120,000 个文件) 仅需要大约 14 MB 的内存以及不到 9 MB 的硬盘空间。
 1,000,000 个文件需要大约 75 MB 的内存和 45 MB 的硬盘空间。
 
-=="Everything" 能都监控文件系统变更？==
+=="Everything" 能否监控文件系统变更？==
 可以，"Everything" 可以监控文件系统变更。
-Your search windows will reflect changes made to the file system.
+搜索结果就可以反映出文件系统变更。
 
 =="Everything" 免费么？==
 免费，"Everything" 是一款免费软件。
@@ -34,45 +34,45 @@ Your search windows will reflect changes made to the file system.
 =="Everything" 是否包含恶意、间谍软件或广告？==
 完全没有，"Everything" 不包含任何恶意、间谍软件或广告。
 
-==Does "Everything" miss changes made to the file system if it is not running?==
-No, "Everything" can be closed and restarted without missing changes made to the file system (even across system restarts).
-"Everything" updates the database when it is started.
+=="Everything" 在非运行时是否会丢失文件系统变更？==
+不会，"Everything" 在关闭和重新打开中不会丢失文件系统变更 (甚至系统重启也不会)。
+"Everything" 将在启动后更新数据库。
 
-==What are the system requirements for "Everything"?==
-"Everything" will run on Windows XP, Vista, Windows 7, Windows 8 and Windows 10
-NTFS indexing requires the Everything service or running "Everything" as administrator.
+=="Everything" 的系统要求是什么？==
+"Everything" 能在 Windows XP、Vista、Windows 7、Windows 8 和 Windows 10 上运行。
+NTFS 索引功能需要 Everything 服务或用管理员方式打开 "Everything"。
 
-==How do I convert a volume to NTFS?==
-Please backup anything important before converting a volume to NTFS.
-Once a volume is converted to NTFS it can not be converted back to FAT or FAT32.
-Please note that some devices may not be able to read NTFS volumes on USB disks / USB drives.
+==怎么样转换分卷为 NTFS？==
+转换分卷为 NTFS前，请务必备份好任何重要资料。
+分卷一旦转换为 NTFS，它将无法转换回 FAT 或 FAT32。
+请注意，某些系统可能无法读取 U 盘或 USB 中 NTFS 分卷。
 
-To convert a volume to NTFS:
+转换分卷为 NTFS：
 <ul>
-*From the '''Start''' menu, click '''Run'''.
-*Type in the following and press '''ENTER''':
+*'''开始'''菜单，点击'''运行'''。
+*输入以下内容并点击'''确定'''：
 <pre>
 cmd
 </pre>
-*In the command prompt, type in the following and press '''ENTER''':
+*在命令提示符中，输入以下内容并点击'''确定'''：
 <pre>
 convert D: /fs:ntfs
 </pre>
-''where D: is the drive to convert.''
+''其中 D: 是待转换分区。''
 </ul>
 
-==Can "Everything" index a mapped network drive?==
-Yes, please see [[support/everything/folder indexing#how_do_i_add_a_network_share_to_the_everything_index|Folder indexing]] for more information.
+=="Everything" 能否可以索引映射的网络分区？==
+可以，请查阅[[support/everything/folder indexing#how_do_i_add_a_network_share_to_the_everything_index|文件夹索引]]以获取更多信息。
 
-==How do I install "Everything"?==
-Please see A [[support/everything/installing everything|basic guide to installing "Everything"]].
+==如何安装 "Everything"？==
+请查阅[[support/everything/installing everything|"Everything" 基础安装指南]].
 
-==How do I use "Everything"?==
-Please see A [[support/everything/using everything|basic guide to using "Everything"]].
+==如何使用 "Everything"？==
+Please see A [[support/everything/using everything|"Everything" 基础使用指南]].
 
-==Why is "Everything" 1.4 using more memory than 1.3?==
-"Everything" 1.4 indexes file sizes and dates and also stores extra information for faster sorting by default.
-Please see [[support/everything/indexes#optimizing_for_smallest_memory_foot_print|Optimizing for smallest memory foot print]] to disable these changes.
+==为何 "Everything" 1.4 比 1.3 占用更多内存？==
+"Everything" 1.4 默认索引了文件大小和日期并存储了额外信息以便更快排序。
+请查阅[[support/everything/indexes#optimizing_for_smallest_memory_foot_print|最小内存优化]]以禁用这些变更。
 
 ==How do I prevent the UAC prompt when running "Everything"?==
 "Everything" requires administrative privileges for low level read access to NTFS volumes for NTFS indexing.
