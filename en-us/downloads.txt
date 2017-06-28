@@ -1,4 +1,4 @@
-﻿=Downloads=
+﻿=下载=
 {{DOWNLOAD_EVERYTHING_BETA}}
 
 {{DOWNLOAD_EVERYTHING}}
