@@ -1,7 +1,7 @@
-﻿=About voidtools=
+﻿=关于 voidtools=
 
-The website for downloading software created by [[contact|David Carpenter]].
-Support and community forums for software hosted by voidtools.
+此网站由 [[contact|David Carpenter]] 创建，并提供软件下载。
+支持和社区论坛托管于 voidtools。
 
 ==Everything==
-The offical website for the Windows Desktop Search Engine: "Everything".
+此为 Windows 桌面搜索引擎："Everything" 的官方网站。
