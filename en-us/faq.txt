@@ -65,10 +65,10 @@ convert D: /fs:ntfs
 可以，请查阅[[support/everything/folder indexing#how_do_i_add_a_network_share_to_the_everything_index|文件夹索引]]以获取更多信息。
 
 ==如何安装 "Everything"？==
-请查阅[[support/everything/installing everything|"Everything" 基础安装指南]].
+请查阅 [[support/everything/installing everything|"Everything" 基础安装指南]].
 
 ==如何使用 "Everything"？==
-请查阅[[support/everything/using everything|"Everything" 基础使用指南]].
+请查阅 [[support/everything/using everything|"Everything" 基础使用指南]].
 
 ==为何 "Everything" 1.4 比 1.3 占用更多内存？==
 "Everything" 1.4 默认索引了文件大小和日期并存储了额外信息以便更快排序。
@@ -82,11 +82,11 @@ UAC 警告可以通过以标准用户运行 "Everything" 和安装 "Everything" 
 以标准用户运行 "Everything" 和安装 "Everything" 服务：
 <ul>
 *在 '''''"Everything"''''' 中， 打开'''工具'''菜单，点击 '''选项'''。
-*点击'''通用'''页面。
-*检查'''Everything 服务'''。
+*点击'''常规'''页面。
+*检查 '''Everything 服务'''。
 *取消'''以管理员方式运行'''。
 *点击'''确定'''。
-*退出 "Everything" (右键 Everything 托盘图标并点击退出)
+*退出 "Everything" (右键 Everything 托盘图标并点击退出)。
 *重启 Everything。
 </ul>
 
@@ -176,7 +176,7 @@ abc 123
 启用保存设置和数据到 %APPDATA%\Everything：
 <ul>
 *在 Everything 中，打开工具菜单，点击选项。
-*点击通用页面。
+*点击常规页面。
 *点击保存设置和数据到 %APPDATA%\Everything。
 *点击确定。
 </ul>
@@ -193,7 +193,7 @@ abc 123
 *点击确定。
 </ul>
 
-检查NTFS 分卷是否被自动索引：
+检查 NTFS 分卷是否被自动索引：
 <ul>
 *在 Everything 中，打开工具菜单，点击选项。
 *点击 NTFS 页面。
@@ -206,17 +206,17 @@ abc 123
 安装 "Everything" 服务：
 <ul>
 *在 Everything 中，打开工具菜单，点击选项。
-*点击通用页面。
+*点击常规页面。
 *点击 Everything 服务：
 *点击确定。
 </ul>
 
--or-
+-或-
 
 以管理员身份运行 Everything：
 <ul>
 *在 Everything 中，打开工具菜单，点击选项。
-*点击通用页面。
+*点击常规页面。
 *点击管理员身份运行：
 *点击确定。
 </ul>
@@ -233,7 +233,7 @@ abc 123
 *检查包含到数据库。
 *检查启用 USN 日志记录。
 *检查监控变更。
-</ul>    
+</ul>
 *点击确定。
 </ul>
 
