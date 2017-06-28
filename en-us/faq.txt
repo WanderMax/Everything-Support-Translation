@@ -151,96 +151,96 @@ abc 123
 
 
 
-=Troubleshooting=
+=疑难解答=
 
-==Search doesn't find what I want==
-Please make sure the following search options are unchecked:
+==搜索结果不对==
+请确认以下搜索选项未选择：
 <ul>
-*In Everything, from the Search menu:
-*Uncheck Match Case.
-*Uncheck Match Whole Word.
-*Uncheck Match Path.
-*Uncheck Match Diacritics.
-*Uncheck Enable Regex.
+*在 Everything 中，打开搜索菜单：
+*取消大小写匹配。
+*取消全字匹配。
+*取消匹配路径。
+*取消匹配变音标记。
+*取消启用正则表达式。
 </ul>
 
-Please make sure the Everything filter is selected:
+请确认 Everything 筛选器：
 <ul>
-*In Everything, from the Search menu:
-*Check Everything.
+*在 Everything 中，打开搜索菜单：
+*检查 Everything。
 </ul>
 
-==Settings are not saved==
-Please make sure Store settings and data in %APPDATA%\Everything is enabled.
+==设置未保存==
+请确认已启用保存设置和数据到 %APPDATA%\Everything。
 
-To enable Store settings and data in %APPDATA%\Everything:
+启用保存设置和数据到 %APPDATA%\Everything：
 <ul>
-*In Everything, from the Tools menu, click Options.
-*Click the General tab.
-*Check Store settings and data in %APPDATA%\Everything.
-*Click OK.
+*在 Everything 中，打开工具菜单，点击选项。
+*点击通用页面。
+*点击保存设置和数据到 %APPDATA%\Everything。
+*点击确定。
 </ul>
 
-==Duplicated results==
-NTFS volumes are automatically indexed by "Everything".
-Adding a NTFS volume as a folder index will show duplicated results.
+==结果重复==
+"Everything" 已自动索引 NTFS 分卷。
+添加 NTFS 分卷作为文件夹索引将会导致搜索结果重复。
 
-Please remove any NTFS volumes from the folder index:
+移除作为文件夹索引的 NTFS 分卷：
 <ul>
-*In Everything, from the Tools menu, click Options.
-*Click the Folders tab.
-*Select any NTFS volumes and click Remove.
-*Click OK.
+*在 Everything 中，打开工具菜单，点击选项。
+*点击文件夹页面
+*选择 NTFS 分卷并点击移除。
+*点击确定。
 </ul>
 
-To check which NTFS volumes are automatically included:
+检查NTFS 分卷是否被自动索引：
 <ul>
-*In Everything, from the Tools menu, click Options.
-*Click the NTFS tab.
-*NTFS volumes that have Include in database checked are included in the NTFS index.
+*在 Everything 中，打开工具菜单，点击选项。
+*点击 NTFS 页面。
+*数据库中 NTFS 分卷必定包含在 NTFS 索引中。
 </ul>
 
-==The result list is empty or contains only drives==
-Please make sure the "Everything" service is running or "Everything" is running as administrator.
+==搜索结果为空或仅包含分区==
+请确认 "Everything" 服务已运行或 "Everything" 以管理员身份运行。
 
-To install the "Everything" service:
+安装 "Everything" 服务：
 <ul>
-*In Everything, from the Tools menu, click Options.
-*Click the General tab.
-*Check Everything Service:
-*Click OK.
+*在 Everything 中，打开工具菜单，点击选项。
+*点击通用页面。
+*点击 Everything 服务：
+*点击确定。
 </ul>
 
 -or-
 
-To run Everything as administrator:
+以管理员身份运行 Everything：
 <ul>
-*In Everything, from the Tools menu, click Options.
-*Click the General tab.
-*Check Run as administrator:
-*Click OK.
+*在 Everything 中，打开工具菜单，点击选项。
+*点击通用页面。
+*点击管理员身份运行：
+*点击确定。
 </ul>
 
-Make sure you have at least one local NTFS volume.
-Please see [[faq#how_do_i_convert_a_volume_to_ntfs|How do I convert a volume to NTFS]].
+请确认您拥有至少一个本地 NTFS 分卷。
+请查阅[[faq#how_do_i_convert_a_volume_to_ntfs|转换分卷为 NTFS]].
 
-To manually enable all local NTFS volumes for indexing:
+手动启用索引全部本地 NTFS 分卷：
 <ul>
-*In Everything, from the Tools menu, click Options.
-*Click the NTFS tab.
-*For each volume in the Local NTFS volumes list:
+*在 Everything 中，打开工具菜单，点击选项。
+*点击 NTFS 页面。
+*分卷列表中的本地 NTFS 分卷：
 <ul>
-*Check Include in database.
-*Check Enable USN Journal logging.
-*Check Monitor changes.
+*检查包含到数据库。
+*检查启用 USN 日志记录。
+*检查监控变更。
 </ul>    
-*Click OK.
+*点击确定。
 </ul>
 
-Force Everything to rebuild its database:
+强制 Everything 重建数据库：
 <ul>
-*In Everything, from the Tools menu, click Options.
-*Click the Indexes tab.
-*Click Force Rebuild.
-*Click OK.
+*在 Everything 中，打开工具菜单，点击选项。s.
+*点击索引页面。
+*点击强制重建。
+*点击确定。
 </ul>
