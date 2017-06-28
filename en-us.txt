@@ -7,16 +7,16 @@
 // Please make sure to edit and save as UTF-8
 
 // Put the name of the Language (Region) here
-_LANGUAGE_NAME = "English (United States)"
+_LANGUAGE_NAME = "简体中文 (中国)"
 
 // Put the English name of the Language (Region) here 
-_LANGUAGE_ENGLISH_NAME = "English (United States)"
+_LANGUAGE_ENGLISH_NAME = "Chinese Simplified (China)"
 
 // Put your name here so I can credit you.
-_LANGUAGE_TRANSLATOR = "David Carpenter"
+_LANGUAGE_TRANSLATOR = "WanderMax"
 
 // a link to your email or website [optional]
-_LANGUAGE_TRANSLATOR_LINK = "david@voidtools.com"
+_LANGUAGE_TRANSLATOR_LINK = "https://github.com/WanderMax"
 
 // Syntax.
 // key = "value"
@@ -26,22 +26,22 @@ _LANGUAGE_TRANSLATOR_LINK = "david@voidtools.com"
 
 // page titles
 
-HOME="Home"
-DOWNLOADS="Downloads"
-FAQ="FAQ"
-SUPPORT="Support"
-FORUMS="Forums"
-DONATE="Donate"
-CONTACT="Contact"
-PRIVACY="Privacy"
+HOME="主页"
+DOWNLOADS="下载"
+FAQ="常见问题"
+SUPPORT="支持"
+FORUMS="论坛"
+DONATE="捐赠"
+CONTACT="联系方式"
+PRIVACY="隐私策略"
 ERROR404="Error 404"
-ABOUT="About voidtools"
-LANGUAGE="Language"
-DONATED="Donated"
-CONTACTOK="Contact Successful"
-CONTACTERROR="Contact Error"
-UPDATE="Update"
-MAINTENANCE="Maintenance"
+ABOUT="关于 voidtools"
+LANGUAGE="语言"
+DONATED="已捐赠"
+CONTACTOK="发送成功"
+CONTACTERROR="发送失败"
+UPDATE="更新"
+MAINTENANCE="维护"
 
 // page template files.
 // these should be lowercase and easy to type.
@@ -84,56 +84,56 @@ TITLE_FORMAT = "{{TITLE}} - voidtools" // {{TITLE}} = current page title
 
 // Download page
 
-DOWNLOAD_EVERYTHING_HEADER = "Download Everything {{VERSION}}" // {{VERSION}} = 1.3.4.686
-EVERYTHING_CHANGES = "[[{{CHANGES}}|Changes]]" // {{CHANGES}} = /Changes-1.3.4.686.txt
-EVERYTHING_OLDER_VERSIONS = "[[support/everything/previous_versions|Older Versions]]"
-EVERYTHING_LICENSE = "[[License.txt|License]]"
+DOWNLOAD_EVERYTHING_HEADER = "下载 Everything {{VERSION}}" // {{VERSION}} = 1.3.4.686
+EVERYTHING_CHANGES = "[[{{CHANGES}}|更新日志]]" // {{CHANGES}} = /Changes-1.3.4.686.txt
+EVERYTHING_OLDER_VERSIONS = "[[support/everything/previous_versions|旧版本]]"
+EVERYTHING_LICENSE = "[[License.txt|许可证]]"
 EVERYTHING_MD5 = "[[{{MD5}}|MD5]]" // {{MD5}} = /Changes-1.3.4.686.md5
 EVERYTHING_SHA256 = "[[{{SHA256}}|SHA256]]" // {{SHA256}} = /Changes-1.3.4.686.sha256
-EVERYTHING_SUPPORTED_LANGUAGES = "[[support/everything/supported_languages|Supported Languages]]" 
-EVERYTHING_HELP = "[[support/everything/installing_everything|Help]]"
+EVERYTHING_SUPPORTED_LANGUAGES = "[[support/everything/supported_languages|多语言支持]]" 
+EVERYTHING_HELP = "[[support/everything/installing_everything|帮助]]"
 
-DOWNLOAD_EVERYTHING_BETA_HEADER = "Download Everything {{VERSION}} Beta" // {{VERSION}} = 1.4.1.867b
-EVERYTHING_BETA_WHATS_NEW = "[[support/everything/whats_new|What's New]]"
+DOWNLOAD_EVERYTHING_BETA_HEADER = "下载 Everything {{VERSION}} 测试版" // {{VERSION}} = 1.4.1.867b
+EVERYTHING_BETA_WHATS_NEW = "[[support/everything/whats_new|更新动态]]"
 
-DOWNLOAD_INSTALLER = "Download Installer"
-DOWNLOAD_INSTALLER_X64 = "Download Installer 64-bit"
-DOWNLOAD_PORTABLE_ZIP = "Download Portable Zip"
-DOWNLOAD_PORTABLE_ZIP_X64 = "Download Portable Zip 64-bit"
+DOWNLOAD_INSTALLER = "下载安装版"
+DOWNLOAD_INSTALLER_X64 = "下载安装版 64位"
+DOWNLOAD_PORTABLE_ZIP = "下载便携版"
+DOWNLOAD_PORTABLE_ZIP_X64 = "下载便携版 64位"
 
-ALL_EVERYTHING_DOWNLOADS_HEADER = "All Everything Downloads"
-INSTALLER = "Installer"
-PORTABLE = "Portable"
-MULTILINGUAL = "[[support/everything/supported_languages|Multilingual]]"
+ALL_EVERYTHING_DOWNLOADS_HEADER = "Everything 全部下载"
+INSTALLER = "安装版"
+PORTABLE = "便携版"
+MULTILINGUAL = "[[support/everything/supported_languages|多语言版]]"
 KB = "KB"
 
-DOWNLOAD_EVERYTHING_LANGUAGE_PACK_HEADER = "Download Everything Language Pack"
-EVERYTHING_LANGUAGE_PACK_HELP = "[[support/everything/supported_languages/#installing_the_language_pack|Help]]"
+DOWNLOAD_EVERYTHING_LANGUAGE_PACK_HEADER = "下载 Everything 语言包"
+EVERYTHING_LANGUAGE_PACK_HELP = "[[support/everything/supported_languages/#installing_the_language_pack|帮助]]"
 
-DOWNLOAD_EVERYTHING_COMMAND_LINE_INTERFACE_HEADER = "Download Everything Command-line Interface"
-EVERYTHING_COMMAND_LINE_INTERFACE_HELP = "[[support/everything/command_line_interface|Help]]"
+DOWNLOAD_EVERYTHING_COMMAND_LINE_INTERFACE_HEADER = "下载 Everything 命令行界面"
+EVERYTHING_COMMAND_LINE_INTERFACE_HELP = "[[support/everything/command_line_interface|帮助]]"
 
-DOWNLOAD_EVERYTHING_SDK_HEADER = "Download Everything SDK"
-EVERYTHING_SDK_HELP = "[[support/everything/SDK|Help]]"
+DOWNLOAD_EVERYTHING_SDK_HEADER = "下载 Everything SDK"
+EVERYTHING_SDK_HELP = "[[support/everything/SDK|帮助]]"
 
 // footer
 
 COPYRIGHT = "&copy; {{YEAR}} - " // {{YEAR}} = current year.
 
 // donate
-DONATE_FORM_NAME = "Name (optional, name will be published below, leave blank for an anonymous donation):"
-DONATE_FORM_COMMENT = "Comment (optional, 200 characters max):"
+DONATE_FORM_NAME = "姓名 (可选，将显示在捐赠历史中，留空则为匿名捐赠)："
+DONATE_FORM_COMMENT = "评论 (可选，最大200字符)："
 DONATE_FORM_BUTTON_IMAGE = "paypal.donate.png"
-DONATE_FORM_DONATE = "Donate with PayPal"
-DONATE_HISTORY = "Donation History"
-DONATE_HISTORY_NAME = "Name"
-DONATE_HISTORY_COMMENT = "Comment"
-DONATE_HISTORY_AMOUNT = "Amount"
+DONATE_FORM_DONATE = "通过 PayPal 捐赠"
+DONATE_HISTORY = "捐赠历史"
+DONATE_HISTORY_NAME = "姓名"
+DONATE_HISTORY_COMMENT = "评论"
+DONATE_HISTORY_AMOUNT = "金额"
 
 // contact
 
-CONTACT_FORM_MESSAGE = "Message:"
-CONTACT_FORM_EMAIL = "Email (optional):"
-CONTACT_FORM_SEND = "Send"
+CONTACT_FORM_MESSAGE = "内容："
+CONTACT_FORM_EMAIL = "联系邮箱 (可选)："
+CONTACT_FORM_SEND = "发送"
 
 
