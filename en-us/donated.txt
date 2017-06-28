@@ -1,4 +1,4 @@
-﻿=Donation Successful=
-Thank you for your donation.
+﻿=捐献成功=
+感谢您的捐赠。
 
-Your donation is appreciated and will ensure future development of "Everything".
+感谢您的捐赠，它将有助于 "Everything" 的后续开发。
