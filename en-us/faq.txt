@@ -74,80 +74,80 @@ Please see A [[support/everything/using everything|"Everything" 基础使用指�
 "Everything" 1.4 默认索引了文件大小和日期并存储了额外信息以便更快排序。
 请查阅[[support/everything/indexes#optimizing_for_smallest_memory_foot_print|最小内存优化]]以禁用这些变更。
 
-==How do I prevent the UAC prompt when running "Everything"?==
-"Everything" requires administrative privileges for low level read access to NTFS volumes for NTFS indexing.
+==如何在运行 "Everything" 时屏蔽 UAC 警告？==
+"Everything" 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
 
-The UAC prompt can be avoided by running "Everything" as a standard user and installing the "Everything" service or not using NTFS indexing.
+UAC 警告可以通过以标准用户运行 "Everything" 和安装 "Everything" 服务或不使用 NTFS 索引来避免。
 
-To run "Everything" as a standard user and install the "Everything" service:
+以标准用户运行 "Everything" 和安装 "Everything" 服务：
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''General''' tab.
-*Check '''Everything Service'''.
-*Uncheck '''Run as administrator'''.
-*Click '''OK'''.
-*Exit "Everything" (right click the Everything system tray icon and click Exit)
-*Restart Everything.
+*在 '''''"Everything"''''' 中， 打开'''工具'''菜单，点击 '''选项'''。
+*点击'''通用'''页面。
+*检查'''Everything 服务'''。
+*取消'''以管理员方式运行'''。
+*点击'''确定'''。
+*退出 "Everything" (右键 Everything 托盘图标并点击退出)
+*重启 Everything。
 </ul>
 
 
 
-=Searching=
+=搜索=
 
-==How do I search for a file or folder?==
-Type the partial file or folder name into the search edit, the results will appear instantly.
+==如何搜索文件或文件夹？==
+在搜索框中输入文件或文件夹部分名称，搜索结果将会立即出现。
 
-==How do I use boolean operators?==
-'''AND''' is the default boolean operator.
+==如何使用布尔运算符？==
+'''AND''' 是默认布尔运算符。
 
-For example, to search for abc and 123, search for:
+例如，搜索 abc 和 123，您可以：
 <pre>
 abc 123
 </pre>
 
-To search for either of two search terms, add a | between the terms.
+搜索两个搜索项中任意一个，在两项中加上 | 。
 
-For example, to search for .jpg or .bmp, search for:
+例如，搜索 .jpg 或 .bmp，您可以：
 <pre>
 .jpg | .bmp
 </pre>
 
-To exclude something from the search include a ! at the front of the term.
+搜索时排除某项，在其开头加上 ! 。
 
-For example, to search for everything except abc, search for:
+例如，搜索除了 abc 以外的内容，您可以：
 <pre>
 !abc
 </pre>
 
-To show the basic search syntax in Everything:
+查看 Everything 基础搜索语法：
 <ul>
-In '''''"Everything"''''', from the '''Help''' menu, click '''Search syntax'''.
+在 '''''"Everything"''''' 中，打开'''帮助'''菜单，点击'''搜索语法'''。
 </ul>
 
-==How do I use wildcards?==
-Using a * in your search will match any number of any type of character.
-For example, here is how to search for files and folders that start with e and end with g: e*g
-Using a ? in your search will match one character.
-For example, here is how to search for files that have a 2 letter file extension: *.??
+==如何使用通配符？==
+搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。
+例如，搜索以 e 开头并以 g 结尾的文件和文件夹：e*g
+搜索关键词中使用通配符 ? 将会匹配任一字符。
+例如，搜索含有两个字符扩展名的文件：*.??
 
-==How do I include spaces in my search?==
-To include spaces in your search enclose your search in double quotes.
-For example, here is how to search for foo<space>bar: "foo bar"
+==如何搜索包含空格的关键词？==
+搜索包含空格的关键词，请用双引号。
+例如， 搜索关键词 foo<space>bar："foo bar"
 
-==How do I search for a file type?==
-To search for a file type, type the file extension into the search edit,
-eg: to search for the mp3 file type, type *.mp3 into the search edit.
-To search for more than one type of file type use a | to separate file types,
-eg: *.bmp|*.jpg will search for files with the extension bmp or jpg.
+==如何搜索文件类型？==
+搜索文件类型，请在搜索框输入扩展名，
+例如，搜索 mp3 文件，输入 *.mp3 即可。
+搜索多个文件类型，请使用 | 分隔，
+例如：*.bmp|*.jpg 将会搜索 bmp 或 jpg 类型文件。
 
-==How do I search for files and folders in a specific location?==
-To search for files and folders in a specific location include a \ in your search string.
-For example, here is how to search for all your mp3s in a downloads folder: downloads\ .mp3
-You could alternately enable Match Path in the Search menu and include the location in your search string.
-For example, here is how to search for all your avis in a downloads folder with Match Path enabled: downloads .avi
+==如何搜索指定位置的文件和文件夹？==
+搜索指定位置的文件和文件夹，请在搜索框中使用 \。
+例如，在 downloads 文件夹中搜索全部 mp3 文件：downloads\ .mp3
+您也可以在搜索菜单中启用匹配路径并包含路径到搜索关键词中。
+例如，启用匹配路径并在 downloads 文件夹中搜索全部 avi 文件：downloads .avi
 
-==Advanced searching==
-See Searching Everything for more information.
+==高级搜索==
+查阅 Everything 帮助以获取更多信息。
 
 
 
