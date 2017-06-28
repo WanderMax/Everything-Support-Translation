@@ -1,2 +1,2 @@
-﻿=Contact Successful=
-Thank you for contacting voidtools.
+﻿=发送成功=
+voidtools 在此感谢您的来信。
