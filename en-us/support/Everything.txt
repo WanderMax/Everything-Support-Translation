@@ -1,23 +1,23 @@
 =Everything=
 [[File:support/everything/Everything.Search.Window.png|alt=Everything Search Window]]
 
-"''Everything''" is a filename search engine for Windows.
+"''Everything''" 是 Windows 上文件名搜索引擎。
 
-==How is Everything different from other search engines==
+==Everything 和其他搜索引擎有何不同==
 <ul>
-* Small installation file.
-* Clean and simple user interface.
-* Quick file indexing.
-* Quick searching.
-* Quick startup.
-* Minimal resource usage.
-* Small database on disk.
-* Real-time updating.
+* 轻量安装文件。
+* 干净简洁的用户界面。
+* 快速文件索引。
+* 快速搜索。
+* 快速启动。
+* 最小资源使用。
+* 轻量数据库。
+* 实时更新。
 </ul>
 
-==See also==
+==更新信息请查阅==
 <ul>
-*[[support/everything/Installing Everything|Installing Everything]]
-*[[support/everything/Using Everything|Using Everything]]
-*[[/Everything.chm.zip|Download offline help]]
+*[[support/everything/Installing Everything|安装 Everything]]
+*[[support/everything/Using Everything|使用 Everything]]
+*[[/Everything.chm.zip|下载离线帮助]]
 </ul>
