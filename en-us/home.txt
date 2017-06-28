@@ -1,16 +1,16 @@
 ﻿=Everything=
-Locate files and folders by name instantly.
+基于名称快速定位文件和文件夹。
 
 {{SCREENSHOT_BEGIN}}
 <ul>
-*Small installation file
-*Clean and simple user interface
-*Quick file indexing
-*Quick searching
-*Minimal resource usage
-*Share files with others easily
-*Real-time updating
-*[[faq|More...]]
+*轻量安装文件
+*干净简洁的用户界面
+*快速文件索引
+*快速搜索
+*最小资源使用
+*便于文件分享
+*实时更新
+*[[faq|更多...]]
 </ul>
 {{SCREENSHOT_END}}
 
