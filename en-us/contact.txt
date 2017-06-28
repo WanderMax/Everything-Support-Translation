@@ -1,7 +1,7 @@
-﻿=Contact voidtools=
-==Email==
+﻿=联系 voidtools=
+==电子邮件==
 David Carpenter
 [[mailto:david@voidtools.com|david@voidtools.com]]
 
-==Send David Carpenter a Message==
+==给 David Carpenter 发送消息==
 {{CONTACT_FORM}}
