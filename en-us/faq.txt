@@ -222,7 +222,7 @@ abc 123
 </ul>
 
 请确认您拥有至少一个本地 NTFS 分卷。
-请查阅[[faq#how_do_i_convert_a_volume_to_ntfs|转换分卷为 NTFS]].
+请查阅[[faq#how_do_i_convert_a_volume_to_ntfs|转换分卷为 NTFS]]。
 
 手动启用索引全部本地 NTFS 分卷：
 <ul>
@@ -239,7 +239,7 @@ abc 123
 
 强制 Everything 重建数据库：
 <ul>
-*在 Everything 中，打开工具菜单，点击选项。s.
+*在 Everything 中，打开工具菜单，点击选项。
 *点击索引页面。
 *点击强制重建。
 *点击确定。
