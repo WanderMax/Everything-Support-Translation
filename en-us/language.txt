@@ -1,4 +1,4 @@
-﻿=Language and Region=
+﻿=区域和语言=
 
-Select from one of the following language and Regions:
+请从下列区域和语言中选择：
 {{LANGUAGES}}
