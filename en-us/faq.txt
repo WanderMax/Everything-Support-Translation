@@ -1,38 +1,38 @@
-﻿=Frequently Asked Questions=
+﻿=常见问题=
 
 __TOC__
 
 
 =Everything=
-==What is "Everything"?==
-"Everything" is search engine that locates files and folders by filename instantly for Windows.
-Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything").
-You type in a search filter to limit what files and folders are displayed.
+=="Everything" 是什么？==
+"Everything" 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
+不像 Windows 内置搜索，"Everything" 默认显示电脑上每个文件和文件夹 (就如其名 "Everything")。
+您在搜索框输入的关键词将会筛选显示的文件和文件夹。
 
-==How long will it take to index my files?==
-"Everything" only indexes file and folder names and generally takes a few seconds to build its database.
-A fresh install of Windows 10 (about 120,000 files) will take about 1 second to index.
-1,000,000 files will take about 1 minute.
+==索引全部文件需要多长时间？==
+"Everything" 仅索引文件和文件夹名，一般仅需几秒便可建立其数据库。
+全新安装的 Windows 10 (大约 120,000 个文件) 仅需 1 秒即可索引完成。
+索引 1,000,000 个文件将需要大约 1 分钟。
 
-==Does Everything search file contents?==
-Yes, "Everything" can search file content with the content: search function.
-File content is not indexed, searching content is slow.
+==Everything 能否搜索文件内容？==
+可以，"Everything" 可以通过搜索函数 content: 来搜索文件内容。
+文件内容未被索引时，搜索内容将会很慢。
 
-==Does "Everything" hog my system resources?==
-No, "Everything" uses very little system resources.
-A fresh install of Windows 10 (about 120,000 files) will use about 14 MB of ram and less than 9 MB of disk space.
-1,000,000 files will use about 75 MB of ram and 45 MB of disk space.
+=="Everything" 是否占用很多系统资源？==
+不，"Everything" 仅需要使用非常少的系统资源。
+全新安装的 Windows 10 (大约 120,000 个文件) 仅需要大约 14 MB 的内存以及不到 9 MB 的硬盘空间。
+1,000,000 个文件需要大约 75 MB 的内存和 45 MB 的硬盘空间。
 
-==Does "Everything" monitor file system changes?==
-Yes, "Everything" does monitor file system changes.
+=="Everything" 能都监控文件系统变更？==
+可以，"Everything" 可以监控文件系统变更。
 Your search windows will reflect changes made to the file system.
 
-==Is "Everything" free?==
-Yes, "Everything" is Freeware.
-Please consider [[donate|donating]].
+=="Everything" 免费么？==
+免费，"Everything" 是一款免费软件。
+软件开发维护不易，请考虑[[donate|捐赠]].
 
-==Does "Everything" contain any malware, spyware or adware?==
-No, "Everything" does not contain any malware, spyware or adware.
+=="Everything" 是否包含恶意、间谍软件或广告？==
+完全没有，"Everything" 不包含任何恶意、间谍软件或广告。
 
 ==Does "Everything" miss changes made to the file system if it is not running?==
 No, "Everything" can be closed and restarted without missing changes made to the file system (even across system restarts).
