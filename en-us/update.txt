@@ -1,16 +1,16 @@
-=Update=
-==How often will Everything auto update?==
-Everything will check for new updates every time it is run.
+=更新=
+==Everything 如何检查更新？==
+Everything 将会在运行时自动检查更新。
 
-==How does Everything update?==
-When Everything updates it downloads [[/everything/update.ini]]
-Once update.ini is downloaded Everything will compare the version information in update.ini with the current version of Everything that you are running.
+==Everything 怎样更新？==
+在 Everything 更新时，它将下载 [[/everything/update.ini]]
+一旦 update.ini 下载完成，Everything 将会对比其中的版本信息。
 
-If the version in update.ini is newer than your version of Everything, Everything will notify you that a new version is available and ask if you would like to download it now.
-If you choose to download the newer version, Everything will open up the [[downloads|download page]] where you will be able to download the new version.
+如果 update.ini 中版本更新，Everything 将会通知您存在新版本并询问是否立即下载。
+如果您选择下载新版，Everything 将会打开[[downloads|下载页面]]以便下载新版本。
 
-==Can I disable auto updating?==
-Yes, To disable auto updating open the '''Everything options'''
-Click on the '''General''' tab.
-Uncheck '''Check for updates automatically''' check box.
+==能否禁用自动更新？==
+可以，禁用自动更新，请打开'''Everything 选项'''
+点击'''通用''' 页面。
+取消'''自动检查更新'''选项。
 
