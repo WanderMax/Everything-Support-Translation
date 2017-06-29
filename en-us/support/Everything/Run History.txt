@@ -1,60 +1,60 @@
-=Run History=
-"Everything" "Run History" is a database of how many times you have run every file or folder from "Everything".
-Every time you open a file or folder its run count is incremented by one.
-Pressing Enter from the search edit will focus the file or folder result with the highest run count.
+=运行历史=
+"Everything" 中"运行历史"是一个记录从 "Everything" 中运行文件或文件夹次数的数据库。
+每当您打开文件或文件夹，那么其运行历史就会增加一次。
+输入关键词并搜索后，将会聚焦到最高运行次数的文件或文件夹。
 
-==Set an items run count==
+==设置某项运行次数==
 <ul>
-*'''Right click''' the file or folder.
-*Click '''Set Run Count...'''.
-*Enter in a new run count.
+*'''右键'''某个文件或文件夹。
+*点击'''设置运行次数...'''。
+*输入新的运行次数。
 </ul>
 
-==Disable Run History==
+==禁用运行历史==
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''History '''tab.
-*Uncheck '''Enable run history'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''历史'''页面。
+*取消 '''启用运行历史'''。
+*点击'''确定'''。
 </ul>
 
-==Run History Location==
-Everything stores run history in:
+==运行历史存储位置==
+Everything 存储运行历史到：
 <pre>
 %APPDATA%\Everything\Run History.csv 
 </pre>
-If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, Run History.csv is stored in the same location as Everything.exe.
+如果启用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，Run History.csv 将会保存到 Everything.exe 相同位置。
 
-==Search for run count==
-Use runcount: to search for a specific run count or run count range.
+==搜索运行次数==
+使用 runcount：来搜索指定运行次数或运行次数范围。
 
-Search for a run count greater than 100:
+搜索运行次数大于 100：
 <pre>
 runcount:>100
 </pre>
 
-Run once or more:
+搜索运行次数至少一次：
 <pre>
 runcount:
 </pre>
 
-Search for a run count between 10 and 20:
+搜索运行次数在 10 与 20 之间：
 <pre>
 runcount:10-20
 </pre>
 
-Search for files you ran yesterday:
+搜索昨天运行的文件：
 <pre>
 daterun:yesterday
 </pre>
 
-==Sort by run count by default==
-Sorting by run count is instant and persistent.
+==默认以运行次数排序==
+以运行次数排序将会很迅速和持久。
 
-To sort by run count by default:
+设置默认以运行次数排序：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Home''' tab.
-*Change '''sort '''to '''Run Count (Descending)'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''主页'''页面。
+*更改'''排序方式'''为'''运行次数 (降序)'''。
+*点击'''确定'''。
 </ul>
