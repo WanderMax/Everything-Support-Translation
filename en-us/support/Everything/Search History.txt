@@ -1,71 +1,71 @@
-=Search History=
-Search history is a list of all your previous searches.
-Search history is disabled by default.
-When search history is enabled, you can list search suggestions by pressing Ctrl + Space in the search edit.
+=搜索历史=
+搜索历史是先前搜索记录列表。
+搜索历史默认禁用。
+当启用搜索历史后，您可以在搜索框通过组合键 Ctrl + Space 列举搜索建议。
 
-==How do I enable search history?==
-Search history is disabled by default, to enable search history:
+==如何启用搜索历史？==
+搜索历史默认禁用，启用搜索历史:
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''History '''tab.
-*Check '''Enable search history'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击''历史'''页面。
+*选择'''启用搜索历史'''。
+*点击'''确定'''。
 </ul>
 
-==How do I show a list of search suggestions?==
-Press Ctrl + Space to display the list of search suggestions.
+==如何显示搜索建议列表？==
+通过组合键 Ctrl + Space 显示搜索建议列表。
 
--or-
+-或-
 
-Disable search as you type to always show suggestions:
+禁用实时搜索以总是显示搜索建议：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''UI '''tab.
-*Uncheck '''Search as you type'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''界面'''页面。
+*取消选择'''实时搜索'''。
+*点击'''确定'''。
 </ul>
 
--or-
+-或-
 
-Always show search suggestions:
+总是显示搜索建议：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''History '''tab.
-*Check '''Always show search suggestions'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击''历史'''页面。
+*选择 '''总是显示搜索建议'''。
+*点击'''确定'''。
 </ul>
 
--or-
+-或-
 
-Click the down arrow on the right side the search edit.
+点击搜索框右侧下拉箭头。
 
-==How do I add a search to the search history?==
-Press Enter from the search edit or perform an action on a result.
+==如何添加搜索到搜索历史？==
+输入搜索关键词执行搜索即可。
 
-==Where is the search history saved?==
-Search history is saved to:
+==搜索历史存储位置==
+搜索历史存储到：
 <pre>
 %APPDATA%\Everything\Search History.csv
 </pre>
-If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, the Search History.csv is stored in the same location as Everything.exe.
+如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，Search History.csv 将保存到 Everything.exe 相同目录。
 
-This file is updated when closing the Everything Search window.
+此文件将在关闭 Everything 搜索窗口时更新。
 
-==How do I clear my search history?==
+==如何清除搜索历史?==
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''History '''tab.
-*In the Search History group box, click '''Clear Now'''.
-*Click '''OK''' to clear.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击''历史'''页面。
+*在搜索历史页面，点击'''马上清除'''。
+*点击'''确定'''以清除。
+*点击'''确定'''。
 </ul>
 
-==Browsing Search History==
-Previous searches can be shown from clicking on the dropdown button to the right of the search box.
+==浏览搜索历史==
+点击搜索框右侧下拉箭头即可浏览先前搜索。
 
-With Everything 1.4 you can now browse and edit your entire search history (if enabled).
+Everything 1.4 中，您可以浏览和编辑全部搜索历史 (如果启用)。
 
-To browse and edit your Search History:
+浏览和编辑搜索历史：
 <ul>
-* In "Everything", from the View menu, from the Goto menu, click Show All History.
+* 在 "Everything" 中，打开视图菜单，选择转到菜单，点击显示全部历史。
 </ul>
