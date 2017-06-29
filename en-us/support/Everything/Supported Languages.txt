@@ -1,34 +1,34 @@
-=Supported Languages=
-The following translations will work with any version of "Everything" with multiple language support.
+=多语言支持=
+下列翻译将适用于任意版本的 "Everything" 以提供多语言支持。
 
-English is used for new untranslated features.
+未翻译的字符将显示为英语。
 
 {|
-! Language
-! Translator
-! Version
+! 语言
+! 译者
+! 版本
 |-
 {{SUPPORTED_LANGUAGES}}
 |}
 
-==Download language pack for "''Everything''"==
+==下载 "''Everything''" 语言包==
 <ul>
 [[/Everything.lng.zip|Everything.lng.zip]]
 </ul>
 
-==Installing the language pack==
+==安装语言包==
 <ul>
-*Download the language pack [[/Everything.lng.zip|Everything.lng.zip]]
-*Unzip '''Everything.lng''' from the language pack into the folder where "Everything" is installed.
-*Restart "'''Everything'''".
-*In "'''Everything'''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''General''' tab.
-*Select your language from the '''Language''' dropdown list.
-*Click '''OK'''.
-*In the "language change" popup, click '''OK''' to restart "'''Everything'''".
+*下载语言包 [[/Everything.lng.zip|Everything.lng.zip]]
+*解压语言包中 '''Everything.lng''' 到 "Everything" 安装目录。
+*重启 "'''Everything'''"。
+*在 '''''"Everything"''''' 中， 打开'''工具'''菜单，点击 '''选项'''。
+*点击'''常规'''页面。
+*在'''语言'''下拉列表中选项界面语言。
+*点击'''确定'''。
+*在"语言变更"弹出窗口中，点击'''确定'''以重启 "'''Everything'''"。
 </ul>
 
-==See also==
+==更多请查阅==
 <ul>
 *[[support/Everything/Translating]]
 </ul>
