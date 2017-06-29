@@ -1,55 +1,55 @@
-=Recent Changes=
-Recent changes is a list of files and folders that have been changed since Everything was started.
+=最近变更=
+最近变更是一个 Everything 启动后，文件和文件夹的变更列表。
 
-==Search recent changes==
-Use rc: or recentchange: with a date to search for recent changes:
+==搜索最近变更==
+使用 rc: 或 recentchange: 配合日期以搜索最近变更：
 <pre>
 rc:<date>
 </pre>
 
-For example, to find recent changes today, search for:
+例如：搜索今天的最近变更，搜索：
 <pre>
 rc:today
 </pre>
 
-For example, to find recent changes yesterday, search for:
+例如：搜索昨天的最近变更，搜索：
 <pre>
 rc:yesterday
 </pre>
 
-For example, to find recent changes in the last 2 hours, search for:
+例如：搜索最近 2 小时内的最近变更，搜索：
 <pre>
 rc:last2hours
 </pre>
 
-For example, to find recent changes in the last 10 minutes, search for:
+例如：搜索最近 10 分钟内的最近变更，搜索：
 <pre>
 rc:last10mins
 </pre>
 
-For the full rc: search syntax, please see [[support/everything/searching#Functions|searching]].
+更多 rc: 完整搜索语法，请查阅[[support/everything/searching#Functions|搜索函数]]。
 
-==Include the USN Journal in the recent changes list==
-By default, Everything will only keep a list of changes since Everything was started, including the USN change Journal in the recent changes list will allow you to quickly search for changes that can go back many days.
+==包含 USN 日志到最近变更列表==
+Everything 默认情况下仅记录 Everything 启动后，文件和文件夹的变更，包含 USN 日志到最近变更列表将让您更快得搜索到最近变更甚至过去几天的变更。
 
-To include the USN Journals in the recent changes list:
+包含 USN 日志到最近变更列表：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''NTFS''' tab.
-*For each local NTFS volume:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''NTFS''' 页面。
+*对于本地 NTFS 分卷：
 <ul>
-*Check '''Include USN Journal in recent changes'''.
+*选择'''包含 USN 日志到最近变更'''。
 </ul>
-*Click '''OK'''.
+*点击'''确定'''。
 </ul>
 
-==Sort by recent changes==
-Sorting by recent changes is instant and persistant.
-Right click an empty spot in the result list, from the Sort by menu, click Date Recently changed.
-Sort by recent changes to monitor changes to the Everything index in real-time.
+==根据最近变更排序==
+根据最近变更排序是及时其永久的。
+右键点击结果列表空白处，在排序方式菜单中，点击最近变更日期。
+根据最近变更排序后，Everything 将实时索引和监控变更。
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/searching#Functions|rc:]] and [[support/everything/searching#Functions|recentchange:]] search functions.
-*[[support/everything/Options#NTFS Include USN Journal in recent changes|Include USN Journal in recent changes]] option.
+*[[support/everything/searching#Functions|rc:]] 和 [[support/everything/searching#Functions|recentchange:]] 搜索函数。
+*[[support/everything/Options#NTFS Include USN Journal in recent changes|包含 USN 日志到最近变更]]选项。
 </ul>
