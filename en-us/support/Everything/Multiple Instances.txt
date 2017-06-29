@@ -2,7 +2,7 @@
 Everything 默认只能运行一个实例。
 当运行 Everything.exe 时，它会检测已存在的实例。如果发现已存在实例，那么命令行选项将会发送并由已存在实例执行。如果未发现已存在实例，则创建一个新实例。
 
-以多实例运行 Everything，使用[[support/everything/multiple instances#named instances|命名实例]].
+以多实例运行 Everything，使用[[support/everything/multiple instances#named instances|命名实例]]。
 
 ==命名实例==
 Everything 默认使用未命名实例。
@@ -20,7 +20,7 @@ Everything.exe -instance "ETP Server"
 命名实例使用单独的设置和数据。
 例如：命名实例 "ETP Server" 将使用 Everything-ETP SERVER.ini 作为设置文件。
 
-实例名称位于 Everything 搜索窗口标题栏和鼠标悬浮于图盘图标时工具提示。
+实例名称位于 Everything 搜索窗口标题栏和鼠标悬浮于托盘图标时工具提示。
 
 ==服务==
 Everything 默认为每个实例安装一个服务。
