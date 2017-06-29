@@ -1,62 +1,62 @@
-=Troubleshooting=
+=疑难解答=
 
-==Missing files==
-Corrupt files and folders are automatically excluded by "''Everything''". Please check your disk(s) for errors.
+==文件缺失==
+"''Everything''" 自动排除了损坏的文件和文件夹。请检查您硬盘错误。
 
-To check your disk(s) for errors:
+检查硬盘错误：
 <ul>
-* In '''My Computer''', for each volume:
-* '''Right click''' and select '''Properties'''.
-* Click the '''Tools''' tab.
-* Click '''Check now...'''.
-* Select '''Automatically fix file system errors'''.
-* Click '''Start'''.
-* If prompted to schedule the disk check the next time you restart the computer select Yes.
+* 打开'''我的电脑'''，对于某分卷：
+* '''右键'''并选择'''属性'''。
+* 点击'''工具''' 页面。
+* 点击'''开始检查...'''。
+* 选择'''自动修复文件系统错误'''。
+* 点击'''开始'''。
+* 如果弹出是否计划下次重启时进行硬盘检查，选择是。
 </ul>
 
-==Rebuilding the database==
-To force "''Everything''" to rebuild the database:
+==重建数据库==
+强制 "''Everything''" 重建数据库：
 <ul>
-*In "'''''Everything'''''", from the the '''Tools''' menu, click '''Options'''.
-*Click the '''Indexes''' tab.
-*Click '''Force rebuild'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''索引'''页面。
+*点击 '''强制重建'''。
+*点击'''确定'''。
 </ul>
 
-==Recreate the USN Journal==
-To force the NTFS driver to rebuild the USN Journal:
+==重建 USN 日志==
+强制 NTFS 驱动重建 USN 日志：
 <ul>
-*In "'''''Everything'''''", from the the '''Tools''' menu, click '''Options'''.
-*Click the '''NTFS''' tab.
-*Select the NTFS volume .
-*Uncheck '''Enable USN Journal Logging'''.
-*Click '''Apply'''.
-*Check '''Enable USN Journal Logging'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''NTFS''' 页面。
+*选择 NTFS 分卷。
+*取消选择'''启用 USN 日志记录'''。
+*点击'''应用'''。
+*选择 '''启用 USN 日志记录'''。
+*点击'''确定'''。
 </ul>
 
-==HTTP Server does not start==
-This is most commonly caused by another service using port 80.
+==HTTP 服务器未启动==
+此情况一般由于另一个服务占用了端口 80 导致。
 
-Try to change the HTTP server port.
+尝试更改 HTTP 服务器端口。
 
-For example: to change the HTTP server port to 8080:
+例如：更改 HTTP 服务器端口到 8080：
 
 <ul>
-*In "Everything", from the Tools menu, click Options.
-*Under the HTTP tab, change the HTTP Server Port to 8080.
-*Click OK.
+*在 "Everything" 中，打开工具菜单，点击选项。
+*进入 HTTP 页面，更改 HTTP 服务器端口到 8080。
+*点击确定.
 </ul>
 
-To connect to this server:
+连接到此服务器：
 <ul>
-*In your web browser, enter http://localhost:8080
-*Change localhost to the server name for remote access. 
+*打开您的网络浏览器，输入 http://localhost:8080
+*更改 localhost 为远程访问服务名称。
 </ul>
 
-==Debug mode.
-The debug console can be toggled with the Ctrl + ` key.
-See [[/forum/viewtopic.php?f=6&t=1713]] for more information.
+==调试模式==
+调试控制台可以通过组合键 Ctrl + ` 打开。
+查阅 [[/forum/viewtopic.php?f=6&t=1713]] 以获取更多信息。
 
-==Support==
-Please check the [[/forum/|forums]] or [[contact|contact voidtools]] for support.
+==支持==
+请访问[[/forum/|论坛]]或[[contact|联系 voidtools]] 以获取支持。
