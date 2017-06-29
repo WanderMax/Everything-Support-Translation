@@ -1,37 +1,37 @@
-=Multiple Instances=
-By default there is only one instance of Everything.
-When you run Everything.exe it will check for an existing instance. If an existing instance is found the command line options are sent and processed by the existing instance. If no existing instance is found a new one is created.
+=多实例=
+Everything 默认只能运行一个实例。
+当运行 Everything.exe 时，它会检测已存在的实例。如果发现已存在实例，那么命令行选项将会发送并由已存在实例执行。如果未发现已存在实例，则创建一个新实例。
 
-To run multiple instances of Everything use [[support/everything/multiple instances#named instances|Named instances]].
+以多实例运行 Everything，使用[[support/everything/multiple instances#named instances|命名实例]].
 
-==Named instances==
-By default Everything uses the unnamed instance. 
-Assign unique names to Everything instances to use multiple instances.
-There can only be one instance for each unique name.
+==命名实例==
+Everything 默认使用未命名实例。
+指定一个唯一的名称给 Everything 实例以使用多实例。
+每个实例只能有一个单独的实例名称。
 
-To assign a name to the instance:
-Use the [[support/everything/command line options#-instance|-instance]] command line option to specify the instance name when starting Everything.exe.
+指定名称给实例：
+启动 Everything.exe 时，使用 [[support/everything/command line options#-instance|-instance]] 命令行选项以指定实例名称。
 
-For example:
+例如：
 <pre>
 Everything.exe -instance "ETP Server"
 </pre>
 
-Named instances use unique settings and data.
-For example, the named instanced "ETP Server" will use Everything-ETP SERVER.ini as the settings file.
+命名实例使用单独的设置和数据。
+例如：命名实例 "ETP Server" 将使用 Everything-ETP SERVER.ini 作为设置文件。
 
-The name of the instance is located in the Everything search window caption and in the tooltip when hovering over the tray icon with the cursor.
+实例名称位于 Everything 搜索窗口标题栏和鼠标悬浮于图盘图标时工具提示。
 
-==Service==
-By default Everything will install a service for each instance.
+==服务==
+Everything 默认为每个实例安装一个服务。
 
-To use the same service for all instances, use the [[support/everything/command_line_options#-service-pipe-name|-service-pipe-name]] command line option or [[support/everything/ini#service_pipe_name|service_pipe_name]] ini option to specify the same service pipe name.
-The default unnamed servive pipe name is:
+为所有实例使用相同服务，使用 [[support/everything/command_line_options#-service-pipe-name|-service-pipe-name]] 命令行选项或 [[support/everything/ini#service_pipe_name|service_pipe_name]] ini 选项以指定相同服务管道名。
+默认未命名管道名为：
 <pre>
 \\\\.\\PIPE\\Everything Service
 </pre>
 
-For example, to connect to the default service pipe with a different instance name:
+例如：用补个不同的实例名连接默认服务管道：
 <pre>
 Everything.exe -instance "ETP Server" -service-pipe-name "\\\\.\\PIPE\\Everything Service"
 </pre>
