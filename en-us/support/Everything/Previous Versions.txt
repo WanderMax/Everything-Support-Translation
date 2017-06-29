@@ -1,7 +1,7 @@
-=Previous Versions=
-A list of all the previous versions of Everything.
+=旧版本=
+Everything 旧版本列表。
 
-Previous stable releases:
+旧版稳定版本：
 {|
 {{PREVIOUS_STABLE_RELEASES}}
 |}
