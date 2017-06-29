@@ -29,7 +29,7 @@ __TOC__
 
 =="Everything" 免费么？==
 免费，"Everything" 是一款免费软件。
-软件开发维护不易，请考虑[[donate|捐赠]].
+软件开发维护不易，请考虑[[donate|捐赠]]。
 
 =="Everything" 是否包含恶意、间谍软件或广告？==
 完全没有，"Everything" 不包含任何恶意、间谍软件或广告。
@@ -65,10 +65,10 @@ convert D: /fs:ntfs
 可以，请查阅[[support/everything/folder indexing#how_do_i_add_a_network_share_to_the_everything_index|文件夹索引]]以获取更多信息。
 
 ==如何安装 "Everything"？==
-请查阅 [[support/everything/installing everything|"Everything" 基础安装指南]].
+请查阅 [[support/everything/installing everything|"Everything" 基础安装指南]]。
 
 ==如何使用 "Everything"？==
-请查阅 [[support/everything/using everything|"Everything" 基础使用指南]].
+请查阅 [[support/everything/using everything|"Everything" 基础使用指南]]。
 
 ==为何 "Everything" 1.4 比 1.3 占用更多内存？==
 "Everything" 1.4 默认索引了文件大小和日期并存储了额外信息以便更快排序。
