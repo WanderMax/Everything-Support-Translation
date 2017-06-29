@@ -21,7 +21,7 @@
 *下载语言包 [[/Everything.lng.zip|Everything.lng.zip]]
 *解压语言包中 '''Everything.lng''' 到 "Everything" 安装目录。
 *重启 "'''Everything'''"。
-*在 '''''"Everything"''''' 中， 打开'''工具'''菜单，点击 '''选项'''。
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
 *点击'''常规'''页面。
 *在'''语言'''下拉列表中选项界面语言。
 *点击'''确定'''。
@@ -30,5 +30,5 @@
 
 ==更多请查阅==
 <ul>
-*[[support/Everything/Translating]]
+*[[support/Everything/Translating|翻译]]
 </ul>
