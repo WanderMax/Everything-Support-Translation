@@ -1,37 +1,37 @@
-=Everything Service=
-The Everything service indexes NTFS volumes and monitors USN Journals.
-This allows the Everything client to run as a standard user.
+=Everything 服务=
+Everything 服务可以索引 NTFS 分卷和监控 USN 日志。
+这将可以让 Everything 以标准用户方式运行。
 
-On XP or earlier the Everything service is not required.
-On Vista or later with a standard user account you will need to install the Everything service to use NTFS indexing.
-On Vista or later with the true administrator account the Everything service is not required.
+在 XP 或更早系统中无需 Everything 服务。
+在 Vista 或更新系统中，标准账户需要安装 Everything 服务以使用 NTFS 索引。
+在 Vista 或更新系统中，管理员账户无需安装 Everything 服务。
 
-The Everything service is installed by default on Windows Vista or later when the installer is run with a standard user account.
+Everything 服务将默认在 Vista 或更新系统中以标准账户运行安装程序时安装。
 
-==Installing==
-
-<ul>
-*Check the Install Everything Service option when running the Everything installer.
-</ul>
-
--or-
+==安装==
 
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''General '''Tab.
-*Check '''Everything Service'''.
-*Uncheck '''Run as administrator'''.
-*Click '''OK'''.
+*运行 Everything 安装程序时选择安装 Everything 服务选项。
 </ul>
 
-==How is the Everything service started?==
-Windows automatically starts the Everything service on system start-up.
+-或-
 
-==Stopping or starting the service==
-The Everything service is always running and generally does not need to be stopped.
-However, you can start or stop the Everything service from Start -> Control Panel -> Administrative Tools -> Services. Right click the Everything service and select Start or Stop.
+<ul>
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''常规'''页面。
+*选择 '''Everything 服务'''。
+*取消选择'''以管理员身份运行'''。
+*点击'''确定'''。
+</ul>
 
-==How can I manage the Everything service from the command line?==
+==如何启动 Everything 服务？==
+Windows 将在系统启动时自动启动 Everything 服务。
+
+==停止或启动 Everything 服务==
+Everything 服务将一直运行，通常无需停止。
+当然，您可以通过开始->控制面板->管理员工具->服务来停止或启动 Everything 服务。 右键点击 Everything 服务并选择停止或启动。
+
+==如何通过命令行管理 Everything 服务？==
 <pre>
 Everything.exe -install-service [-install-service-pipe-name <name>] [-install-service-security-descriptor <sd>]
 Everything.exe -uninstall-service
@@ -39,38 +39,38 @@ Everything.exe -start-service
 Everything.exe -stop-service
 </pre>
 
-==How can I manage the Everything service from Everything?==
+==如何通过 Everything 管理 Everything 服务？==
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''General '''Tab.
-*Check or uncheck the '''Everything service''' to install or uninstall the Everything service.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''常规'''页面。
+*选择或取消选择 '''Everything 服务'''以安装或卸载 Everything 服务。
+*点击'''确定'''。
 </ul>
 
-==How can I run the Everything service from the portable version of Everything?==
-To launch the Everything service as a normal administrator application, run the following:
+==如何从便携版 Everything 中运行 Everything 服务？==
+以正常管理员身份启动 Everything 服务：
 <pre>
 Everything.exe -svc
 </pre>
 
-To specify the pipe name, use the -svc-pipe-name <name> command line option, for example:
+指定管道名称，请使用 -svc-pipe-name <name> 命令行选项，例如：
 <pre>
 Everything.exe -svc -svc-pipe-name "my Everything pipe name"
 </pre>
 
-Running the Everything service this way does not modify the system.
+这种方式运行 Everything 服务不会修改系统。
 
-The Everything service has no interface.
-Use Task Manager to terminate the service application when it is no longer needed.
+Everything 服务没有用户界面。
+使用任务管理器来终止不需要的服务程序。
 
-You can close the portable service application easily by making a batch file that runs Everything.exe -svc
-Simply close the console window to terminate the service application.
+您也可以使用批处理文件运行 Everything.exe -svc 来简单关闭便携版服务程序。
+简单关闭控制台窗口来终止服务程序。
 
-==How many resources does the service use?==
-The Everything service will use about 1MB of RAM and will have none to very little CPU usage.
+==服务需要使用多少资源？==
+Everything 服务将使用大约 1MB 内存且极少的 CPU 使用率。
 
-==Security==
-Any local user can use the Everything Service to create a list of all NTFS filenames. 
-Note: The Everything Service can not be used to access files, only filenames.
+==安全==
+任何本地用户都可以使用 Everything 服务来创建所有 NTFS 文件名列表。
+注意：Everything 服务无法访问文件，仅文件名。
 
 
