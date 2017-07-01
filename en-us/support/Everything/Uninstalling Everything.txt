@@ -1,48 +1,48 @@
-=Uninstalling Everything=
-An uninstaller is created when Everything is installed.
+=卸载 Everything=
+Everything 安装时将会创建一个卸载程序。
 
-To completely uninstall Everything with the uninstaller:
+通过卸载程序完全卸载 Everything：
 <ul>
-*From the '''Control panel''', open '''Programs and Features'''.
-*Right click '''''Everything'''''.
-*Select '''Uninstall/Change'''
-*Select the language of the uninstaller if the multilingual installer was used to install Everything.
-*Click '''Uninstall'''.
+*进入'''控制面板'''，打开'''程序和功能'''。
+*右键点击 '''''Everything'''''。
+*选择'''卸载/更改'''。
+*如果使用 Everything 多语言安装程序安装，选择卸载程序语言。
+*点击'''卸载'''。
 </ul>
 
-To completely uninstall the portable version of Everything:
+完全卸载便携版 Everything：
 <ul>
-*From a command prompt, run:
+*打开命令提示符，运行：
 <pre>
 Everything.exe -uninstall
 </pre>
-*Delete Everything.exe.
+*删除 Everything.exe.
 </ul>
 
-==System modifications==
-The follow settings modify the system:
+==系统配置修改==
+以下设置更改了系统配置：
 <ul>
-*Store settings and data in %APPDATA%\Everything
-*Start Everything on system startup
-*Everything service
-*Show shell context menus
-*Start menu shortcuts
-*Desktop shortcuts
-*Quick Launch shortcuts
-*URL protocol
-*EFU file association.
+*保存设置和数据到 %APPDATA%\Everything
+*开机自启动 Everything
+*Everything 服务
+*集成到资源管理器右键菜单
+*开始菜单快捷方式
+*桌面快捷方式
+*快读启动栏快捷方式 
+*URL 协议
+*EFU 文件关联。
 </ul>
 
-To change these settings:
+恢复以上配置：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''General''' tab.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''常规'''页面。
 </ul>
 
-All system modifications made by Everything are removed when Everything is uninstalled.
+Everything 卸载时将移除全部 Everything 所做系统配置修改。
 
-==Files created by Everything==
-Everything may create the following files in %APPDATA%\Everything:
+==Everything 创建的文件==
+Everything 将在 %APPDATA%\Everything 创建以下文件：
 <ul>
 *Everything.db
 *Everything.db.tmp
@@ -61,33 +61,33 @@ Everything may create the following files in %APPDATA%\Everything:
 *Logs\ETP_Server_Log.txt
 </ul>
 
-These files are deleted when Everything is uninstalled.
-If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, these files are stored in the same location as Everything.exe.
-These files have different filenames if [[support/everything/multiple instances|Multiple Instances]] is used.
-If you use [[support/everything/multiple instances|Named instances]] and wish to uninstall, you will have to uninstall each instance separately with Everything.exe -uninstall -instance <Instance Name>
+上述文件将在 Everything 卸载时被自动删除。
+如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]选项，以上文件将保存到 Everything.exe 相同目录。
+这些文件或许有不同的文件夹，如果使用了[[support/everything/multiple instances|多实例]]。
+如果使用了[[support/everything/multiple instances|命名实例]]且需要卸载，您必需通过 Everything.exe -uninstall -instance <Instance Name> 单独卸载每个实例。
 
-==Manual uninstall==
+==手动卸载==
 <ul>
-*Make sure Everything and the Everything service is not running.
-*Delete the folder C:\Program Files\Everything
-*Delete the folder C:\Program Files (x86)\Everything
-*Delete the folder %APPDATA%\Everything
-*Delete the registry value Everything in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-*Delete the registry value Everything in HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run
-*Delete the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Everything
-*Delete the registry key HKEY_CLASSES_ROOT\Folder\shell\Search Everything...
-*Delete the folder %APPDATA%\Microsoft\Windows\Start Menu\Programs\Everything
-*Delete the folder %USERPROFILE%\Start Menu\Programs\Everything
-*Delete the shortcut %USERPROFILE%\Desktop\Search Everything.lnk
-*Delete the shortcut %APPDATA%\Microsoft\Internet Explorer\Quick Launch\Search Everything.lnk
-*Delete the registry key HKEY_CLASSES_ROOT\ES
-*Delete the registry key HKEY_CLASSES_ROOT\.efu
-*Delete the registry key HKEY_CLASSES_ROOT\Everything.FileList
-*Delete the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Everything
-*Delete the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Everything
+*确认 Everything 和 Everything 服务未运行。
+*删除文件夹 C:\Program Files\Everything
+*删除文件夹 C:\Program Files (x86)\Everything
+*删除文件夹 %APPDATA%\Everything
+*删除 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 注册表值 Everything
+*删除 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run 值 Everything
+*删除注册表项 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Everything
+*删除注册表项 HKEY_CLASSES_ROOT\Folder\shell\Search Everything...
+*删除文件夹 %APPDATA%\Microsoft\Windows\Start Menu\Programs\Everything
+*删除文件夹 %USERPROFILE%\Start Menu\Programs\Everything
+*删除快捷方式 %USERPROFILE%\Desktop\Search Everything.lnk
+*删除快捷方式 %APPDATA%\Microsoft\Internet Explorer\Quick Launch\Search Everything.lnk
+*删除注册表项 HKEY_CLASSES_ROOT\ES
+*删除注册表项 HKEY_CLASSES_ROOT\.efu
+*删除注册表项 HKEY_CLASSES_ROOT\Everything.FileList
+*删除注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Everything
+*删除注册表项 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Everything
 </ul>
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/multiple instances|Multiple Instances]]
+*[[support/everything/multiple instances|多实例]]
 </ul>
