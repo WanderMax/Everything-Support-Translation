@@ -1,11 +1,11 @@
 =SDK=
-The Everything SDK provides a DLL and Lib interface to Everything over [[support/everything/SDK/IPC]].
-It also provides methods for using WM_COPYDATA for [[support/everything/SDK/IPC]].
+Everything SDK 通过 [[support/everything/SDK/IPC]] 提供 DLL 和 Lib 接口到 Everything。
+同样提供使用 [[support/everything/SDK/IPC]] WM_COPYDATA 的方式。
 
-==Download==
+==下载==
 [[/Everything-SDK.zip]]
 
-==Manipulating the search state==
+==操作搜索状态==
 <ul>
 *[[support/Everything/SDK/Everything_SetSearch|Everything_SetSearch]]
 *[[support/Everything/SDK/Everything_SetMatchPath|Everything_SetMatchPath]]
@@ -20,7 +20,7 @@ It also provides methods for using WM_COPYDATA for [[support/everything/SDK/IPC]
 *[[support/Everything/SDK/Everything_SetRequestFlags|Everything_SetRequestFlags]]
 </ul>
 
-==Reading the search state==
+==读取搜索状态==
 <ul>
 *[[support/Everything/SDK/Everything_GetSearch|Everything_GetSearch]]
 *[[support/Everything/SDK/Everything_GetMatchPath|Everything_GetMatchPath]]
@@ -36,23 +36,23 @@ It also provides methods for using WM_COPYDATA for [[support/everything/SDK/IPC]
 *[[support/Everything/SDK/Everything_GetRequestFlags|Everything_GetRequestFlags]]
 </ul>
 
-==Executing the query==
+==执行询问==
 <ul>
 *[[support/Everything/SDK/Everything_Query|Everything_Query]]
 </ul>
 
-==Check for query reply==
+==检查询问应答==
 <ul>
 *[[support/Everything/SDK/Everything_IsQueryReply|Everything_IsQueryReply]]
 </ul>
 
-==Manipulating results==
+==操作结果==
 <ul>
 *[[support/Everything/SDK/Everything_SortResultsByPath|Everything_SortResultsByPath]]
 *[[support/Everything/SDK/Everything_Reset|Everything_Reset]]
 </ul>
 
-==Reading results==
+==读取结果==
 <ul>
 *[[support/Everything/SDK/Everything_GetNumFileResults|Everything_GetNumFileResults]]
 *[[support/Everything/SDK/Everything_GetNumFolderResults|Everything_GetNumFolderResults]]
@@ -83,7 +83,7 @@ It also provides methods for using WM_COPYDATA for [[support/everything/SDK/IPC]
 *[[support/Everything/SDK/Everything_GetResultHighlightedFullPathAndFileName|Everything_GetResultHighlightedFullPathAndFileName]]
 </ul>
 
-==General==
+==常规==
 <ul>
 *[[support/Everything/SDK/Everything_Reset|Everything_Reset]]
 *[[support/Everything/SDK/Everything_CleanUp|Everything_CleanUp]]
@@ -103,14 +103,14 @@ It also provides methods for using WM_COPYDATA for [[support/everything/SDK/IPC]
 *[[support/Everything/SDK/Everything_GetTargetMachine|Everything_GetTargetMachine]]
 </ul>
 
-==Run History==
+==运行历史==
 <ul>
 *[[support/Everything/SDK/Everything_GetRunCountFromFileName|Everything_GetRunCountFromFileName]]
 *[[support/Everything/SDK/Everything_SetRunCountFromFileName|Everything_SetRunCountFromFileName]]
 *[[support/Everything/SDK/Everything_IncRunCountFromFileName|Everything_IncRunCountFromFileName]]
 </ul>
 
-==Examples==
+==例子==
 <ul>
 *[[support/Everything/SDK/C|C/C++]]
 *[[support/Everything/SDK/CSharp|C#]]
@@ -119,17 +119,17 @@ It also provides methods for using WM_COPYDATA for [[support/everything/SDK/IPC]
 
 
 
-==Notes==
+==注意==
 <ul>
-*The SDK is a basic [[support/Everything/SDK/IPC|IPC]] wrapper
-*Requires "Everything" to be running.
-*ANSI / Unicode support.
-*Thread safe.
-*Support for blocking and non-blocking mode.
-*x86 and x64 support.
+*此 SDK 是一个基础的 [[support/Everything/SDK/IPC|IPC]] 包装器。
+*需要 "Everything" 未运行。
+*ANSI / Unicode 支持。
+*安全线程。
+*支持阻挡和非阻挡模式。
+*x86 和 x64 支持。
 </ul>
 
-==See Also==
+==更多请查阅==
 <ul>
 *[[support/Everything/SDK/IPC]]
 </ul>
