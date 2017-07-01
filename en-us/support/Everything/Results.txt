@@ -1,97 +1,97 @@
-=Results=
-The result list shows the file and folders matches for the current search.
-Right click a file or folder to perform an action, such as open, cut, copy, delete, rename or properties.
+=搜索结果=
+结果列表显示匹配当前搜索的文件和文件夹。
+右键点击一个文件或文件夹以执行右键操作，比如：打开、剪切、复制、删除、重命名或属性。
 
-==Thumbnails==
+==缩略图==
 [[File:support/everything/Everything.Thumbnails.png|alt=Everything Thumbnails]]
 
-To show results in thumbnail view:
+显示搜索结果缩略图：
 <ul>
-*In "'''''Everything'''''", from the '''View''' menu, click '''Medium Thumbnails''', '''Large Thumbnails''' or '''Extra Large Thumbnails'''.
+*在 '''''"Everything"''''' 中，打开'''查看'''菜单，选择'''中等图标'''，'''大图标'''或'''超大图标'''。
 </ul>
 
--or-
+-或-
 
 <ul>
-*In "'''''Everything'''''", Press and hold the Ctrl key and use the mouse wheel to change the view from Details to Extra Large Thumbnails.
+*在 '''''"Everything"''''' 中，按住 Ctrl 键并使用鼠标滚轮缩放以从详情到超大图标切换视图。
 </ul>
 
-==Preview==
+==预览==
 [[File:support/everything/Everything.Preview.png|alt=Everything Preview]]
 
-To show the preview pane:
+显示预览面板：
 <ul>
-*In "'''''Everything'''''", from the '''View''' menu, check '''Preview'''.
+*在 '''''"Everything"''''' 中，打开'''查看'''菜单，选择'''预览'''。
 </ul>
 
-Click and drag the divider to resize the preview pane.
+移动分隔条以缩放预览面板。
 
-==Hide results when the search is empty==
-All files and folders are found when the search is empty. To hide the results when the search is empty:
+==搜索关键词为空时不显示搜索结果==
+搜索关键词为空时默认显示所有文件和文件夹。搜索关键词为空时隐藏此结果：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Check '''Hide results when the search is empty'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*选择 '''搜索关键词为空时不显示搜索结果'''。
+*点击'''确定'''。
 </ul>
 
-==Keep selection==
-When you change the search in Everything, the current selection is cleared. 
+==保持选择区==
+当更改搜索关键词时，当前选择区默认被清除。
 
-To keep the selection after changing the search:
+更改搜索关键词后保持选择区：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''Results''' tab.
-*Uncheck the '''Clear selection on search'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''结果'''页面。
+*取消选择'''搜索时清除选择区'''。
+*点击'''确定'''。
 </ul>
 
-==Jump to==
-Type in the start of a filename to jump to it.
-The jump to text is displayed in the status bar.
+==跳转到==
+输入文件名开头部分以跳转到此文件。
+跳转文本显示在状态栏。
 
-==Sorting results==
-By default the results are sorted by Name, then Path.
-Sorting is reset back to the default each time the search parameters change.
-At the top of the result list is a header. To sort a column click its header.
+==排序搜索结果==
+搜索结果默认按照名称、其次路径排序。
+搜索参数变更后搜索结果都将重置为默认排序。
+结果列表分栏顶部为标头。点击标头以按此排序。
 
-Note: Sorting can be slow when there are many results.
+注意：搜索结果众多时排序将比较耗时。
 
-Sorting can be cancelled by selecting another sort or changing the search.
+排序过程可以通过选择其他排序或更改搜索参数取消。
 
-==Highlight the row the mouse is over==
-To highlight the row the mouse is over:
+==高亮光标经过行==
+高亮光标经过行：
 <ul>
-*In "''Everything''", from the '''Tools''' menu, click '''Options'''.
-*Select the '''View''' tab.
-*Check '''Show row mouseover'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''视图'''页面。
+*选择'''高亮光标经过行'''。
+*点击'''确定'''。
 </ul>
 
-==Multi-file Renaming==
+==多文件重命名==
 [[File:support/everything/Everything.Multi.File.Rename.png|alt=Everything Multi-file Rename Screenshot]]
 
-To use multi-file renaming select multiple files in the result list and press F2.
+使用多文件重命名，选择结果列表中多个文件并按 F2。
 
-With multi-file renaming you can:
+通过多文件重命名：
 <ul>
-*Change common text in all filenames.
-*Change the extension of all files easily.
-*Find and replace text.
-*Edit all filenames in one edit box.
+*更改所有文件名中相同文本部分。
+*更改所有文件扩展名。
+*查找和替换文本。
+*统一编辑框中编辑所有文件名。
 </ul>
 
-Note: multi-file renaming works best when the selected files share similar formats, for example: Artist - Album - Track - Song Title.mp3
+注意：多文件重命名在选定多文件具有相似格式时很好用，例如：Artist - Album - Track - Song Title.mp3
 
-==Undo==
-To undo a move, copy or delete:
+==撤销==
+撤销移动、复制或删除操作：
 <ul>
-*Open Windows Explorer (Win + E)
-*From the Edit menu.
-*Click Undo.
+*打开 Windows 文件浏览器 (Win + E)
+*打开编辑菜单。
+*选择撤销。
 </ul>
 
-==See Also==
+==更多请查阅==
 <ul>
-*[[support/everything/options#results|Results Options]]
-*[[support/everything/options#fonts and colors|Change the font and colors]]
+*[[support/everything/options#results|结果选项]]
+*[[support/everything/options#fonts and colors|更改字体和颜色]]
 </ul>
