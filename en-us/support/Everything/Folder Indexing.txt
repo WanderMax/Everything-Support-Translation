@@ -1,116 +1,116 @@
-=Folder Indexing=
-Folder indexing allows Everything to include any file system folder in the Everything index.
+=文件夹索引=
+文件夹索引让 Everything 可以索引任何文件系统文件夹。
 
-Indexed folders can go offline and remain in the Everything index.
+索引的文件夹甚至可以离线但仍旧可以通过 Everything 索引。
 
-For example, with folder indexing you can index:
+例如，通过文件夹索引您可以索引以下：
 <ul>
-*Network shares or mapped network drives.
-*FAT32 and other volumes.
-*Any physical folder.
+*网络分享或映射的网络分区。
+*FAT32 和其他分卷。
+*任何物理文件夹 。
 </ul>
 
 [[File:support/everything/everything.options.folders.server.downloads.png|alt=Everything Options Folders Network Share]]
 
-==Do I need administrative privileges or the Everything service to index folders?==
-No, folder indexing does not require administrative privileges or the Everything service.
+==是否需要管理员权限或 Everything 服务才可以索引文件夹？==
+不，文件夹索引不需要管理员权限或 Everything 服务。
 
-==Why is indexing so slow?==
-Folder indexing uses the same approach as the Windows search.
-This can be a lot slower than NTFS indexing.
-Everything can take a couple minutes to scan a folder and all its subfolders and files.
+==为什么索引这么慢？==
+文件夹索引使用 Windows 搜索相同的方式。
+这比 NTFS 索引慢多了。
+Everything 需要数分钟来扫描文件夹和其子文件夹以及文件。
 
-==How do I add a folder to the Everything index?==
+==如何添加文件夹到 Everything 索引？==
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Folders '''tab.
-*Click '''Add...'''.
-*Select a folder to add to the Everything index.
-*Click '''OK'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*点击'''添加...'''。
+*选择文件夹以添加到 Everything 索引。
+*点击'''确定'''。
+*点击'''确定'''。
 </ul>
 
-==How do I add a network share to the Everything index?==
+==如何添加网络分享目录到 Everything 索引？==
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Folders '''tab.
-*Click '''Add...'''.
-*Select the network share to add to the Everything index, for example:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*点击'''添加...'''。
+*选择网络分享目录以添加到 Everything 索引，例如：
 <pre>
 \\server\share
 </pre>
-*Click '''OK'''.
-*Click '''OK'''.
+*点击'''确定'''。
+*点击'''确定'''。
 </ul>
 
-==How do I add a mapped network drive to the Everything index?==
+==如何添加网络映射分区到 Everything 索引？==
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Folders '''tab.
-*Click '''Add...'''.
-*Select the mapped network drive.
-*Click '''OK'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*点击'''添加...'''。
+*选择网络映射分区。
+*点击'''确定'''。
+*点击'''确定'''。
 </ul>
 
-==How do I stop Everything from scanning folders on startup==
-To prevent Everything from rescanning folders on startup:
+==如何启动时禁止 Everything 扫描文件夹==
+启动时禁止 Everything 扫描文件夹：
 <ul>
-*In '''Everything''', type in the following search and press '''ENTER''':
+*在 '''''"Everything"''''' 中，搜索框输入以下并按 '''ENTER'''：
 /[[support/everything/ini#folder_update_rescan_asap|folder_update_rescan_asap]]=0
 </ul>
 
-Folder rescanning will occur at the next scheduled time.
+文件夹重扫描将在下个计划时间开始。
 
-==Will Everything detect all file name changes made to this folder?==
-Almost all changes are detected. 
-Changes can be missed if too many occur in a short time.
+==Everything 能否检测出此文件夹所有文件名变更？==
+几乎可以检测出此文件夹所有文件名变更。
+如果短时间内出现大量文件名变更时，某些变更将会无法检测。
 
-To rebuild the folder index when too many changes occur in a short time:
+以上情况，请重建文件夹索引：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Folders '''tab.
-*Select a folder.
-*Check '''Rescan on full buffer'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*选择文件夹。
+*选择'''重新扫描全部'''。
 </ul>
 
-Everything can schedule an update time or update interval to rescan the entire folder for changes that might have been missed.
+Everything 可以计划按时间或按周期来重扫描文件夹变更以防止丢失变更检测。
 
-To customize the update time or update interval:
+自定义重扫描时间或周期：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Folders '''tab.
-*Select a folder.
-*Choose one of the options below:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*选择文件夹。
+*选择以下任一选项：
 <ul>
-*Update each day, or weekly on a specific day, at a specific time.
-*Update periodically in the specified hours or minutes.
-*Never update.
+*以每天、每周某天或某个特定时间扫描。
+*以指定的小时或分钟周期扫描。
+*不自动扫描。
 </ul>
 </ul>
 
-==How do I manually update a folder index?==
-To manually update all folder indexes:
+==如何手动更新文件夹索引？==
+手动更新所有文件夹索引：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Folders '''tab.
-*Click '''Rescan All Now'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*点击'''重扫描全部'''。
+*点击'''确定'''。
 </ul>
 
-To manually update a folder index:
+手动更新单个文件夹索引：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''.
-*Click the '''Folders '''tab.
-*Select the folder to update and click '''Rescan Now'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*选择单个文件夹并点击'''立即重扫描'''。
+*点击'''确定'''。
 </ul>
 
-==What happens if the indexed folder is offline or not available?==
-The folder index will remain unchanged.
-However, forcing a index rebuild will show the folder as empty.
+==索引的文件夹离线或不存在时会出现什么情况？==
+文件夹索引将会保持不变。
+但是，强制重建索引将会显示此文件夹为空。
 
-Everything will continue to re-scan the folder at the specified update time or update interval and only update the folder when it is online.
+Everything 将会在指定的时间或周期时继续重扫描此文件夹，但仅在文件夹存在时更新索引。
 
-Displaying icons and file information of offline folders can take several seconds to time-out.
-You can press F5 to refresh this cache when the folder is back online.
+离线文件夹图标和文件信息显示将在数秒后超时。
+您可以在文件夹存在时按 F5 来刷新缓存。
