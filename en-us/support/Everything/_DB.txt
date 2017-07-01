@@ -1,111 +1,111 @@
 =DB=
-This is very basic description and is likely to change...
-Since the database is just a cache of the NTFS mft with some volume information, it can be re-built from scratch easily.
+这仅仅是数据库最基础的描述并可能改变...
+由于数据库仅仅是 NTFS 主文件表的缓存及分卷信息，它可以简单的重建。
 
-BZIP compression can be applied.
-I usually see a total 11:1 compression ratio.
-After BZIP decompression it should look something like:
+数据库已应用 BZIP 压缩。
+Everything 数据库使用全局 11:1 压缩率。
+在 BZIP 解压后，数据库格式如下：
 
 {|
-! Offset
-! Size
-! Description
+! 偏移
+! 类型
+! 描述
 |-
 | 0x00000000
 | DWORD
-| 0x42445A45 or EZDB or (0x455A4442 or BDZE for byte swapped)
+| 0x42445A45 或 EZDB 或 (0x455A4442 或 字节交换下 BDZE)
 |-
 | 0x00000004
 | DWORD
-| 0x01060006 or version 0xXXYYZZZZ x.y.z (major.minor.revision)
+| 0x01060006 或版本 0xXXYYZZZZ x.y.z (major.minor.revision)
 |-
 | 0x00000008
 | DWORD
-| flags: 0x00000002 exclude hidden files and folders. 0x00000004 exclude system files and folders.
+| 标记：0x00000002 排除隐藏文件和文件夹。0x00000004 排除系统文件和文件夹。
 |-
 | 0x0000000C
 | DWORD
-| folder count
+| 文件夹数目
 |-
 | 0x00000010
 | DWORD
-| file count
+| 文件数目
 |-
 | 0x00000014
 | DWORD
-| folder decode size
+| 文件夹大小
 |-
 | 0x00000018
 | DWORD
-| file decode size
+| 文件大小
 |}
 
-Followed immediately by the monitoring status for each volume.
+以下是每个分卷的监控状态信息。
 
-There are 26 of the following structures, one for each drive:
+存在有 26 个相同结构，分别代表每个分区：
 
 {|
-! Offset
-! Size
-! Description
+! 偏移
+! 类型
+! 描述
 |-
 | 0x00000000
 | BYTE
-| included: 0x00 there is no data for this volume so start reading the next volume. 0x01 continue reading the information for this volume.
+| 包含：0x00 此分卷无数据，读取下一个分卷。0x01 继续读取此分卷信息。
 |-
 | 0x00000001
 | DWORD
-| serial number
+|序列号
 |-
 | 0x00000005
 | QWORD
-| USN Journal ID
+| USN 日志 ID
 |-
 | 0x0000000D
 | QWORD
-| Next USN
+| 下一个 USN
 |}
 
-Followed immediately by the exclude list count:
+以下是排除列表数：
 
 {|
 | 0x00000000
 | DWORD
-| number of exclude items.
+| 排除项数目。
 |}
 
-Followed immediately by the exclude list:
-Use the exclude list count from above to determine how many exclude items there are..
+以下是排除列表：
+使用上述排除列表数以判断除列表数目...
 
 {|
-! Offset
-! Size
-! Description
+! 偏移
+! 类型
+! 描述
 |-
 | 0x00000000
 | BYTE
-| exclude type
+| 排除类型
 |-
 | 0x00000001
 | DWORD
-| length of the exclude string
+| 排除字符长度
 |-
 | 0x00000005
-| length of the exclude string
-| exclude string
+| 排除字符长度
+| 排除字符
 |}
 
-Followed immediately by the sorted folders:
-We know the number of folders from above.
+以下是排序文件夹：
+由此可知文件夹数目。
 
 {|
-! Offset
-! Size
-! Description
+! 偏移
+! 类型
+! 描述
 |-
 | 0x00000000
 | BYTE
-| drive this folder belongs too.
+| 分区所属。
 |-
 | 0x00000001
 | QWORD
@@ -113,46 +113,46 @@ We know the number of folders from above.
 |-
 | 0x00000005
 | DWORD
-| Parent folder offset, or 0xFFFFFFFF if root.
+| 父文件夹偏移或根目录 0xFFFFFFFF。
 |-
 | 0x00000009
 | DWORD
-| FRN offset
+| FRN 偏移
 |-
 | 0x0000000D
 | BYTE
-| code length, if 0 it is the same name, skip to the next folder after adding the same name.
+| 代码长度，0 表示相同名称，添加相同名称后读取下一个文件夹。
 |-
 | 0x0000000E
 | BYTE
-| code offset
+| 代码偏移
 |-
 | 0x0000000F
-| code length
-| code
+| 代码长度
+| 代码
 |}
 
-Followed immediately by the sorted files:
-We know the number of files from above.
+以下是排序文件：
+由此可知文件数目。
 
 {|
-! Offset
-! Size
-! Description
+! 偏移
+! 类型
+! 描述
 |-
 | 0x00000000
 | DWORD
-| Parent folder offset
+| 父文件夹
 |-
 | 0x00000004
 | BYTE
-| code length, if 0 it is the same name, skip to the next file after adding the same name.
+| 代码长度，0 表示相同名称，添加相同名称后读取下一个文件。
 |-
 | 0x00000005
 | BYTE
-| code offset
+| 代码偏移
 |-
 | 0x00000006
-| code length
-| code
+| 代码长度
+| 代码
 |}
