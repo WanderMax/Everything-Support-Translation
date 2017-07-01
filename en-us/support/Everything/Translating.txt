@@ -1,146 +1,146 @@
-=Translating=
-Please check [[support/Everything/Supported languages]] for a list of supported translations.
+=翻译=
+请查阅[[support/Everything/Supported languages|多语言支持]]以获取支持语言翻译列表。
 
-Download the English translation template from [[/Template.zip]]
+请从 [[/Template.zip]] 获取英语翻译模版文件。
 
-Unzip the template to an empty folder.
+解压模板文件到一个空文件夹。
 
-Open the file <code>Template.txt</code> with notepad.
+用记事本打开模板文件 <code>Template.txt</code>。
 
-Translate each string in the template to the new language.
+翻译模板文件中每个字符串为对应的语言。
 
-==Syntax==
-Each string will appear on a single line and has the following syntax:
+==语法==
+每个字符串将单行显示且语法如下：
 <pre>
 key = "value"
 </pre>
 
-For example: the string in the English translation template:
+例如：翻译模板中英文字符串：
 <pre>
 LOADING_DATABASE = "Loading database..."
 </pre>
 
-For example: Translating the LOADING_DATABASE string to Italian:
+例如：翻译 LOADING_DATABASE 字符串到简体中文：
 <pre>
-LOADING_DATABASE = "Caricamento della base dati..."
+LOADING_DATABASE = "正在载入数据库..."
 </pre>
 
-==Comments==
-<code>//</code> Start a line comment (the rest of the line is ignored)
-<code>;</code> Start a line comment (the rest of the line is ignored)
-Comments are ignored by the language compiler.
+==注释==
+<code>//</code> 注释行开头 (其他行将被忽略)
+<code>;</code> 注释行开头 (其他行将被忽略)
+注释内容将被语言编译器忽略。
 
-==Escaping charactors==
+==转义字符==
 {|
-! Escape
-! Description
+! 转义字符
+! 描述
 |-
 | <code>\n</code>
-| new line
+| 换行
 |-
 | <code>\r</code>
-| line return
+| 回车
 |-
 | <code>\t</code>
-| tab
+| 制表符
 |-
 | <code>\"</code>
-| escape a double quote (")
+| 转义双引号 (")
 |-
 | <code>\\</code>
-| a single back-slash (\)
+| 转义反斜线 (\)
 |}
 
 ==printf==
 {| style="background:#ffeeee; border:1px dashed red;"
-| %s and %d must be in the same order as they appear in the English translation template.
+| %s 和 %d 必需保持与英语翻译模板中一样顺序。
 |}
 
-==Menu Keys==
-place a <code>&</code> in front of the letter for the menu key.
-This only apples to strings in the English translation template that have a <code>&</code>
+==菜单键==
+请将 <code>&</code> 置于菜单键大写字母前。
+这仅适用于英语翻译模板中字符串存在 <code>&</code>
 
-==Saving==
-Please save the template as UTF-8
+==保存==
+请保存格式为 UTF-8
 
-==Updating==
+==更新翻译==
 
-I will notify you by email when translations require updating.
+我将邮件通知译者以更新翻译。
 
-An up to date English translation template is always available from [[/Template.zip]]
+最新的英语翻译模板都在 [[/Template.zip]]。
 
-New and changed translation strings are added to the end of the template.
+新增和变更的字符串将出现在翻译模板结尾。
 
-If you have an existing translation you will need to add the updated translations from [[/Template.zip]] to the end of your translation template.
+如果您已存在一份翻译，您需要基于 [[/Template.zip]] 的模板更新您的翻译。
 
-Your translation is compatible with previous and future versions of Everything.
-Strings that have not yet been translated will appear in English.
+您的翻译将兼容与旧版和新版的 Everything。
+未翻译的字符串继续以英语显示。
 
 
-==Changes==
-Some strings may change vary between Everything versions. Usually help information is expanded upon or alt shortcut keys added.
-Please check the Changes.txt in the [[/Template.zip]] file for a list of changes that may need updating in your existing translation template.txt.
+==变更==
+某些字符串将由于 Everything 版本更新而变动。通常是帮助信息扩展或快捷键增加。
+请检查 [[/Template.zip]] 中 Changes.txt 以获知变更列表以更新翻译。
 
-==Language compiler==
-Please download the language pack compiler if you would like to test your translation with "''Everything''".
+==语言编译器==
+请下载语言编译器，如果您需要通过 "''Everything''" 测试您的翻译。
 
-An up to date language pack compiler is always available from [[/makelng.zip]]
+最新的语言编译器请通过 [[/makelng.zip]] 获取。
 
-==Instructions==
+==使用说明==
 <ul>
-*Download the language pack compiler and extract to an empty folder.
-*Copy your translation template to this folder.
-*Run the compiler.
-*Exit "''Everything''".
-*Copy the generated <code>Everything.lng</code> to your "''Everything''" installation folder.
-*Restart "''Everything''".
-*Select the correct language in "''Everything''"
+*下载语言编译器并解压到一个空文件夹。
+*复制翻译模板到此文件夹。
+*运行语言编译器。
+*退出 "''Everything''"。
+*复制生成的 <code>Everything.lng</code> 到 "''Everything''" 安装文件夹。
+*重启 "''Everything''"。
+*选择 "''Everything''" 正确的语言。
 </ul>
 
 
 {| style="background:#ffeeee; border:1px dashed red;"
-| Note: makelng.exe compiles *.txt .
+| 注意：makelng.exe compiles *.txt 。
 |}
 
 
 
-==Warnings==
-Ignore warnings for duplicated definitions.
+==语言编译器警告==
+重复翻译警告可以忽略。
 
-The last definition will be used for duplicates.
+重复翻译以靠后为准。
 
-You can optionally remove the first references of the duplicates to remove these warnings.
+您可以移除第一个翻译以解决以上警告。
 
-Warnings for undefined strings should be fixed.
-Warnings for empty strings should be fixed.
+未翻译警告需要翻译以解决。
+空字符串警告需要解决。
 
-==Credit==
-Please add your name to the credit list for your translation.
+==鸣谢==
+请添加您的名字到翻译中鸣谢列表。
 
-Your name will be added to the English translation template to be updated for the next release of "''Everything''".
+您的名字将被添加到英语翻译模板并更新与下个 "''Everything''" 版本。
 
-Your name will also be included on the website.
+您的名字同样将出现在官方网站鸣谢列表中。
 
-You can optionally have your name linked to an email address or website.
+您可以选择链接名字到邮件地址或个人网站。
 
-==Help & Support==
-Please contact [[mailto:david@voidtools.com|David Carpenter]] for assistance.
+==帮助 & 支持==
+请联系 [[mailto:david@voidtools.com|David Carpenter]] 以获取支持。
 
-==Everything 1.4 Changes==
-Please check the latest English translation template from [[/Template.zip]] for a list of changes to strings from Everything 1.3. These strings should be updated in your translation template.
+==Everything 1.4 变更==
+请检查 [[/Template.zip]] 英语翻译模板以获取字符串从 Everything 1.3 的变更。这些字符串已在模板中更新。
 
-==Website==
-To translate the voidtools website, please see [[support/everything/makevoidtools|makevoidtools]].
-
-
-==Thanks==
-Thanks to those that have translated "''Everything''".
-
-Thank you for supporting "''Everything''"!
+==官方网站==
+帮助翻译官方网站，请查阅 [[support/everything/makevoidtools|makevoidtools]]。
 
 
+==感谢支持==
+感谢所有 "''Everything''" 译者！
 
-==See also==
+感谢支持 "''Everything''" ！
+
+
+
+==更多请查阅==
 <ul>
-*[[support/Everything/Supported languages]]
+*[[support/Everything/Supported languages|多语言支持]]
 </ul>
