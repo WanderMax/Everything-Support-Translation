@@ -99,7 +99,7 @@ Everything 记忆每次结果的运行次数。
 查阅 [[support/everything/ini#Fonts and colors|Everything.ini]] 以了解如何自定义字体和颜色。
 
 ==外部文件管理器==
-查阅[[support/everything/customizing#External File Manager|外部文件管理器]]以了解如何用自定义文件管理器打开文件。
+查阅[[support/everything/customizing#外部文件管理器|外部文件管理器]]以了解如何用自定义文件管理器打开文件。
 
 ==键盘快捷键==
 查阅[[support/everything/keyboard shortcuts|键盘快捷键]]以获取存在键盘快捷键列表。
