@@ -2,7 +2,7 @@
 Everything 默认只能运行一个实例。
 当运行 Everything.exe 时，它会检测已存在的实例。如果发现已存在实例，那么命令行选项将会发送并由已存在实例执行。如果未发现已存在实例，则创建一个新实例。
 
-以多实例运行 Everything，使用[[support/everything/multiple instances#named instances|命名实例]]。
+以多实例运行 Everything，使用[[support/everything/multiple instances#命名实例|命名实例]]。
 
 ==命名实例==
 Everything 默认使用未命名实例。
