@@ -62,7 +62,7 @@ convert D: /fs:ntfs
 </ul>
 
 =="Everything" 能否可以索引映射的网络分区？==
-可以，请查阅[[support/everything/folder indexing#how_do_i_add_a_network_share_to_the_everything_index|文件夹索引]]以获取更多信息。
+可以，请查阅[[support/everything/folder indexing#如何添加网络映射分区到_everything_索引？|文件夹索引]]以获取更多信息。
 
 ==如何安装 "Everything"？==
 请查阅 [[support/everything/installing everything|"Everything" 基础安装指南]]。
@@ -222,7 +222,7 @@ abc 123
 </ul>
 
 请确认您拥有至少一个本地 NTFS 分卷。
-请查阅[[faq#how_do_i_convert_a_volume_to_ntfs|转换分卷为 NTFS]]。
+请查阅[[faq#怎么样转换分卷为_ntfs？|转换分卷为 NTFS]]。
 
 手动启用索引全部本地 NTFS 分卷：
 <ul>
