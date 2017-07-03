@@ -48,7 +48,7 @@ makevoidtools.exe c:\makevoidtools\voidtools file://c:/makevoidtools/voidtools
 
 ==Wiki 页面==
 请确认您以 UTF-8 页面格式打开 Wiki 页面。
-Wiki 页面使用基础的[[#Wiki syntax|Wiki Markup 语言]]。
+Wiki 页面使用基础的[[#wiki_语法|Wiki Markup 语言]]。
 Wiki 页面模板文件以数字做文件名前缀并以此排序。例如，01-Installing Everything.txt 是 Wiki 页面第一页同时 02-Using Everything.txt 是第二页，以此内推。
 Wiki 页面模板中以下划线 (_) 前缀文件是隐藏的，例如：[[http://www.voidtools.com/support/everything/db]].
 
@@ -112,7 +112,7 @@ A paragraph of text.
 [[faq#what_is_everything|What is Everything?]]
 </pre>
 
-[[faq/#what_is_everything|What is Everything?]]
+[[faq/#everything_是什么？|What is Everything?]]
 
 ;''图片''
 <pre>
