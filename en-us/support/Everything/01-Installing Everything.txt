@@ -1,153 +1,153 @@
-=Installing Everything=
-Everything can be installed or run as a portable executable.
-The installer and portable version of Everything can be found on the [[downloads|downloads page]].
+=安装 Everything=
+Everything 可以通过安装包安装或以便携版运行。
+Everything 安装包和便携版可以在[[downloads|下载页面]]下载。
 
-==What version of Everything should I download?==
+==Everything 应该下载什么版本？==
 {|
-! Version
-! Description
+! 版本
+! 说明
 |-
-| Installer
-| The installer version will guide the user through the installation of Everything (recommended). The installed Everything.exe is the same as the portable Everything.exe.
+| 安装版
+| 安装版将指导用户安装 (推荐)。安装版中 Everything.exe 与便携版中一致。
 |-
-| Portable
-| The user must extract the Everything.exe to the desired location. No changes to the system are made. Most of the options in the installer are available in the portable version in the [[support/everything/Options|Everything Options]].
+| 便携版
+| 用户必须解压 Everything.exe 到指定路径，且不会更改系统。大部分安装版中选项都在便携版 [[support/everything/Options|Everything 选项]]中可用。
 |-
 | x86
-| Only x86 context menu extensions will work in Everything. This version will work on both x86 and x64 versions of Windows.
+| Everything x86 版本仅支持 x86 上下文扩展菜单。此版本同时可以工作于 Windows x86 和 x64 平台。
 |-
 | x64
-| The x64 version requires a 64bit x64 OS. Supports databases larger than 2GB. Only x64 context menu extensions will work in Everything. The x64 version will use more memory than the x86 version.
+| Everything x64 版本需要 64 位 x64 操作系统。支持大于 2GB 的数据库。Everything x64 版本仅支持 x64 上下文扩展菜单，且要比 x86 版本使用更多内存。
 |-
 | English (US)
-| Only English is available for this version, the [[support/everything/supported_languages/#installing_the_language_pack|language pack]] can be installed manually.
+| 英文版，可以手动安装[[support/everything/supported_languages/#installing_the_language_pack|语言包]]。
 |-
-| Multilingual
-| Includes the Everything [[support/everything/supported_languages/#installing_the_language_pack|language pack]] for multiple language support.
+| 多语言版
+| 包含 Everything [[support/everything/supported_languages/#installing_the_language_pack|语言包]]以提供多语言支持。
 |}
 
-==Language selection==
+==语言选择==
 [[File:support/everything/Everything.Installer.Language.png|alt=Everything Installer Language]]
 
-Choose the language of the installer. This language will also be used in Everything.
-See [[support/Everything/Supported Languages]] for a list of supported languages.
+选择安装向导语言，此语言亦将适用于 Everything 界面语言。
+查阅[[support/Everything/多语言支持]]以获取支持语言列表。
 
-==License Agreement==
+==许可协议==
 [[File:support/everything/Everything.Installer.License.Agreement.png|alt=Everything Installer License Agreement]]
 
-You must accept the agreement to install Everything.
-You can find a copy of the license [[License.txt|here]].
+您必须同意许可协议才可以继续安装 Everything。
+您可以[[License.txt|此处]]找到许可协议的副本。
 
-==Install Location==
+==安装位置==
 [[File:support/everything/Everything.Installer.Install.Location.png|alt=Everything Installer Install Location]]
 
-Choose the installation location of Everything.
+选择 Everything 安装位置。
 
-By default Everything is installed to:
+Everything 默认安装到：
 <pre>
 C:\Program Files\Everything
 </pre>
 
-or if you install the x86 version of "Everything" on a x64 OS:
+如果安装 x86 版本 "Everything" 到 x64 OS：
 <pre>
 c:\Program Files (x86)\Everything
 </pre>
 
-==Location for data and settings==
+==设置和数据存储位置==
 [[File:support/everything/Everything.Installer.Install.Options1.png|alt=Everything Installer Install Options 1]]
 
-Choose a location to store data and settings.
-%APPDATA%\Everything is recommended.
+选择设置和数据存储位置。
+推荐 %APPDATA%\Everything。
 
-This setting can be changed in the [[support/Everything/Options|Everything options]] at anytime.
+此设置可以在 [[support/Everything/Options|Everything 选项]]中更改。
 
-==Indexing NTFS volumes==
-Choose a method for indexing NTFS volumes
+==索引 NTFS 分卷==
+选择索引 NTFS 分卷方式：
 {|
-! Method
-! Description
+! 方式
+! 说明
 |-
-| Install Everything service
-| Install the Everything service which will do all the low level volume reading required for NTFS indexing. The service runs with the necessary privileges so the Everything client can run as a standard user account.
+| 安装 Everything 服务
+| 安装 Everything 服务将允许 Everything 以低级别权限获取 NTFS 索引。此服务以必须权限运行，Everything 可以以普通账户运行。
 |-
-| Run as administrator
-| Run Everything with administrative privileges.
+| 以管理员身份运行
+| 以管理员身份运行 Everything。
 |-
-| No NTFS indexing
-| Everything will not attempt to index NTFS volumes.
+| 不索引 NTFS
+| Everything 不将索引 NTFS 分卷。
 |}
 
-This setting can be changed in the [[support/Everything/Options|Everything options]] at anytime.
+此设置可以在 [[support/Everything/Options|Everything 选项]]中更改。
 
-==Install Options==
+==安装选项==
 [[File:support/everything/Everything.Installer.Install.Options2.png|alt=Everything Installer Install Options 2]]
 
 {|
-! Option
-! Description
+! 选项
+! 说明
 |-
-| Check for updates
-| Enabling this setting will make Everything check www.voidtools.com for updates when you run Everything.
+| 检查更新
+| 启用后，运行 Everything 时，连接 www.voidtools.com 以检查更新。
 |-
-| Start Everything on system startup
-| Run Everything when Windows starts. This will load the Everything database into memory and create the Everything tray icon.
+| 开机自动启动 Everything
+| 开机自动启动 Everything。此操作将加载 Everything 数据库到内存并创建 Everything 托盘图标。
 |-
-| Install folder context menus
-| Enabling this will show the context menu item "Search Everything..." when you right click a folder in Windows. Clicking on this context menu item will show the Everything window with the search set to the selected folder.
+| 集成到资源管理器上下文菜单
+| 集成上下文菜单 "Search Everything..." 到 Windows 资源管理器。点击此上下文菜单将以此选定文件夹打开 Everything 搜索窗口。
 |-
-| Install start menu items.
-| Creates the Search Everything and Uninstall Everything shortcuts in the Start menu.
+| 添加 Everything 到开始菜单
+| 创建搜索 Everything 和卸载 Everything 快捷方式到开始菜单。
 |-
-| Install Desktop shortcut
-| Creates the Search Everything shortcut on the Desktop.
+| 创建 Everything 桌面快捷方式
+| 创建搜索 Everything 桌面快捷方式。
 |-
-| Install Quick launch shortcut
-| Creates the Search Everything shortcut in the Quick launch toolbar.
+| 添加 Everything 到快速启动栏
+| 创建搜索 Everything 快捷方式到快速启动栏。
 |-
-| ES URL Protocol
-| Open Everything from es: urls.
+| 安装 URL 协议
+| 允许通过 es: urls 打开 Everything。
 |-
-| Associate EFU files with Everything
-| Associate Everything file lists (EFU files) with Everything.
+| 关联 EFU 文件到 Everything
+| 关联 Everything 文件列表 (EFU 文件) 到 Everything。
 |-
-| Automatically index fixed NTFS volumes
-| If enabled Everything will automatically add all NTFS volumes to the index. Disable to manually setup which volumes are included.
+| 自动索引 NTFS 固定卷
+| 启用后，Everything 将自动添加所有 NTFS 分卷到索引。禁用此项以手动添加。
 |}
 
-These settings can be changed in the [[support/Everything/Options|Everything options]] at anytime.
+此设置可以在 [[support/Everything/Options|Everything 选项]]中更改。
 
 ==UAC==
 [[File:support/everything/Everything.Installer.UAC.png|alt=Everything Installer UAC]]
 
-Everything installation requires administrative privileges.
-Click Yes to continue installation with administrative privileges.
+Everything 安装需要管理员权限。
+点击 Yes 继续以管理员权限安装。
 
-==Finish==
+==完成==
 [[File:support/everything/Everything.Installer.Finish.png|alt=Everything Installer Finish]]
 
-The installation of Everything is complete. Click Finish to launch Everything.
-When Everything launches it will begin creating the initial index which will take a few seconds.
-For a basic guide on using Everything, please see [[support/everything/using everything|Using Everything]].
+Everything 安装完成。点击完成以启动 Everything。
+当 Everything 启动有，它将花费数秒来创建初始索引。
+Everything 基础使用指南，请查阅[[support/everything/using everything|使用 Everything]]。
 
-==Troubleshooting==
+==疑难解答==
 
 {|
-! Error
-! Description
+! 错误
+! 说明
 |-
-| OS is not x64<br>Install anyway?
-| This error is displayed when attempting to install the x64 version of Everything on a 32bit OS. Please make sure you have the correct x86 or x64 version of Everything for your OS (See [[support/Everything/Installing Everything#What version of Everything should I download?|What version of Everything should I download?]]).
+| OS 不是 x64<br>是否继续安装？
+| 如果安装 x64 版本 Everything 到 32 位 OS，则将出现此错误。请确认您使用正确的 x86 或 x64 版本的 Everything (查阅 [[support/Everything/Installing Everything#What version of Everything should I download?|Everything 应该下载什么版本？]])。
 |-
-| Failed to execute admin command
-| The installer failed to run Everything as an administrator to make changes to the system. Please make sure Everything can run with elevated privileges.
+| 执行管理员命令失败
+| 安装向导以管理员身份运行 Everything 并更改系统配置失败。请确认 Everything 能以管理员身份运行。
 |-
-| Failed to execute user command
-| The installer failed to run Everything to install the options for the current user. This could be due to anti-virus software. Please make sure the installer can execute Everything from the temp directory.
+| 执行用户命令失败
+| 安装向导运行 Everything 并配置选项失败。此情况一般因为反病毒软件造成。请确认安装向导能够从临时目录执行 Everything。
 |}
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/Everything/Using Everything]]
-*[[support/Everything/Options]]
-*[[support/Everything/Uninstalling Everything]]
+*[[support/Everything/Using Everything|使用 Everything]]
+*[[support/Everything/Options|选项]]
+*[[support/Everything/Uninstalling Everything|卸载 Everything]]
 </ul>
