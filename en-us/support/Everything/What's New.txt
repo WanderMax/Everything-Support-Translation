@@ -5,11 +5,11 @@
 <ul>
 *[[support/everything/Indexes#Size, Dates and Attributes Indexing|大小、日期和属性索引]]
 *[[support/everything/Indexes#Fast Sorting|快速排序]]
-*[[support/everything/Results#Thumbnails|缩略图]]
-*[[support/everything/Results#Preview|预览面板]]
+*[[support/everything/Results#缩略图|缩略图]]
+*[[support/everything/Results#预览面板|预览面板]]
 *[[support/everything/Indexes#ReFS|ReFS 支持]]
 *[[support/everything/Searching#Advanced Search|高级搜索]]
-*[[support/everything/Results#Multi-file Renaming|多文件重命名]]
+*[[support/everything/Results#多文件重命名|多文件重命名]]
 *[[support/everything/Searching#Content Searching|文件内容搜索]]
 *[[support/everything/Indexes#Fast Reindexing|快速重索引]]
 </ul>
