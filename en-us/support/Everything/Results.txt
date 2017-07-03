@@ -16,7 +16,7 @@
 *在 '''''"Everything"''''' 中，按住 Ctrl 键并使用鼠标滚轮缩放以从详情到超大图标切换视图。
 </ul>
 
-==预览==
+==预览面板==
 [[File:support/everything/Everything.Preview.png|alt=Everything Preview]]
 
 显示预览面板：
