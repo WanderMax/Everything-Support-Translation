@@ -20,17 +20,17 @@ Everything 安装包和便携版可以在[[downloads|下载页面]]下载。
 | Everything x64 版本需要 64 位 x64 操作系统。支持大于 2GB 的数据库。Everything x64 版本仅支持 x64 上下文扩展菜单，且要比 x86 版本使用更多内存。
 |-
 | English (US)
-| 英文版，可以手动安装[[support/everything/supported_languages/#installing_the_language_pack|语言包]]。
+| 英文版，可以手动安装[[support/everything/supported_languages/#安装语言包|语言包]]。
 |-
 | 多语言版
-| 包含 Everything [[support/everything/supported_languages/#installing_the_language_pack|语言包]]以提供多语言支持。
+| 包含 Everything [[support/everything/supported_languages/#安装语言包|语言包]]以提供多语言支持。
 |}
 
 ==语言选择==
 [[File:support/everything/Everything.Installer.Language.png|alt=Everything Installer Language]]
 
 选择安装向导语言，此语言亦将适用于 Everything 界面语言。
-查阅[[support/Everything/多语言支持]]以获取支持语言列表。
+查阅[[support/Everything/Supported Languages|多语言支持]]以获取支持语言列表。
 
 ==许可协议==
 [[File:support/everything/Everything.Installer.License.Agreement.png|alt=Everything Installer License Agreement]]
@@ -136,7 +136,7 @@ Everything 基础使用指南，请查阅[[support/everything/using everything|�
 ! 说明
 |-
 | OS 不是 x64<br>是否继续安装？
-| 如果安装 x64 版本 Everything 到 32 位 OS，则将出现此错误。请确认您使用正确的 x86 或 x64 版本的 Everything (查阅 [[support/Everything/Installing Everything#What version of Everything should I download?|Everything 应该下载什么版本？]])。
+| 如果安装 x64 版本 Everything 到 32 位 OS，则将出现此错误。请确认您使用正确的 x86 或 x64 版本的 Everything (查阅 [[support/Everything/Installing Everything#everything 应该下载什么版本？|Everything 应该下载什么版本？]])。
 |-
 | 执行管理员命令失败
 | 安装向导以管理员身份运行 Everything 并更改系统配置失败。请确认 Everything 能以管理员身份运行。
