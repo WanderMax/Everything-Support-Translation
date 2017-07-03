@@ -1,26 +1,27 @@
-=Language IDs=
+=语言标识符=
 
-A list of Windows language Identifiers
+Windows 语言标识符列表
+
 {|
-! Hexadecimal<br>code
-! Decimal<br>code
-! Language
+! 十六进制<br>代码
+! 十进制<br>代码
+! 语言
 |-
 | 0x0000
 | 0
-| Language Neutral 
+| 中性语言 
 |-
 | 0x007f
 | 127
-| The language for the invariant locale (LOCALE_INVARIANT). See MAKELCID. 
+| 恒定区域语言 (LOCALE_INVARIANT)。请查阅 MAKELCID。
 |-
 | 0x0400
 | 1024
-| Process or User Default Language 
+| 进程或用户默认语言 
 |-
 | 0x0800
 | 2048
-| System Default Language 
+| 系统默认语言 
 |-
 | 0x0436
 | 1078
