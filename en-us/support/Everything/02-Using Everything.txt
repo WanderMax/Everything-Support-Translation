@@ -1,137 +1,137 @@
-=Using Everything=
-An index of all your local NTFS volumes is created when running Everything for the first time.
-Indexing can take a few seconds.
-Once the indexing stage is complete, All your files will be displayed.
+=使用 Everything=
+Everything 首次启动时，将创建所有本地 NTFS 分卷索引。
+创建全部索引将花费数秒。
+一旦索引完毕，您的所有文件都会显示在 Everything 中。
 
-Type in a partial filename in the search box at the top to begin.
+在搜索框中输入部分文件夹以进行搜索。
 
 [[File:support/everything/Everything.Search.Window.png|alt=Everything Search Window]]
 
-The Everything search window contains the following parts:
+Everything 搜索窗口包含以下部分：
 
 <dl>
-;Menu
-The menu contains commands for working with the Everything search window, results, view, search, bookmarks, tools and help.
+;菜单
+菜单栏包括有 Everything 搜索窗口的各种命令， 结果、视图、书签、工具以及帮助。
 
-;Search edit
-Type in the partial filename to locate a file or folder.
-Use the [[support/everything/searching#advanced_search|Advanced Search]] from the Search menu to perform more complex searches.
-See [[support/everything/searching|Searching]] for the complete search syntax.
-Basic search syntax can be displayed in Everything from the Help menu.
+;搜索框
+输入部分文件名以定位文件或文件夹。
+使用搜索菜单中[[support/everything/searching#advanced_search|高级搜索]]以执行复杂搜索操作。
+查阅[[support/everything/searching|搜索]]中完整搜索语法。
+基础搜索语法可以通过 Everything 帮助菜单查看。
 
-;Result list header
-Click a column header to sort the results by that column. Click the same column header to change the direction of the sort.
-Right click to show or hide different columns.
+;结果列表标头
+点击分栏标头以排序此分栏结果。点击统一分栏标头以更改排序。
+右键点击分栏标头以自定义分栏显示。
 
-;Result list
-Double click or select an item and press Enter to open it.
-Items can be dragged and dropped on another program.
-Right click on an item to show a list of actions for the selected results.
+;结果列表
+双击或单击并按 Enter 以打开选定项。
+选定项可以拖拽到其他程序。
+右键点击选定项可以打开上下文菜单。
 
-See [[support/everything/Results|Results]] for more information.
+查阅[[support/everything/Results|结果]]以获取更多信息。
 
-;Status bar
-Displays the current status of Everything and the current search options.
-Right click the status bar to change the search options.
-Double click a search option to disable it.
+;状态栏
+显示 Everything 当前状态和当前搜索选项。
+右键点击状态栏以更改搜索选项。
+双击某搜索选项以禁用。
 </dl>
 
-==Show an Everything search window==
-To show the search window:
+==显示 Everything 搜索窗口==
+显示 Everything 搜索窗口：
 <ul>
-*Double click the [[support/everything/options#Show tray icon|Everything tray icon]].
+*双击 [[support/everything/options#Show tray icon|Everything 托盘图标]]。
 
--or-
+-或-
 
-*Use a [[support/everything/Keyboard Shortcuts#Hotkeys|Hotkey]].
+*使用[[support/everything/Keyboard Shortcuts#Hotkeys|快捷键]]。
 
--or-
+-或-
 
-*Run Everything from a shortcut, such as the Everything Desktop shortcut, Everything start menu shortcut or Everything quick launch shortcut.
+*从快捷方式打开 Everything ，例如 Everything 桌面快捷方式、Everything 开始菜单快捷方式或 Everything 快速启动栏快捷方式。
 </ul>
 
-Normally, Everything will only use one search window.
-To allow multiple windows, enable [[support/everything/options#Create a new window from the system tray|Create a new window from the system tray]] and/or [[support/everything/options#Create a new window when running Everything|Create a new window when running Everything]].
+一般情况下，Everything 仅会显示一个搜索窗口。
+启用[[support/everything/options#Create a new window from the system tray|从托盘图标创建新的搜索窗口]]和/或 [[support/everything/options#Create a new window when running Everything|Everything 运行时创建创建新的搜索窗口]]以使用多搜索窗口。
 
-==Find recently modified files instantly and monitor file system changes real-time==
-For example, to find files and folders modified today, search for:
+==查找最近修改的文件和监控系统实时变更==
+例如，查找今天修改的文件和文件夹：
 <pre>
 dm:today
 </pre>
 
-Right click an empty spot in the result list and click Sort by -> Date Modified to see changes to the file system in real-time.
+右键点击结果列表空白处并点击排序->修改时间以查看系统实时变更。
 
-==Open frequently run files easily==
-Everything remembers the run count for each result.
-Press Enter from the search edit to select the result with the highest run count.
-Right click a file or folder to manually set the run count.
-See [[support/everything/Run history|Run History]] for more information.
+==打开经常运行文件==
+Everything 记忆每次结果的运行次数。
+在搜索框中按 Enter 已选择最高运行次数的结果。
+右键点击一个文件或文件夹以手动设置运行次数。
+查阅[[support/everything/Run history|运行历史]]以获取更多信息。
 
-To sort by run count, right click an empty spot in the result list and click Sort by -> Run Count.
+以运行次数排序，右键点击列表空白处并点击排序->运行次数。
 
-==Export results==
-Results can be exported to CSV, TXT or [[support/everything/file lists|EFU]] files.
-To export results:
+==导出结果==
+搜索结果导出为 CSV、TXT 或 [[support/everything/file lists|EFU]] 格式文件。
+导出搜索结果：
 <ul>
-*In '''''Everything''''', From the '''File''' menu, click '''Export...'''.
+*在 '''''"Everything"''''' 中，打开'''文件'''菜单，点击'''导出...'''。
 </ul>
 
-==Filters==
-Filters are predefined searches, such as audio and video files types.
-To select a filter, click a filter from the Search menu. The selected filter will show in the status bar. Double click the filter in the status bar to disable it.
-To show the filter bar, click Filters from the View menu.
-See [[support/everything/searching#filters|Customizing filters]] for more information.
+==筛选器==
+筛选器是预定义的搜索选项，例如音频和视频文件类型。
+点击搜索菜单中筛选器已选择一个筛选器。选定的筛选器将显示在状态栏。双击状态栏中此筛选器已禁用。
+点击视图菜单中筛选器以显示筛选器栏。
+查阅[[support/everything/searching#filters|自定义筛选器]]以获取更多信息。
 
-==Bookmarks==
-Save the current search, filter, sort and index so it can be quickly restored later.
-See [[support/everything/searching#Bookmarks|Bookmarks]] for more information.
+==书签==
+保存当前搜索、筛选器，排序方式和索引以便后续快速恢复。
+查阅[[support/everything/searching#Bookmarks|书签]]以获取更多信息。
 
-==Access Everything from a web browser==
-You can start your own web server in Everything to access your files from your phone or other device.
-See [[support/everything/http|HTTP Server]] for more information.
+==从网络浏览器访问 Everything==
+您可以在 Everything 启用网络服务器以从手机或其他设备访问您的文件。
+查阅 [[support/everything/http|HTTP 服务器]]以获取更多信息。
 
-==Access Everything from another computer==
-You can start your own ETP server in Everything to access your files from another computer.
-See [[support/everything/ETP|ETP Server]] for more information.
+==从其他电脑访问 Everything==
+您可以在 Everything 启用 ETP 服务器以从其他电脑访问您的文件。
+查阅 [[support/everything/ETP|ETP 服务器]]以获取更多信息。
 
-==Change fonts and colors==
-The result list font and colors can be customized in the [[support/everything/options#fonts and colors|Everything options]].
-To customize all fonts and colors, see [[support/everything/ini#Fonts and colors|Everything.ini]].
+==更改字体和颜色==
+结果列表字体和颜色可以通过 [[support/everything/options#fonts and colors|Everything 选项]]自定义。
+查阅 [[support/everything/ini#Fonts and colors|Everything.ini]] 以了解如何自定义字体和颜色。
 
-==External File Manager==
-To open folders with a custom file manager, see [[support/everything/customizing#External File Manager|External File Manager]].
+==外部文件管理器==
+查阅[[support/everything/customizing#External File Manager|外部文件管理器]]以了解如何用自定义文件管理器打开文件。
 
-==Keyboard shortcuts==
-For a list of existing keyboard shortcuts, see [[support/everything/keyboard shortcuts|Keyboard Shortcuts]].
-See [[support/everything/keyboard shortcuts#Customizing|Customizing keyboard shortcuts]] for more information.
+==键盘快捷键==
+查阅[[support/everything/keyboard shortcuts|键盘快捷键]]以获取存在键盘快捷键列表。
+查阅[[support/everything/keyboard shortcuts#Customizing|自定义键盘快捷键]]以获取更多信息。
 
-==Indexes==
-Include local NTFS volumes, any folders and/or file lists in the index. 
-See [[support/everything/indexes|Indexes]] for more information.
+==索引==
+包含本地 NTFS 分卷，任何文件夹和/或文件都索引到列表中。
+查阅[[support/everything/indexes|索引]]以获取更多信息。
 
-==File lists==
-Create a snap shot of files on a NAS, CD, DVD or BluRay and include them in your index.
-To show the built in file list editor, from the Tools menu, click File List Editor....
-See [[support/everything/file lists|File Lists]] for more information.
+==文件列表==
+创建一个在 NAS、CD、DVD 或 BluRay 上文件的快照并包含到索引。
+打开工具菜单，点击文件列表编辑器以显示内置列表编辑器。
+查阅[[support/everything/file lists|文件列表]]以获取更多信息。
 
-==Options==
-Customize the installation of Everything, user interface, home search, search settings, how the results are displayed, how the results look, right click menus, fonts and colors, keyboard shortcuts, search and run history, ntfs volumes, folder indexing, file lists, excluded folders and file types, ETP and HTTP servers.
-See [[support/everything/options]] for more information.
+==选项==
+自定义Customize the installation of Everything, 用户界面、主页搜索、搜索设置、搜索结果显示、右键菜单、字体和颜色、键盘快捷键、搜索和运行历史、NTFS 分卷、文件夹索引、文件列表、排除文件夹和文件类型、ETP 和 HTTP 服务器。
+查阅[[support/everything/options|选项]]以获取更多信息。
 
-==Exit Everything==
-When you close the Everything search window, Everything will continue to run in the background.
-To exit Everything completely, click Exit from the File menu or right click the Everything tray icon and click Exit.
-To make Everything exit when the Everything search window is closed:
+==退出 Everything==
+当您关闭 Everything 搜索窗口后，Everything 仍继续在后台运行。
+打开文件菜单，点击退出或右键点击 Everything 托盘图标并点击退出以完全退出 Everything。
+关闭 Everything 搜索窗口同时退出 Everything：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''UI''' tab.
-*Uncheck '''[[support/everything/options#run in background|Run in background]]'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''界面'''页面。
+*取消选择'''[[support/everything/options#run in background|后台运行]]'''。
+*点击'''确定'''。
 </ul>
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/Searching|Searching]]
-*[[support/everything/Results|Results]]
-*[[support/everything/Indexes|Indexes]]
+*[[support/everything/Searching|搜索]]
+*[[support/everything/Results|结果]]
+*[[support/everything/Indexes|索引]]
 </ul>
