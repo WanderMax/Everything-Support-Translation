@@ -1,69 +1,69 @@
 =makevoidtools=
-makevoidtools is a program to compile your own [[http://www.voidtools.com|voidtools.com]] website.
-All text can be customized for localization.
+makevoidtools 是网站 [[http://www.voidtools.com|voidtools.com]] 多语言编译程序。
+所有文本都可以翻译。
 
-==makevoidtools Guide==
+==makevoidtools 指南==
 <ul>
-*Extact [[/makevoidtools.zip]] to a new folder, eg: c:\makevoidtools
-*Copy the en-us.txt file and name it with the [[http://www.lingoes.net/en/translator/langcode.htm|language code]] for your language and region.
-*This is the main translation template file for the website.
-*For example: es-us.txt
-*Copy the en-us subfolder and name it with the [[http://www.lingoes.net/en/translator/langcode.htm|language code]] for your language and region.
-*This is the main translation folder for the website.
-*For example: es-us
-*open your main translation file, eg: en-us.txt
-*Read the notes inside this translation file for help.
-*translate all strings.
-*translate all pages in the main translation folder, eg: en-us\*.txt
+*解压 [[/makevoidtools.zip]] 到一个新文件夹，例如：c:\makevoidtools
+*复制 en-us.txt 文件并以匹配区域和语言的[[http://www.lingoes.net/en/translator/langcode.htm|语言代码]]重命名。
+*此文件是网站的主翻译模板。
+*例如：es-us.txt
+*复制 en-us 子文件夹并以匹配区域和语言的[[http://www.lingoes.net/en/translator/langcode.htm|语言代码]]重命名。
+*此文件夹是网站的主翻译文件夹。
+*例如：es-us
+*打开主翻译模板，例如：en-us.txt
+*阅读此翻译模板中备注帮助。
+*翻译全部字符串。
+*翻译主翻译文件夹中全部文件，例如：en-us\*.txt
 </ul>
 
-==Requirements==
-Only the files directly in your main translation folder (eg: en-us) need to be translated.
-Translating the support wiki is not required. -not all pages need translating as some are quite technical.
-translating the following support wiki pages are encouraged:
+==需求==
+主翻译文件夹 (例如：en-us) 中文件才需要翻译。
+Wiki 页面无需翻译。某些页面太过技术性，无需翻译。
+最好能翻译以下 Wiki 页面：
 <ul>
 *01-Installing Everything.txt
 *02-Using Everything.txt
 *Searching.txt
 </ul>
 
-==Offline help==
-The Everything.chm offline help will use the same support wiki templates.
+==离线帮助==
+离线帮助文件 Everything.chm 使用和 Wiki 页面模板相同内容。
 
-==Testing==
-Run makevoidtools.exe
-makevoidtools will compile *.txt in the same location as makevoidtools.exe
-These txt files will be translation templates for each language and region.
+==翻译测试==
+运行 makevoidtools.exe
+makevoidtools 将会编译 makevoidtools.exe 目录下全部 *.txt 文件。
+这些模板文件需要翻译成区域对应的的语言。
 
 <pre>
 makevoidtools.exe <output folder> <url root>
 </pre>
 
-Example:
+例如：
 <pre>
 makevoidtools.exe c:\makevoidtools\voidtools file://c:/makevoidtools/voidtools
 </pre>
 
-Open c:\makevoidtools\voidtools\index.html
+打开 c:\makevoidtools\voidtools\index.html
 
-==Wiki Pages==
-Make sure you open and save wiki pages as UTF-8
-Wiki pages in the support folder use basic [[#Wiki syntax|wiki markup language]].
-Prefixing a wiki page template with a number are shown above all other wiki pages in sequence. For example, 01-Installing Everything.txt is the first wiki page listed and 02-Using Everything.txt is the second wiki page listed and so on.
-wiki page templates starting with a underscore (_) are hidden. For example: [[http://www.voidtools.com/support/everything/db]].
+==Wiki 页面==
+请确认您以 UTF-8 页面格式打开 Wiki 页面。
+Wiki 页面使用基础的[[#Wiki syntax|Wiki Markup 语言]]。
+Wiki 页面模板文件以数字做文件名前缀并以此排序。例如，01-Installing Everything.txt 是 Wiki 页面第一页同时 02-Using Everything.txt 是第二页，以此内推。
+Wiki 页面模板中以下划线 (_) 前缀文件是隐藏的，例如：[[http://www.voidtools.com/support/everything/db]].
 
-==Wiki syntax==
-The voidtools wiki syntax is very similar to [[https://en.wikipedia.org/wiki/Help:Wiki_markup|Wikipedia's markup]] with some limitations:
+==Wiki 语法==
+网站 voidtools Wiki 语法近似于受限的 [[https://en.wikipedia.org/wiki/Help:Wiki_markup|Wikipedia's Markup]]：
 
 <dl>
-;''Text''
+;''文本''
 <pre>
 A paragraph of text.
 </pre>
 
 A paragraph of text.
 
-;''Headers''
+;''标头''
 <pre>
 =Main Header=
 </pre>
@@ -76,31 +76,31 @@ A paragraph of text.
 
 ==Sub Header==
 
-;''Italic''
+;''斜体''
 <pre>
 ''Italic''
 </pre>
 
 ''Italic''
 
-;''Bold''
+;''加粗''
 <pre>
 '''Bold'''
 </pre>
 
 '''bold'''
 
-;''Italic and Bold''
+;''加粗斜体''
 <pre>
 '''''Italic and Bold'''''
 </pre>
 
 '''''Italic and Bold'''''
 
-;''Links''
-Relative URLs are relative to http://www.voidtools.com/en-us
-where en-us is your language-region code.
-The |text part in [ [url|text]] can be omitted, in which case the url is used as the text and URLs paths are striped when no protocol is present.
+;''链接''
+相应的链接将关联到 http://www.voidtools.com/en-us
+此处 en-us 是区域语言代码。
+[ [url|text]]中 |text 部分将被移除，此时链接仅仅是移除 |text 后的部分。
 
 <pre>
 [[http://en.wikipedia.org/wiki/]]
@@ -114,14 +114,14 @@ The |text part in [ [url|text]] can be omitted, in which case the url is used as
 
 [[faq/#what_is_everything|What is Everything?]]
 
-;''Images''
+;''图片''
 <pre>
 [[File:support/everything/Everything.Search.Window.png|alt=Everything Search Window]]
 </pre>
 
 [[File:support/everything/Everything.Search.Window.png|alt=Everything Search Window]]
 
-;''Preformatted text''
+;''格式化文本''
 {{PRE_EXAMPLE}}
 
 <pre>
@@ -132,7 +132,7 @@ for(i=0;i<10;i++)
 }
 </pre>
 
-;''Unordered lists''
+;''无序列表''
 <pre>
 <ul>
 *item1
@@ -157,7 +157,7 @@ for(i=0;i<10;i++)
 *item3
 </ul>
 
-;''Tables''
+;''表格''
 <pre>
 {|
 ! header1
@@ -188,7 +188,7 @@ for(i=0;i<10;i++)
 | row2, abc3
 |}
 
-;''Discription lists''
+;''说明列表''
 <pre>
 <dl>
 ;''item1''
@@ -209,7 +209,7 @@ text2
 text3
 </dl>
 
-;''Macros''
+;''宏''
 <pre>
 {{DOWNLOAD_EVERYTHING}}
 </pre>
@@ -218,6 +218,6 @@ text3
 
 </dl>
 
-==Help==
-If you need any assistance, please [[contact|contact David Carpenter]].
+==帮助==
+如果需要帮助，请[[contact|联系 David Carpenter]]。
 
