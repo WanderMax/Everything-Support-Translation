@@ -1,13 +1,13 @@
-=Customizing=
-Everything can be customized through the Everything.ini, registry and Everything options.
-This guide will help you customize Everything.
+=自定义=
+Everything 可以通过 Everything.ini、注册表和 Everythingcan 选项来自定义。
+此指南将帮助您自定义 Everything。
 
-==Window Caption==
-To customize the Everything search window caption, HTTP server title and/or taskbar notification title:
+==窗口标题==
+自定义 Everything 搜索窗口标题、HTTP 服务器标题或任务通知栏标题：
 <ul>
-*Exit Everything
-*Open your [[support/everything/ini|Everything.ini]] file.
-*Change the following lines:
+*退出 Everything
+*打开 [[support/everything/ini|Everything.ini]] 文件。
+*更改如下行：
 <pre>
 window_title_format=$s?{$s - }$t$i?{ ($i)}
 http_title_format=$s?{$s - }$t
@@ -16,35 +16,35 @@ taskbar_notification_title_format=$t$i?{ ($i)}
 
 *Set a new format:
 {| class="wikitable"
-! Variable
-! Description
+! 变量名
+! 说明
 |-
 | <code>$s</code>
-| Current search
+| 当前搜索
 |-
 | <code>$t</code>
-| Everything (localized)
+| Everything (本地化)
 |-
 | <code>$i</code>
-| Instance name
+| 实例名
 |}
-*Use the following syntax to optionally display text:
+*使用以下语法以条件性显示文本：
 {| class="wikitable"
-! Syntax
-! Description
+! 语法
+! 说明
 |-
 | <code>$x?{text}</code>
-| Display '''text''' if $x is not empty.
+| 如果 $x 为空，显示 '''text'''。
 |}
-*Save changes and close the Everything.ini.
-*Restart Everything.
+*保存变更且关闭 Everything.ini。
+*重启 Everything。
 </ul>
 
-Example formats:
+例子：
 {| class="wikitable"
-! Format
-! Search
-! Title
+! 格式
+! 搜索
+! 标题
 |-
 | $s?{$s - }My Search
 | apples
@@ -55,67 +55,67 @@ Example formats:
 | My Search
 |}
 
-Note: Changing the window_title_format will also affect the title on the taskbar button.
+注意：更改 window_title_format 将同样作用于任务栏按钮标题。
 
-==Icon==
-To change the Everything icon:
+==图标==
+更改 Everything 图标：
 <ul>
-*Copy your custom icon file to: 
+*复制自定义图标文件到：
 <pre>
 %APPDATA%\Everything\Everything.ico
 </pre>
 
-If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, copy your custom icon file to Everything.ico in the same location as your Everything.exe.
-*Exit '''''Everything''''' (Right click the Everything system tray icon and click Exit)
-*Restart '''''Everything'''''.
+如果[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 选项已禁用，复制自定义图标文件 Everything.ico 到 Everything.exe 相同目录。
+*退出 '''''Everything''''' (右键点击 Everything 系统托盘图标并点击退出)
+*重启 '''''Everything'''''。
 </ul>
 
-Download the colorful Everything Icon Pack:
+下载自定义 Everything 图标合集：
 [[/Everything-Icons.zip]]
 
-==Taskbar Group Icon==
-To change the Everything Taskbar group icon:
+==任务栏组图标==
+更改 Everything 任务栏组图标：
 <ul>
-*Right click the Everything taskbar button.
-*Hold down the Shift key and right click Search Everything.
-*Click '''Properties'''.
+*右键点击 Everything 任务栏按钮。
+*按住 Shift 键并右键点击 Search Everything。
+*点击'''属性'''。
 [[File:support/everything/right.click.taskbar.shift.right.click.search.everything.properties.png|alt=Right click taskbar shift right click Search Everything Properties]]
 
-*Click '''Change Icon'''.
-*Click '''Browse...''', select a new icon and click '''Open'''.
-*Click '''OK'''.
-*Click '''OK'''.
+*点击'''更改图标'''。
+*点击'''浏览...'''，选择新图标并点击'''打开'''。
+*点击'''确定'''。
+*点击'''确定'''。
 [[File:support/everything/change.icon.green.icon.png|alt=Change icon green icon]]
 
-*Rebuild the icon cache:
-*From the Start menu, type in the following search and press enter:
+*重建图标缓存：
+*打开开始菜单，输入以下关键词并搜索：
 <pre>
 cmd
 </pre>
 
 [[File:support/everything/start.search.cmd.png|alt=Start search cmd]]
 
-*In the command prompt, navigate to local app data folder by typing in the following and pressing enter:
+*在命令提示符，输入以下命令以转到本地应用程序数据目录：
 <pre>
 cd %localappdata%
 </pre>
 
-*Remove the hidden attribute from the icon cache database by typing the following and pressing enter:
+*输入以下命令以移除图标缓存数据库隐藏属性：
 <pre>
 attrib iconcache.db -r
 </pre>
 
-*Delete the icon cache database by typing the following and pressing enter:
+*输入以下命令以删除图标缓存数据库：
 <pre>
 del iconcache.db
 </pre>
 
-*Terminate Windows Explorer by typing the following and pressing enter:
+*输入以下命令以终止 Windows 资源管理器进程：
 <pre>
 taskkill /f /im explorer.exe
 </pre>
 
-*Restart Windows Explorer by typing the following and pressing enter:
+*输入以下命令以重启 Windows 资源管理器进程：
 <pre>
 explorer
 </pre>
@@ -123,158 +123,158 @@ explorer
 [[File:support/everything/rebuild.icon.cache.png|alt=Rebuild icon cache]]
 </ul>
 
-==External File Manager==
-To open paths in an external file manager:
+==外部文件管理器==
+通过外部文件管理器打开路径：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''Context Menu''' tab.
-*Select '''Open Path'''.
-*Change the '''command''' to:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''上下文菜单''' 页面。
+*选择'''打开路径'''。
+*更改'''command''' 到：
 <pre>
 $exec("C:\ExternalFileManager\ExternalFileManager.exe" "%1")
 </pre>
 
-*Where C:\ExternalFileManager\ExternalFileManager.exe is the location of the external file manager.
-*Use $$, $%, $( and $) to escape $, %, ( and ).
-*Check your external file manager help for any required command line parameters.
-*Click OK.
+*其中 C:\ExternalFileManager\ExternalFileManager.exe 代表外部文件管理器完整路径。
+*使用 $$、$%、$( and $) 来转义 $、%、( and )。
+*查阅外部文件管理器帮助以获取命令行参数。
+*点击确定。
 </ul>
 
-==Date Format==
-To use a custom date format in Everything:
+==日期格式==
+自定义 Everything 日期格式：
 <ul>
-*Exit Everything.
-*Open your [[support/everything/INI|Everything.ini]].
-*Change the following line:
+*退出 Everything
+*打开 [[support/everything/ini|Everything.ini]] 文件。
+*更改如下行：
 <pre>
 date_format=
 </pre>
 
-Date format can be zero or more of the following codes:
+日期格式可以用以下零个或多个参数：
 {|
-! code
-! Description
+! 代码
+! 说明
 |-
 | d 
-| Day of month as digits with no leading zero for single-digit days. 
+| 天、没有前导零、一位数。
 |-
 | dd 
-| Day of month as digits with leading zero for single-digit days. 
+| 天、有前导零、一位数。
 |-
 | ddd 
-| Day of week as a three-letter abbreviation. The function uses the LOCALE_SABBREVDAYNAME value associated with the specified locale. 
+| 天、三位数缩写。使用指定区域的 LOCALE_SABBREVDAYNAME 值。
 |-
 | dddd 
-| Day of week as its full name. The function uses the LOCALE_SDAYNAME value associated with the specified locale. 
+| 天、全名称。使用指定区域的 LOCALE_SDAYNAME 值。
 |-
 | M 
-| Month as digits with no leading zero for single-digit months. 
+| 月、没有前导零、一位数。
 |-
 | MM 
-| Month as digits with leading zero for single-digit months. 
+| 月、有前导零、一位数。
 |-
 | MMM 
-| Month as a three-letter abbreviation. The function uses the LOCALE_SABBREVMONTHNAME value associated with the specified locale. 
+| 月、三位数缩写。使用指定区域的 LOCALE_SABBREVMONTHNAME 值。
 |-
 | MMMM 
-| Month as its full name. The function uses the LOCALE_SMONTHNAME value associated with the specified locale. 
+| 月、全名称。使用指定区域的 LOCALE_SMONTHNAME 值。
 |-
 | y 
-| Year as last two digits, but with no leading zero for years less than 10. 
+| 年、末尾两位数，没有前导零且小于 10。
 |-
 | yy 
-| Year as last two digits, but with leading zero for years less than 10. 
+| 年、末尾两位数，有前导零且小于 10。
 |-
 | yyyy 
-| Year represented by full four digits. 
+| 年、全四位数。
 |-
 | gg 
-| Period/era string. The function uses the CAL_SERASTRING value associated with the specified locale. This element is ignored if the date to be formatted does not have an associated era or period string. 
+| 周期/时代字符串。使用指定区域的 CAL_SERASTRING 值。此项将在日期没有关联与周期/时代字符串情况下忽略。
 |}
-*Save changes to the Everything.ini
-*Restart Everything.
+*保存变更且关闭 Everything.ini。
+*重启 Everything。
 </ul>
 
-==Time Format==
-To use a custom time format in Everything:
+==时间格式==
+自定义 Everything 时间格式：
 <ul>
-*Exit Everything.
-*Open your [[support/everything/INI|Everything.ini]].
-*Change the following line:
+*退出 Everything
+*打开 [[support/everything/ini|Everything.ini]] 文件。
+*更改如下行：
 <pre>
 time_format=
 </pre>
 
 Time format can be zero or more of the following codes:
 {|
-! Code
-! Description
+! 代码
+! 说明
 |-
 | h 
-| Hours with no leading zero for single-digit hours; 12-hour clock. 
+| 小时、没有前导零、一位数；12-小时制。
 |-
 | hh 
-| Hours with leading zero for single-digit hours; 12-hour clock. 
+| 小时、有前导零、一位数；12-小时制。
 |-
 | H 
-| Hours with no leading zero for single-digit hours; 24-hour clock. 
+| 小时、没有前导零、一位数；24-小时制。
 |-
 | HH 
-| Hours with leading zero for single-digit hours; 24-hour clock. 
+| 小时、有前导零、一位数；24-小时制。
 |-
 | m 
-| Minutes with no leading zero for single-digit minutes. 
+| 分钟、没有前导零、一位数。
 |-
 | mm 
-| Minutes with leading zero for single-digit minutes. 
+| 分钟、有前导零、一位数。
 |-
 | s 
-| Seconds with no leading zero for single-digit seconds. 
+| 秒、没有前导零、一位数。
 |-
 | ss 
-| Seconds with leading zero for single-digit seconds. 
+| 秒、有前导零、一位数。
 |-
 | t 
-| One character time-marker string, such as A or P. 
+| 单字符时间标志，A 或 P。
 |-
 | tt 
-| Multicharacter time-marker string, such as AM or PM. 
+| 多字符时间标志，AM 或 PM。
 |-
 | SSS
-| Milliseconds with leading zeros, must be the last part of the format.
+| 毫秒、有前导零，必须在格式末尾。
 |}
-*Save changes to the Everything.ini
-*Restart Everything.
+*保存变更且关闭 Everything.ini。
+*重启 Everything。
 </ul>
 
-==Translucent Selection Rectangle==
-To change the translucency see [[support/everything/ini#translucent_selection_rectangle_alpha|translucent_selection_rectangle_alpha]]
-To change the background color see [[support/everything/ini#translucent_selection_rectangle_background_color|translucent_selection_rectangle_background_color]]
-To change the border color see [[support/everything/ini#translucent_selection_rectangle_border_color|translucent_selection_rectangle_border_color]]
+==半透明选择长方形==
+查阅 [[support/everything/ini#translucent_selection_rectangle_alpha|translucent_selection_rectangle_alpha]] 以更改半透明度。
+查阅 [[support/everything/ini#translucent_selection_rectangle_background_color|translucent_selection_rectangle_background_color]] 以更改背景色。
+查阅 [[support/everything/ini#translucent_selection_rectangle_border_color|translucent_selection_rectangle_border_color]] 以更改边框颜色。
 
-==Change the default search and search settings==
-See [[support/everything/options#home|home]]
+==更改默认搜索和搜索设置==
+查阅 [[support/everything/options#home|主页]]
 
-==Fonts and colors==
-To change the result list font see [[support/everything/options#fonts_and_colors|Fonts and colors]]
-To change the search edit font see [[support/everything/ini#search_edit_font|search_edit_font_size]] and [[support/everything/ini#search_edit_font|search_edit_font_size]]
-To change the status bar font see [[support/everything/ini#status_bar_font|status_bar_font]] and [[support/everything/ini#status_bar_font_size|status_bar_font_size]]
-To change the result list header font see [[support/everything/ini#header_font|header_font]] and [[support/everything/ini#header_font_size|header_font_size]]
+==字体和颜色==
+查阅[[support/everything/options#fonts_and_colors|字体和颜色]]以更改结果列表字体
+查阅 [[support/everything/ini#search_edit_font|search_edit_font_size]] 和 [[support/everything/ini#search_edit_font|search_edit_font_size]] 以更改搜索框字体。
+查阅 [[support/everything/ini#status_bar_font|status_bar_font]] 和 [[support/everything/ini#status_bar_font_size|status_bar_font_size]] 以更改状态栏字体。
+查阅 [[support/everything/ini#header_font|header_font]] 和 [[support/everything/ini#header_font_size|header_font_size]] 以更改结果列表标头字体。
 
-==Status bar format==
-To change the status bar format see [[support/everything/ini#statusbar_selected_item_format|statusbar_selected_item_format]]
+==状态栏格式==
+查阅 [[support/everything/ini#statusbar_selected_item_format|statusbar_selected_item_format]] 以更改状态栏格式。
 
 ==HTTP Server==
-See [[support/everything/http#Change the default HTTP files|Change the default HTTP files]].
+查阅[[support/everything/http#Change the default HTTP files|更改默认 HTTP 文件]]。
 
 ==ETP/FTP Welcome Message==
-See [[support/everything/ini#etp_server_welcome_message|etp_server_welcome_message]] in the Everything.ini.
+查阅 Everything.ini 中 [[support/everything/ini#etp_server_welcome_message|etp_server_welcome_message]]。
 
-==See Also==
+==更多请查阅==
 <ul>
 *[[support/Everything/Ini]]
-*[[support/Everything/Translating]]
-*[[support/Everything/Indexes]]
-*[[support/Everything/Searching]]
-*[[support/Everything/Command line options]]
+*[[support/Everything/Translating|翻译]]
+*[[support/Everything/Indexes|索引]]
+*[[support/Everything/Searching|搜索]]
+*[[support/Everything/Command line options|命令行选项]]
 </ul>
