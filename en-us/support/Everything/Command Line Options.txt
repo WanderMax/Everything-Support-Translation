@@ -1,445 +1,445 @@
-=Command Line Options=
-A list of all the command line options available in Everything.
-Most of these options are available within Everything, in the [[support/everything/options|Everything options]].
+=命令行选项=
+Everything 中全部可用命令行选项列表。
+大部分选项都已集成到 [[support/everything/options|Everything 选项]]中。
 
-==Syntax==
+==语法==
 <pre>
 Everything.exe [filename] [options]
 </pre>
 
 <dl>
 ;[option]
-Optional option.
+可选选项。
 
 ;<option>
-Required option.
+必须选项。
 </dl>
 
 
-==Installation==
-These command line options return immediately and do not show an Everything search window.
-Some command line options require administrative privileges. Running Everything with a command line option that requires administrative privileges from a standard user account will automatically relaunch Everything with the specified command line option as administrator.
+==安装==
+这些命令行选项会立即返回数据且不会显示 Everything 搜索窗口。
+某些命令行选项需要管理员权限。以普通用户身份运行 Everything 中需要管理员权限的命令行选项将重新启动 Everything 并以管理员权限执行特定的命令行选项。
 
 <dl>
 ;''-app-data''
 ;''-noapp-data''
-Store settings and data in %APPDATA%\Everything or in the same location as the executable.
+保存设置和数据到 %APPDATA%\Everything 或安装目录。
 
 ;''-choose-language''
-Show the language selection page.
+显示语言选择页面。
 
 ;''-choose-volumes''
-Do not automatically index volumes. Removes all NTFS volumes from the index.
+禁用自动分卷索引。移除所有 NTFS 分卷索引。
 
 ;''-enable-run-as-admin''
 ;''-disable-run-as-admin''
-Enable or disable run as administrator.
+启用或禁用以管理员身份运行。
 
 ;''-enable-update-notification''
 ;''-disable-update-notification''
-Enable or disable update notification on startup.
+启用或禁用启动时更新通知。
 
 ;''-install'' <location>
-Copies Everything.exe and uninstall.exe to the new location. Creates an uninstall entry in Programs and Features if uninstall.exe is present. Executes the copied Everything.exe with the install options specified in [[support/everything/command line options#-install-options|-install-options]].
+复制 Everything.exe 和 uninstall.exe 到新目录。uninstall.exe 不存在时在程序和功能中创建卸载入口。执行复制的 Everything.exe 以安装选项请查阅 [[support/everything/command line options#-install-options|-install-options]]。
 
 ;''-install-client-service''
 ;''-uninstall-client-service''
-Install the "Everything" client as a service.
+安装 "Everything" 客户服务。
 
 ;''-install-config'' <filename>
-Install the specified configuration file. The specified ini file is merged with any existing configuration file before any other install options are applied.
+安装指定的配置文件。应用其他安装选项前，指定的 ini 文件将于存在的配置文件合并。
 
 ;''-install-desktop-shortcut''
 ;''-uninstall-desktop-shortcut''
-Create or delete the desktop shortcut.
+创建或删除桌面快捷方式。
 
 ;''-install-efu-association''
 ;''-uninstall-efu-association''
-Create or remove the EFU file association with Everything.
+创建或移除 Everything EFU 文件关联。
 
 ;''-install-folder-context-menu''
 ;''-uninstall-folder-context-menu''
-Install or uninstall folder context menus.
+安装或卸载文件夹上下文菜单。
 
 ;''-install-options'' <command line options>
-Command line options to pass to the newly installed Everything.exe. Combine with [[support/everything/command line options#-install|-install]].
+传递命令行选项到新安装 Everything.exe。结合 [[support/everything/command line options#-install|-install]]。
 
 ;''-install-quick-launch-shortcut''
 ;''-uninstall-quick-launch-shortcut''
-Create or delete the Search Everything quick launch shortcut.
+创建或删除快速启动栏快捷方式。
 
 ;''-install-run-on-system-startup''
 ;''-uninstall-run-on-system-startup''
-Add or remove Everything from the system startup.
+添加或移除 Everything 开机自启动。
 
 ;''-install-service''
 ;''-uninstall-service''
-Install or uninstall the "Everything" service. The service is started automatically. Combine with [[#-install-service-port|-install-service-port]] to set the service port. Combine with [[#-install-service-pipe-name|-install-service-pipe-name]] to set the service pipe name. Combine with [[#-install-service-security-descriptor|-install-service-security-descriptor]] to set the service security descriptor.
+安装或卸载 "Everything" 服务。服务将自动启动。结合 [[#-install-service-port|-install-service-port]] 选项以设置服务端口。结合 [[#-install-service-pipe-name|-install-service-pipe-name]] 选项以设置管道名。结合 [[#-install-service-security-descriptor|-install-service-security-descriptor]] 选项以设置安全描述符。
 
 ;''-install-service-port'' <port>
-Install the Everything service on the specified port.
+安装 Everything 服务到指定端口。
 
 ;''-install-service-pipe-name'' <name>
-Install the Everything service with the specified pipe name.
+安装 Everything 服务以指定管道名。
 
 ;''-install-service-security-descriptor'' <sd>
-Install the Everything service with the specified security descriptor.
+安装 Everything 服务以指定安全描述符。
 
 ;''-install-start-menu-shortcuts''
 ;''-uninstall-start-menu-shortcuts''
-Create or delete the Everything shortcuts in the Start menu.
+创建或删除开始菜单快捷方式。
 
 ;''-install-url-protocol''
 ;''-uninstall-url-protocol''
-Install or uninstall the URL Protocol.
+安装或卸载 URL 协议。
 
 ;''-language'' <langID>
-Set the language to the specified language ID in decimal. 1033 = English (US). 0 = System default. See [[support/everything/Language IDs|Language IDs]] for a list of langIDs.
+设置语言到指定十进制语言标识符。1033 = English (US)。0 = 系统默认。 查阅[[support/everything/Language IDs|语言标识符]]以获取语言标识符列表。
 
 ;''-uninstall'' [path]
-Uninstall Everything from the specified path. If no path is specified Everything is uninstalled from the executables location. This removes Everything from system startup, removes the service, folder context menu, start menu shortcuts, desktop shortcut, quick launch shortcut, URL protocol, efu file associations and deletes any files created by Everything.
+从指定路径卸载 Everything。如果不指定路径，默认卸载安装路径中 Everything。此操作将移除 Everything 开机自启动、移除服务、移除上下文菜单、开始菜单快捷方式、桌面快捷方式、快速启动栏快捷方式、URL 协议、efu 文件关联和删除 Everything 创建的所有文件。
 
 ;''-uninstall-user''
-Uninstall Everything user files.
+卸载 Everything 用户文件。
 
 ;''-create-usn-journal'' <volume> <max-size-bytes> <allocation-delta-bytes>
-Create a USN Journal on the specifed volume with the specified maximum size and allocation delta in bytes.
+创建指定分卷的USN 日志并指定最大大小和分配差值。
 
 ;''-delete-usn-journal'' <volume>
-Delete the USN Journal on the specifed volume.
+删除指定分卷的 USN 日志。
 </dl>
 
-==File Lists==
-Command line options to manipulate Everything file lists EFU files.
+==文件列表==
+操作 Everything EFU 文件列表命令行选项。
 
 <dl>
 ;[filename]
-Open the specified file list.
+打开指定文件列表。
 
 ;''-create-file-list'' <filename> <path>
-Create a file list of a path. When this command completes Everything.exe will exit, no search window is shown.
+创建指定路径的文件列表。命令执行完毕后 Everything.exe 将自动退出且不显示搜索窗口。
 
 ;''-create-file-list-exclude-files'' <filters>
-Set a semicolon delimited wildcard filter of files to exclude with -create-file-list.
-Prefix a filter with regex: to use Regex.
+以 -create-file-list 创建文件列表时设置分号间隔的通配符筛选器以排除文件。
+筛选器可以使用正则表达式。
 
 ;''-create-file-list-exclude-folders'' <filters>
-Set a semicolon delimited wildcard filter of folders to exclude with -create-file-list.
-Prefix a filter with regex: to use Regex.
+以 -create-file-list 创建文件列表时设置分号间隔的通配符筛选器以排除文件夹。
+筛选器可以使用正则表达式。
 
 ;''-create-file-list-include-only-files'' <filters>
-Set a semicolon delimited wildcard filter of files to include only with -create-file-list.
-Prefix a filter with regex: to use Regex.
+以 -create-file-list 创建文件列表时设置分号间隔的通配符筛选器以仅包含文件。
+筛选器可以使用正则表达式。
 
 ;''-edit'' <filename>
-Open the specified file list with the file list editor.
+以文件列表编辑器打开指定文件列表。
 
 ;''-f'' <filename>
 ;''-filelist'' <filename>
-Open a file list.
+打开文件列表。
 </dl>
 
 ==ETP==
-Command line options to connect to an ETP server.
+连接 ETP 服务器命令行选项。
 
 <dl>
 ;''-admin-server-share-links''
 ;''-server-share-links''
 ;''-ftp-links''
 ;''-drive-links''
-Link type for ETP connections. Use with [[#-connect|-connect]].
+ETP 连接类型。使用 [[#-connect|-connect]]。
 
 ;''-connect'' <[username[:password]@]host[:port]>
-Connect to an ETP server.
+连接 ETP 服务器
 </dl>
 
-==Searching==
-Command line options to manipulate the search.
+==搜索==
+操作搜索命令行选项。
 
 <dl>
 ;''-bookmark'' <name>
-Open a bookmark.
+打开书签。
 
 ;''-case''
 ;''-nocase''
-Enable or disable case matching.
+启用或禁用大小写匹配。
 
 ;''-diacritics''
 ;''-nodiacritics''
-Enable or disable diacritics matching.
+启用或禁用变音标记匹配。
 
 ;''-filename'' <filename>
-Search for a file or folder by filename.
+以文件名搜索文件或文件夹。
 
 ;''-filter'' <name>
-Select a search filter.
+选择搜索筛选器。
 
 ;''-l''
 ;''-local''
-Load the local database.
+载入本地数据库。
 
 ;''-matchpath''
 ;''-nomatchpath''
-Enable or disable full path matching.
+启用或禁用全路径匹配。
 
 ;''-p'' <path>
 ;''-path'' <path>
-Search for a path.
+搜索路径。
 
 ;''-parent'' <path>
-Search for files and folders in path. Does not search subfolders.
+搜索当前目录文件和文件夹。不搜索子文件夹。
 
 ;''-parentpath'' <path>
-Search for the parent of a path.
+搜索父目录。
 
 ;''-regex''
 ;''-noregex''
-Enable or disable Regex.
+启用或禁用正则表达式。
 
 ;''-s'' <text>
 ;''-search'' <text>
-Set the search.
+设置搜索。
 
 ;''-url'' <[es:]search>
-Set the search from an ES: URL.
+设置从 ES: URL 搜索。
 
 ;''-wholeword''
 ;''-nowholeword''
 ;''-ww''
 ;''-noww''
-Enable or disable match whole word.
+启用或禁用全字匹配。
 
 ;''-home''
-Open the home search.
+打开主页搜索。
 
 ;''-name-part'' <filename>
-Search for the name part of a filename.
+搜索部分文件名。
 
 ;''-search-file-list'' <filename>
-Search the specified text file for a list of file names.
-Each filename must appear on a single line.
-Include a backslash to match the full path and filename.
+在文件名列表中搜索指定文本。
+每个文件仅单行显示。
+包含反斜线以匹配全路径和文件夹。
 
 </dl>
 
-==Results==
-Command line options to manipulate the results.
+==搜索结果==
+操作搜索结果命令行选项。
 
 <dl>
 ;''-sort'' <name>
-Set the sort to the specified name.
+以指定名称排序。
 
 ;''-sort-ascending''
-Sort ascending.
+升序排列。
 
 ;''-sort-descending''
-Sort descending.
+降序排列。
 
 ;''-details''
-View results in the detail view.
+以详情视图显示结果。
 
 ;''-thumbnail-size'' <size>
-Specify the size of thumbnails in pixels.
+指定缩略图像素大小。
 
 ;''-thumbnails''
-Show results in thumbnail view.
+以缩略图视图显示结果。
 
 ;''-focus-bottom-result''
-Focus the bottom result.
+聚焦底部结果。
 
 ;''-focus-last-run-result''
-Focus the last run result.
+聚焦上次运行结果。
 
 ;''-focus-most-run-result''
-Focus the most run result.
+聚焦最大运行次数结果。
 
 ;''-focus-results''
-Focus the result list.
+聚焦结果列表。
 
 ;''-focus-top-result''
-Focus the top result.
+聚焦顶部结果。
 
 ;''-select'' <filename>
-Focus and select the specified result.
+聚焦并选项指定结果。
 
 </dl>
 
-==General==
-General command line options.
+==常规==
+常规命令行选项。
 
 <dl>
 ;''-?''
 ;''-h''
 ;''-help''
-Show this help.
+显示帮助。
 
 ;''-admin''
-Run Everything as an administrator.
+以管理员身份运行 Everything。
 
 ;''-client-svc''
-Everything client service entry point.
+Everything 客户服务入口。
 
 ;''-config'' <filename>
-The filename of the ini file.
+配置文件 ini 文件名。
 
 ;''-console''
 ;''-debug''
-Show the debugging console.
+显示调试控制台。
 
 ;''-debug-log''
-Enables debug mode and logs debugging information to disk.
+启用调试模式并记录调试日志到本地磁盘。
 
 ;''-exit''
 ;''-quit''
-Exit an existing "Everything" instance.
+退出 "Everything" 实例。
 
 ;''-instance'' <name>
-The name of the Everything [[support/everything/Multiple Instances|instance]].
+Everything [[support/everything/Multiple Instances|实例]]名称。
 
 ;''-is-run-as''
-Everything was executed with "runas" and should not attempt to runas again.
+以 "runas" 运行 Everything 且不会再次尝试。
 
 ;''-start-client-service''
 ;''-stop-client-service''
-Start or stop the Everything client service.
+启动或停止 Everything 客户服务。
 
 ;''-start-service''
 ;''-stop-service''
-Start or stop the Everything service.
+启动或停止 Everything 服务。
 
 ;''-startup''
-Run Everything in the background.
+后台运行 Everything。
 
 ;''-svc''
-Service entry point. Optionally combine with -svc-port.
+服务入口点。可以结合 -svc-port。
 
 ;''-svc-port'' <port>
-Run the Everything service on the specified port.
+运行 Everything 服务于指定端口。
 
 ;''-svc-pipe-name'' <name>
-Host the pipe server with the specified name.
+以指定名称托管管道服务器。
 
 ;''-svc-security-descriptor'' <sd>
-Host the pipe server with the security descriptor.
+以指定安全描述符托管管道服务器。
 
 ;''-service-port'' <port>
-Connect to the Everything service on the specified port.
+以指定端口连接 Everything 服务。
 
 ;''-service-pipe-name'' <name>
-Connect to the Everything service using the specified pipe name.
+以指定管道名连接 Everything 服务。
 
 ;''-verbose''
 ;''-noverbose''
-Display all or basic debug messages. combine with [[#-debug|-debug]].
+显示基本调试信息。结合 [[#-debug|-debug]]。
 
 ;''-first-instance''
-Only run Everything if this is the first instance of Everything.
-If Everything is already running this call will be ignored.
+仅在第一 Everything 实例时运行 Everything。
+如果 Everything 已运行，被忽略。
 
 ;''-no-first-instance''
-Only run Everything if Everything is already running.
-If Everything is not running this call will be ignored.
+仅在 Everything 已运行时运行 Everything。
+如果 Everything 未运行，被忽略。
 
 
 </dl>
 
-==Database==
-Command line options to manipulate the Everything database.
+==数据库==
+操作 Everything 数据库命令行选项。
 
 <dl>
 ;''-db'' <filename>
-The filename of the database. Combine with -read-only.
+数据库名。结合 -read-only。
 
 ;''-load-delay'' <milliseconds>
-The delay in milliseconds before loading the database.
-The database is loaded if required before this delay.
+载入数据库前的毫秒延迟。
+延迟前需要载入数据库。
 
 ;''-nodb''
-Do not save to or load from the "Everything" database file.
+不保存或载入 "Everything" 数据库文件。
 
 ;''-read-only''
-Loads the database in read-only mode.
+以只读模式载入数据库。
 
 ;''-reindex''
-Force database rebuild.
+强制数据库重建。
 
 ;''-update''
-Save the database to disk.
+保存数据库到磁盘。
 </dl>
 
-==Window==
-Command line options to manipulate the search window and results.
+==搜索窗口==
+操作搜索窗口盒结果命令行选项。
 
 <dl>
 ;''-fullscreen''
 ;''-nofullscreen''
-Show the search window fullscreen or in a window.
+全屏或窗口显示搜索窗口。
 
 ;''-maximized''
 ;''-nomaximized''
-Maximize or restore the search window.
+最大化或恢复搜索窗口。
 
 ;''-minimized''
 ;''-nominimized''
-Minimize or restore the search window.
+最小化或恢复搜索窗口。
 
 ;''-newwindow''
 ;''-nonewwindow''
-Create a new search window or show an existing window.
+创建新的搜索窗口或显示已存在的搜索窗口。
 
 ;''-ontop''
 ;''-noontop''
-Enable or disable always ontop.
+启用禁用置顶显示。
 
 ;''-close''
-Close the current search window. 
+关闭当前搜索窗口。
 
 ;''-toggle-window''
-Shows or hides the current search window.
+显示或隐藏当前搜索窗口。
 
 
 </dl>
 
-==Multi File Renaming==
-Shows the multi file renamer dialog and does not start Everything.
+==多文件重命名==
+显示多文件重命名对话框且不启动 Everything。
 
 <dl>
 ;''-copyto'' [filename1] [filename2] [filename3] [...]
-Show the Everything multi file renamer for a copy to operation.
+为复制操作显示 Everything 多文件重命名。
 
 ;''-moveto'' [filename1] [filename2] [filename3] [...]
-Show the Everything multi file renamer for a move to operation.
+为移动操作显示 Everything 多文件重命名。
 
 ;''-rename'' [filename1] [filename2] [filename3] [...]
-Show the Everything multi file renamer for a rename operation.
+为重命名操作显示 Everything 多文件重命名。
 
 </dl>
 
-==Notes==
-Dashes (-) inside switches can be omitted, for example, instead of using -no-new-window, use: -nonewwindow
+==注意==
+参数中短划线 (-) 可以省略，例如：使用：-nonewwindow 而不是 -no-new-window。
 
-Use double quotes to escape spaces and switches.
+使用双引号以转义空格和参数。
 
-Use ^ to escape \, &, |, >, < and ^.
+使用 ^ 以转义 \、&、|、>、< 和 ^。
 
 
-==Examples==
-Search for ABC or 123:
+==例子==
+搜索 ABC 或 123：
 <pre>
 Everything.exe -s "ABC|123"
 </pre>
 
-Connect to an ETP server:
+连接 ETP 服务器：
 <pre>
 Everything.exe -connect "ComputerName" -drive-links
 </pre>
 
-Create a filelist mp3 and flac files in D:\Music
+创建 D:\Music 下 mp3 和 flac 文件列表：
 <pre>
 Everything.exe -create-file-list "music.efu" "D:\Music" -create-file-list-include-only "*.mp3;*.flac"
 </pre>
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/multiple instances|Multiple Instances]]
+*[[support/everything/multiple instances|多实例]]
 </ul>
