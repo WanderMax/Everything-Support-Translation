@@ -416,7 +416,7 @@ Everything [[support/everything/Multiple Instances|实例]]名称。
 </dl>
 
 ==注意==
-参数中短划线 (-) 可以省略，例如：使用：-nonewwindow 而不是 -no-new-window。
+参数中短划线 (-) 可以省略，例如，使用：-nonewwindow 而不是 -no-new-window。
 
 使用双引号以转义空格和参数。
 
