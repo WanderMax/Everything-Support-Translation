@@ -1,484 +1,445 @@
-=Command Line Interface=
-ES is a command line interface to search Everything from a command prompt.
+=命令行选项=
+Everything 中全部可用命令行选项列表。
+大部分选项都已集成到 [[support/everything/options|Everything 选项]]中。
 
-[[File:support/everything/es-no-shadow.png|alt=Everything ES command line interface]]
-
-==Download==
-ES can be downloaded from the [[downloads#cli|Downloads page]].
-
-==Requirements==
-<ul>
-*Everything must be installed and running.
-</ul>
-
-==Usage==
+==语法==
 <pre>
-es.exe [options] [search text]
+Everything.exe [filename] [options]
 </pre>
 
 <dl>
 ;[option]
-Optional option.
+可选选项。
 
 ;<option>
-Required option.
+必须选项。
 </dl>
 
 
-==General Command Line Options==
-
-These options will work with any version of Everything.
+==安装==
+这些命令行选项会立即返回数据且不会显示 Everything 搜索窗口。
+某些命令行选项需要管理员权限。以普通用户身份运行 Everything 中需要管理员权限的命令行选项将重新启动 Everything 并以管理员权限执行特定的命令行选项。
 
 <dl>
-;''-r''
-;''-regex''
-Search using regular expressions.
+;''-app-data''
+;''-noapp-data''
+保存设置和数据到 %APPDATA%\Everything 或安装目录。
 
-;''-i''
+;''-choose-language''
+显示语言选择页面。
+
+;''-choose-volumes''
+禁用自动分卷索引。移除所有 NTFS 分卷索引。
+
+;''-enable-run-as-admin''
+;''-disable-run-as-admin''
+启用或禁用以管理员身份运行。
+
+;''-enable-update-notification''
+;''-disable-update-notification''
+启用或禁用启动时更新通知。
+
+;''-install'' <location>
+复制 Everything.exe 和 uninstall.exe 到新目录。uninstall.exe 不存在时在程序和功能中创建卸载入口。执行复制的 Everything.exe 以安装选项请查阅 [[support/everything/command line options#-install-options|-install-options]]。
+
+;''-install-client-service''
+;''-uninstall-client-service''
+安装 "Everything" 客户服务。
+
+;''-install-config'' <filename>
+安装指定的配置文件。应用其他安装选项前，指定的 ini 文件将于存在的配置文件合并。
+
+;''-install-desktop-shortcut''
+;''-uninstall-desktop-shortcut''
+创建或删除桌面快捷方式。
+
+;''-install-efu-association''
+;''-uninstall-efu-association''
+创建或移除 Everything EFU 文件关联。
+
+;''-install-folder-context-menu''
+;''-uninstall-folder-context-menu''
+安装或卸载文件夹上下文菜单。
+
+;''-install-options'' <command line options>
+传递命令行选项到新安装 Everything.exe。结合 [[support/everything/command line options#-install|-install]]。
+
+;''-install-quick-launch-shortcut''
+;''-uninstall-quick-launch-shortcut''
+创建或删除快速启动栏快捷方式。
+
+;''-install-run-on-system-startup''
+;''-uninstall-run-on-system-startup''
+添加或移除 Everything 开机自启动。
+
+;''-install-service''
+;''-uninstall-service''
+安装或卸载 "Everything" 服务。服务将自动启动。结合 [[#-install-service-port|-install-service-port]] 选项以设置服务端口。结合 [[#-install-service-pipe-name|-install-service-pipe-name]] 选项以设置管道名。结合 [[#-install-service-security-descriptor|-install-service-security-descriptor]] 选项以设置安全描述符。
+
+;''-install-service-port'' <port>
+安装 Everything 服务到指定端口。
+
+;''-install-service-pipe-name'' <name>
+安装 Everything 服务以指定管道名。
+
+;''-install-service-security-descriptor'' <sd>
+安装 Everything 服务以指定安全描述符。
+
+;''-install-start-menu-shortcuts''
+;''-uninstall-start-menu-shortcuts''
+创建或删除开始菜单快捷方式。
+
+;''-install-url-protocol''
+;''-uninstall-url-protocol''
+安装或卸载 URL 协议。
+
+;''-language'' <langID>
+设置语言到指定十进制语言标识符。1033 = English (US)。0 = 系统默认。 查阅[[support/everything/Language IDs|语言标识符]]以获取语言标识符列表。
+
+;''-uninstall'' [path]
+从指定路径卸载 Everything。如果不指定路径，默认卸载安装路径中 Everything。此操作将移除 Everything 开机自启动、移除服务、移除上下文菜单、开始菜单快捷方式、桌面快捷方式、快速启动栏快捷方式、URL 协议、efu 文件关联和删除 Everything 创建的所有文件。
+
+;''-uninstall-user''
+卸载 Everything 用户文件。
+
+;''-create-usn-journal'' <volume> <max-size-bytes> <allocation-delta-bytes>
+创建指定分卷的USN 日志并指定最大大小和分配差值。
+
+;''-delete-usn-journal'' <volume>
+删除指定分卷的 USN 日志。
+</dl>
+
+==文件列表==
+操作 Everything EFU 文件列表命令行选项。
+
+<dl>
+;[filename]
+打开指定文件列表。
+
+;''-create-file-list'' <filename> <path>
+创建指定路径的文件列表。命令执行完毕后 Everything.exe 将自动退出且不显示搜索窗口。
+
+;''-create-file-list-exclude-files'' <filters>
+以 -create-file-list 创建文件列表时设置分号间隔的通配符筛选器以排除文件。
+筛选器可以使用正则表达式。
+
+;''-create-file-list-exclude-folders'' <filters>
+以 -create-file-list 创建文件列表时设置分号间隔的通配符筛选器以排除文件夹。
+筛选器可以使用正则表达式。
+
+;''-create-file-list-include-only-files'' <filters>
+以 -create-file-list 创建文件列表时设置分号间隔的通配符筛选器以仅包含文件。
+筛选器可以使用正则表达式。
+
+;''-edit'' <filename>
+以文件列表编辑器打开指定文件列表。
+
+;''-f'' <filename>
+;''-filelist'' <filename>
+打开文件列表。
+</dl>
+
+==ETP==
+连接 ETP 服务器命令行选项。
+
+<dl>
+;''-admin-server-share-links''
+;''-server-share-links''
+;''-ftp-links''
+;''-drive-links''
+ETP 连接类型。使用 [[#-connect|-connect]]。
+
+;''-connect'' <[username[:password]@]host[:port]>
+连接 ETP 服务器
+</dl>
+
+==搜索==
+操作搜索命令行选项。
+
+<dl>
+;''-bookmark'' <name>
+打开书签。
+
 ;''-case''
-Match case.
+;''-nocase''
+启用或禁用大小写匹配。
 
-;''-w''
-;''-ww''
-;''-whole-word''
-;''-whole-words''
-Match whole words.
-
-;''-p''
-;''-match-path''
-Match full path and file name.
-
-;''-h''
-;''-help''
-Display this help.
-
-;''-o <offset>''
-;''-offset <offset>''
-Show results starting from the zero based offset.
-
-;''-n <num>''
-;''-max-results <num>''
-Limit the number of results shown to <num>.
-
-;''-s''
-Sort by full path.
-</dl>        
-
-==Everything 1.4 Command Line Options==
-
-The following switches require Everything 1.4 or later.
-
-<dl>    
-;''-a''
 ;''-diacritics''
-Match diacritical marks.
+;''-nodiacritics''
+启用或禁用变音标记匹配。
 
-;''-name''
-;''-path-column''
-;''-full-path-and-name''
-;''-filename-column''
-;''-extension''
-;''-ext''
-;''-size''
-;''-date-created''
-;''-dc''
-;''-date-modified''
-;''-dm''
-;''-date-accessed''
-;''-da''
-;''-attributes''
-;''-attribs''
-;''-attrib''
-;''-file-list-file-name''
-;''-run-count''
-;''-date-run''
-;''-date-recently-changed''
-;''-rc''
-Show the specified column. The full path and name column will be used if no name, path or full path and name column is specified.
-Columns are displayed in the order specified.
+;''-filename'' <filename>
+以文件名搜索文件或文件夹。
 
-;''-sort name''
-;''-sort path''
-;''-sort size''
-;''-sort extension''
-;''-sort date-created''
-;''-sort date-modified''
-;''-sort date-accessed''
-;''-sort attributes''
-;''-sort file-list-file-name''
-;''-sort run-count''
-;''-sort date-recently-changed''
-;''-sort date-run''
-;''-sort-name''
-;''-sort-path''
-;''-sort-size''
-;''-sort-extension''
-;''-sort-date-created''
-;''-sort-date-modified''
-;''-sort-date-accessed''
-;''-sort-attributes''
-;''-sort-file-list-file-name''
-;''-sort-run-count''
-;''-sort-date-recently-changed''
-;''-sort-date-run''
-;''-sort name-ascending''
-;''-sort name-descending''
-;''-sort path-ascending''
-;''-sort path-descending''
-;''-sort size-ascending''
-;''-sort size-descending''
-;''-sort extension-ascending''
-;''-sort extension-descending''
-;''-sort date-created-ascending''
-;''-sort date-created-descending''
-;''-sort date-modified-ascending''
-;''-sort date-modified-descending''
-;''-sort date-accessed-ascending''
-;''-sort date-accessed-descending''
-;''-sort attributes-ascending''
-;''-sort attributes-descending''
-;''-sort file-list-file-name-ascending''
-;''-sort file-list-file-name-descending''
-;''-sort run-count-ascending''
-;''-sort run-count-descending''
-;''-sort date-recently-changed-ascending''
-;''-sort date-recently-changed-descending''
-;''-sort date-run-ascending''
-;''-sort date-run-descending''
-;''-sort-name-ascending''
-;''-sort-name-descending''
-;''-sort-path-ascending''
-;''-sort-path-descending''
-;''-sort-size-ascending''
-;''-sort-size-descending''
-;''-sort-extension-ascending''
-;''-sort-extension-descending''
-;''-sort-date-created-ascending''
-;''-sort-date-created-descending''
-;''-sort-date-modified-ascending''
-;''-sort-date-modified-descending''
-;''-sort-date-accessed-ascending''
-;''-sort-date-accessed-descending''
-;''-sort-attributes-ascending''
-;''-sort-attributes-descending''
-;''-sort-file-list-file-name-ascending''
-;''-sort-file-list-file-name-descending''
-;''-sort-run-count-ascending''
-;''-sort-run-count-descending''
-;''-sort-date-recently-changed-ascending''
-;''-sort-date-recently-changed-descending''
-;''-sort-date-run-ascending''
-;''-sort-date-run-descending''
-Specify the sort. Results are sorting by name ascending if not specified.
+;''-filter'' <name>
+选择搜索筛选器。
+
+;''-l''
+;''-local''
+载入本地数据库。
+
+;''-matchpath''
+;''-nomatchpath''
+启用或禁用全路径匹配。
+
+;''-p'' <path>
+;''-path'' <path>
+搜索路径。
+
+;''-parent'' <path>
+搜索当前目录文件和文件夹。不搜索子文件夹。
+
+;''-parentpath'' <path>
+搜索父目录。
+
+;''-regex''
+;''-noregex''
+启用或禁用正则表达式。
+
+;''-s'' <text>
+;''-search'' <text>
+设置搜索。
+
+;''-url'' <[es:]search>
+设置从 ES: URL 搜索。
+
+;''-wholeword''
+;''-nowholeword''
+;''-ww''
+;''-noww''
+启用或禁用全字匹配。
+
+;''-home''
+打开主页搜索。
+
+;''-name-part'' <filename>
+搜索部分文件名。
+
+;''-search-file-list'' <filename>
+在文件名列表中搜索指定文本。
+每个文件仅单行显示。
+包含反斜线以匹配全路径和文件夹。
+
+</dl>
+
+==搜索结果==
+操作搜索结果命令行选项。
+
+<dl>
+;''-sort'' <name>
+以指定名称排序。
 
 ;''-sort-ascending''
+升序排列。
+
 ;''-sort-descending''
-Set sort order. For example, sort by size ascending: -sort size -sort-ascending
-If the sort order is not specified: size is sorted largest first, dates latest first and run count largest first, All other sorts are sorted alphabetically.
+降序排列。
 
-;''-instance <name>''
-Connect to the unique Everything instance name.
-See [[support/everything/Multiple Instances]] for more information.
+;''-details''
+以详情视图显示结果。
 
-;''-highlight''
-Highlight results.
-Highlighting many results can decrease the performance of "Everything".
+;''-thumbnail-size'' <size>
+指定缩略图像素大小。
 
-;''-highlight-color <color>''
-<color> can be one of the following color codes:
-[[File:support/everything/es-colors.png|alt=command prompt console colors and codes]]
-Highlight color 0x00-0xFF.
-The default highlight color is 0x0a (light Green on Black).
+;''-thumbnails''
+以缩略图视图显示结果。
 
-;''-csv''
-;''-efu''
-;''-txt''
-;''-m3u''
-;''-m3u8''
-Change display format.
-Use > to redirect to a file or | to pipe to another application.
-See -export options below to also write to a file.
+;''-focus-bottom-result''
+聚焦底部结果。
 
-;''-export-csv <out.csv>''
-;''-export-efu <out.efu>''
-;''-export-txt <out.txt>''
-;''-export-m3u <out.m3u>''
-;''-export-m3u8 <out.m3u8>''
-Export to a file. No output is displayed on screen.
-        
-;''-size-format <format>''
-Format can be one of the following values:
-{|
-! Value
-! Description
-|-
-| 0
-| Auto
-|-
-| 1
-| Bytes
-|-
-| 2
-| KB
-|-
-| 3
-| MB
-|}
+;''-focus-last-run-result''
+聚焦上次运行结果。
 
-;''-pause''
-;''-more''
-Pause after each page of output.
+;''-focus-most-run-result''
+聚焦最大运行次数结果。
 
-;''-hide-empty-search-results''
-Don't show any results when there is no search.
+;''-focus-results''
+聚焦结果列表。
 
-;''-empty-search-help''
-Show help when no search is specified.
+;''-focus-top-result''
+聚焦顶部结果。
 
-;''-timeout <milliseconds>''
-Timeout after the specified number of milliseconds to wait for the Everything database to load before sending a query.
+;''-select'' <filename>
+聚焦并选项指定结果。
 
-;''-filename-color <color>''
-;''-name-color <color>''
-;''-path-color <color>''
-;''-extension-color <color>''
-;''-size-color <color>''
-;''-date-created-color <color>''
-;''-dc-color <color>''
-;''-date-modified-color <color>''
-;''-dm-color <color>''
-;''-date-accessed-color <color>''
-;''-da-color <color>''
-;''-attributes-color <color>''
-;''-file-list-filename-color <color>''
-;''-run-count-color <color>''
-;''-date-run-color <color>''
-;''-date-recently-changed-color <color>''
-;''-rc-color <color>''
-<color> can be one of the following color codes:
-[[File:support/everything/es-colors.png|alt=command prompt console colors and codes]]
-Set the column color 0x00-0xFF.
-        
-;''-filename-width <width>''
-;''-name-width <width>''
-;''-path-width <width>''
-;''-extension-width <width>''
-;''-size-width <width>''
-;''-date-created-width <width>''
-;''-dc-width <width>''
-;''-date-modified-width <width>''
-;''-dm-width <width>''
-;''-date-accessed-width <width>''
-;''-da-width <width>''
-;''-attributes-width <width>''
-;''-file-list-filename-width <width>''
-;''-run-count-width <width>''
-;''-date-run-width <width>''
-;''-date-recently-changed-width <width>''
-;''-rc-width <width>''
-Set the column width 0-200.
+</dl>
 
-;''-size-leading-zero''
-;''-run-count-leading-zero''
-Format the number with leading zeros, use with -no-digit-grouping.
+==常规==
+常规命令行选项。
 
-;''-no-digit-grouping''
-Don't group numbers with commas.
+<dl>
+;''-?''
+;''-h''
+;''-help''
+显示帮助。
 
-;''-path <path>''
-Search for subfolders and files in path.
+;''-admin''
+以管理员身份运行 Everything。
 
-;''-parent-path <path>''
-Search for subfolders and files in the parent of path.
+;''-client-svc''
+Everything 客户服务入口。
 
-;''-parent <path>''
-Search for files with the specified parent path.
+;''-config'' <filename>
+配置文件 ini 文件名。
 
-;''/o[sort]''
-DIR style sorts.
-sort must be one the following sorts:
-{|
-! Sort
-! Description
-|-
-| N
-| Name ascending.
-|-
-| -N
-| Name descending.
-|-
-| S
-| Size ascending.
-|-
-| -S
-| Size descending.
-|-
-| E
-| Extension ascending.
-|-
-| -E
-| Extension descending.
-|-
-| D
-| Date modified ascending.
-|-
-| -D
-| Date modified descending.
-|}
+;''-console''
+;''-debug''
+显示调试控制台。
 
-;''/ad''
-Folders only.
+;''-debug-log''
+启用调试模式并记录调试日志到本地磁盘。
 
-;''/a-d''
-Files only.
+;''-exit''
+;''-quit''
+退出 "Everything" 实例。
 
-;''/a[attributes]''
-DIR style attributes search.
-attributes can be any one or more of the following attributes:
-{|
-! Attribute
-! Description
-|-
-| R
-| Read only.
-|-
-| H
-| Hidden.
-|-
-| S
-| System.
-|-
-| D
-| Directory.
-|-
-| A
-| Archive.
-|-
-| V
-| Device.
-|-
-| N
-| Normal.
-|-
-| T
-| Temporary.
-|-
-| P
-| Sparse file.
-|-
-| L
-| Reparse point.
-|-
-| C
-| Compressed.
-|-
-| O
-| Offline.
-|-
-| I
-| Not content indexed.
-|-
-| E
-| Encrypted.
-|}
-To exclude an attribute prefix it with a -
-For example, find files with no read-only attribute set: es.exe /a-r
-The Directory attribute is determined by the result being a file or folder in Everything, not the file attribute. Search for attributes:d for the true directory attribute.
+;''-instance'' <name>
+Everything [[support/everything/Multiple Instances|实例]]名称。
 
-;''-set-run-count <filename> <count>''
-Set the run count for the specified filename. No search is performed.
+;''-is-run-as''
+以 "runas" 运行 Everything 且不会再次尝试。
 
-;''-inc-run-count <filename>''
-Increment the run count for the specified filename by one. No search is performed.
+;''-start-client-service''
+;''-stop-client-service''
+启动或停止 Everything 客户服务。
 
-;''-get-run-count <filename>''
-Display the run count for the specified filename. No search is performed.
+;''-start-service''
+;''-stop-service''
+启动或停止 Everything 服务。
 
-;''-save-settings''
-;''-clear-settings''
-Save or clear settings. No search is performed. 
-Settings are stored in es.ini in the same location as your es.exe.
-</dl>    
+;''-startup''
+后台运行 Everything。
 
-==Limitations==
-ES does not have access to bookmarks or filters.
+;''-svc''
+服务入口点。可以结合 -svc-port。
 
-==Examples==
-Export all mp3 files to an Everything file list named mp3.efu
+;''-svc-port'' <port>
+运行 Everything 服务于指定端口。
+
+;''-svc-pipe-name'' <name>
+以指定名称托管管道服务器。
+
+;''-svc-security-descriptor'' <sd>
+以指定安全描述符托管管道服务器。
+
+;''-service-port'' <port>
+以指定端口连接 Everything 服务。
+
+;''-service-pipe-name'' <name>
+以指定管道名连接 Everything 服务。
+
+;''-verbose''
+;''-noverbose''
+显示基本调试信息。结合 [[#-debug|-debug]]。
+
+;''-first-instance''
+仅在第一 Everything 实例时运行 Everything。
+如果 Everything 已运行，被忽略。
+
+;''-no-first-instance''
+仅在 Everything 已运行时运行 Everything。
+如果 Everything 未运行，被忽略。
+
+
+</dl>
+
+==数据库==
+操作 Everything 数据库命令行选项。
+
+<dl>
+;''-db'' <filename>
+数据库名。结合 -read-only。
+
+;''-load-delay'' <milliseconds>
+载入数据库前的毫秒延迟。
+延迟前需要载入数据库。
+
+;''-nodb''
+不保存或载入 "Everything" 数据库文件。
+
+;''-read-only''
+以只读模式载入数据库。
+
+;''-reindex''
+强制数据库重建。
+
+;''-update''
+保存数据库到磁盘。
+</dl>
+
+==搜索窗口==
+操作搜索窗口盒结果命令行选项。
+
+<dl>
+;''-fullscreen''
+;''-nofullscreen''
+全屏或窗口显示搜索窗口。
+
+;''-maximized''
+;''-nomaximized''
+最大化或恢复搜索窗口。
+
+;''-minimized''
+;''-nominimized''
+最小化或恢复搜索窗口。
+
+;''-newwindow''
+;''-nonewwindow''
+创建新的搜索窗口或显示已存在的搜索窗口。
+
+;''-ontop''
+;''-noontop''
+启用禁用置顶显示。
+
+;''-close''
+关闭当前搜索窗口。
+
+;''-toggle-window''
+显示或隐藏当前搜索窗口。
+
+
+</dl>
+
+==多文件重命名==
+显示多文件重命名对话框且不启动 Everything。
+
+<dl>
+;''-copyto'' [filename1] [filename2] [filename3] [...]
+为复制操作显示 Everything 多文件重命名。
+
+;''-moveto'' [filename1] [filename2] [filename3] [...]
+为移动操作显示 Everything 多文件重命名。
+
+;''-rename'' [filename1] [filename2] [filename3] [...]
+为重命名操作显示 Everything 多文件重命名。
+
+</dl>
+
+==注意==
+参数中短划线 (-) 可以省略，例如：使用：-nonewwindow 而不是 -no-new-window。
+
+使用双引号以转义空格和参数。
+
+使用 ^ 以转义 \、&、|、>、< 和 ^。
+
+
+==例子==
+搜索 ABC 或 123：
 <pre>
-es.exe *.mp3 -export-efu mp3.efu
+Everything.exe -s "ABC|123"
 </pre>
 
-Show the top 10 largest files:
+连接 ETP 服务器：
 <pre>
-es.exe -sort size -n 10
+Everything.exe -connect "ComputerName" -drive-links
 </pre>
 
-Show the last 10 modified files:
+创建 D:\Music 下 mp3 和 flac 文件列表：
 <pre>
-es.exe -sort dm -n 10
+Everything.exe -create-file-list "music.efu" "D:\Music" -create-file-list-include-only "*.mp3;*.flac"
 </pre>
 
-Highlight the search terms foo bar
-<pre>
-es.exe foo bar -highlight
-</pre>
-
-Make ES show the size column, date modified column and set some pretty colors and make them the default settings:
-<pre>
-es.exe -size -dm -sizecolor 0x0d -dmcolor 0x0b -save-settings
-</pre>
-
-==Return Codes==
-ES can return one of the following errorlevel codes:
-{|
-! Errorlevel
-! Description
-|-
-| 0
-| No known error, search successful.
-|-
-| 1
-| Failed to register window class.
-|-
-| 2
-| Failed to create listening window.
-|-
-| 3
-| Out of memory.
-|-
-| 4
-| Expected an additional command line option with the specified switch.
-|-
-| 5
-| Failed to create export output file.
-|-
-| 6
-| Unknown switch.
-|-
-| 7
-| Failed to send Everything IPC a query.
-|-
-| 8
-| Everything IPC window not found. Please make sure the Everything search client is running.
-|}
-
-==Notes==
-Dashes (-) inside switches can be omitted, for example, instead of using -no-digit-grouping, use: -nodigitgrouping
-
-Switches can also start with a /
-
-Use double quotes to escape spaces and switches.
-
-Switches can be disabled by prefixing them with no-, eg: -no-size.
-
-Use ^ to escape \, &, |, >, < and ^.
-
-ES Source code is included with the download.
-
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/SDK/IPC]]
-*[[support/everything/Multiple Instances]]
-*[[downloads|Downloads]]
+*[[support/everything/multiple instances|多实例]]
 </ul>
