@@ -15,7 +15,7 @@
 * 实时更新。
 </ul>
 
-==更新信息请查阅==
+==更多请查阅==
 <ul>
 *[[support/everything/Installing Everything|安装 Everything]]
 *[[support/everything/Using Everything|使用 Everything]]
