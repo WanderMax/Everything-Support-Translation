@@ -277,7 +277,7 @@ Everything 索引的每个文件和文件夹都可以通过 Web 服务器搜索�
 <pre>
 allow_http_server=1
 </pre>
-to:
+为：
 <pre>
 allow_http_server=0
 </pre>
