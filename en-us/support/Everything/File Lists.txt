@@ -1,167 +1,167 @@
-=File Lists=
-An EFU file is a Comma-separated Values (CSV) file containing a list of filenames, sizes, dates and attributes.
-File lists can be opened with Everything or included in your Everything index.
-File lists can be searched and sorted by size, date or attributes instantly.
+=文件列表=
+EFU 文件是包含文件名、大小、日期以及属性列表的逗号分隔值 (CSV) 文件。
+文件列表可以通过 Everything 打开或包含到 Everything 索引。
+文件列表可以被搜索并可以立即按大小、日期或属性排序。
 
-==How do I make an EFU file list?==
+==如何创建 EFU 文件列表？==
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''File List Editor...'''.
-*In the '''File List Editor''', '''drag and drop''' files into the list to add to your file list.
-*You can also add files and folders from the Edit menu.
-*When you are finished, from the '''File '''menu, click '''Save'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''文件列表编辑器...'''。
+*在'''文件列表编辑器'''中，'''拖拽'''文件到列表以添加到文件列表。
+*您也可以从编辑菜单添加文件和文件夹。
+*添加完成后，打开'''文件'''菜单，点击'''保存'''。
 </ul>
 
-==How do I make an EFU file list from Everything?==
-To save the current search as an EFU file list
+==如何从 Everything 导出 EFU 文件列表？==
+保存当前搜索为 EFU 文件列表
 <ul>
-*In '''''"Everything"''''', from the '''File '''menu, click '''Export...'''.
-*Change '''Save as Type''' to '''EFU Everything File List (*.efu)'''.
-*Type in a filename and click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''文件'''菜单，点击'''导出...'''。
+*更改'''保存类型'''为 '''EFU Everything File List (*.efu)'''。
+*输入文件名并点击'''确定'''。
 </ul>
 
-==How do I make an EFU File list from the command line?==
-To create a file list from the command line:
+==如何从命令行创建 EFU 文件列表？==
+从命令行创建文件列表：
 <pre>
 Everything.exe -create-filelist <output-filename> <path-to-scan>
 </pre>
 
-Combine with [[support/everything/command_line_options#-create-file-list-exclude-files|-create-file-list-exclude-files]] <filters> to exclude files.
-Combine with [[support/everything/command_line_options#-create-file-list-exclude-folders|-create-file-list-exclude-folders]] <filters> to exclude folders.
-Combine with [[support/everything/command_line_options#-create-file-list-include-only-files|-create-file-list-include-only-files]] <filters> to include only the specified files.
+结合 [[support/everything/command_line_options#-create-file-list-exclude-files|-create-file-list-exclude-files]] <filters> 以排除文件。
+结合 [[support/everything/command_line_options#-create-file-list-exclude-folders|-create-file-list-exclude-folders]] <filters> 以排除文件夹。
+结合 [[support/everything/command_line_options#-create-file-list-include-only-files|-create-file-list-include-only-files]] <filters> 以仅包含指定文件。
 
-Examples
-To create a file list excluding tmp files:
+例子
+创建文件列表并排除 tmp 文件：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "*.tmp"
 </pre>
 
-To create a file list excluding lnk and thumbs.db files:
+创建文件列表并排除 lnk 和 thumbs.db 文件：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "*.lnk;thumbs.db"
 </pre>
 
-To exclude folders with the name 1033:
+创建文件列表并排除 1033 文件夹：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "1033"
 </pre>
 
-To exclude a specific folder
+创建文件列表并排除指定单个文件夹：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "c:\windows"
 </pre>
 
-To exclude specific folders
+创建文件列表并排除指定多个文件夹：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "c:\windows;c:\program files;c:\program files (x86)"
 </pre>
 
-To include specified files only:
+创建文件列表并仅包含指定文件：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-include-only-files "*.mp3;*.flac"
 </pre>
 
-regex can be used in the exclude lists, for example, exclude files starting with A-M
+排除文件可以使用正则表达式，例如，排除首字母为 A-M 的文件：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "regex:^^[A-M]"
 </pre>
 
-Path matching can be done by including a \ in your filter (\\ for regex).
+筛选器中使用 \ 来匹配路径 (正则表达式使用 \\)：
 <pre>
 Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "c:\folder\a specific file.txt"
 </pre>
 
-==Does Everything access the files in the file list?==
-Everything will only access the files if you try to open a file or right click a file.
-File size, dates and attributes are read from the file list.
+==Everything 能否访问文件列表中文件？==
+Everything 仅能通过打开文件或右键点击文件才可以访问文件。
+文件大小、日期和属性由文件列表读取。
 
 
-==How do I change the volume for all the files in a file list?==
+==如何更改文件列表中所有文件分卷名？==
 <ul>
-*Open the file list in Notepad.
-*Press '''Ctrl + H''' to replace.
-*Change '''Find what''' to the old volume (eg: D:)
-*Change '''Replace '''with to the new volume (eg: E:)
-*Click '''Replace All'''.
-*'''Save '''changes to the file list.
+*使用记事本打开文件列表。
+*按 '''Ctrl + H''' 以打开替换对话框。
+*更改'''查找'''为旧分卷名 (例如：D:)
+*更改'''替换 '''为新分卷名 (例如：E:)
+*点击'''替换全部'''。
+*'''保存'''更改到文件列表。
 </ul>
 
-==Can I use relative paths in a file list?==
-Yes, filenames are relative to the file list location.
-Optionally use . and .. for locations relative to the file list location.
-You can use \ at the start of a filename to specify a file relative to the root of the file list.
-Specify a filename with a full path to override relative filenames.
+==能否在文件列表中使用相对路径？==
+能，文件名可以相对于文件列表路径。
+可以使用 . 和 .. 来代表文件列表位置的相对路径。
+您可以在文件名首位使用 \ 以指定相对于文件列表根目录的文件。
+以全路径指定文件名将覆盖相对文件名。
 
-==Update a file list with the Task Scheduler==
-To rebuild a file list every hour with the task scheduler:
+==使用计划任务更新文件列表==
+使用计划任务每小时重建文件列表：
 <ul>
-*Open the '''Task Scheduler''' from Start -> Programs -> Accessories -> System Tools -> Task Scheduler.
-*Click '''Create Task...'''.
-*Set the '''Name''' to '''Everything File List'''
+*从开始->所有程序->附件->系统工具->任务计划程序以打开'''计划任务'''。
+*点击'''创建任务...'''。
+*设置'''任务名'''为 '''Everything File List'''。
 
-*Click the '''Triggers''' tab.
-*Click '''New...'''.
-*Select '''One time'''.
-*Check '''Repeat task every'''.
-*Change the '''Repeat task every time''' to '''1 hour'''.
-*Change '''for a duration of''' to '''Indefinitely'''.
-*Click '''OK'''.
+*点击'''触发器'''页面。
+*点击'''新建...'''。
+*选择'''一次'''。
+*选择'''重复任务间隔'''。
+*更改'''重复任务间隔'''为 '''1 小时'''。
+*更改'''持续时间'''为 '''无限期'''。
+*点击'''确定'''。
 
-*Click the '''Actions''' tab.
-*Click '''New...'''.
-*Select Start a program for Action.
-*Click Browse to select Everything.exe
-*Set '''Add arguments''' to:
+*点击'''操作'''页面。
+*点击'''新建...'''.
+*选择启动程序。
+*点击浏览以选择 Everything.exe
+*设置'''添加参数'''为：
 <pre>
 -create-filelist c:\filelist.efu c:\
 </pre>
-*Click '''OK'''.
-*Click '''OK'''.
+*点击'''确定'''。
+*点击'''确定'''。
 </ul>
 
-==Include a file list in the Everything index==
+==包含文件列表到 the Everything 索引==
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''File Lists''' tab.
-*Click '''Add...''' to add a file list.
-*Select a file list.
-*Click '''Open'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件列表'''页面。
+*点击'''添加...'''以添加文件列表。
+*选择文件列表。
+*点击'''打开'''。
+*点击'''确定'''。
 </ul>
 
-==Modifying file lists==
-"Everything" will automatically reload modified file lists that are included in the Everything index.
+==修改文件列表==
+"Everything" 将自动重载 Everything 索引中修改的文件列表。
 
-To disable this feature:
+禁用自动重载：
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''File Lists''' tab.
-*Select the file list to stop monitoring.
-*Uncheck '''Monitor changes'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*打开'''文件列表'''页面。
+*选择停止监控的文件列表。
+*取消选择'''监控变更'''。
+*点击'''确定'''。
 </ul>
 
-==What is the format of an EFU file list?==
-EFU files are comma-separated values ([[http://en.wikipedia.org/wiki/Comma-separated_values|CSV]]) files.
-A header is required with at least the Filename column specified.
-File size is specified in bytes.
-Dates are FILETIMEs (100-nanosecond intervals since January 1, 1601.) in decimal or [[http://en.wikipedia.org/wiki/ISO_8601|ISO 8601]] dates.
-Attributes can be zero or more of the [[http://msdn.microsoft.com/en-us/library/windows/desktop/gg258117%28v=vs.85%29.aspx|Windows File Attributes]].
-EFU files are encoded with UTF-8.
+==EFU 文件列表是什么格式？==
+EFU 文件是逗号分隔值 ([[http://en.wikipedia.org/wiki/Comma-separated_values|CSV]]) 文件。
+指定至少文件名分栏时需要标头。
+文件大小指定为字节。
+日期是十进制 FILETIMEs (1601 年 1 月 1 日 100-纳秒) 或 [[http://en.wikipedia.org/wiki/ISO_8601|ISO 8601]] 格式日期。
+属性可以为 0 或 多个 [[http://msdn.microsoft.com/en-us/library/windows/desktop/gg258117%28v=vs.85%29.aspx|Windows 文件属性]]。
+EFU 文件是 UTF-8 编码。
 
-==Opening a file list with Excel==
-To open a file list with excel:
+==用 Excel 打开文件列表==
+用 Excel 打开文件列表：
 <ul>
-*In '''Excel''', from the '''Data''' menu, from the '''Import External Data''' submenu, click '''Import data...'''.
-*Select your exported csv and click '''Open'''.
-*Change '''File origin''' to '''65001 : Unicode (UTF-8)'''.
-*Click '''Next'''.
-*Check '''Comma'''.
-*Click '''Next'''.
-*Click '''Finish'''.
-*Click '''OK''' to put the data in the existing worksheet at '''$A$1'''.
+*在 '''Excel''' 中，打开'''数据'''菜单，选择'''导入外部数据'''子菜单并点击'''导入数据...'''。
+*选择导出的 csv 并点击'''打开'''。
+*更改'''文件来源'''为 '''65001 : Unicode (UTF-8)'''。
+*点击''下一步'''。
+*选择'''逗号'''。
+*点击'''下一步'''。
+*点击'''完成'''。
+*点击'''确定'''以放置数据到已存在工作表 '''$A$1'''。
 </ul>
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/folder indexing|Folder indexing]]
+*[[support/everything/folder indexing|文件夹索引]]
 </ul>
