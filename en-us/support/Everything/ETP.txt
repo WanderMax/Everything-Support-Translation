@@ -13,7 +13,7 @@ Everything ETP/FTP 服务器让您可以从 Everything 客户端或 FTP 客户�
 请确认您共享分区在服务器上为分区名。
 例如，共享分区 C: 为：'''C'''
 
-请查阅 [[support/everything/ini/#etp_客户端路径重写|ETP 路径重写]]以使用自定义共享。
+请查阅 [[support/everything/ini/#etp_client_rewrite_patterns|ETP 路径重写]]以使用自定义共享。
 
 ==连接 ETP 服务器==
 连接 ETP 服务器：
