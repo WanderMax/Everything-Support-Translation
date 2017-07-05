@@ -267,7 +267,7 @@ thumbs.db;desktop.ini;*.tmp
 *[[support/Everything/options#Folders|文件夹索引选项]]
 *[[support/Everything/options#File Lists|文件列表选项]]
 *[[support/Everything/options#Exclude|排除选项]]
-*[[support/Everything/command line options#Database|数据库命令行选项]]
+*[[support/Everything/command line options#数据库|数据库命令行选项]]
 *[[support/Everything/ini#Indexing|索引 Everything.ini 选项]]
 </ul>
 
