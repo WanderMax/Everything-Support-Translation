@@ -1,273 +1,273 @@
-=Indexes=
-By default, "''Everything''" indexes all local fixed NTFS volumes.
+=索引=
+"''Everything''" 默认索引全部本地 NTFS 固定卷。
 
-Indexes can be customized in the [[support/everything/options#indexes|Everything options]].
+索引可以在 [[support/everything/options#indexes|Everything 选项]]中自定义。
 
-==Database location==
-Everything stores the database in:
+==数据库存储位置==
+Everything 保存数据库到：
 <pre>
 %LOCALAPPDATA%\Everything\Everything.db
 </pre>
-If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, Everything.db is stored in the same location as Everything.exe.
+如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据库到 %APPDATA%\Everything]] 选项，Everything.db 则保存到 Everything.exe 相同目录。
 
-To set the database location:
+设置数据库保存位置：
 <ul>
-*In "''Everything''", from the '''Tools''' menu, click '''Options'''.
-*Select the '''Indexes''' tab.
-*Set the '''Database location'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''索引'''页面。
+*设置'''数据库保存位置'''。
+*点击'''确定'''。
 </ul>
 
-==Size, Dates and Attributes Indexing==
-Everything indexes file size and date modified by default.
-Everything will maintain this extra file information in real-time.
+==大小、日期和属性索引==
+Everything 默认索引文件大小和修改日期。
+Everything 将实时维护额外文件信息。
 
-File information that is indexed can be searched instantly.
+索引的文件信息才可以及时搜索到。
 
-Extra file information, such as date created and file attributes is not indexed.
-This file information is gathered when displayed in Everything.
-Searching or sorting by this file information can be quite slow for many results.
+额外文件信息，例如创建日期和文件属性没有被索引。
+此文件信息仅在激活 Everything 窗口时收集。
+对大量结果的此类文件信息搜索和排序将会比较慢。
 
-To include extra file information in the Everything index:
+包含额外文件信息到 Everything 索引：
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''
-*Click the '''Indexes''' tab.
-*Check the desired options:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''索引'''页面。
+*选择您需要的选项：
 <ul>
-*Index file size
-*Index folder size
-*Index date created
-*Index date modified
-*Index date accessed
-*Index attributes
+*索引文件大小
+*索引文件夹大小
+*索引创建日期
+*索引修改日期
+*索引访问日期
+*索引属性
 </ul>
-*Click '''OK'''.
-</ul>
-
-Note: Including extra file information in the index will require more memory.
-Hover over an extra file information option to see a tooltip showing the extra memory requirements.
-
-==Folder sizes==
-To show folder sizes in ''"Everything"'':
-<ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''
-*Click the '''Indexes''' tab.
-*Check '''Index folder size'''.
-*Click '''OK'''.
+*点击'''确定'''。
 </ul>
 
-==Fast Sorting==
-''"Everything"'' maintains a "Fast sort" index for size and date modified information.
+注意：包含额外文件信息到 Everything 索引需要更多内存。
+鼠标悬停于额外文件信息选项时将会显示额外内存需求提示。
 
-Fast sorting is persistent, that is, ''"Everything"'' will remember the sort between searches.
-
-When sorting by file information that does not have fast sorting enabled ''"Everything"'' must gather this information from disk which can be slow.
-
-To enable fast sorting:
+==文件夹大小==
+在 ''"Everything"'' 显示文件夹大小：
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''Indexes''' tab.
-*Check the desired fast sort options:
-<ul>
-*Fast size sort
-*Fast date created sort
-*Fast date modified sort
-*Fast date accessed sort
-*Fast attribute sort
-*Fast path sort
-*Fast extension sort
-</ul>
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''索引'''页面。
+*选择'''索引文件夹大小'''。
+*点击'''确定'''。
 </ul>
 
-Note: Enabling fast sort requires more memory. The corresponding extra file information must be included in the index.
-Hover over a fast sort option to see a tooltip showing the extra memory requirements.
+==快速排序==
+''"Everything"'' 维护大小和修改日期信息的"快速排序"索引。
 
-Name, Date Run, Run Count and Date Recently Changed are always fast sort enabled.
+快速排序是持久的，意味着 ''"Everything"'' 将记忆不同搜索间排序。
+
+当对未启用快速排序的文件信息排序时，''"Everything"'' 必须先从磁盘收集此信息，所以此时排序会比较慢。
+
+启用快速排序：
+<ul>
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''索引'''页面。
+*选择您需要的快速排序选项：
+<ul>
+*快速文件大小排序
+*快速创建日期排序
+*快速修改日期排序
+*快速访问日期排序
+*快速属性排序
+*快速路径排序
+*快速扩展名排序
+</ul>
+*点击'''确定'''。
+</ul>
+
+注意：启用快速排序需要更多内存，且对应的额外文件信息必须包含到索引中。
+鼠标悬停于快速排序选项时将会显示额外内存需求提示。
+
+名称、运行日期、运行次数和最近修改日期默认启用快速排序。
 
 ==NTFS==
-''"Everything"'' will automatically index all fixed NTFS volumes.
+''"Everything"'' 自动索引全部 NTFS 固定卷。
 
-To manually index fixed NTFS volumes:
+手动索引 NTFS 固定卷：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''NTFS''' tab
-*uncheck '''Auto include new fixed volumes'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''NTFS''' 页面。
+*取消选择'''自动包含新增固定卷'''。
+*点击'''确定'''。
 </ul>
 
-To include removable NTFS volumes in the index:
+包含 NTFS 可移动卷到索引：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''NTFS''' tab
-*Select the removable volume.
-*Check '''Include in database'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''NTFS''' 页面。
+*选择可移动卷。
+*选择'''包含到数据库'''。
+*点击'''确定'''。
 </ul>
 
 ==ReFS==
-''"Everything"'' will automatically index all fixed ReFS volumes.
+''"Everything"'' 将自动索引所有 ReFS 固定卷。
 
-To manually index fixed ReFS volumes:
+手动索引 ReFS 固定卷：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''ReFS''' tab
-*uncheck '''Auto include new fixed volumes'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''ReFS''' 页面。
+*取消选择'''自动包含新增固定卷'''。
+*点击'''确定'''。
 </ul>
 
-To include removable ReFS volumes in the index:
+包含 ReFS 可移动卷到索引：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''ReFS''' tab
-*Select the removable volume.
-*Check '''Include in database'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+**点击 '''ReFS''' 页面。
+*选择可移动卷。
+*选择'''包含到数据库'''。
+*点击'''确定'''。
 </ul>
 
-==Folders==
-Use folder indexing to include mapped network drives, CDRoms, DVDRoms, FAT and FAT32 volumes.
+==文件夹==
+使用文件夹索引以包含网络映射分区、CD-ROM、DVD-ROM、FAT 和 FAT32 分卷。
 
-See [[support/everything/Folder Indexing]] for more information.
+查阅[[support/everything/Folder Indexing|文件夹索引]]以获取更多信息。
 
-==File Lists==
-Use file lists to index CDs, DVDs, BluRays and other offline files and folders.
+==文件列表==
+使用文件列表以索引 CDs、DVDs、BluRays 和其他离线文件和文件夹。
 
-See [[support/everything/File lists]] for more information.
+查阅[[support/everything/File lists|文件列表]]以获取更多信息。
 
-==Exclude==
-''"Everything"'' will index every file and folder, you can then exclude files from the index.
+==排除==
+''"Everything"'' 索引每个文件和文件夹，但是您可以从索引中排除指定文件。
 
-To exclude files or folders with the hidden or system attributes from the ''"Everything"'' index:
+从 ''"Everything"'' 索引中排除隐藏或系统属性的文件和文件夹：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''Exclude''' tab
-*Check '''Exclude hidden files and folders''' to exclude files and folders with the hidden attribute.
-*Check '''Exclude system files and folders''' to exclude files and folders with the system attribute.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''排除'''页面。
+*点击'''排除隐藏文件和文件夹'''以排除隐藏文件和文件夹。
+*点击'''排除系统文件和文件夹'''以系统文件和文件夹。
+*点击'''确定'''。
 </ul>
 
-To exclude a folder from the ''"Everything"'' index:
+从 ''"Everything"'' 索引中排除文件夹：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''Exclude''' tab
-*Click '''Add Folder...'''
-*Select the folder to exclude.
-*Click '''OK'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''排除'''页面。
+*点击'''添加文件夹...'''。
+*选择排除文件夹。
+*点击'''确定'''。
+*点击'''确定'''。
 </ul>
 
-To include only certain types of files in the ''"Everything"'' index:
+仅包含特定类型文件到 ''"Everything"'' 索引：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''Exclude''' tab
-*Type in the semicolon delimited list of wildcard filters for '''include only files''', for example, include only mp3 and jpg files:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''排除'''页面。
+*在'''仅包含文件'''中输入分号分隔的通配符列表，例如，仅包含 mp3 和 jpg 文件：
 <pre>
 *.mp3;*.jpg
 </pre>
-*Click '''OK'''.
+*点击'''确定'''。
 </ul>
 
-To exclude certain types of files from the ''"Everything"'' index:
+从 ''"Everything"'' 索引中特定类型文件：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''Exclude''' tab
-*Type in the semicolon delimited list of wildcard filters for '''exclude files''', for example, exclude thumbs.db, desktop.ini and tmp files:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''排除'''页面。
+*在'''排除文件'''中输入分号分隔的通配符列表，例如，排除 thumbs.db、desktop.ini 和 tmp 文件：
 <pre>
 thumbs.db;desktop.ini;*.tmp
 </pre>
-*Click '''OK'''.
+*点击'''确定'''。
 </ul>
 
-To use regex in your exclude filters, prefix the exclude filter with regex:, for example, to exclude folders starting with A-N, set the exclude filter to:
-regex:^[A-N]
+在排除筛选器使用正则表达式，排除筛选器首位输入正则表达式，例如，排除首字母为 A-N 的文件夹，设置排除筛选器为：
+正则表达式：^[A-N]
 
-==Optimizing for smallest memory foot print==
-To reduce the memory requirements for ''"Everything"'':
+==最小内存使用优化==
+降低 ''"Everything"'' 内存需求：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''Indexes''' tab
-*Uncheck '''Index recent changes'''.
-*Uncheck '''Index file size'''.
-*Uncheck '''Index folder size'''.
-*Uncheck '''Index date created'''.
-*Uncheck '''Index date modified'''.
-*Uncheck '''Index date accessed'''.
-*Uncheck '''Index attributes'''.
-*Uncheck '''Fast path sort'''.
-*Uncheck '''Fast extension sort'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''索引'''页面。
+*取消选择'''索引最近变更'''。
+*取消选择'''索引文件大小'''。
+*取消选择'''索引文件夹大小'''。
+*取消选择'''索引创建日期'''。
+*取消选择'''索引修改日期'''。
+*取消选择'''索引访问日期'''。
+*取消选择'''索引属性'''。
+*取消选择'''快速索引路径'''。
+*取消选择'''快速索引扩展名'''。
+*点击'''确定'''。
 </ul>
 
-==Recover filenames from an Everything.db==
-To recover a list of filenames from a Everything.db:
+==从 Everything.db 恢复文件名==
+从 Everything.db 恢复列表中文件名：
 <ul>
-*Please make sure you have a backup of your Everything.db.
-*Download [[/db2efu.zip|db2efu.zip]].
-*Open db2efu.zip and run db2efu.exe
-*Select your Everything.db file.
-*Choose a filename to store the list of filenames.
-*This [[support/Everything/File Lists|file list]] file can be opened with ''"Everything"'', notepad or Excel.
+*请确认 已备份 Everything.db。
+*下载 [[/db2efu.zip|db2efu.zip]]。
+*打开 db2efu.zip 并允许 run db2efu.exe
+*选择 Everything.db 文件。
+*选择保存文件名列表文件名。
+*此[[support/Everything/File Lists|文件列表]]文件可以通过 ''"Everything"''、notepad 或 Excel 打开。
 </ul>
 
-==Force rebuild==
-To force ''"Everything"'' to rebuild its indexes:
+==强制重建==
+强制 ''"Everything"'' 重建索引：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''Indexes''' tab
-*Click '''Force Rebuild'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''索引'''页面。
+*点击'''强制重建'''。
+*点击'''确定'''。
 </ul>
 
-==Keep offline NTFS volumes in the index==
-To force Everything to rebuild its indexes:
+==保持离线 NTFS 分卷索引==
+保持离线 NTFS 分卷索引：
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''NTFS''' tab
-*Uncheck '''Automatically remove offline volumes'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''NTFS''' 页面。
+*取消选择'''自动移除离线分卷'''。
+*点击'''确定'''。
 </ul>
 
-To manually remove offline volumes
+手动移除离线分卷
 <ul>
-*In "'''''Everything'''''", from the '''Tools''' menu, click '''Options'''.
-*Click the '''NTFS''' tab
-*Select the offline NTFS volume and click '''Remove'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''NTFS''' 页面。
+*选择离线 NTFS 分卷并点击'''移除'''。
+*点击'''确定'''。
 </ul>
 
-==Fast reindexing==
-''"Everything"'' must perform a reindex when a new volume is added to the index or an existing volume is removed from the index.
-When a reindex occurs with ''"Everything"'' 1.3 and earlier, all volumes must be completely rescanned, even if they have not changed.
-''"Everything"'' 1.4 can quickly reindex by reusing the existing up-to-date indexes.
+==快速重新索引==
+''"Everything"'' 在新增分卷或移除分卷后必须重新索引。
+在 ''"Everything"'' 1.3 和更早版本中重新索引，所有分卷必须完全重新扫描，即使它没有任何变更。
+''"Everything"'' 1.4 可以重用已存在的最新索引来快速重新索引。
 
-==Limitations==
-While all NTFS/ReFS hard links are indexed, changes made to a hard link will only update the first hard link entry in ''"Everything"''.
-''"Everything"'' does not follow junctions with NTFS/ReFS indexing.
+==限制==
+当全部 NTFS/ReFS 硬链接已索引，硬链接的更改仅会更新 ''"Everything"'' 首个硬链接入口。
+''"Everything"'' 不索引 NTFS/ReFS 交叉点。
 
-==Pausing file system monitors==
-To pause NTFS monitors, ReFS monitors, folder monitors and file list monitors:
+==暂停监控文件系统==
+暂停监控 NTFS、ReFS、文件夹和文件列表：
 <ul>
-*In "'''''Everything'''''", type in the following search and press ENTER:
+*在 '''''"Everything"''''' 中，输入以下搜索关键词并按 ENTER：
 /monitor_pause
 </ul>
 
-To resume NTFS monitors, ReFS monitors, folder monitors and file list monitors:
+恢复监控 NTFS、ReFS、文件夹和文件列表：
 <ul>
-*In "'''''Everything'''''", type in the following search and press ENTER:
+*在 '''''"Everything"''''' 中，输入以下搜索关键词并按 ENTER：
 /monitor_resume
 </ul>
 
-Monitors will remain paused until they are resumed.
+监控将保持暂停直到恢复。
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/Everything/options#Indexes|Indexing options]]
+*[[support/Everything/options#Indexes|索引选项]]
 *[[support/Everything/options#NTFS|NTFS]]
-*[[support/Everything/options#Folders|Folder indexing options]]
-*[[support/Everything/options#File Lists|File lists options]]
-*[[support/Everything/options#Exclude|Exclude options]]
-*[[support/Everything/command line options#Database|Database command line options]]
-*[[support/Everything/ini#Indexing|Indexing Everything.ini options]]
+*[[support/Everything/options#Folders|文件夹索引选项]]
+*[[support/Everything/options#File Lists|文件列表选项]]
+*[[support/Everything/options#Exclude|排除选项]]
+*[[support/Everything/command line options#Database|数据库命令行选项]]
+*[[support/Everything/ini#Indexing|索引 Everything.ini 选项]]
 </ul>
 
