@@ -308,8 +308,8 @@ Everything 支持流媒体范围请求。
 
 ==更多请查阅==
 <ul>
-*[[support/everything/multiple instances|多实例]]。
-*[[support/everything/ini#http|Everything.ini 中 HTTP 服务器选项]]。
-*[[support/everything/options#http server|HTTP 服务器选项]]。
+*[[support/everything/multiple instances|多实例]]
+*[[support/everything/ini#http|Everything.ini 中 HTTP 服务器选项]]
+*[[support/everything/options#http server|HTTP 服务器选项]]
 *[[http://en.wikipedia.org/wiki/HTTP]]
 </ul>
