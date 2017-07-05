@@ -1,177 +1,177 @@
 =ETP=
-The Everything ETP/FTP server allows you to search and access your files from an Everything client or FTP client.
+Everything ETP/FTP 服务器让您可以从 Everything 客户端或 FTP 客户端中搜索和访问您的文件。
 
-==Start an ETP/FTP server==
-To start an ETP/FTP server:
+==启动 ETP/FTP 服务器==
+启动 ETP/FTP 服务器
 <ul>
-*On the computer whose files you wish to share, In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''''ETP/FTP''''' tab.
-*Check '''Enable ETP/FTP server'''.
-*Click '''OK'''.
+*在待共享文件电脑上，在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''''ETP/FTP''''' 页面。
+*选择 '''Enable ETP/FTP 服务器'''。
+*点击'''确定'''。
 </ul>
 
-Please make sure you share each drive on your server as its drive letter.
-For example, share C: drive as: '''C'''
+请确认您共享分区在服务器上为分区名。
+例如，共享分区 C: 为：'''C'''
 
-To use custom shares, please [[support/everything/ini/#etp_client_rewrite_patterns|ETP path rewriting]].
+请查阅 [[support/everything/ini/#etp_客户端路径重写|ETP 路径重写]]以使用自定义共享。
 
-==Connect to an ETP server==
-To connect to an ETP server:
+==连接 ETP 服务器==
+连接 ETP 服务器：
 <ul>
-*In '''"Everything"''', from the '''Tools''' menu, click '''connect to ETP server...'''.
-*Type in the '''server name''' or '''IP''' for the host.
-*Click OK.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''连接 ETP 服务器...'''。
+*输入'''服务器名'''或主机 '''IP'''。
+*点击确定。
 </ul>
 
-==ETP link types==
-There are four link types that change the way the Everything client accesses files on the ETP server.
-When connecting to an ETP server you can specify the link type.
+==ETP 链接类型==
+以下四种链接类型可适用于 Everything 客户端访问 ETP 服务器文件。
+当您连接 ETP 服务器时可以指定链接类型。
 
 {|
-! Link type
-! Description
+! 链接类型
+! 说明
 |-
 | C:
-| No change, the paths are the same as they are on the server. This is useful if you index a subst'ed drive on the server and are using mapped network drives on the client.
+| 不更改，路径与服务器上共享路径一致。当您在服务器上使用服虚拟盘符而客户端中使用网络映射分区时很有用。
 |-
 | \\Server\C
-| Use Windows shares (this is the default link type). By default these shares do not exist, you will need to create them on the server if you wish to use this method.
+| 使用 Windows 共享 (默认链接类型)。默认情况下，这些分享不存在，您必须在服务器创建共享才可以使用。
 |-
 | \\Server\C$
-| Use the default admin drive shares.
+| 使用默认管理员分区共享。
 |-
 | ftp://host/C:
-| Use ftp links.
+| 使用 FTP 链接。
 |}
 
-==Username and password==
-To change the ETP/FTP server username and password:
+==用户名和密码==
+更高 ETP/FTP 服务器用户名和密码：
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''ETP/FTP Server''' tab.
-*Type in a new '''username''' and '''password'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''ETP/FTP 服务器'''页面。
+*输入新的'''用户名'''和'''密码'''。
+*点击'''确定'''。
 </ul>
 
-==Disable file downloading==
-To disable ETP/FTP file downloading:
+==禁用文件下载==
+禁用 ETP/FTP 文件下载：
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''ETP/FTP Server''' tab.
-*Uncheck '''Allow file download'''.
-*Click '''OK'''
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''ETP/FTP 服务器'''页面。
+*取消选择'''允许文件下载'''。
+*点击'''确定'''。
 </ul>
 
-==Different indexes==
-To index different NTFS volumes for the ETP server, see [[support/everything/Multiple Instances]].
+==索引不同分卷==
+查阅[[support/everything/Multiple Instances|多实例]]以索引 FTP 服务器上不同 NTFS 分卷。
 
-==Create a Windows share==
-Everything works best if you share each drive as a single letter, for example, share your C: drive as C, D: drive as D and so on.
+==创建 Windows 共享==
+Everything 在共享分区为单字母时工作良好，例如，共享 C: 分区为 C，D: 分区为 D 等。
 
-To create a windows share for a single folder, please follow the guide below:
+创建单个文件夹 Windows 共享，请按照以下步骤：
 
-For example, we want to host an ETP/FTP server for one folder:
+例如，想要托管单个文件夹 ETP/FTP 服务器：
 <pre>
 C:\share
 </pre>
 
-Substitute a drive letter for the local folder c:\share:
+为本地文件夹 c:\share 创建虚拟盘符：
 <ul>
-*From a command prompt, run:
+*在命令提示符中，运行：
 <pre>
 subst H: c:\share
 </pre>
 </ul>
 
-Setup an index to include only the H: drive.
+配置仅索引 H: 分区。
 <ul>
-*In '''''"Everything"''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''NTFS''' tab.
-*Uncheck '''Include in database''' for all volumes, except the H: drive.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''NTFS''' 页面。
+*取消选择所有分区'''包含到数据库'''，除了 H: 分区。
+*点击'''确定'''。
 </ul>
 
-Add a share name to c:\share
+添加共享明到 c:\share
 <ul>
-*In '''Explorer''', '''right click''' the '''c:\share''' and click '''properties'''.
-*Click the '''Sharing''' tab.
-*Click '''Advanced Sharing...'''.
-*Click '''Add'''.
-*Type in '''H''' for the '''share name'''.
-*Click '''OK'''.
-*Click '''OK'''.
-*Click '''Close'''.
+*在'''资源管理器'''中，'''右键点击''' '''c:\share''' 并选择'''属性'''。
+*点击'''共享'''页面。
+*点击'''高级共享...'''。
+*点击'''添加'''。
+*输入 '''H''' 为'''共享名'''。
+*点击'''确定'''。
+*点击'''确定'''。
+*点击'''关闭'''。
 </ul>
 
-Connect to the ETP/FTP server with \\Server\C links.
+以 \\Server\C 链接连接 ETP/FTP 服务器。
 
-==Security==
-Every file and folder indexed by Everything can be searched and downloaded via the ETP server.
+==安全性==
+Everything 索引的每个文件和文件夹都可以通过 ETP 服务器搜索和下载。
 
-To disable file downloading:
+禁用文件下载：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''ETP Server''' tab.
-*Uncheck '''allow file download'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''ETP 服务器'''页面。
+*取消选择'''允许文件下载'''。
 </ul>
 
-See [[support/everything/etp#disable_etp_ftp_server|Disable ETP/FTP Server]] to remove the ETP server options and prevent the ETP server from starting.
+查阅[[support/everything/etp#禁用_etp_ftp_服务器|禁用 ETP/FTP 服务器]]以移除 ETP 服务器选项和阻止 ETP 服务器启动。
 
-==Disable ETP/FTP Server==
-To disable the ETP/FTP server:
+==禁用 ETP/FTP 服务器==
+禁用 ETP/FTP 服务器：
 <ul>
-*Exit Everything (right click the Everything system tray icon and click Exit)
-*Open your Everything.ini in the same location as your Everything.exe
-*Change the following line:
+*退出 Everything (右键点击 Everything 托盘图标并选择退出)
+*打开 Everything.exe 同目录下 Everything.ini 文件。
+*更改以下行：
 <pre>
 allow_etp_server=1
 </pre>
-to:
+为：
 <pre>
 allow_etp_server=0
 </pre>
-*Save changes and restart Everything.
+*保存更改并重启 Everything。
 </ul>
 
-==ETP Client path rewriting==
-ETP clients can rewrite the ETP server paths so they can be accessed from different shares.
-For example, rewrite the path D:\music to \\server\music and "D:\Install Files" to "\\server\Install Files"
+==ETP 客户端路径重写==
+ETP 客户端可以重写 ETP 服务器路径以便从不同的共享访问。
+例如，重写路径 D:\music 到 \\server\music 和 "D:\Install Files" 到 "\\server\Install Files"
 
-To rewrite the paths on the ETP client.
+在 ETP 客户端上重写路径。
 <ul>
 *On the '''''Everything''''' ETP client PC:
-*Completely exit '''''Everything''''' (Right click the '''''Everything''''' system tray icon and click Exit)
-*Open your %APPDATA%\Everything\Everything.ini
-*Change the following lines:
+*完全退出 '''''Everything''''' (右键点击 '''''Everything''''' 托盘图标并选择退出)
+*打开 %APPDATA%\Everything\Everything.ini
+*更改以下行：
 etp_client_rewrite_patterns=
 etp_client_rewrite_substitutions=
 to:
 etp_client_rewrite_patterns=D:\music;"D:\\Install Files"
 etp_client_rewrite_substitutions=\\server\music;"\\\\server\\Install Files"
-*Save changes and restart Everything.
+*保存更改并重启 Everything。
 </ul>
 
-The pattern must match the path on the server. It is not effected by the link type.
+重写样式必须匹配服务器路径。这不会被链接类型影响。
 
-==Trouble Shooting==
-Unable to start ETP server: bind failed 10048
-Please make sure no FTP servers are already running on port 21 or use a different ETP server port.
+==疑难解答==
+无法启动 ETP 服务器：绑定失败 10048
+请确认没有已运行 FTP 服务器占用端口 21 或使用不同的 ETP 服务器端口。
 
-To change the ETP server port:
+更改 ETP 服务器端口：
 <ul>
-*In '''"Everything"''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''ETP/FTP Server''' tab.
-*Change the '''port''' to: '''2121'''
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''ETP/FTP 服务器'''页面。
+*更改'''端口'''为：'''2121'''。
+*点击'''确定'''。
 </ul>
 
-Please match the same port number when connecting to the ETP server.
+当连接 ETP 服务器时请匹配端口号。
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/multiple instances|Multiple Instances]].
-*[[support/everything/command line options#etp|ETP/FTP Server command line options]].
-*[[support/everything/ini#etp|ETP/FTP Server Everything.ini options]].
-*[[support/everything/options#etp/ftp server|ETP/FTP Server options]].
+*[[support/everything/multiple instances|多实例]]。
+*[[support/everything/command line options#etp|ETP/FTP 服务器命令行选项]]。
+*[[support/everything/ini#etp|Everything.ini 中 ETP/FTP 服务器选项]]。
+*[[support/everything/options#etp/ftp server|ETP/FTP 服务器选项]]。
 *[[http://en.wikipedia.org/wiki/FTP]]
 </ul>
