@@ -1,116 +1,116 @@
 =HTTP=
-The Everything HTTP server is a web server that allows you to search and access your files from a web browser.
+Everything HTTP 服务器时 Web 服务器允许您通过网络浏览器搜索和访问您的文件。
 
-==Start a HTTP server==
-To start a HTTP server:
+==启动 HTTP 服务器==
+启动 HTTP 服务器:
 <ul>
-*In '''''Everything''''', From the '''Tools '''menu, click '''Options'''.
-*Click the''' HTTP Server''' tab.
-*Check '''Enable HTTP server'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''HTTP 服务器'''页面。
+*选择'''启用 HTTP 服务器'''.
+*点击'''确定'''。
 </ul>
 
-==View a HTTP server==
-Start the HTTP server and open http://ComputerName in your web browser. Where ComputerName is the name of the computer running the HTTP server.
+==访问 HTTP 服务器==
+启动 HTTP 服务器并在浏览器中打开 http://ComputerName。此处 ComputerName 是运行 HTTP 服务器的计算机名。
 
 
-==Set a username and password==
-Changing the username and password will take effect immediately.
+==设置用户名和密码==
+更改用户名和密码将即时生效。
 
-To change the HTTP server username and password
+更改 HTTP 服务器用户名和密码：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''
-*Click the '''HTTP server''' tab.
-*Type in a new '''username '''and '''password'''.
-*Click '''OK'''
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''HTTP 服务器'''页面。
+*输入新的'''用户名 '''和'''密码'''。
+*点击'''确定'''。
 </ul>
 
-==Disable file downloading==
-You can disable file downloading and allow clients to list results only.
+==禁用文件下载==
+您可以禁用文件下载而允许客户端仅列举结果。
 
-To disable HTTP file downloading:
+禁用 HTTP 文件下载：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''
-*Click the '''HTTP server''' tab.
-*Uncheck''' Allow file download'''.
-*Click '''OK'''
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''HTTP 服务器'''页面。
+*取消选择'''允许文件下载'''。
+*点击'''确定'''。
 </ul>
 
-==URL query string==
+==URL 查询字符串==
 
-Syntax:
+语法：
 <pre>
 http://localhost/?s=&o=0&c=32&j=0&i=0&w=0&p=0&r=0&m=0&path_column=0&size_column=0&date_modified_column=0&date_created_column=0&attributes_column=0&sort=name&ascending=1
 </pre>
-key=value pairs can be omitted if not required.
+key=数值对不需要时可以忽略。
 
-Keys:
+关键词：
 <dl>
 ;''s''
 ;''q''
 ;''search''
-search text
+搜索文本
 ;''o''
 ;''offset''
-display results from the nth result
+显示第 nth 个结果
 ;''c''
 ;''count''
-return no more than value results
+返回不超过设定值的结果数
 ;''j''
 ;''json''
-return results as a JSON object if value is nonzero
+数值非零时返回结果为 json 对象
 ;''i''
 ;''case''
-match case if value is nonzero
+数值非零时匹配大小写
 ;''w''
 ;''wholeword''
-search whole words if value is nonzero
+数值非零时匹配全字
 ;''p''
 ;''path''
-search whole paths if value is nonzero
+数值非零时搜索完整路径
 ;''r''
 ;''regex''
-perform a regex search if value is nonzero
+数值非零时执行正则搜索
 ;''m''
 ;''diacritics''
-match diacritics if value is nonzero
+数值非零时匹配变音标记
 ;''path_column''
-list the result's path in the json object if value is nonzero
+数值非零时列举结果路径为 json 对象
 ;''size_column''
-list the result's size in the json object if value is nonzero
+数值非零时列举结果大小为 json 对象
 ;''date_modified_column''
-list the result's modified date in the json object if value is nonzero
+数值非零时列举结果修改日期为 json 对象
 ;''date_created_column''
-list the result's creation date in the json object if value is nonzero
+数值非零时列举结果创建日期为 json 对象
 ;''attributes_column''
-list the result's attributes in the json object if value is nonzero
+数值非零时列举结果属性为 json 对象
 ;''sort''
-where value can be one of the following:
+排序值可以为以下任一项：
 {|
-! Sort name
-! Description
+! 排序方式
+! 说明
 |-
 | name
-| Sort by Name.
+| 按名称排序。
 |-
 | path
-| Sort by Path.
+| 按路径排序。
 |-
-| date_modified 
-| Sort by Date Modified.
+| date_modified
+| 按修改日期排序。
 |-
 | size
-| Sort by Size.
+| 按大小排序。
 |}
 
 ;''ascending''
-sort by ascending order if value is nonzero
+数值非零时升序排列
 </dl>
 
-Default html query strings values:
+默认 html 查询字符串值：
 {|
-! Key
-! Value
+! 关键词
+! 数值
 |-
 | search
 | 
@@ -146,10 +146,10 @@ Default html query strings values:
 | 1
 |}
 
-Default JSON object query strings values:
+默认 json 对象查询字符串值：
 {|
-! Key
-! Value
+! 关键词
+! 数值
 |-
 | search
 | 
@@ -200,80 +200,80 @@ Default JSON object query strings values:
 | 1
 |}
 
-For example, search for ABC AND 123, from the starting offset of 0, displaying only the first 100 results, sorted by size descending:
+例如，搜索 ABC AND 123，起始偏移为 0 ，显示开头 100 个结果，按大小降序排列：
 <pre>
 http://localhost/?search=ABC+123&offset=0&count=100&sort=size&ascending=0
 </pre>
 
-==Change the default HTTP files==
-You can customize the layout of the server, the icon, folder image, file image, everything logo, sort up image, sort down image and up one folder image.
+==更改 HTTP 默认文件==
+您可以自定义 HTTP 服务器布局、图标、文件夹图标、文件图标、任何图标、升序图标、降序图标和上层目录图标。
 
 <ul>
-*Create the folder 
+*创建文件夹 
 <pre>
 HTTP Server
 </pre>
-in:
+在：
 <pre>
 %APPDATA%\Everything
 </pre>
-*If [[support/everything/options#store_settings_and_data_in_appdata_everything|Store settings and data in %APPDATA%\Everything]] is disabled, the HTTP Server folder must be created in the same location as your Everything.exe.
-*In '''''Everything''''', from the '''Tools''' menu, click '''Start HTTP Server'''.
-*Download the following files to your HTTP Server folder:
+*如果禁用[[support/everything/options#store_settings_and_data_in_appdata_everything|保存设置和数据到 %APPDATA%\Everything]] 选项，HTTP 服务器文件夹必须创建在 Everything.exe 相同目录。
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''启动 HTTP 服务器'''。
+*下载以下文件到 HTTP 服务器文件夹：
 *[[/Everything-HTTP.Server.Files.zip]]
-*Edit these files in the HTTP Server folder in your "''Everything''" installation folder.
-*Everything will load these files instead of the embedded HTTP server files.
-*Hold Shift and press the reload button to force your browser to refresh.
+*编辑 "''Everything''" 安装目录下 HTTP 服务器文件夹中这些文件。
+*Everything 将会载入这些文件而不是内置的 HTTP 服务器文件。
+*按住 Shift 并按重载按钮以强制浏览器刷新。
 </ul>
 
-==Change the default HTTP server page==
-To change the default HTTP server page:
+==更改 HTTP 服务器默认页面==
+更改 HTTP 服务器默认页面：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''HTTP Server''' tab.
-*Set the '''Default page''' to your custom page.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''HTTP 服务器'''页面。
+*设置'''默认页面'''到自定义页面。
 </ul>
 
-==Custom strings==
-To customize the builtin HTTP server strings:
+==自定义字符串==
+自定义内置 HTTP 服务器字符串：
 <ul>
-*Download the HTTP server strings template: [[/http_server_strings.zip|http_server_strings.zip]]
-*Extract the http_server_strings.ini file to: %APPDATA%\Everything\HTTP server
-*Make any changes to your http_server_strings.ini
-*In Everything, type in the following search and press ENTER:
+*下载 HTTP 服务器字符串模板：[[/http_server_strings.zip|http_server_strings.zip]]
+*解压 http_server_strings.ini 文件到：%APPDATA%\Everything\HTTP server
+*更改 http_server_strings.ini
+*在 Everything 中，输入以下搜索并按 ENTER：
 <pre>
 /http_server_strings=C:\Users\<user>\AppData\Roaming\Everything\HTTP Server\http_server_strings.ini
 </pre>
-where <user> is your username.
-*Restart the HTTP Server:
+此处 <user> 是您的用户名。
+*重启 HTTP 服务器:
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''HTTP Server''' tab.
-*Uncheck '''Enable HTTP Server'''.
-*Click '''Apply'''.
-*Check '''Enable HTTP Server'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''HTTP 服务器'''页面。
+*取消选择'''启用 HTTP 服务器'''。
+*点击'''应用'''。
+*点击'''启用 HTTP 服务器'''。
+*点击'''确定'''。
 </ul>
 </ul>
 
-==Security==
-Every file and folder indexed by Everything can be searched and downloaded via the web server.
+==安全性==
+Everything 索引的每个文件和文件夹都可以通过 Web 服务器搜索和下载。
 
-To disable file downloading:
+禁用文件下载：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''HTTP Server''' tab.
-*Uncheck '''allow file download'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''HTTP 服务器'''页面。
+*取消选择'''允许文件下载'''。
 </ul>
 
-See [[support/everything/http#disable_http_server|Disable HTTP Server]] to remove the HTTP server options and prevent the HTTP server from starting.
+查阅[[support/everything/http#禁用_http_服务器|禁用 HTTP 服务器]]以移除 HTTP 服务器选项和阻止 HTTP 服务器启动。
 
-==Disable HTTP Server==
-To disable the HTTP server:
+==禁用 HTTP 服务器==
+禁用 HTTP 服务器
 <ul>
-*Exit Everything (right click the Everything system tray icon and click Exit)
-*Open your Everything.ini in the same location as your Everything.exe
-*Change the following line:
+*退出 Everything (右键点击 Everything 托盘图标并选择退出)
+*打开 Everything.exe 同目录下 Everything.ini 文件。
+*更改以下行：
 <pre>
 allow_http_server=1
 </pre>
@@ -281,35 +281,35 @@ to:
 <pre>
 allow_http_server=0
 </pre>
-*Save changes and restart Everything.
+*保存更改并重启 Everything。
 </ul>
 
-==Trouble shooting==
-How do I fix the Unable to start HTTP server: bind failed 10048 error?
+==疑难解答==
+如何修复无法启动 HTTP 服务器：绑定 10048 错误？
 
-There is already another service running on port 80.
-Please try changing the Everything HTTP server port to another port.
+存在其他服务器占用端口 80。
+请尝试更改 Everything HTTP 服务器端口号。
 
-To change the HTTP server port:
+更改 HTTP 服务器端口：
 <ul>
-*In '''Everything''', from the '''Tools '''menu, click '''Options'''
-*Click the '''HTTP server''' tab.
-*Change''' Listen on port''' to a new port, for example 8080.
-*Click '''OK'''
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击 '''HTTP 服务器'''页面。
+*更改''' 监听端口'''到新端口，例如 8080。
+*点击'''确定'''。
 </ul>
 
-Please make sure to specify this port when connecting to the web server with your web browser, for example:
+请确认在通过网络浏览器连接 Web 服务器时已指定端口，例如：
 <pre>
 http://localhost:8080
 </pre>
 
-==Range request==
-Everything supports range requests for streaming support.
+==请求范围==
+Everything 支持流媒体范围请求。
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/multiple instances|Multiple Instances]].
-*[[support/everything/ini#http|HTTP Server Everything.ini options]].
-*[[support/everything/options#http server|HTTP Server options]].
+*[[support/everything/multiple instances|多实例]]。
+*[[support/everything/ini#http|Everything.ini 中 HTTP 服务器选项]]。
+*[[support/everything/options#http server|HTTP 服务器选项]]。
 *[[http://en.wikipedia.org/wiki/HTTP]]
 </ul>
