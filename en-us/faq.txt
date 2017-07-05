@@ -72,7 +72,7 @@ convert D: /fs:ntfs
 
 ==为何 "Everything" 1.4 比 1.3 占用更多内存？==
 "Everything" 1.4 默认索引了文件大小和日期并存储了额外信息以便更快排序。
-请查阅[[support/everything/indexes#optimizing_for_smallest_memory_foot_print|最小内存优化]]以禁用这些变更。
+请查阅[[support/everything/indexes#最小内存使用优化|最小内存优化]]以禁用这些变更。
 
 ==如何在运行 "Everything" 时屏蔽 UAC 警告？==
 "Everything" 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
