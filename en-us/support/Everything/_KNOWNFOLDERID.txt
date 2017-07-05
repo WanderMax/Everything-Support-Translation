@@ -1,12 +1,12 @@
 =KNOWNFOLDERID=
 
-Use with the <code>shell:<name></code> search function.
-Replace <code><name></code> with one of the following physical folders:
+使用 <code>shell:<name></code> 搜索功能。
+替换 <code><name></code> 为以下任一物理地址：
 
 {|
-! Name
-! Availability
-! Example Path
+! 名称
+! 可用性
+! 示例路径
 |-
 | AccountPictures
 | Windows 8, 10
