@@ -6,7 +6,7 @@ Everything ETP/FTP 服务器让您可以从 Everything 客户端或 FTP 客户�
 <ul>
 *在待共享文件电脑上，在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
 *点击 '''''ETP/FTP''''' 页面。
-*选择 '''Enable ETP/FTP 服务器'''。
+*选择'''启用 ETP/FTP 服务器'''。
 *点击'''确定'''。
 </ul>
 
@@ -145,7 +145,7 @@ ETP 客户端可以重写 ETP 服务器路径以便从不同的共享访问。
 *更改以下行：
 etp_client_rewrite_patterns=
 etp_client_rewrite_substitutions=
-to:
+为：
 etp_client_rewrite_patterns=D:\music;"D:\\Install Files"
 etp_client_rewrite_substitutions=\\server\music;"\\\\server\\Install Files"
 *保存更改并重启 Everything。
@@ -169,9 +169,9 @@ etp_client_rewrite_substitutions=\\server\music;"\\\\server\\Install Files"
 
 ==更多请查阅==
 <ul>
-*[[support/everything/multiple instances|多实例]]。
-*[[support/everything/command line options#etp|ETP/FTP 服务器命令行选项]]。
-*[[support/everything/ini#etp|Everything.ini 中 ETP/FTP 服务器选项]]。
-*[[support/everything/options#etp/ftp server|ETP/FTP 服务器选项]]。
+*[[support/everything/multiple instances|多实例]]
+*[[support/everything/command line options#etp|ETP/FTP 服务器命令行选项]]
+*[[support/everything/ini#etp|Everything.ini 中 ETP/FTP 服务器选项]]
+*[[support/everything/options#etp/ftp server|ETP/FTP 服务器选项]]
 *[[http://en.wikipedia.org/wiki/FTP]]
 </ul>
