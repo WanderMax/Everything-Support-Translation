@@ -1,315 +1,315 @@
-=Searching=
-Use the [[support/everything/using everything#search edit|search edit]] to type in a search. 
+=搜索=
+在[[support/everything/using everything#搜索框|搜索框]]中输入关键词以搜索。
 
-Type in a partial filename, files and folders matching your partial filename search will be instantly displayed in the [[support/everything/using everything#result_list|result list]].
+输入部分文件名，匹配部分文件名的文件和文件夹就会显示[[support/everything/using everything#结果列表|结果列表]]中。
 
-For example, to find files and folders with the text '''reports''' in the filename, search for:
+例如，搜索文件名包含有 '''reports''' 的文件和文件夹：
 <code>reports</code>
 
-To limit the results to a drive, simply search for that drive, for example, to find files and folders on your '''D:''' drive, search for:
+可以限定搜索某一分区，例如，搜索分区 '''D:''' 中文件和文件夹：
 <code>d:</code>
 
-Include the path to limit the results to a folder, for example, to find files and folders in the folder '''D:\Downloads''', search for:
+可以包含路径以限定搜索此文件夹，例如，搜索文件夹 '''D:\Downloads''' 中文件和文件夹：
 <code>d:\downloads\</code>
 
-Use double quotes to escape spaces, for example, to find files and folders in '''C:\Program Files''', search for:
+使用双引号以转义空格，搜索 '''C:\Program Files''' 下文件和文件夹：
 <code>"c:\program files\"</code>
 
-Use \ to find partial paths, for example, to find files and folders in a folder ending with '''documents''', search for:
+使用 \ 来搜索部分路径，例如，在以 '''documents''' 结尾文件夹中搜索文件和文件夹：
 <code>documents\</code>
 
-Use a space to combine searches, for example, to find files and folders containing the text '''order''', located in the folder starting with '''work''', search for:
+使用空格以组合搜索条件，例如，在以 '''work''' 开头文件夹下搜索包含 '''order''' 的文件和文件夹：
 <code>\work order</code>
 
-==Syntax==
+==语法==
 <dl>
-;Operators
+;操作符
 {|
 | <code>''space''</code>
-| AND
+| 与
 |-
 | <code>|</code>
-| OR
+| 或
 |-
 | <code>!</code>
-| NOT
+| 非
 |-
 | <code>< ></code>
-| Grouping
+| 分组
 |-
 | <code>" "</code>
-| Search for an exact phrase
+| 搜索引号内的词组
 |}
 
-;Wildcards
+;通配符
 {|
 | <code>*</code>
-| Matches zero of more characters.
+| 匹配 0 个或多个字符。
 |-
 | <code>?</code>
-| Matches one character.
+| 匹配 1 个字符。
 |}
 
-Wildcards match the ''whole'' filename. Disable [[support/everything/options#Match whole filename when using wildcards|Match whole filename when using wildcards]] to match wilcards anywhere in the filename.
+通配符将匹配''完整''文件名。禁用[[support/everything/options#使用通配符时匹配完整文件名|使用通配符时匹配完整文件名]]来匹配任意部分文件名。
 
-;syntax_macros|Macros 
+;syntax_macros|宏 
 {|
 | <code>quot:</code>
-| Literal double quote <code>"</code>
+| 双引号 <code>"</code>
 |-
 | <code>apos:</code>
-| Literal apostrophe <code>'</code>
+| 单引号 <code>'</code>
 |-
 | <code>amp:</code>
-| Literal ampersand <code>&</code>
+| 与号 <code>&</code>
 |-
 | <code>lt:</code>
-| Literal less than <code><</code>
+| 小于 <code><</code>
 |-
 | <code>gt:</code>
-| Literal greater than <code>></code>
+| 大于 <code>></code>
 |-
 | <code>#<n>:</code>
-| Literal unicode character <n> in decimal.
+| 十进制 Unicode 字符 <n>。
 |-
 | <code>#x<n>:</code>
-| Literal unicode character <n> in hexadecimal.
+| 十六进制 Unicode 字符 <n>。
 |-
 | <code>audio:</code>
-| Search for audio files.
+| 搜索音频文件。
 |-
 | <code>zip:</code>
-| Search for compressed files.
+| 搜索压缩文件。
 |-
 | <code>doc:</code>
-| Search for document files.
+| 搜索文档文件。
 |-
 | <code>exe:</code>
-| Search for executable files.
+| 搜索可执行文件。
 |-
 | <code>pic:</code>
-| Search for picture files.
+| 搜索图片文件。
 |-
 | <code>video:</code>
-| Search for video files.
+| 搜索视频文件。
 |}
 
-;Modifiers
+;修饰符
 {|
 | <code>ascii:<br>utf8:<br>noascii:</code>
-| Enable or disable fast ASCII case comparisons.
+| 启用或禁用快速 ASCII 大小写对比。
 |-
 | <code>case:<br>nocase:</code>
-| Match or ignore case.
+| 匹配或忽略大小写。
 |-
 | <code>diacritics:<br>nodiacritics:</code>
-| Match or ignore accent marks.
+| 匹配或忽略变音标记。
 |-
 | <code>file:<br>files:<br>nofileonly:</code>
-| Match files only.
+| 仅匹配文件。
 |-
 | <code>folder:<br>folders:<br>nofolderonly:</code>
-| Match folders only.
+| 仅匹配文件夹。
 |-
 | <code>path:<br>nopath:</code>
-| Match the full path and file name or just the filename.
+| 匹配完整路径和文件名或仅文件名。
 |-
 | <code>regex:<br>noregex:</code>
-| Enable or disable regex.
+| 启用或禁用正则表达式。
 |-
 | <code>wfn:<br>wholefilename:<br>nowfn:<br>nowholefilename:</code>
-| Match the whole filename or match anywhere in the filename.
+| 匹配完整文件名或匹配任意部分文件名。
 |-
 | <code>wholeword:<br>ww:<br>nowholeword:<br>noww:</code>
-| Match whole words or match anywhere in the filename.
+| 匹配全字或匹配任意部分。
 |-
 | <code>wildcards:<br>nowildcards:</code>
-| Enable or disable wildcards.
+| 启用或禁用通配符。
 |}
 
-;Functions
+;函数
 {|
 | <code>album:<album></code>
-| Search for the ID3 or FLAC album.
+| 搜索 ID3 或 FLAC 专辑。
 |-
 | <code>artist:<artist></code>
-| Search for the ID3 or FLAC artist.
+| 搜索 ID3 或 FLAC 艺术家。
 |-
 | <code>attrib:<attributes><br>attributes:<attributes></code>
-| Search for files and folders with the specified file attributes.
+| 搜索指定的文件属性的文件和文件夹。
 |-
 | <code>bitdepth:<bitdepth></code>
-| Find images with the specified bits per pixel.
+| 搜索指定像素密度的图片。
 |-
 | <code>child:<filename></code>
-| Search for folders that contain a child file or folder with a matching filename.
+| 搜索包含匹配文件名文件或文件夹的文件夹。
 |-
 | <code>childcount:<count></code>
-| Search for folders that contain the specified number of subfolders and files.
+| 搜索包含有指定数目子文件夹或文件的文件夹。
 |-
 | <code>childfilecount:<count></code>
-| Search for folders that contain the specified number of files.
+| 搜索包含有指定数目文件的文件夹。
 |-
 | <code>childfoldercount:<count></code>
-| Search for folders that contain the specified number of subfolders.
+| 搜索包含有指定数目子文件的文件夹。
 |-
 | <code>comment:<comment></code>
-| Search for the ID3 or FLAC comment.
+| 搜索 ID3 或 FLAC 注释。
 |-
 | <code>content:<br>ansicontent:<br>utf8content:<br>utf16content:<br>utf16becontent:</code>
-| Search file content.
+| 搜索文本内容。
 |-
 | <code>count:<max></code>
-| Limit the number of results to max.
+| 指定搜索结果最大值。
 |-
 | <code>dateaccessed:<date><br>da:<date></code>
-| Search for files and folders with the specified date accessed.
+| 搜索指定访问时间的文件和文件夹。
 |-
 | <code>datecreated:<date><br>dc:<date></code>
-| Search for files and folders with the specified date created.
+| 搜索指定创建日期的文件和文件夹。
 |-
 | <code>datemodified:<date><br>dm:<date></code>
-| Search for files and folders with the specified date modified.
+| 搜索指定修改日期的文件和文件夹。
 |-
 | <code>daterun:<date><br>dr:<date></code>
-| Search for files and folders with the specified date run.
+| 搜索指定打开时间的文件和文件夹。
 |-
 | <code>depth:<depth><br>parents:<count></code>
-| Search for files and folders with the specified folder depth.
+| 搜索指定文件夹深度的文件和文件夹。
 |-
 | <code>dimension:<width>x<height></code>
-| Find images with the specified width and height.
+| 搜索指定长宽的图片。
 |-
 | <code>dupe:<br>namepartdupe:<br>attribdupe:<br>dadupe:<br>dcdupe:<br>dmdupe:<br>sizedupe:</code>
-| Search for duplicated files.
+| 搜索重复的文件。
 |-
 | <code>empty:</code>
-| Search for empty folders.
+| 搜索空文件夹。
 |-
 | <code>endwith:<text></code>
-| Filenames (including extension) ending with text.
+| 搜索以搜索文本结尾的文件 (包含扩展名)。
 |-
 | <code>ext:<list></code>
-| Search for files with a matching extension in the specified semicolon delimited extension list.
+| 搜索和列表中指定的扩展名匹配的文件 (扩展名以分号分隔)。
 |-
 | <code>filelist:<list></code>
-| Search for a list of file names in the specified pipe (|) delimited file list.
+| 搜索文件名列表中的文件。
 |-
 | <code>filelistfilename:<filename></code>
-| Search for files and folders belonging to the file list filename.
+| 搜索文件名列表中的文件和文件夹。
 |-
 | <code>frn:<frnlist></code>
-| Search for files and folders with the specified semicolon delimited File Reference Numbers.
+| 搜索指定文件索引号的文件和文件夹。
 |-
 | <code>fsi:<index></code>
-| Search for files and folders in the specified zero based internal file system index.
+| 搜索指定盘符索引中文件或文件夹 (索引 0 表示 C 盘, 以此类推)。
 |-
 | <code>genre:<genre></code>
-| Search for the ID3 or FLAC genre.
+| 搜索 ID3 或 FLAC 流派。
 |-
 | <code>height:<height></code>
-| Search for images with the specified height in pixels.
+| 搜索指定像素高度的图片。
 |-
 | <code>len:<length></code>
-| Search for files and folders that match the specified filename length.
+| 搜索和指定的文件名长度相匹配的文件和文件夹。
 |-
 | <code>orientation:<type></code>
-| Search for images with the specified orientation (landscape or portrait).
+| 搜索指定方向的图片 (水平或竖直)。
 |-
 | <code>parent:<path><br>infolder:<path><br>nosubfolders:<path></code>
-| Search for files and folders in the specified path, excluding subfolders.
+| 搜索指定路径下的文件和文件夹 (不包含子文件夹)。
 |-
 | <code>recentchange:<date><br>rc:<date></code>
-| Search for files and folders with the specified recently changed date.
+| 搜索指定最近修改日期的文件和文件夹。
 |-
 | <code>root:</code>
-| Search for files and folders with no parent folder.
+| 搜索没有父文件夹的文件和文件夹。
 |-
 | <code>runcount:<count></code>
-| Search for files and folders with the specified run count.
+| 搜索指定打开次数的文件和文件夹。
 |-
 | <code>shell:<name></code>
-| Search for a [[support/everything/knownfolderid|known shell folder name]], including subfolders and files.
+| 搜索[[support/everything/knownfolderid|已知 Shell 文件夹名称]]，包括子目录和文件。
 |-
 | <code>size:<size></code>
-| Search for files with the specified size in bytes.
+| 搜索指定大小的文件 (以字节为单位)。
 |-
 | <code>startwith:<text></code>
-| Search for filenames starting with text.
+| 搜索指定文本开头的文件。
 |-
 | <code>title:<title></code>
-| Search for the ID3 or FLAC title.
+| 搜索 ID3 或 FLAC 标题。
 |-
 | <code>type:<type></code>
-| Search for files and folders with the specified type.
+| 搜索指定的文件类型的文件和文件夹。
 |-
 | <code>width:<width></code>
-| Search for images with the specified width in pixels.
+| 搜索指定像素宽度的图片。
 |}
 
-;Function syntax
+;函数语法：
 {|
 | <code>function:value</code>
-| Equal to value.
+| 等于某设定值。
 |-
 | <code>function:<=value</code>
-| Less than or equal to value.
+| 小于等于某设定值。
 |-
 | <code>function:<value</code>
-| Less than value.
+| 小于某设定值。
 |-
 | <code>function:=value</code>
-| Equal to value.
+| 等于某设定值。
 |-
 | <code>function:>value</code>
-| Greater than value.
+| 大于某设定值。
 |-
 | <code>function:>=value</code>
-| Greater than or equal to value.
+| 大于等于某设定值。
 |-
 | <code>function:start..end</code>
-| Is in the range of values from start to end.
+| 在起始值和终止值的范围内。
 |-
 | <code>function:start-end</code>
-| Is in the range of values from start to end.
+| 在起始值和终止值的范围内。
 |}
 
-;Size Syntax:
+;大小语法：
 <code>size[kb|mb|gb]</code>
 
-;Size Constants:
+;大小常数：
 {|
 | <code>empty</code>
 | 
 |-
 | <code>tiny</code>
-| 0 KB < size <= 10 KB
+| 0 KB < 大小 <= 10 KB
 |-
 | <code>small</code>
-| 10 KB < size <= 100 KB
+| 10 KB < 大小 <= 100 KB
 |-
 | <code>medium</code>
-| 100 KB < size <= 1 MB
+| 100 KB < 大小 <= 1 MB
 |-
 | <code>large</code>
-| 1 MB < size <= 16 MB
+| 1 MB < 大小 <= 16 MB
 |-
 | <code>huge</code>
-| 16 MB < size <= 128 MB
+| 16 MB < 大小 <= 128 MB
 |-
 | <code>gigantic</code>
-| size > 128 MB
+| 大小 > 128 MB
 |-
 | <code>unknown</code>
 | 
 |}
 
-;Date Syntax:
+;日期语法
 <code>year</code>
-<code>month/year</code> or <code>year/month</code> depending on locale settings
-<code>day/month/year</code>, <code>month/day/year</code> or <code>year/month/day</code> depending on locale settings
+<code>month/year</code> 或 <code>year/month</code> 取决于本地设置
+<code>day/month/year</code>, <code>month/day/year</code> 或 <code>year/month/day</code> 取决于本地设置
 
-;Date Constants:
+;日期常数：
 <code>today</code>
 <code>yesterday</code>
 <code><last|past|prev|current|this|coming|next><year|month|week></code>
@@ -321,72 +321,72 @@ Wildcards match the ''whole'' filename. Disable [[support/everything/options#Mat
 <code>sun|mon|tue|wed|thu|fri|sat</code>
 <code>unknown</code>
 
-;Attribute Constants:
+;属性常数：
 {|
 | <code>A</code>
-| Archive
+| 存档
 |-
 | <code>C</code>
-| Compressed
+| 压缩
 |-
 | <code>D</code>
-| Directory
+| 目录
 |-
 | <code>E</code>
-| Encrypted
+| 加密
 |-
 | <code>H</code>
-| Hidden
+| 隐藏
 |-
 | <code>I</code>
-| Not content indexed
+| 未索引的内容
 |-
 | <code>L</code>
-| Reparse point
+| 重解析点
 |-
 | <code>N</code>
-| Normal
+| 一般
 |-
 | <code>O</code>
-| Offline
+| 离线
 |-
 | <code>P</code>
-| Sparse file
+| 稀疏文件
 |-
 | <code>R</code>
-| Read only
+| 只读
 |-
 | <code>S</code>
-| System
+| 系统
 |-
 | <code>T</code>
-| Temporary
+| 临时
 |-
 | <code>V</code>
-| Device
+| 设备
 |}
 </dl>
 	
-==Search options==
-Search options can be toggled from the [[support/everything/using everything#menu|Search menu]].
+==搜索选项==
+搜索选项可以通过[[support/everything/using everything#菜单|搜索菜单]]打开。
 
-Enabled search options are displayed in the right of the status bar. Double click the status bar part to disable the search option. Right click the status bar to show a list of search options.
+启用搜索选项将显示在状态栏右侧。双击状态栏以禁用搜索选项。右键点击状态栏以显示搜索选项列表。
 
 <dl>
-;''Match Case''
-Match or ignore case.
+;''匹配大小写''
+匹配或忽略大小写。
 
-;''Match Whole Words''
-Match whole words or allow the match to occur any where in the filename.
+;''匹配全字''
+匹配全字或文件名部分。
 
-;''Match Path''
-match against the full path and filename or just the filename.
+;''匹配路径''
+匹配全路径和文件夹或仅文件名。
 
-;''Match Diacritics.''
-Match or ignore accent marks.
+;''匹配变音标记''
+匹配或忽略变音标记。
 
-;''Enable Regex''
-Enable or disable [[support/everything/searching#regex|regular expressions]].
+;''启用正则表达式''
+启用或禁用[[support/everything/searching#正则表达式|正则表达式]]。
 
 ;''Everything''
 ;''Audio''
@@ -396,83 +396,83 @@ Enable or disable [[support/everything/searching#regex|regular expressions]].
 ;''Folder''
 ;''Picture''
 ;''Video''
-Match the specified type only. See [[support/everything/searching#filters|Filters]] for more information.
+匹配指定类型。请查阅[[support/everything/searching#筛选器|筛选器]]以获取更多信息。
 </dl>
 
-==Advanced Search==
+==高级搜索==
 [[File:support/everything/Everything.Advanced.Search.png|alt=Everything Advanced Search]]
 
-Use the Everything advanced search to help build a more complex search.
+使用 Everything 高级搜索以完成更复杂的搜索。
 
-To show the advanced search dialog:
+打开高级搜索对话框：
 <ul>
-*In "'''''Everything'''''", from the '''Search''' menu, click '''Advanced Search'''.
+**在 '''''"Everything"''''' 中，打开'''搜索'''菜单，点击'''高级搜索'''。
 </ul>
 
 
-==Content Searching==
-Warning: content searching is extremely slow.
-File content is not indexed.
+==内容搜索==
+警告：搜索内容非常慢。
+文件内容没有被索引。
 
-Please combine content: functions with other filters for the best performance.
+请结合 content: 函数和筛选器以达到最佳效果。
 
-Content search functions:
+内容搜索函数：
 {|
 | <code>content:<text></code>
-| Search file content using the associated [[https://en.wikipedia.org/wiki/IFilter|iFilter]]. If no iFilter exists UTF-8 content is used.
+| 搜索文本内容，请结合 [[https://en.wikipedia.org/wiki/IFilter|iFilter]]。如果没有 iFilter，默认使用 UTF-8。
 |-
 | <code>ansicontent:<text></code>
-| File contents are treated as ANSI text.
+| 搜索 ANSI 格式文本内容。
 |-
 | <code>utf8content:<text></code>
-| File contents are treated as UTF-8 text.
+| 搜索 UTF-8 格式文本内容。
 |-
 | <code>utf16content:<text></code>
-| File contents are treated as UTF-16 (Unicode) text.
+| 搜索 UTF-16 格式文本内容。
 |-
 | <code>utf16becontent:<text></code>
-| File contents are treated as UTF-16 (Big Endian) text.
+| 搜索 UTF-16 BE 格式文本内容。
 |}
 
-Example, find emails, modified this week, containing the text "keyboard":
+例如，搜索邮件、修改于此周且包含有关键词 "keyboard"：
 <pre>
 *.eml dm:thisweek content:keyboard
 </pre>
 
- * Note: content: is used last in the search above, this means Everything will only search the content of files that matched the previous search <code>*.eml dm:thisweek</code>
+ * 注意：content: 使用在搜索最后，Everything 则只有搜索匹配 <code>*.eml dm:thisweek</code> 的文件内容。
 
-==ID3 Tags==
-The following search functions can be used to search for ID3 tags and FLAC tags:
+==ID3 标签==
+以下搜索函数可以搜索 ID3 标签和 FLAC 标签：
 {|
 | <code>track:<track></code>
-| Track number or track range.
+| 搜索媒体元数据音轨号。
 |-
 | <code>year:<year></code>
-| Tear or year range.
+| 搜索媒体元数据年份。
 |-
 | <code>title:<title></code>
-| Song title.
+| 搜索媒体元数据歌曲标题。
 |-
 | <code>artist:<artist></code>
-| Song Artist.
+| 搜索媒体元数据歌曲艺术家。
 |-
 | <code>album:<album></code>
-| Album name.
+| 搜索媒体元数据专辑名。
 |-
 | <code>comment:<comment></code>
-| Track comment.
+| 搜索媒体元数据音轨注释。
 |-
 | <code>genre:<genre></code>
-| Track genre.
+| 搜索媒体元数据音轨流派。
 |}
 
-ID3v1 is fully supported.
-ID3v2, ID3v2.3 and ID3v2.4 are loosely supported.
+以上函数完全支持 ID3v1。
+ID3v2、ID3v2.3 和 ID3v2.4 部分支持。
 
-ID3 tags and FLAC tags are not indexed. Searching for ID3 tags and FLAC tags is slow, combine with other searches for the best performance.
-Only ID3 tags in mp3 files are currently supported.
+ID3 标签和 FLAC 标签未被索引。搜索 ID3 标签和 FLAC 标签比较慢，请结合其他搜索以达到最佳效果。
+当前仅支持 mp3 文件 ID3 标签。
 
-Examples:
+例子：
 <pre>
 year:2002..2005
 genre:electronic
@@ -482,29 +482,29 @@ track:>10
 year:>=2000
 </pre>
 
-==Image information==
-The following functions can be used to search for image dimensions
+==图片信息==
+以下搜索函数可以搜索图片尺寸：
 {|
 | <code>width:<width></code>
-| The width of the image in pixels.
+| 搜索指定像素宽度的图片
 |-
 | <code>height:<height></code>
-| The height of the image in pixels.
+| 搜索指定像素高度的图片。
 |-
 | <code>dimensions:<width>x<height></code>
-| The width and height of the image in pixels. Use a x to separate the width and height.
+| 搜索指定长宽的图片。
 |-
 | <code>orientation:<type></code>
-| <code><type></code> can <code>landscape</code> or <code>portrait</code>.
+| <code><type></code> 可以为<code>水平</code>或<code>竖直</code>。
 |-
 | <code>bitdepth:<bitdepth></code>
-| <code>Find images with the specified bits per pixel.</code>.
+| 搜索指定像素密度的图片。
 |}
 
-Image information is not indexed. Searching for image information is slow, combine with other searches for the best performance.
-Only jpg, png, gif and bmp files are supported.
+图片信息未被索引。搜索图片信息比较慢，请结合其他搜索以达到最佳效果。
+仅支持 jpg、png、gif 和 bmp 格式图片文件。
 
-Examples:
+例子：
 <pre>
 width:>2560
 width:800..1920
@@ -512,341 +512,341 @@ height:600..1080
 dimensions:800x600..1920x1080
 </pre>
 
-==Duplicated Files==
-The following functions can be used to search for duplicated files.
+==重复文件==
+以下搜索函数可以搜索重复文件：
 {|
 | <code>dupe:</code>
-| Find files and folders with the same filename.
+| 搜索含有相同文件名的文件和文件夹。
 |-
 | <code>attribdupe:</code>
-| Find files and folders with the same attributes. Sort by attributes for the best results.
+| 搜索含有相同属性的文件和文件夹。按属性排序以显示最佳结果。
 |-
 | <code>dadupe:</code>
-| Find files and folders with the same date accessed. Sort by date accessed for the best results.
+| 搜索含有相同访问时间的文件和文件夹。按访问时间排序以显示最佳结果。
 |-
 | <code>dcdupe:</code>
-| Find files and folders with the same date created. Sort by date created for the best results.
+| 搜索含有相同创建时间的文件和文件夹。按创建时间排序以显示最佳结果。
 |-
 | <code>dmdupe:</code>
-| Find files and folders with the same date modified. Sort by date modified for the best results.
+| 搜索含有相同修改时间的文件和文件夹。按修改时间排序以显示最佳结果。
 |-
 | <code>namepartdupe:</code>
-| Find files and folders with the same name part (excluding extension).
+| 搜索含有相同名称部分的文件和文件夹 (不包含扩展名)。
 |-
 | <code>sizedupe:</code>
-| Find files and folders with the same size. Sort by size for the best results.
+| 搜索大小相同的文件和文件夹。按大小排序以显示最佳结果。
 |}
 
-Duplicates are found in the ENTIRE index, not the current results. 
-Search and sort results by the same dupe type for the best results.
+重复文件将在完整索引中搜索，而不是当前搜索结果。
+搜索并以重复属性类型排序以显示最佳结果。。
 
-Everything does not check file contents. Use the dupe finding functions as a guide only.
+Everything 不会检测文件内容。使用重复搜索函数作为辅助。
 
-Examples:
+例子：
 <pre>
 dupe: .mp4
 size:>1gb sizedupe:
 </pre>
 
-==Filters==
-Filters are predefined searches. Only one filter can be active at a time. Filters can be toggled from the [[support/everything/using everything#menu|Search menu]].
+==筛选器==
+筛选器是预定义的搜索。同时仅能应用一个筛选器。筛选器可以通过[[support/everything/using everything#菜单|搜索菜单]]打开。
 
-To create a new filter from the current search:
+从当前搜索新建筛选器：
 <ul>
-*In '''''Everything''''', from the '''Search''' menu, click '''Add to filters...'''.
-*Type in a '''Name'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''搜索'''菜单，点击'''添加到筛选器...'''。
+*输入'''名称'''。
+*点击'''确定'''。
 </ul>
 
-To edit an existing filter:
+编辑筛选器：
 <ul>
-*In '''''Everything''''', from the '''Search''' menu, click '''Organize filters...'''.
-*Select a filter.
-*Click '''Edit'''.
+*在 '''''"Everything"''''' 中，打开'''搜索'''菜单，点击'''管理筛选器...'''。
+*选择一个筛选器。
+*点击'''编辑'''。
 </ul>
 
-==Bookmarks==
-Bookmarks can save the current search, filter, sort and index.
+==书签==
+书签可以保存当前搜索、筛选器、排序和索引。
 
-To create a new bookmark from the current search:
+从当前搜索新建书签：
 <ul>
-*In '''''Everything''''', from the '''Bookmarks''' menu, click '''Add to bookmarks...'''.
-*Type in a '''Name'''.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''书签'''菜单, 点击'''添加到书签...'''。
+*输入'''名称'''。
+*点击'''确定'''。
 </ul>
 
-To organize bookmarks:
+管理书签：
 <ul>
-*In '''''Everything''''', from the '''Bookmarks''' menu, click '''Organize bookmarks...'''.
+*在 '''''"Everything"''''' 中，打开'''书签'''菜单, 点击'''管理书签...'''。
 </ul>
 
-==Home Search==
-The home search is the default search when you first open an Everything search window.
-The home search can be opened by pressing [[support/everything/keyboard_shortcuts#global_keyboard_shortcuts|Alt + Home]].
+==主页搜索==
+主页搜索是打开 Everything 搜索窗口时默认搜索。
+主页搜索可以通过快捷键 [[support/everything/keyboard_shortcuts#global_keyboard_shortcuts|Alt + Home]] 激活。
 
-To change the home search settings:
+更改主页搜索设置：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the [[support/Everything/Options#home|'''Home''']] tab.
-*Set the desired search, search options, sort order and view options.
-*Click '''OK'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击[[support/Everything/Options#主页|'''主页''']]页面。
+*设置搜索关键词、搜索选项、排序和视图选项。
+*点击'''确定'''。
 </ul>
 
-==Macros==
-Custom macros can be defined by filters and bookmarks.
+==宏==
+自定义宏可以通过筛选器和书签来定义。
 
-To create a custom filter macro:
+创建自定义筛选器宏：
 <ul>
-*Create a [[support/everything/searching#Filters|new filter]] or [[support/everything/searching#Filters|edit an existing one]].
-*Type in a macro name, for example:
+*创建[[support/everything/searching#筛选器|新筛选器]]或[[support/everything/searching#筛选器|编辑筛选器]]。
+*输入宏名称，例如：
 <pre>
 foo
 </pre>
-*Click '''OK'''.
-*Click '''OK'''.
-*Searching for foo: will now be replaced by the filter's search.
+*点击'''确定'''。
+*点击'''确定'''。
+*搜索 foo: 将会被筛选器搜索替代。
 </ul>
 
-==Regex==
-Regex overrides the search syntax. Search operators, wildcards, macros, modifiers and functions do not work in regex mode.
-Regex must be enabled from the [[support/everything/using everything#menu|Search menu]] or prefix the search with <code>regex:</code>
+==正则表达式==
+正则表达式默认覆盖搜索语法。搜索操作符、通配符、宏、修饰符和函数无法工作于正则表达式模式。
+正则表达式必须从[[support/everything/using everything#菜单|搜索菜单]]启用或使用搜索前缀 <code>regex:</code>
 
 {|
 | <code>a|b</code>
-| Matches a or b
+| 匹配 a 或 b
 |-
 | <code>gr(a|e)y</code>
-| Matches gray or grey
+| 匹配 gray 或 grey
 |-
 | <code>.</code>
-| Matches any single character
+| 匹配任一字符
 |-
 | <code>[abc]</code>
-| Matches a single character a, b or c
+| 匹配任一字符：a 或 b 或 c
 |-
 | <code>[^abc]</code>
-| Matches any single character except a, b or c
+| 匹配任一字符, 但不包括 a、b、c
 |-
 | <code>[a-z]</code>
-| Matches a single charactor in the range a to z
+| 匹配从 a 到 z 之间的任一字符
 |-
 | <code>[a-zA-Z]</code>
-| Matches a single charactor in the range a to z or A to Z
+| 匹配从 a 到 z, 及从 A 到 Z 之间的任一字符
 |-
 | <code>^</code>
-| Matches the start of the filename
+| 匹配文件名的头部
 |-
 | <code>$</code>
-| Matches the end of the filename
+| 匹配文件名的尾部
 |-
 | <code>*</code>
-| Matches the preceding element zero or more times
+| 匹配前一项内容 0 或多次
 |-
 | <code>?</code>
-| Matches the preceding element zero or one times
+| 匹配前一项内容 0 或 1 次
 |-
 | <code>+</code>
-| Matches the preceding element one or more times
+| 匹配前一项内容 1 或多次
 |-
 | <code>{x}</code>
-| Matches the preceding element x times
+| 匹配前一项内容 x 次
 |-
 | <code>{x,}</code>
-| Matches the preceding element x or more times
+| 匹配前一项内容 x 或多次
 |-
 | <code>{x,y}</code>
-| Matches the preceding element between x and y times
+| 匹配前一项内容次数介于 x 和 y 之间
 |}
 
-==Search Commands==
-The following search commands are special searches that can be activated by typing in the search and pressing ENTER.
+==搜索命令==
+以下搜索命令是预设特定的搜索关键词，输入后按下 ENTER。
 
 {|
-! Search
-! Action
+! 搜索
+! 操作
 |-
 | <code>about:</code>
-| Show the About dialog.
+| 显示关于对话框。
 |-
 | <code>about:config</code>
-| Open your [[support/Everything/INI|Everything.ini]]
+| 打开 [[support/Everything/INI|Everything.ini]]
 |-
 | <code>about:credits</code>
-| Show the Everything credits dialog.
+| 显示 Everything 致谢对话框。
 |-
 | <code>about:home</code>
-| Open the [[support/Everything/Searching#home search|home search]].
+| 打开[[support/Everything/Searching#主页搜索|主页搜索]]。
 |-
 | <code>about:licence<br>about:license</code>
-| Show the Everything licence agreement.
+| 显示 Everything 许可证。
 |-
 | <code>about:options<br>about:preferences</code>
-| Show the [[support/Everything/Options|Everything options]].
+| 显示 [[support/Everything/Options|Everything 选项]]。
 |-
 | <code>/close</code>
-| Close the Everything search window.
+| 关闭 Everything 搜索窗口。
 |-
 | <code>/closeall</code>
-| Close all Everything search windows.
+| 关闭全部 Everything 搜索窗口。
 |-
 | <code>/command <id></code>
-| Run the specified [[support/Everything/SDK|command ID]].
+| 运行指定的 [[support/Everything/SDK|command ID]]。
 |-
 | <code>/config_save</code>
-| Show a save as dialog to backup the [[support/Everything/INI|Everything.ini]].
+| 显示另存为对话框以备份 [[support/Everything/INI|Everything.ini]]。
 |-
 | <code>/config_save <filename></code>
-| Backup the [[support/Everything/INI|Everything.ini]] to the specified filename.
+| 备份 [[support/Everything/INI|Everything.ini]] 到指定文件名。
 |-
 | <code>/config_load</code>
-| Show a open file dialog to load the [[support/Everything/INI|Everything.ini]].
+| 显示打开文件对话框以加载 [[support/Everything/INI|Everything.ini]]。
 |-
 | <code>/config_load <filename></code>
-| Load the [[support/Everything/INI|Everything.ini]] from the specified filename.
+| 加载指定文件名 [[support/Everything/INI|Everything.ini]]。
 |-
 | <code>/debug<br>/console</code>
-| Enable debug mode.
+| 启用调试模式。
 |-
 | <code>/debug_log</code>
-| Enable debug mode and start debug logging.
+| 启用调试模式并启动调试记录。
 |-
 | <code>/help</code>
-| Show the help window.
+| 显示帮助窗口。
 |-
 | <code>/monitor_pause</code>
-| Stops NTFS, ReFS, file lists and folder monitors. Monitors are not started again until specified with /monitor_resume.
+| 停止 NTFS、ReFS、文件列表和文件夹监控直到命令 /monitor_resume。
 |-
 | <code>/monitor_resume</code>
-| Starts NTFS, ReFS, file lists and folder monitors.
+| 启动 NTFS、ReFS、文件列表和文件夹监控。
 |-
 | <code>/quit<br>/exit</code>
-| Exit Everything
+| 退出 Everything。
 |-
 | <code>/rebuild<br>/reindex</code>
-| Force a rebuild
+| 强制重建。
 |-
 | <code>/restart</code>
-| Restart Everything
+| 重启 Everything。
 |-
 | <code>/verbose</code>
-| Enable verbose debugging.
+| 启用详情调试。
 |-
 | <code>/update</code>
-| Update all folder indexes now.
+| 更新所有文件夹索引。
 |-
 | <code>/update <folder index></code>
-| Update the specifed folder index by path now.
+| 更新指定路径文件夹索引。
 |-
 | <code>/[[support/Everything/INI|&lt;ini option&gt;]]</code>
-| Show the current setting for the specified ini option in the statusbar. Use the TAB key to auto complete.
+| 状态栏显示指定 ini 选项当前设置。使用 TAB 键以自动完成。
 |-
 | <code>/[[support/Everything/INI|&lt;ini option&gt;]]=<value></code>
-| Set the specified ini option to the specified value. The new value is shown in the status bar if successful.
+| 设置指定 ini 选项到指定值。新值成功后将显示在状态栏。
 |}
 
-For example, to change the status bar selected item format to full path and filename, type in the following search and press ENTER:
+例如，更改状态栏选定项格式到完整路径和文件名，输入以下搜索命令并按下 ENTER：
 <pre>
 /statusbar_selected_item_format=$f
 </pre>
 
-Changing some ini options will require a restart.
+更改某些 ini 选项需要重启以生效。
 
-To change the / prefix to another character or string, type in the following search and press ENTER:
+更改前缀 / 到其他字符和字符串，输入以下搜索命令并按下 ENTER：
 <pre>
 /search_command_prefix=<command prefix>
 </pre>
-where <code><command prefix></code> is the new command prefix.
+其中 <code><command prefix></code> 是新命令前缀。
 
-For example, to change the command prefix to <code>></code>, type in the following search and press ENTER:
+例如，更改命令前缀到 <code>></code>，输入以下搜索命令并按下 ENTER：
 <pre>
 /search_command_prefix=>
 </pre>
 
-To restore the command prefix to the default <code>/</code>, type in the following search and press ENTER:
+恢复命令前缀为默认 <code>/</code>，输入以下搜索命令并按下 ENTER：
 <pre>
 /search_command_prefix=/
 </pre>
 
-==Limiting results==
-To limit the number of results shown, use the count: search function.
-For example to limit the number of results shown to 100, include at the start of your search:
+==限定结果数目==
+限定显示结果数目，请使用 count: 搜索函数。
+例如，限定显示结果数目为 100，输入以下：
 <pre>
 count:100
 </pre>
 
-==Examples==
+==例子==
 
-Search for ABC and 123:
+搜索 ABC 和 123：
 <pre>
 ABC 123
 </pre>
 
-Search for ABC or 123:
+搜索 ABC 或 123：
 <pre>
 ABC|123
 </pre>
 
-Search for everything except ABC:
+搜索除了 ABC 其他文件：
 <pre>
 !ABC
 </pre>
 
-Search for uppercase ABC
+搜索大写 ABC
 <pre>
 case:ABC
 </pre>
 
-Search for mp3 files:
+搜索 mp3 文件：
 <pre>
 *.mp3
 </pre>
 
-Search for mp3 files on the D: or E: drive:
+搜索分区 D: 或 E: 上 mp3 文件：
 <pre>
 d:|e: *.mp3
 </pre>
 
-Search for jpg or png files on the D: drive:
+搜索分区 D: 上 jpg 或 png 文件：
 <pre>
 d: *.jpg|*.png
 </pre>
 
-Search for files or folders with no extension:
+搜索无扩展名的文件或文件夹：
 <pre>
 !.
 </pre>
 
-Search for files only:
+仅搜索文件：
 <pre>
 file:
 </pre>
 
-Search for folders only:
+仅搜索文件夹：
 <pre>
 folder:
 </pre>
 
-Limit the search to a single folder:
+限定搜索单个文件夹：
 <pre>
 parent:c:\windows
 </pre>
 
-Find files larger than 1MB:
+搜索大于 1MB 的文件：
 <pre>
 size:>1mb
 </pre>
 
-Instantly find files that have changed today:
+快速搜索今日修改的文件：
 <pre>
 dm:today
 </pre>
 
-Find files and folders created this week:
+搜索这周创建的文件和文件夹：
 <pre>
 dc:thisweek
 </pre>
 
-Find files and folders created from the 1st August 2014 to 31st August 2014:
+搜索创建于2014 年 8 月 1 日到 2014 年 8 月 31 日的文件和文件夹:
 <pre>
 dc:1/8/2014-31/8/2014
 </pre>
@@ -854,22 +854,22 @@ or:
 <pre>
 dc:8/1/2014-8/31/2014
 </pre>
-Depending on your locale settings.
+日期格式取决于本地设置。
 
-Find folders in D:\music that do not contain an mp3 file:
+搜索 D:\music 下不包含 mp3 的文件夹：
 <pre>
 d:\music\ !child:mp3
 </pre>
 
-Find filenames with non-ASCII characters:
+搜索包含非 ASCII 字符的文件名：
 <pre>
 regex:[^\x00-\x7f]
 </pre>
 
-==See also==
+==更多请查阅==
 <ul>
-*[[support/everything/using everything#menu|Search menu]]
-*[[support/everything/command line options#searching|Search command line options]]
-*[[support/everything/options#search|Search options]]
-*[[support/everything/keyboard shortcuts|Search keyboard shortcuts]]
+*[[support/everything/using everything#菜单|搜索菜单]]
+*[[support/everything/command line options#搜索|搜索命令行选项]]
+*[[support/everything/options#搜索|搜索选项]]
+*[[support/everything/keyboard shortcuts|搜索键盘快捷键]]
 </ul>
