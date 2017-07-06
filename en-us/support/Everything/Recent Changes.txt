@@ -27,7 +27,7 @@ rc:last2hours
 rc:last10mins
 </pre>
 
-更多 rc: 完整搜索语法，请查阅[[support/everything/searching#Functions|搜索函数]]。
+更多 rc: 完整搜索语法，请查阅[[support/everything/searching#函数|搜索函数]]。
 
 ==包含 USN 日志到最近变更列表==
 Everything 默认情况下仅记录 Everything 启动后，文件和文件夹的变更，包含 USN 日志到最近变更列表将让您更快得搜索到最近变更甚至过去几天的变更。
@@ -50,6 +50,6 @@ Everything 默认情况下仅记录 Everything 启动后，文件和文件夹的
 
 ==更多请查阅==
 <ul>
-*[[support/everything/searching#Functions|rc:]] 和 [[support/everything/searching#Functions|recentchange:]] 搜索函数。
+*[[support/everything/searching#函数|rc:]] 和 [[support/everything/searching#函数|recentchange:]] 搜索函数。
 *[[support/everything/Options#NTFS Include USN Journal in recent changes|包含 USN 日志到最近变更]]选项。
 </ul>
