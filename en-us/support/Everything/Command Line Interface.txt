@@ -480,5 +480,5 @@ ES 源代码已包含在下载中。
 <ul>
 *[[support/everything/SDK/IPC]]
 *[[support/everything/Multiple Instances|多实例]]
-*[[downloads|下线]]
+*[[downloads|下载]]
 </ul>
