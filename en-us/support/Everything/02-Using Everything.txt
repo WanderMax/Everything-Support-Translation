@@ -15,7 +15,7 @@ Everything 搜索窗口包含以下部分：
 
 ;搜索框
 输入部分文件名以定位文件或文件夹。
-使用搜索菜单中[[support/everything/searching#advanced_search|高级搜索]]以执行复杂搜索操作。
+使用搜索菜单中[[support/everything/searching#高级搜索|高级搜索]]以执行复杂搜索操作。
 查阅[[support/everything/searching|搜索]]中完整搜索语法。
 基础搜索语法可以通过 Everything 帮助菜单查看。
 
@@ -43,7 +43,7 @@ Everything 搜索窗口包含以下部分：
 
 -或-
 
-*使用[[support/everything/Keyboard Shortcuts#Hotkeys|快捷键]]。
+*使用[[support/everything/Keyboard Shortcuts#热键|快捷键]]。
 
 -或-
 
@@ -80,11 +80,11 @@ Everything 记忆每次结果的运行次数。
 筛选器是预定义的搜索选项，例如音频和视频文件类型。
 点击搜索菜单中筛选器已选择一个筛选器。选定的筛选器将显示在状态栏。双击状态栏中此筛选器已禁用。
 点击视图菜单中筛选器以显示筛选器栏。
-查阅[[support/everything/searching#filters|自定义筛选器]]以获取更多信息。
+查阅[[support/everything/searching#筛选器|自定义筛选器]]以获取更多信息。
 
 ==书签==
 保存当前搜索、筛选器，排序方式和索引以便后续快速恢复。
-查阅[[support/everything/searching#Bookmarks|书签]]以获取更多信息。
+查阅[[support/everything/searching#书签|书签]]以获取更多信息。
 
 ==从网络浏览器访问 Everything==
 您可以在 Everything 启用网络服务器以从手机或其他设备访问您的文件。
@@ -103,7 +103,7 @@ Everything 记忆每次结果的运行次数。
 
 ==键盘快捷键==
 查阅[[support/everything/keyboard shortcuts|键盘快捷键]]以获取存在键盘快捷键列表。
-查阅[[support/everything/keyboard shortcuts#Customizing|自定义键盘快捷键]]以获取更多信息。
+查阅[[support/everything/keyboard shortcuts#自定义|自定义键盘快捷键]]以获取更多信息。
 
 ==索引==
 包含本地 NTFS 分卷，任何文件夹和/或文件都索引到列表中。
