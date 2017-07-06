@@ -582,7 +582,7 @@ size:>1gb sizedupe:
 
 ==主页搜索==
 主页搜索是打开 Everything 搜索窗口时默认搜索。
-主页搜索可以通过快捷键 [[support/everything/keyboard_shortcuts#global_keyboard_shortcuts|Alt + Home]] 激活。
+主页搜索可以通过快捷键 [[support/everything/keyboard_shortcuts#全局键盘快捷键|Alt + Home]] 激活。
 
 更改主页搜索设置：
 <ul>
