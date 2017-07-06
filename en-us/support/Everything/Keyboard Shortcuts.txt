@@ -1,360 +1,360 @@
-=Keyboard Shortcuts=
-A list of all the default keyboard shortcuts for Everything and how to customize them.
+=键盘快捷键=
+Everything 默认键盘快捷键列表及自定义。
 
-==Search edit shortcuts==
-Keyboard shortcuts that can be used when the search edit has focus.
+==搜索框快捷键==
+聚焦于搜索框时使用的快捷键。
 
 {| class="wikitable"
-! Shortcut key
-! Action
+! 快捷键
+! 动作
 |-
 | Ctrl + A
-| Select all text.
+| 选择全部文本。
 |-
 | Ctrl + Backspace
-| Delete previous word.
+| 删除前一个单词。
 |-
 | Ctrl + Space
-| Complete search. Requires search history to be enabled.
+| 完成搜索。需要启用搜索历史。
 |-
 | Enter
-| Focus result list and select the item with the highest run count.
+| 聚焦结果列表并选择最大运行次数项。
 |-
 | Up Arrow<br>Down Arrow
-| Focus result list.
+| 聚焦结果列表。
 |-
 | Alt + Up Arrow<br>Alt + Down Arrow
-| Show search history.
+| 显示搜索历史。
 |-
 | Double Click
-| Select word
+| 选择单词。
 |-
 | Triple Click
-| Select all
+| 全选
 |}
 
-==Result list shortcuts==
-Keyboard shortcuts that can be used when the result list has focus.
+==结果列表快捷键==
+聚焦于结果列表时使用的快捷键。
 
 {| class="wikitable"
-! Shortcut key
-! Action
+! 快捷键
+! 动作
 |-
 | F2
-| Rename the focused item.
+| 重命名选定项。
 |-
 | Delete
-| Move selected items to the recycle bin.
+| 移动选定项到回收站。
 |-
 | Shift + Delete
-| Permanently delete selected items.
+| 彻底删除选定项。
 |-
 | Left Arrow
-| Scroll left.
+| 向左滚动。
 |-
 | Right Arrow
-| Scroll right.
+| 向右滚动。
 |-
 | Ctrl + Left Arrow
-| Scroll left one page.
+| 向左滚动一页。
 |-
 | Ctrl + Right Arrow
-| Scroll right one page.
+| 向右滚动一页。
 |-
 | Enter
-| Open the selected items.
+| 打开选定项。
 |-
 | Ctrl + Enter
-| Open the path of the selected item.
+| 打开选定项路径。
 |-
 | Alt + Enter
-| Display properties of the selected items.
+| 显示选定项属性。
 |-
 | Ctrl + +
-| auto adjust column widths.
+| 自动适应分栏宽度。
 |-
 | Up Arrow<br>Down Arrow<br>Page Up<br>Page Down<br>Home<br>End
-| Navigate item focus and selection.
+| 导航聚焦项和选区。
 |-
 | Shift + Up Arrow<br>Shift + Down Arrow<br>Shift + Page Up<br>Shift + Page Down<br>Shift + Home<br>Shift + End
-| Extend item selection.
+| 扩展选区。
 |-
 | Ctrl + Up Arrow<br>Ctrl + Down Arrow<br>Ctrl + Page Up<br>Ctrl + Page Down<br>Ctrl + Home<br>Ctrl + End
-| Navigate item focus.
+| 导航聚焦项
 |-
 | Ctrl + Shift + Up Arrow<br>Ctrl + Shift + Down Arrow<br>Ctrl + Shift + Page Up<br>Ctrl + Shift + Page Down<br>Ctrl + Shift + Home<br>Ctrl + Shift + End
-| Extend item selection, keeping the current selection.
+| 保持选定项下扩展选区。
 |-
 | Space
-| Select focus.
+| 选择聚焦项。
 |-
 | Ctrl + Space
-| Toggle item selection.
+| 切换选定项。
 |-
 | Escape
-| Cancel any current actions.
+| 取消当前操作。
 |-
 | Ctrl + A
-| Selected all items.
+| 选择全部项。
 |-
 | Ctrl + C<br>Ctrl + Insert
-| Copy selected items.
+| 复制选定项。
 |-
 | Ctrl + E
-| Read the file size, date and attributes of the current selection. May be useful before exporting all sizes, dates and attributes.
+| 读取当前选定项文件大小、日期和属性。导出全部文件大小、日期和属性前有用。
 |-
 | Ctrl + V<br>Shift + Insert
-| Paste items from the clipboard into the selected folder.
+| 从剪贴板粘贴项目到选定文件夹。
 |-
 | Ctrl + X
-| Cut selected items.
+| 剪切选定项。
 |-
 | Ctrl + Shift + C
-| Copy the full path and name of the current selection to the clipboard.
+| 复制当前选定项完整路径和名称到剪贴板。
 |-
 | Shift + F10
-| Display item context menu for the current selection. Displays the result list context menu if no selection.
+| 显示当前选定项上下文菜单。无选定项时显示结果列表上下文菜单。
 |-
 | Any character
-| Adds a character to the jump to text.
+| 添加字符。
 |-
 | Backspace
-| Remove the last character in the jump to text.
+| 移除文本最后一个字符
 |}
 
-==Global keyboard shortcuts==
-Keyboard shortcuts that can be used when an Everything search window has focus.
+==全局键盘快捷键==
+Everything 搜索窗口激活时使用的键盘快捷键。
 
 {| class="wikitable"
-! Shortcut key
-! Action
+! 快捷键
+! 动作
 |-
 | Escape<br>Ctrl + W
-| Close the Everything window.
+| 关闭 Everything 窗口。
 |-
 | F1
-| Show the Everything help.
+| 打开 Everything 帮助。
 |-
 | F3<br>Ctrl + F<br>Alt + D
-| Focus and highlight the search edit.
+| 聚焦和高亮搜索框。
 |-
 | F5
-| Reload icons, file sizes, dates and attributes.
+| 重载图标、文件大小、日期和属性。
 |-
 | F11
-| Toggle fullscreen.
+| 切换全屏。
 |-
 | Ctrl + Tab<br>Ctrl + Shift + Tab
-| Cycle between open windows.
+| 切换于激活窗口。
 |-
 | Tab<br>Shift + Tab
-| Cycle between search edit and results view.
+| 切换于搜索框与结果列表。
 |-
 | Escape
-| Close the current window.
+| 关闭当前窗口。
 |-
 | Alt + 1
-| Resize the window to 512 x 398.
+| 调整窗口尺寸为 512 x 398。
 |-
 | Alt + 2
-| Resize the window to 640 x 497.
+| 调整窗口尺寸为 640 x 497。
 |-
 | Alt + 3
-| Resize the window to 768 x 597.
+| 调整窗口尺寸为 768 x 597。
 |-
 | Alt + 4
-| Auto size the window.
+| 自动调整窗口尺寸。
 |-
 | Alt + P
-| Toggle the preview pane.
+| 切换预览面板。
 |-
 | Ctrl + Shift + 1
-| Toggle extra large thumbnails.
+| 切换超大图标视图。
 |-
 | Ctrl + Shift + 2
-| Toggle large thumbnails.
+| 切换大图标视图。
 |-
 | Ctrl + Shift + 3
-| Toggle medium thumbnails.
+| 切换中等图标视图。
 |-
 | Ctrl + Shift + 6
-| Toggle detail view.
+| 切换详情视图。
 |-
 | Ctrl + Alt + +
-| Increase thumbnail size.
+| 增加缩略图尺寸。
 |-
 | Ctrl + Alt + -
-| Decrease thumbnail size.
+| 减小缩略图尺寸。
 |-
 | Ctrl + `
-| Toggle debug console.
+| 切换调试控制台。
 |-
 | Ctrl + F1
-| Show About Everything.
+| 打开 Everything 关于页面。
 |-
 | Ctrl + 1
-| Sort by name.
+| 按名称排序。
 |-
 | Ctrl + 2
-| Sort by path.
+| 按路径排序。
 |-
 | Ctrl + 3
-| Sort by size.
+| 按大小排序。
 |-
 | Ctrl + 4
-| Sort by extension.
+| 按扩展名排序。
 |-
 | Ctrl + 5
-| Sort by type.
+| 按类型排序。
 |-
 | Ctrl + 6
-| Sort by date modified.
+| 按修改日期排序。
 |-
 | Ctrl + 7
-| Sort by date created.
+| 按创建日期排序
 |-
 | Ctrl + 8
-| Sort by attributes.
+| 按属性排序
 |-
 | Ctrl + 9
-| Sort by date recently changed.
+| 按最近更改日期排序。
 |-
 | Ctrl + B
-| Toggle match whole word.
+| 切换全字匹配。
 |-
 | Ctrl + D
-| Bookmark the current search.
+| 添加当前搜索为书签。
 |-
 | Ctrl + I
-| Toggle match case.
+| 切换大小写匹配。
 |-
 | Ctrl + M
-| Toggle match diacritics.
+| 切换变音标记匹配。
 |-
 | Ctrl + N
-| Open a new search window.
+| 新建搜索窗口。
 |-
 | Ctrl + O
-| Open an Everything file list.
+| 打开 Everything 文件列表。
 |-
 | Ctrl + P
-| Show the Options window.
+| 打开选项页面。
 |-
 | Ctrl + Q
-| Exit Everything.
+| 退出 Everything。
 |-
 | Ctrl + R
-| Toggle Regex.
+| 切换正则表达式匹配。
 |-
 | Ctrl + S
-| Export the current results to an Everything file list, csv or txt file.
+| 扫除当前搜索为 Everything 文件列表、csv 或 txt 文件。
 |-
 | Ctrl + T
-| Toggle always on top.
+| 切换总是置顶。
 |-
 | Ctrl + U
-| Toggle match path.
+| 切换路径匹配。
 |-
 | Ctrl + +
-| Increase text size.
+| 增加字体大小。
 |-
 | Ctrl + -
-| Decrease text size.
+| 减小字体大小。
 |-
 | Ctrl + 0
-| Reset text size to Normal.
+| 重置字体大小。
 |-
 | Ctrl + Mouse Wheel Up<br>Ctrl + Mouse Wheel Down
-| Change view.
+| 更改视图。
 |-
 | Alt + Home
-| Go to the home search.
+| 返回主页搜索。
 |-
 | Alt + Left Arrow<br>Back<br>Mouse back button
-| Go back to the previous search.
+| 转到上一个搜索。
 |-
 | Alt + Right Arrow<br>Forward<br>Mouse forward button
-| Go forward to the next search.
+| 转到下一个搜索。
 |-
 | Ctrl + Shift + F
-| Organize filters.
+| 管理筛选器。
 |-
 | Ctrl + Shift + B
-| Organize bookmarks.
+| 管理书签。
 |-
 | Ctrl + H<br>Ctrl + Shift + H
-| Show all search history.
+| 显示全部搜索历史。
 |}
 
-==Hotkeys==
-The Everything search window can be shown by pressing a hotkey.
-Hotkeys can be used anywhere in Windows.
+==热键==
+Everything 搜索窗口可以通过热键激活。
+热键可以用于任意窗口。
 
-There are three different methods for opening the Everything window with a hotkey:
+通过热键打开 Everything 窗口有以下三种方式：
 {| class="wikitable"
-! Method
-! Description
+! 方式
+! 说明
 |-
-| New window
-| Always show a new Everything search window.
+| 新建搜索窗口
+| 总是打开一个新建的 Everything 搜索窗口。
 |-
-| Show window
-| Show the Everything search window if one exists, otherwise create a new Everything search window.
+| 打开搜索窗口
+| 打开已存在的 Everything 搜索窗口，否则创建新的 Everything 搜索窗口。
 |-
-| Toggle window
-| Hide the Everything search window if it is currently in the foreground, otherwise show the Everything search window if one exists, otherwise create a new Everything search window.
+| 切换搜索窗口
+| 隐藏前台的 Everything 搜索窗口，否则激活后台的 Everything 搜索窗口，否则创建新的 Everything 搜索窗口。
 |}
 
-To define a Hotkey to open Everything:
+定义热键以打开 Everything：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''Keyboard''' tab.
-*Choose a hotkey method.
-*Press a new key combination.
-*Click OK.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''快捷键'''页面。
+*选择热键方式。
+*按下新的热键组合。
+*点击确定。
 </ul>
 
-Note: Everything must be running in the background for hotkeys to work.
-Note: You can not override any existing hotkey.
+注意：Everything 必须后台运行时热键才能工作。
+注意：您无法覆盖已存在热键。
 
-To disable a Windows hotkey, such as Win + F:
+禁用 Windows 默认热键，例如 Win + F：
 <ul>
-*From the Start menu, open regedit
-*In the Registry Editor, navigate to:
+*进入开始菜单，打开 regedit。
+*进入注册表编辑器，转到：
 <pre>
 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
 </pre>
-*Create a new String Value called '''DisabledHotkeys'''
-*Set the DisabledHotkeys data to the letter you would like freed, for example: '''F'''
-*Restart your computer
-*Apply the (now free) hotkey Win + F in Everything.
+*创建新字符串值 '''DisabledHotkeys'''。
+*设置 DisabledHotkeys 数据为您想要释放的字母，例如：'''F'''。
+*重启计算机。
+*在 Everything 中应用释放的热键 Win + F。
 </ul>
 
 
-==Customizing==
-To customize keyboard shortcuts:
+==自定义==
+自定义键盘快捷键：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
-*Click the '''Keyboard''' tab.
-*Use '''Show commands containing:''' to search for a command
-*Click '''Add...''' to add a new keyboard shortcut or click '''Edit...''' to edit an existing one.
-*Select a location to use the shortcut in:
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''快捷键'''页面。
+*使用'''显示包含命令:'''以搜索命令。
+*点击'''添加...'''以添加新的键盘快捷键或点击'''编辑...'''以编辑已存在键盘快捷键。
+*选择快捷键使用位置：
 {|
-! Location
-! Description
+! 位置
+! 说明
 |-
-| Global
-| The shortcut will work anywhere in the Everything search window.
+| 全局
+| 适用于Everything 搜索窗口全局。
 |-
-| Search Edit
-| The shortcut will only work when pressed in the search edit.
+| 搜索框
+| 仅适用于 Everything 搜索窗口搜索框。
 |-
-| Result List
-| The shortcut will only work when pressed in the result list.
+| 结果列表
+| 仅适用于Everything 搜索窗口结果列表。
 |}
-*Press a new keyboard shortcut for shortcut key.
-*Check shortcut key currently used by, this existing shortcut (if any) will be removed if you click OK.
-*Click '''OK'''.
-*Click '''OK'''.
+*按下新的键盘快捷键组合。
+*检查快捷键组合是否被占用，如果点击确定占用快捷键将被移除。
+*点击'''确定'''。
+*点击'''确定'''。
 </ul>
 
