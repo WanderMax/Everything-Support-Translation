@@ -108,7 +108,7 @@ MULTILINGUAL = "[[support/everything/supported_languages|多语言版]]"
 KB = "KB"
 
 DOWNLOAD_EVERYTHING_LANGUAGE_PACK_HEADER = "下载 Everything 语言包"
-EVERYTHING_LANGUAGE_PACK_HELP = "[[support/everything/supported_languages/#installing_the_language_pack|帮助]]"
+EVERYTHING_LANGUAGE_PACK_HELP = "[[support/everything/supported_languages/#安装语言包|帮助]]"
 
 DOWNLOAD_EVERYTHING_COMMAND_LINE_INTERFACE_HEADER = "下载 Everything 命令行接口"
 EVERYTHING_COMMAND_LINE_INTERFACE_HELP = "[[support/everything/command_line_interface|帮助]]"
