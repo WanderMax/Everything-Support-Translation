@@ -50,6 +50,6 @@ Everything 默认情况下仅记录 Everything 启动后，文件和文件夹的
 
 ==更多请查阅==
 <ul>
-*[[support/everything/searching#函数|rc:]] 和 [[support/everything/searching#函数|recentchange:]] 搜索函数。
-*[[support/everything/Options#NTFS Include USN Journal in recent changes|包含 USN 日志到最近变更]]选项。
+*[[support/everything/searching#函数|rc:]] 和 [[support/everything/searching#函数|recentchange:]] 搜索函数
+*[[support/everything/Options#NTFS Include USN Journal in recent changes|包含 USN 日志到最近变更]]选项
 </ul>
