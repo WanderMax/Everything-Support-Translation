@@ -253,7 +253,7 @@ time_format=
 查阅 [[support/everything/ini#translucent_selection_rectangle_border_color|translucent_selection_rectangle_border_color]] 以更改边框颜色。
 
 ==更改默认搜索和搜索设置==
-查阅 [[support/everything/options#home|主页]]
+查阅[[support/everything/options#home|主页]]
 
 ==字体和颜色==
 查阅[[support/everything/options#fonts_and_colors|字体和颜色]]以更改结果列表字体
