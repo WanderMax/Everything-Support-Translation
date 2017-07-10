@@ -80,7 +80,7 @@ Everything 仅能通过打开文件或右键点击文件才可以访问文件。
 *使用记事本打开文件列表。
 *按 '''Ctrl + H''' 以打开替换对话框。
 *更改'''查找'''为旧分卷名 (例如：D:)
-*更改'''替换 '''为新分卷名 (例如：E:)
+*更改'''替换'''为新分卷名 (例如：E:)
 *点击'''替换全部'''。
 *'''保存'''更改到文件列表。
 </ul>
@@ -145,7 +145,7 @@ EFU 文件是逗号分隔值 ([[http://en.wikipedia.org/wiki/Comma-separated_val
 指定至少文件名分栏时需要标头。
 文件大小指定为字节。
 日期是十进制 FILETIMEs (1601 年 1 月 1 日 100-纳秒) 或 [[http://en.wikipedia.org/wiki/ISO_8601|ISO 8601]] 格式日期。
-属性可以为 0 或 多个 [[http://msdn.microsoft.com/en-us/library/windows/desktop/gg258117%28v=vs.85%29.aspx|Windows 文件属性]]。
+属性可以为 0 或多个 [[http://msdn.microsoft.com/en-us/library/windows/desktop/gg258117%28v=vs.85%29.aspx|Windows 文件属性]]。
 EFU 文件是 UTF-8 编码。
 
 ==用 Excel 打开文件列表==
