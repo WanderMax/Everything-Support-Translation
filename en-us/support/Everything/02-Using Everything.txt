@@ -115,7 +115,7 @@ Everything 记忆每次结果的运行次数。
 查阅[[support/everything/file lists|文件列表]]以获取更多信息。
 
 ==选项==
-自定义Customize the installation of Everything, 用户界面、主页搜索、搜索设置、搜索结果显示、右键菜单、字体和颜色、键盘快捷键、搜索和运行历史、NTFS 分卷、文件夹索引、文件列表、排除文件夹和文件类型、ETP 和 HTTP 服务器。
+自定义 Everything 安装位置、用户界面、主页搜索、搜索设置、搜索结果显示、右键菜单、字体和颜色、键盘快捷键、搜索和运行历史、NTFS 分卷、文件夹索引、文件列表、排除文件夹和文件类型、ETP 和 HTTP 服务器。
 查阅[[support/everything/options|选项]]以获取更多信息。
 
 ==退出 Everything==
