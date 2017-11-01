@@ -14,7 +14,7 @@ http_title_format=$s?{$s - }$t
 taskbar_notification_title_format=$t$i?{ ($i)}
 </pre>
 
-*Set a new format:
+*设置新格式：
 {| class="wikitable"
 ! 变量名
 ! 说明
@@ -247,7 +247,7 @@ time_format=
 *重启 Everything。
 </ul>
 
-==半透明选择长方形==
+==半透明矩形选区==
 查阅 [[support/everything/ini#translucent_selection_rectangle_alpha|translucent_selection_rectangle_alpha]] 以更改半透明度。
 查阅 [[support/everything/ini#translucent_selection_rectangle_background_color|translucent_selection_rectangle_background_color]] 以更改背景色。
 查阅 [[support/everything/ini#translucent_selection_rectangle_border_color|translucent_selection_rectangle_border_color]] 以更改边框颜色。
