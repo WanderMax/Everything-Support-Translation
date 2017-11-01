@@ -264,10 +264,10 @@ time_format=
 ==状态栏格式==
 查阅 [[support/everything/ini#statusbar_selected_item_format|statusbar_selected_item_format]] 以更改状态栏格式。
 
-==HTTP Server==
+==HTTP 服务器==
 查阅[[support/everything/http#更改_http_默认文件|更改 HTTP 默认文件]]。
 
-==ETP/FTP Welcome Message==
+==ETP/FTP 欢迎消息==
 查阅 Everything.ini 中 [[support/everything/ini#etp_server_welcome_message|etp_server_welcome_message]]。
 
 ==更多请查阅==
