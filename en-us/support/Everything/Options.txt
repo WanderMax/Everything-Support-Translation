@@ -1,886 +1,886 @@
-=Options=
-The Everything Options contains settings that modify the system or Everything.
+=选项=
+Everything 选项包含了修改系统或 Everything 的设置项。
 
-To open the Everything Options window:
+打开 Everything 选项窗口：
 <ul>
-*In '''''Everything''''', from the '''Tools''' menu, click '''Options'''.
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
 </ul>
 
-Select one of the ''"tabs"'' below:
+选择以下任一''"页面"''：
 <ul>
-*[[#General|General]]
+*[[#通用|通用]]
 <ul>
 *[[#UI|UI]]
-*[[#Home|Home]]
-*[[#Search|Search]]
-*[[#Results|Results]]
-*[[#View|View]]
-*[[#Context Menu|Context Menu]]
-*[[#Fonts and Colors|Fonts and Colors]]
-*[[#Keyboard|Keyboard]]
+*[[#首页|首页]]
+*[[#搜索|搜索]]
+*[[#结果列表|结果列表]]
+*[[#视图|视图]]
+*[[#上下文菜单|上下文菜单]]
+*[[#字体和颜色|字体和颜色]]
+*[[#快捷键|快捷键]]
 </ul>
-*[[#History|History]]
-*[[#Indexes|Indexes]]
+*[[#历史|历史]]
+*[[#索引|索引]]
 <ul>
 *[[#NTFS|NTFS]]
 *[[#ReFS|ReFS]]
-*[[#Folders|Folders]]
-*[[#File Lists|File Lists]]
-*[[#Exclude|Exclude]]
+*[[#文件夹|文件夹]]
+*[[#文件列表|文件列表]]
+*[[#排除列表|排除列表]]
 </ul>
-*[[#ETP/FTP Server|ETP/FTP Server]]
-*[[#HTTP Server|HTTP Server]]
+*[[#ETP/FTP 服务器|ETP/FTP 服务器]]
+*[[#HTTP 服务器|HTTP 服务器]]
 </ul>
 
-==General==
+==通用==
 [[File:support/everything/Everything.Options.General.png|alt=Everything Options General]]
 
-Contains settings for configuring the installation of ''Everything''.
+包含有 ''Everything'' 安装向导中配置项。
 
 <dl>
-;''Language''
-Selects the language used for displaying text in Everything. If set to User Default the language is determined by the current users language for displaying text, (User Default) is displayed next to this language in the language selection combo.
-Click the download button to the right of languages to open the download page for the Everything language pack in your web browser.
+;''语言''
+选择 Everything 显示语言。如果设置为用户默认，那么显示语言为当前用户语言决定，(用户默认) 将会显示在语言列表中当前语言右侧。
+点击语言列表右侧下载按钮以打开下载页面下载 Everything 多语言包。
 
-;''Store settings and data in %APPDATA%\Everything''
-Choose the location for storing settings and data. If enabled, settings and data are stored in %APPDATA%\Everything. If disabled, settings and data are stored in the same location as the Everything.exe.
-This option is enabled in the installer by default and disabled in the portable version by default. Changing this setting will overwrite any existing settings.
+;''保存设置和数据到 %APPDATA%\Everything''
+选择设置和数据保存位置。启用后，设置和数据将保存在 %APPDATA%\Everything。如果禁用，设置和数据将保存在 Everything.exe 同目录。
+此选项在安装版中默认启用但便携版中默认禁用。更改此设置将会覆盖已存在设置。
 
-;''Check for updates on startup''
-Check www.voidtools.com for Everything updates when starting Everything.
-To include beta updates, see [[support/everything/ini#beta_updates|Beta updates]].
+;''启动时检查更新''
+启动 Everything 时检查 www.voidtools.com 以获取 Everything 稳定版更新。
+启动时亦检查测试版更新，请查阅[[support/everything/ini#beta_updates|测试版更新]]。
 
-;''Start Everything on system startup''
-Start Everything when Windows starts. When Everything starts from Windows startup, the tray icon is shown and the database is loaded and updated, no Everything search window is shown.
+;''开机自启动 Everything''
+开机自启动 Everything。Everything 开机自启动后，将显示托盘图标且加载和更新数据库，Everything 搜索窗口将隐藏。
 
-;''Run as administrator''
-If enabled and Everything is run with limited privileges, Everything will relaunch with administrative privileges. The Everything service is not required when enabling this option. When disabling this option you must manually restart Everything. When enabled, applications run from Everything will also run as administrator.
+;''以管理员身份运行''
+非管理员权限 Everything 启用后，Everything 将以管理员权限重启。此时不再需要 Everything 服务。当禁用此选项时，您必须手动重启 Everything。启用后，从 Everything 启动的程序都将以管理员身份运行。
 
-;''Everything service''
-Install the Everything service. The Everything service will allow the Everything search window to read and monitor the USN Journal on all NTFS volumes. Enabling this will allow Everything to run as a standard user.
+;''Everything 服务''
+安装 Everything 服务。Everything 服务将允许 Everything 搜索窗口读取和监控所有 NTFS 分卷 USN 日志。启用此项将允许 Everything 以标准用户运行。
 
-;''Show folder context menus''
-Add the '''Search Everything...''' item to folder context menus. The folder context menu is displayed when you right click a folder in Windows. Clicking on the folder context menu item '''Search Everything...''' will launch Everything and populate the search with the selected folder.
+;''添加到资源管理器右键菜单''
+添加'''搜索 Everything...''' 项到文件夹上下文菜单。Windows 资源管理器中右键点击后将显示文件夹上下文菜单。点击文件夹上下文菜单中'''搜索 Everything...''' 将会启动 Everything 并对选定文件夹搜索。
 
-;''Start menu shortcuts''
-Add '''Search Everything''' shortcut (and '''Uninstall Everything''' shortcut if uninstall.exe is present) to the start menu under Programs \ Everything.
+;''添加开始菜单快捷方式''
+添加'''搜索 Everything''' 快捷方式 (和'''卸载 Everything''' 快捷方式，如果 uninstall.exe 存在) 到开始菜单中 Programs \ Everything。
 
-;''Desktop shortcut''
-Add '''Search Everything''' shortcut to the Desktop.
+;''添加桌面快捷方式''
+添加'''搜索 Everything''' 桌面快捷方式。
 
-;''Quick launch shortcut''
-Add '''Search Everything''' shortcut to the Quick launch toolbar.
-To show the Quick Launch toolbar in Windows Vista or later:
+;''添加快速启动栏快捷方式''
+添加'''搜索 Everything''' 快捷方式到快速启动栏。
+在 Windows Vista 或更新中显示快速启动栏：
 <ul>
-*Right click an empty spot on the taskbar.
-*From the '''Toolbars''' submenu, click '''New toolbar...'''
-*type in:
+*右键点击任务栏空白处。
+*在'''工具栏''' 子菜单中，点击'''新建工具栏...'''
+*输入：
 <pre>
 %userprofile%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch
 </pre>
-*Click Select Folder.
+*点击选择文件夹。
 </ul>
 
-;''URL protocol''
-Open Everything from es: urls.
-For example, when clicking on [[es:abc123|es:abc123]] Everything will launch and populate the search with abc123.
+;''安装 URL 协议''
+从 es: urls 打开 Everything。
+例如，当点击 [[es:abc123|es:abc123]] 时 Everything 将启动并搜索 abc123。
 
-;''EFU file association''
-Open EFU files with Everything. EFU files are Everything file lists, for more information please see [[support/everything/file lists|File Lists]].
+;''关联 EFU 文件到 Everything''
+用 Everything 打开 EFU 文件。EFU 文件是 Everything 文件列表文件，更多信息请查阅[[support/everything/file lists|文件列表]]。
 </dl>
 
 ==UI==
 [[File:support/everything/Everything.Options.UI.png|alt=Everything Options UI]]
 
-Contains settings for configuring the user interface.
+包含用户界面配置。
 
 <dl>
-;''Run in background''
-Keep Everything running in the background when all search windows are closed. If disabled and all search windows are closed, Everything will exit completely.
+;''后台运行''
+全部搜索窗口关闭后保持 Everything 后台运行。如果禁用全部搜索窗口关闭后，Everything 将完全退出。
 
-;''Show tray icon''
-Show the Everything tray icon.
+;''显示托盘图标''
+显示 Everything 托盘图标。
 
-;''Single click tray''
-If enabled, Everything will open from the tray icon with a single mouse click. If disabled, Everything will open from the tray icon with a double click.
+;''单击托盘图标打开搜索窗口''
+如果启用，单击托盘图标 Everything 即可打开搜索窗口。如果禁用，双击托盘图标 Everything 才可以打开搜索窗口。
 
-;''Create a new window from the system tray''
-If enabled, always create a new search window from the system tray. If disabled, opening the search window from the tray will show an existing search window before creating a new search window.
+;''单击托盘图标新建搜索窗口''
+如果启用，单击托盘图标将总是创建新的搜索窗口。如果禁用，单击托盘图标将打开已存在的搜索窗口而不是新建搜索窗口。
 
-;''Create a new window when running Everything''
-If enabled, always create a new search window when running Everything.exe or an Everything shortcut. If disabled, running Everything.exe or an Everything shortcut will show an existing search window before creating a new search window.
+;''允许多个窗口运行''
+如果启用，运行 Everything.exe 或 Everything 快捷方式将总是创建新的搜索窗口。如果禁用，运行 Everything.exe 或 Everything 快捷方式将打开已存在的搜索窗口而不是新建搜索窗口。
 
-;''Search as you type''
-If enabled, each keystroke you press will update the search results. If disable, you must press enter to update the search results.
+;''实时搜索''
+如果启用，搜索参数变化时实时更新搜索结果。如果禁用，您必须按下 enter 以更新搜索结果。
 
-;''Select search on mouse click''
-Select all the search edit text when the search edit gains focus from a mouse click.
+;''点击时选中所有文字''
+鼠标点击搜索输入框时, 自动选中所有文字。
 
-;''Focus search on activate''
-Focus the search edit, when Everything is activated from alt + tab or clicking on an Everything search window with the mouse.
+;''自动聚焦于输入框''
+当通过 alt + tab 或鼠标点击激活 Everything 搜索窗口时, 自动将焦点放在搜索输入框上。
 
-;''Full row select''
-The whole row is selectable, otherwise only the name part is selectable.
+;''全行选定''
+扩展选定项目到整行，否则仅选定名称部分。
 
-;''Single click open''
-Open a file or folder with a single click or double click. To select a file or folder when single click is active hover over the item with the cursor.
+;''单击打开''
+单击或双击打开文件或文件夹。激活单击打开时使用鼠标悬停以选择文件或文件夹。
 
-;''Underline icon titles''
-Choose when filenames are underlined in single click mode.
+;''项目标题下划线''
+激活单击打开时指定何时下划线文件名。
 </dl>
 
-==Home==
+==首页==
 [[File:support/everything/Everything.Options.Home.png|alt=Everything Options Home]]
 
-Contains settings for configuring the first search when a new Everything search window is shown.
+包含 Everything 搜索结果配置。
 
 <dl>
-;''Match case''
-The default match case setting. If set to use last value, the match case setting will be restored from the previously closed Everything search window.
+;''区分大小写''
+默认大小写匹配设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。
 
-;''Match whole word''
-The default match whole word setting. If set to use last value, the match whole word setting will be restored from the previously closed Everything search window.
+;''全字匹配''
+默认全字匹配设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。
 
-;''Match path''
-The default match path setting. If set to use last value, the match path setting will be restored from the previously closed Everything search window.
+;''路径匹配''
+默认路径匹配设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。
 
-;''Match diacritics''
-The default match diacritics setting. If set to use last value, the match diacritics setting will be restored from the previously closed Everything search window.
+;''变音标记匹配''
+默认变音标记匹配设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。
 
-;''Match Regex''
-The default match regex setting. If set to use last value, the match regex setting will be restored from the previously closed Everything search window.
+;''正则匹配''
+默认正则匹配设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。
 
-;home_search|''Search''
-The default search. If set to use last value, the search will be restored from the previously closed Everything search window. Set to custom to define your own default search.
+;home_search|''搜索''
+默认搜索设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。设置为自定义可以自定义您的默认搜索。
 
-;''Filter''
-The default filter. If set to use last value, the filter will be restored from the previously closed Everything search window. 
+;''筛选器''
+默认筛选器设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。
 
-;''Sort''
-The default sort. If set to use last value, the sort will be restored from the previously closed Everything search window if it was a fast sort. A fast sort is a sort by name, run count, date run or date recent changed.
-To always keep the sort, see [[support/everything/ini#always_keep_sort|Always keep sort]].
+;''排序''
+默认排序设置。如果设置快速排序为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。快速排序是按照名称、运行次数、运行日期或最近修改时间的排序方式。
+保持排序，请查阅[[support/everything/ini#always_keep_sort|保持排序]]。
 
-;''Index''
-The default index. If set to use last value, the index will be restored from the previously closed Everything search window.
+;''索引''
+默认索引设置。如果设置为使用上一个值，则将使用 Everything 搜索窗口上次关闭时设置。
 
-;''File list''
-The filename of the file list when the index is set to a file list.
+;''文件列表''
+当设置索引为文件列表时，文件列表名称设置。
 
-;''ETP server''
-The username, password, host and port of the ETP server when the index is set to a ETP server.
+;''ETP 服务器''
+当设置索引为 ETP 服务器时，包含用户名、密码、主机和端口设置。
 
-;''Link type''
-The link type of the ETP server when the index is set to an ETP server.
+;''链接类型''
+当设置索引为 ETP 服务器时，链接类型设置。
 </dl>
 
-==Search==
+==搜索==
 [[File:support/everything/Everything.Options.Search.png|alt=Everything Options Search]]
 
-Contains settings for configuring the search.
+包含搜索配置。
 
 <dl>
-;''Fast ASCII search''
-Use single byte comparisons for lower case ASCII characters. 
-Enabling this will greatly improve searching performance when match diacritics is enabled. 
-Disable this to allow Turkish I with dot to match lowercase i.
+;''快速 ASCII 搜索''
+使用单字节对比搜索小写 ASCII 字符。 
+启用此项将会极大提升匹配变音标记时的搜索性能。
+禁用此项来修正 i 和带点的 I 的大小写区分模糊。
 
-;''Match path when a search term contains a path separator''
-Match the full path and filename when a search term contains a backslash (\). 
-Disable this to find files with backslashes in the filename.
+;''匹配路径分割符''
+当搜索含有反斜线 (\) 时, 搜索时包括文件名和完整路径。
+禁用此项以查找包含反斜线的文件名。
 
-;''Match whole filename when using wildcards''
-If enabled, using wildcards must match the ''entire'' filename. 
-If disabled, wildcard matches can be found anywhere in the filename.
+;''使用通配符时匹配完整文件名''
+如果启用，使用通配符必匹配完整文件名。
+如果禁用，通配符将匹配文件名的任意位置。
 
-;''Allow literal operators''
-Allow AND, OR and NOT as operators. 
-Can cause issues when searching for filenames that include the string AND, OR or NOT.
+;''支持操作符''
+允许使用 AND (与)、OR (或)、NOT (否)等操作符。 
+当文件名中包含有 AND、OR 或 NOT 等字符时将会引发搜索问题。
 
-;''Allow round bracket grouping''
-Allow ( and ) for grouping operators. Can cause issues when searching for filenames with the text ( and ).
+;''支持圆括号''
+允许使用左括号'('和右括号')'。当文件名中包含有'('和')'字符时将会引发搜索问题。
 
-;''Expand environment variables''
-Expand environment variables inside % quotes. 
-For example: %APPDATA% will expand to C:\Users\<Current User>\AppData\Roaming. 
-Can cause issues when searching for filenames that include a % character.
+;''扩展系统环境变量''
+扩展 % 引用中的系统环境变量。
+例如：%APPDATA% 将扩展为 C:\Users\<Current User>\AppData\Roaming。
+当文件名中包含有'%'字符时将会引发搜索问题。
 
-;''Replace forward slashes with backslashes''
-Forward slashes (/) are replaced with backslashes (\). 
-Can cause issues when searching for filenames that include a / character. File lists can contain URLs with forward slashes (/).
+;''替换反斜线为斜线号''
+斜线号 (/) 替换为反斜线 (\) 作为路径分隔符。 
+当文件名中包含有'/'字符时将会引发搜索问题。文件列表可以包含斜线号 (/) 的链接。
 
-;''Operator precedence''
-Set the order in which operators are evaluated.
+;''操作符优先级''
+设置操作符优先级。
 
-Set to OR > AND to evaluate OR operations first, for example, searching for <code>A B | C D</code> is the same as <code>A (B | C) D</code>.
+设置 OR > AND 以优先运算 OR 操作符，例如，搜索 <code>A B | C D</code> 将等同于 <code>A (B | C) D</code>。
 
-Set to AND > OR to evaluate AND operations first, for example, searching for <code>A B | C D</code> is the same as <code>(A B) | (C D)</code>.
+设置 AND > OR 以优先运算 AND 操作符，例如，搜索 <code>A B | C D</code> 将等同于 <code>(A B) | (C D)</code>。
 
 </dl>
 
-==Results==
+==结果列表==
 [[File:support/everything/Everything.Options.Results.png|alt=Everything Options Results]]
 
-Contains settings for configuring the result list.
+包含结果列表配置。
 
 <dl>
-;''Hide results when the search is empty''
-The results are not shown until you type in a search.
+;''搜索关键词为空时不显示搜索结果''
+在输入搜索关键词后才显示搜索结果。
 
-;''Clear selection on search''
-Clear the selection each time the search changes. Disable to preserve the selection between searches.
+;''搜索时清除选择区''
+搜索参数改变时清除结果选择区和焦点。禁用以保留搜索间选区。
 
-;''Close window on execute''
-The Everything search window is closed immediately after opening an item.
+;''运行后关闭搜索窗口''
+打开搜索结果中某项后, 关闭搜索窗口。
 
-;''Open path with double click''
-Paths in the path column can be opened with a double click.
+;''双击路径列打开目录''
+双击搜索结果的路径字段时, 打开该目录。
 
-;''Auto scroll view''
-Periodically scroll the result list when the mouse is dragged outside the visible area.
+;''视图自动滚屏''
+搜索结果列表发生改变时, 当前选中的内容是否自动滚动到视窗内。
 
-;''Double quote copy as path''
-Include double quotes when copying filenames to the clipboard.
+;''复制路径包含双引号''
+复制路径时, 是否添加双引号。
 
-;''Do not select extension when renaming''
-Enable to select the file part only, excluding the extension when renaming a file.
+;''重命名时, 忽略扩展名''
+启用以在重命名时仅选择文件名，排除扩展名。
 
-;''Sort date descending first''
-When sorting by date, display newest dates first.
+;''按日期降序排列''
+按日期排序时, 默认从新到旧排列。
 
-;''Sort size descending first''
-When sorting by size, display the largest files first.
+;''按大小降序排列''
+按大小排序时, 默认从大到小排列。
 
-;''Result list focus''
-Can be one of the following:
+;''结果列表焦点''
+可以为以下任一数值：
 {|
-! Value
-! Description
+! 数值
+! 说明
 |-
-| Clamp
-| The result list focus will be clamped to the top and bottom items.
+| 基本
+| 从第一条搜索结果，到最后一条搜索结果。
 |-
-| Repeat
-| The result list focus will wrap around the top and bottom items.
+| 往复
+| 到达最后一条搜索结果时，再向下将回到第一条，反之亦然。
 |-
-| Repeat with search
-| The result list focus will wrap around the top and bottom items to the search edit.
+| 往复(含搜索框)
+| 搜索结果第一条再向上(或最后一条再向下)，将到达搜索框。
 |}
 
-;''Load icon priority''
-The thread priority for loading icons.
+;''图标加载优先级''
+图标加载线程优先级。
 
-;''Load thumbnail priority''
-The thread priority for loading thumbnails.
+;''缩略图加载优先级''
+缩略图加载进程优先级。
 
-;''Load extended information priority''
-The thread priority for loading file dates, sizes and attributes.
+;''读取文件信息优先级''
+读取文件日期、大小和属性信息线程优先级。
 </dl>
 
-==View==
+==视图==
 [[File:support/everything/Everything.Options.View.png|alt=Everything Options View]]
 
-Contains settings for configuring the view.
+包含视图配置。
 
 <dl>
-;''Double buffer''
-Use an off screen buffer when rendering the result list. Enable to avoid flickering when rendering. Disable to draw directly to the screen.
+;''使用双缓存''
+使用非屏幕缓存渲染结果列表。启用此项以避免屏幕闪烁。禁用此项则直接屏幕输出结果。
 
-;''Alternate row color''
-Show odd and even rows in a different color.
+;''交错行颜色''
+每个交替行显示不同的背景颜色。
 
-;''Show row mouseover''
-Show the row the mouse is currently over in a different color.
+;''高亮光标经过行''
+高亮光标经过(无须按下选中)的行。
 
-;''Show highlighted search terms''
-Show highlighted search terms.
+;''搜索关键词高亮''
+在搜索结果列表中, 把匹配的字符串高亮显示。
 
-;''Show selected item in status bar''
-Show the full path and filename of the selected file in the status bar.
-The status bar format for the selected item can be customized with the [[support/Everything/ini#statusbar_selected_item_format|statusbar_selected_item_format]] ini option.
+;''状态栏显示选中内容''
+状态栏显示当前选中的文件和完整路径。
+状态栏显示格式可以通过 [[support/Everything/ini#statusbar_selected_item_format|statusbar_selected_item_format]] ini 选项自定义。
 
-;''Show the result count with the selection count''
-Show the total number of results with the selection count in the status bar.
+;''显示选中数量和搜索结果总数''
+状态栏显示选中数量和搜索结果总数。
 
-;''Show size in status bar''
-Shows the total file selection size in the status bar.
-Folder are not included.
-If there is no selection the total file size is shown.
+;''状态栏显示大小''
+状态栏显示选定文件的总大小。
+不包含文件夹。
+如果未选择则显示总大小。
 
-;''Show tooltips''
-Show helpful tooltips in the Everything Options window.
+;''显示提示信息''
+显示 Everything 选项窗口帮助信息。
 
-;''Update display immediately after scrolling''
-Force the display to update immediately after it is scrolled. Enabling this can cause performance issues for mice with high refresh rates.
+;''滚屏之后立即显示''
+列表窗口滚动后, 实时显示当前内容。启用此项也许会在高刷新率下出现性能问题。
 
-;''Size format''
-The size format. Can be one of the following values:
+;''大小格式''
+大小格式。可以为以下任一数值：
 {|
-! Value
-! Description
+! 数值
+! 说明
 |-
-| Auto
-| Use the best format depending on the size.
+| 自动
+| 根据大小自动选择。
 |-
 | Bytes
-| Always display sizes in bytes.
+| 使用 bytes 显示大小。
 |-
 | KB
-| Always display sizes in KB.
+| 使用 KB 显示大小。
 |}
 
-;''Selection rectangle''
-The selection rectangle display type. Can be one of the following values:
+;''矩形选区样式''
+矩形选区显示样式。可以为以下任一数值：
 {|
-! Value
-! Description
+! 数值
+! 说明
 |-
-| Use  system default.
-| Use the same setting as Windows Explorer.
+| 系统默认
+| 使用与 Windows 资源管理器一致设置。
 |-
-| Translucent mask
-| Show a transparent selection mask. Translucency and color can be [[support/everything/customizing#Translucent Selection Rectangle|customized]].
+| 半透明蒙板
+| 显示半透明蒙板。透明度和颜色可以[[support/everything/customizing#半透明矩形选区|自定义]]。
 |-
-| XOR mask
-| Display every other pixel as an inverted pixel.
+| XOR 蒙板
+| 以反色显示其他像素。
 |}
 </dl>
 
-==Context Menu==
+==上下文菜单==
 [[File:support/everything/Everything.Options.Context.Menu.png|alt=Everything Options Context Menu]]
 
-Contains settings for configuring the context menu. The context menu is displayed when right clicking a file or folder in the Everything result list.
+包含上下文菜单配置。右键点击 Everything 结果列表中文件或文件夹即可显示上下文菜单。
 
 <dl>
-;''Show this item''
-;''Show this item when the Shift key is down''
-;''Do not show this item''
-Choose the visibility of this context menu item.
+;''显示此项''
+;''当按下 Shift 键时显示此项''
+;''隐藏此项''
+选择上下文菜单项可见性。
 
-;''Command''
-The command for the selected context menu item.
+;''命令''
+选定菜单项命令。
 
-The following command syntax can be used:
+命令语法：
 {|
-! command
-! Description
+! 命令
+! 说明
 |-
 | $exec(filename)
-| Executes the specified filename.
+| 执行指定文件名。
 |-
 | $openpath(filename)
-| Opens the folder containing the specified filename and selects the specified filename.
+| 打开包含指定文件名的文件夹并选择指定文件名。
 |-
 | $parent(filename)
-| The parent folder of the specified filename
+| 指定文件名父目录。
 |-
 | $pathpart(filename)
-| The path part of filename
+| 文件名路径。
 |-
 | $namepart(filename)
-| The name and extension part of filename
+| 文件名名称和扩展名。
 |-
 | %1
-| The selected filename.
+| 选定文件名。
 |-
 | $$
-| A single literal $
+| 字符 $。
 |-
 | $(
-| A single literal (
+| 字符 (。
 |-
 | $)
-| A single literal )
+| 字符 )。
 |}
 
-See [[support/everything/customizing#external_file_manager|Customizing]] for more information.
+查阅[[support/everything/customizing#external_file_manager|自定义]]以获取更多信息。
 </dl>
 
-==Fonts and Colors==
+==字体和颜色==
 [[File:support/everything/Everything.Options.Fonts.And.Colors.png|alt=Everything Options Fonts And Colors]]
 
-Contains settings for configuring the font and colors in ''Everything''.
+包含 ''Everything'' 字体和颜色配置。
 
 <dl>
-;''Font''
-;''Size''
-The result list font family and size. Use (Default) to use the same settings as the Windows icon font.
-To customize other fonts, please see [[support/everything/ini#Fonts and colors|Everything.ini]].
+;''字体''
+;''大小''
+结果列表字体和大小。使用 (默认) 以使用与 Windows 图标一致字体。
+自定义其他字体，请查阅 [[support/everything/ini#字体和颜色|Everything.ini]]。
 
-;''Foreground color''
-The text color for the selected item. Select a custom color by clicking on the color button.
+;''前景色''
+选中项字体颜色。点击颜色按钮以选择自定义颜色。
 
-;''Background color''
-The background color for the selected item. Select a custom color by clicking on the color button.
+;''背景色''
+选中项背景颜色。点击颜色按钮以选择自定义颜色。
 
-;''Font style''
-The font style. Can be bold or normal.
+;''字体样式''
+字体样式。可以为粗体或正常。
 </dl>
 
-==Keyboard==
+==快捷键==
 [[File:support/everything/Everything.Options.Keyboard.png|alt=Everything Options Keyboard]]
 
-Contains settings for configuring keyboard shortcuts and hotkeys.
-For a list of all the default keyboard shortcuts, please see [[support/everything/keyboard_shortcuts|Keyboard Shortcuts]].
+包含键盘快捷键配置。
+有关全部默认键盘快捷键列表，请查阅[[support/everything/keyboard_shortcuts|键盘快捷键]]。
 
 <dl>
-;''New window hotkey''
-;''Show window hotkey''
-;''Toggle window hotkey''
-New window will always show a new Everything search window. Show window will show an existing window if one exists, otherwise a new search window is created. Toggle window will hide any existing window that is in the foreground, otherwise an existing window is shown if one exists, otherwise a new search window is created.
-Press a new keyboard shortcut to set the hotkey.
+;''新建窗口快捷键''
+;''显示窗口快捷键''
+;''切换窗口快捷键''
+新建窗口将总会显示一个新的 Everything 搜索窗口。显示窗口将会显示已存在的窗口，如不存在则创建一个新的窗口。切换窗口将会隐藏前台已存在窗口，或显示后台窗口，如不存在则创建一个新的窗口。
+按下新的按键以设置快捷键。 
 
-;''Show commands containing''
-Type in a search to filter the command list by name.
+;''显示包含的命令''
+包含在此输入文本的命令。
 
-;''Shortcuts for the selected command''
-To add a new keyboard shortcut to the selected command or edit an existing keyboard shortcut for the selected command:
+;''选定命令快捷键''
+为选定命令添加快捷键或编辑选定命令已存在快捷键：
 <ul>
-*Click '''Add...''' or '''Edit...'''
-*Choose a location to use the shortcut. Can be one of the following values:
+*点击'''添加...'''或'''编辑...'''
+*选择快捷键使用范围。 可以为以下任一数值：
 {|
-! Value
-! Description
+! 数值
+! 说明
 |-
-| Global
-| The shortcut can be used anywhere in ''Everything''.
+| 全局
+| 快捷键适用于 ''Everything'' 任意位置。
 |-
-| Search Edit
-| The shortcut can only be used in the search edit.
+| 搜索输入框
+| 快捷键仅适用于搜索输入框。
 |-
-| Result List
-| The shortcut can only be used in the result list.
+| 结果列表
+| 快捷键仅适用于结果列表。
 |}
-*Press a new shortcut key for shortcut key.
-*Take note of the shortcut key currently used by list, These existing keyboard shortcuts will be removed when clicking OK.
-*Click '''OK'''.
+*按下键盘按键以设置新的快捷键。
+*请注意那些已存在的快捷键，点击确定后已存在的快捷键将被移除。
+*点击'''确定'''。
 </ul>
 
-To remove a keyboard shortcut:
+移除键盘快捷键：
 <ul>
-*Select the keyboard shortcut in shortcuts for the selected command.
-*Click '''Remove'''.
+*选择选定命令快捷键。
+*点击'''移除'''。
 </ul>
 </dl>
 
-==History==
+==历史==
 [[File:support/everything/Everything.Options.History.png|alt=Everything Options History]]
 
-Contains settings for configuring search history and run history.
+包含搜索历史和运行历史配置。
 
 <dl>
-;''Enable search history''
-Remember search history. A search is added to the search history when you press enter from the search edit or when you act on a file or folder in the result list. Disabling search history does not clear the search history. Click Clear Now to permanently delete search history.
-Press Ctrl + Space to complete a search using the search history, if there's more than one way to complete the search a suggestion list is shown.
-Press the drop down arrow on the right to show search suggestions.
+;''启用搜索历史''
+记忆搜索历史。当您执行一次搜索或从结果列表打开文件或文件夹时，搜索将被添加到搜索历史。禁用搜索历史选项并不会清空搜索历史。点击清除搜索历史以永久删除搜索历史。
+按下 Ctrl + Space 将从搜索历史完成搜索，如果搜索历史不唯一将下拉显示搜索建议。
+按下右侧下拉按钮以显示搜索建议。
 
-See [[support/Everything/Search History|Search History]] for more information.
+查阅[[support/Everything/Search History|搜索历史]]以了解更多信息。
 
-;''Keep search history''
-Specify the number of days to keep search history. When the search history is loaded, searches that occurred longer than the specified number of days will be removed.
-if disabled search history is kept forever.
+;''保存搜索历史''
+保存搜索历史到指定天数。当载入搜索历史后，超出天数的历史将被移除。
+如果禁用则永久保存搜索历史。
 
-;''Always show search suggestions''
-Show the suggestion list after every change to the search.
-Consider disabling [[support/everything/options#search as you type|Search as you type]].
-See [[support/everything/ini#search_history_always_suggest|Everything.ini]] for more options.
+;''总是显示搜索建议''
+在输入搜索参数时显示建议搜索列表。
+可以通过禁用[[support/everything/options#search as you type|实时搜索]]以总是显示搜索建议。
+查阅 [[support/everything/ini#search_history_always_suggest|Everything.ini]] 以了解更多信息。
 
-;''Enable run history''
-Remember the number of times each file or folder has been run. When you execute an item in the result list, its run count is incremented by one. You can set the run count for an item in the result list by right clicking it and selecting Set run count.... Disabling run history will not delete run history. Click Clear Now to permanently delete run history.
-Press enter from the search edit will focus the result with the highest run count.
-Results can be sorted by run count.
-See [[support/everything/searching#Functions|runcount:]] and [[support/everything/searching#Functions|daterun:]] to search run history.
+;''启用运行历史''
+记忆每个文件或文件夹打开次数。当您执行一个结果列表项目后，其运行次数加一。您可以通过右键点击并选择设置运行次数...菜单以自定义次数。 禁用运行历史选项并不会清空运行历史。点击清除运行历史以永久删除运行历史。
+搜索框中按下 enter 将会聚焦到最高运行次数结果。
+搜索结果可以按照运行次数排序。
+查阅 [[support/everything/searching#函数|runcount:]] 和 [[support/everything/searching#函数|daterun:]] 以搜索运行历史。
 
-See [[support/Everything/Run History|Run History]] for more information.
+查阅[[support/Everything/Run History|运行历史]]以了解更多信息。
 
-;''Keep run history''
-Specify the number of days to keep run history. When the run history is loaded, searches that occurred longer than the specified number of days will be removed.
-if disabled run history is kept forever.
+;''保存运行历史''
+保存运行历史到指定天数。当载入运行历史后，超出天数的历史将被移除。
+如果禁用则永久保存运行历史。
 </dl>
 
-==Indexes==
+==索引==
 [[File:support/everything/Everything.Options.Indexes.png|alt=Everything Options Indexes]]
 
-Contains settings for configuring the indexes.
+包含索引配置。
 
 <dl>
-;''Database location''
-Override the default location for the database. The default location is:
+;''数据库路径''
+自定义设置将会覆盖默认数据库路径设置。默认路径如下：
 <pre>
 %LOCALAPPDATA%\Everything
 </pre>
-If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, the database location is the same as the Everything.exe location.
-Click '''Browse...''' to browse for a database location.
+如果已禁用[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，设置和数据将保存在 Everything.exe 同目录。
+点击'''浏览...'''以选择数据库路径。
 
-;''Multi-user database filename''
-Normally Everything uses the filename Everything.db for the database. If enabled Everything will use the unique filename Everything.<ComputerName>.<UserName>.db. This might be useful when using the portable version of Everything on a thumb drive on different computers.
+;''多用户数据库名称''
+Everything 默认使用 Everything.db 作为数据库文件名。如果启用此项，Everything 将会使用唯一名称 Everything.<ComputerName>.<UserName>.db 作为数据库文件名。此选项对于多用户便携版 Everything 很有用。
 
-;''Compress database''
-Compress the database with Bzip 2. Can improve loading performance on very slow hard drives at the cost of higher CPU usage when loading and saving.
+;''压缩数据库''
+使用 Bzip 2 压缩数据库。此选项可以提高低速磁盘时的加载性能，但是会导致加载和保存时的高 CPU 占用。
 
-;''Index recent changes''
-Maintain a separate recent change sorted database of all file system changes that can be searched with [[support/Everything/recent changes|rc:]] or sorted by date recently changed.
+;''索引最近变化''
+维持一个额外的按照最近变化排序的系统文件数据库，其可以通过 [[support/Everything/recent changes|rc:]] 搜索，或以最近变化排序。
 
-;''Index file size''
-Include file size information in the index.
-Size information is maintained in real time.
-Enable to search for size information instantly.
-Greatly improves sorting by size performance.
-Requires an additional 8 bytes of memory per file.
+;''索引文件大小''
+索引文件大小信息。
+实时更新文件大小信息索引。
+启用此项以即时搜索文件大小。
+大幅提升按文件大小排序性能。
+每个文件需要额外 8 字节的存储空间。
 
-;''fast size sort''
-Maintain a separate size sorted database of files.
-Enable to sort by size instantly.
-Enable to make Everything remember this sort between searches.
-Requires an additional 4-8 bytes of memory per file.
+;''快速大小排序''
+维持一个额外的按大小排序的文件数据库。
+启用此项以及时大小排序。
+启用后，Everything 将记忆搜索间排序。
+每个文件需要额外 4-8 字节的存储空间。
 
-;''Index folder size''
-Include folder size information in the index.
-Size information is maintained in real time.
-Enable to search for folder size information instantly.
-Requires an additional 8 bytes of memory per folder.
-Folder size will not include excluded files.
+;''索引文件夹大小''
+索引文件夹大小信息。
+实时更新文件夹大小信息索引。
+启用此项以即时搜索文件夹大小。
+每个文件夹需要额外 8 字节的存储空间。
+文件夹大小不好包含排除的文件。
 
-;''Index file date created''
-Include date created information in the index.
-Date created information is maintained in real time.
-Enable to search for date created information instantly.
-Greatly improves sorting by date created performance.
-Requires an additional 8 bytes of memory per file and folder.
+;''索引创建日期''
+索引文件创建日期。
+实时更新文件创建日期索引。
+启用此项以即时搜索文件创建日期。
+大幅提升按文件创建日期排序性能。
+每个文件和文件夹需要额外 8 字节的存储空间。
 
-;''fast date created sort''
-Maintain a separate date created sorted database of files and folders.
-Enable to sort by date created instantly.
-Enable to make Everything remember this sort between searches.
-Requires an additional 4-8 bytes of memory per file.
+;''快速创建日期排序''
+维持一个额外的按创建日期排序的文件和文件夹数据库。
+启用此项以及时创建日期排序。
+启用后，Everything 将记忆搜索间创建日期排序。
+每个文件需要额外 4-8 字节的存储空间。
 
-;''Index file date modified''
-Include date modified information in the index.
-Date modified information is maintained in real time.
-Enable to search for date modified information instantly.
-Greatly improves sorting by date modified performance.
-Requires an additional 8 bytes of memory per file and folder.
+;''索引修改日期''
+索引文件修改日期。
+实时更新文件修改日期索引。
+启用此项以即时搜索文件修改日期。
+大幅提升按文件修改日期排序性能。
+每个文件和文件夹需要额外 8 字节的存储空间。
 
-;''fast date modified sort''
-Maintain a separate date modified sorted database of files and folders.
-Enable to sort by date modified instantly.
-Enable to make Everything remember this sort between searches.
-Requires an additional 4-8 bytes of memory per file.
+;''快速修改日期排序''
+维持一个额外的按修改日期排序的文件和文件夹数据库。
+启用此项以及时修改日期排序。
+启用后，Everything 将记忆搜索间修改日期排序。
+每个文件需要额外 4-8 字节的存储空间。
 
-;''Index file date accessed''
-Include date accessed information in the index.
-Date accessed information is maintained in real time.
-Enable to search for date accessed information instantly.
-Greatly improves sorting by date accessed performance.
-Requires an additional 8 bytes of memory per file and folder.
+;''索引访问日期''
+索引文件访问日期。
+实时更新文件访问日期索引。
+启用此项以即时搜索文件访问日期。
+大幅提升按文件访问日期排序性能。
+每个文件和文件夹需要额外 8 字节的存储空间。
 
-;''fast date accessed sort''
-Maintain a separate date accessed sorted database of files and folders.
-Enable to sort by date accessed instantly.
-Enable to make Everything remember this sort between searches.
-Requires an additional 4-8 bytes of memory per file.
+;''快速访问日期排序''
+维持一个额外的按访问日期排序的文件和文件夹数据库。
+启用此项以及时访问日期排序。
+启用后，Everything 将记忆搜索间访问日期排序。
+每个文件需要额外 4-8 字节的存储空间。
 
-;''Index file attributes''
-Include attributes information in the index.
-Attributes information is maintained in real time.
-Enable to search for attributes information instantly.
-Greatly improves sorting by attributes performance.
-Requires an additional 4 bytes of memory per file and folder.
+;''索引属性''
+索引文件属性。
+实时更新文件属性索引。
+启用此项以即时搜索文件属性。
+大幅提升按文件属性排序性能。
+每个文件和文件夹需要额外 4 字节的存储空间。
 
-;''fast attributes sort''
-Maintain a separate attributes sorted database of files and folders.
-Enable to sort by attributes instantly.
-Enable to make Everything remember this sort between searches.
-Requires an additional 4-8 bytes of memory per file.
+;''快速属性排序''
+维持一个额外的按属性排序的文件和文件夹数据库。
+启用此项以及时属性排序。
+启用后，Everything 将记忆搜索间属性排序。
+每个文件需要额外 4-8 字节的存储空间。
 
-;''fast path sort''
-Maintain a separate path sorted database of files and folders.
-Enable to sort by path instantly.
-Enable to make Everything remember this sort between searches.
-Requires an additional 4-8 bytes of memory per file.
+;''快速路径排序''
+维持一个额外的按路径排序的文件和文件夹数据库。
+启用此项以及时路径排序。
+启用后，Everything 将记忆搜索间路径排序。
+每个文件需要额外 4-8 字节的存储空间。
 
-;''fast extension sort''
-Maintain a separate extension sorted database of files and folders.
-Enable to sort by extension instantly.
-Enable to make Everything remember this sort between searches.
-Requires an additional 4-8 bytes of memory per file.
+;''快速扩展名排序''
+维持一个额外的按扩展名排序的文件和文件夹数据库。
+启用此项以及时扩展名排序。
+启用后，Everything 将记忆搜索间扩展名排序。
+每个文件需要额外 4-8 字节的存储空间。
 
-;''Force Rebuild''
-Rebuild the Everything.db database.
+;''强制重建 Rebuild''
+强制重建 Everything.db 数据库。
 </dl>
 
 ==NTFS==
 [[File:support/everything/Everything.Options.NTFS.png|alt=Everything Options NTFS]]
 
-Contains settings for configuring NTFS volumes and NTFS indexing.
+包含 NTFS 分卷和 NTFS 索引配置。
 
 <dl>
-;ntfs_auto_include_new_fixed_volumes|''Auto include new fixed volumes''
-Automatically include new fixed volumes in Everything. 
+;ntfs_auto_include_new_fixed_volumes|''自动包含新增固定卷''
+自动包含新增固定卷到 Everything 索引。 
 
-;ntfs_auto_include_new_removable_volumes|''Auto include new removable volumes''
-Automatically include new removable volumes in Everything.
-Everything must rebuild the database when a volume path, volume guid, the USN Journal ID changes or the volume goes offline.
+;ntfs_auto_include_new_removable_volumes|''自动包含新增可移动卷''
+自动包含新增可移动卷到 Everything 索引。 
+当分卷路径、GUID、USN 日志 ID 变化或分卷离线后，Everything 必须重建数据库。
 
-;ntfs_enable_usn_journal|''Enable USN Journal''
-Enable USN Journal logging on the selected NTFS volume. Everything uses the USN Change journal to index and monitor changes to NTFS volumes.
+;ntfs_enable_usn_journal|''启用 USN 日志''
+启用 NTFS 分卷 USN 日志记录。Everything 使用 USN 变更日志以索引和监控 NTFS 分卷变化。
 
-;ntfs_maximum_size|''Maximum size''
-Set the maximum size of the USN Journal in KB. If Everything is rebuilding the database after restarting Windows, try increasing this size to at least 32768 KB.
-If the journal grows larger than this value it is truncated by removing the specified allocation delta from the beginning of the log.
+;ntfs_maximum_size|''最大大小''
+以 KB 设置 USN 日志最大大小。Windows 重启后，如果 Everything 总是重建数据库，请设置此大小为至少 32768 KB。
+如果日志大小超出最大值，那么将会移除日志开头超出部分。
 
-;ntfs_allocation_delta|''Allocation delta''
-Specify how much is removed from the start of the USN Journal in bytes when it has reached its maximum size.
+;ntfs_allocation_delta|''变动幅度''
+指定 USN 日志文件超出最大大小时，从日志头部移除字节值。
 
-;ntfs_include_in_database|''Include in database''
-Include this NTFS volume in the Everything index.
+;ntfs_include_in_database|''包含到数据库''
+包含此 NTFS 分卷到 Everything 索引。
 
-;ntfs_include_usn_journal_in_recent_changes|''Include USN Journal in recent changes''
-Load the entire USN Journal for this volume into the recent changes list. See [[support/everything/Recent changes|Recent changes]] for more information.
+;ntfs_include_usn_journal_in_recent_changes|''包含 USN 日志到最近变更''
+载入此分卷全部 USN 日志到最近变更列表。查阅[[support/everything/Recent changes|最近变更]]以了解更多信息。
 
-;ntfs_include_only|''Include only''
-semicolon delimited list of folders to include on this NTFS volume. Leave empty to include all folders.
+;ntfs_include_only|''仅包含''
+仅包含此 NTFS 分卷上分号分隔的文件夹列表到索引。留空则表示包含全部文件夹。
 
-;ntfs_monitor_changes|''Monitor changes''
-Keep the NTFS index of this NTFS volume up to date.
+;ntfs_monitor_changes|''监控变化''
+实时更新 NTFS 分卷索引。
 </dl>
 
 ==ReFS==
 [[File:support/everything/Everything.Options.ReFS.png|alt=Everything Options ReFS]]
 
-Contains settings for configuring ReFS volumes and ReFS indexing.
+包含 ReFS 分卷和 ReFS 索引配置。
 
 <dl>
-;refs_auto_include_new_fixed_volumes|''Auto include new fixed volumes''
-Automatically include new fixed volumes in Everything. 
+;refs_auto_include_new_fixed_volumes|''自动包含新增固定卷''
+自动包含新增固定卷到 Everything 索引。 
 
-;refs_auto_include_new_removable_volumes|''Auto include new removable volumes''
-Automatically include new removable volumes in Everything.
-Everything must rebuild the database when a volume path, volume guid, the USN Journal ID changes or the volume goes offline.
+;refs_auto_include_new_removable_volumes|''自动包含新增可移动卷''
+自动包含新增可移动卷到 Everything 索引。 
+当分卷路径、GUID、USN 日志 ID 变化或分卷离线后，Everything 必须重建数据库。
 
-;refs_enable_usn_journal|''Enable USN Journal''
-Enable USN Journal logging on the selected ReFS volume. Everything uses the USN Change journal to index and monitor changes to ReFS volumes.
+;refs_enable_usn_journal|''启用 USN 日志''
+启用 ReFS 分卷 USN 日志记录。Everything 使用 USN 变更日志以索引和监控 ReFS 分卷变化。
 
-;refs_maximum_size|''Maximum size''
-Set the maximum size of the USN Journal in KB. If Everything is rebuilding the database after restarting Windows, try increasing this size to at least 32768 KB.
-If the journal grows larger than this value it is truncated by removing the specified allocation delta from the beginning of the log.
+;refs_maximum_size|''最大大小''
+以 KB 设置 USN 日志最大大小。Windows 重启后，如果 Everything 总是重建数据库，请设置此大小为至少 32768 KB。
+如果日志大小超出最大值，那么将会移除日志开头超出部分。.
 
-;refs_allocation_delta|''Allocation delta''
-Specify how much is removed from the start of the USN Journal in bytes when it has reached its maximum size.
-Allocation delta is currently ignored for ReFS volumes.
+;refs_allocation_delta|''变动幅度''
+指定 USN 日志文件超出最大大小时，从日志头部移除字节值。
+ReFS 分卷中此选项当前被忽略。
 
-;refs_include_in_database|''Include in database''
-Include this ReFS volume in the Everything index.
+;refs_include_in_database|''包含到数据库''
+包含此 ReFS 分卷到 Everything 索引。
 
-;refs_include_usn_journal_in_recent_changes|''Include USN Journal in recent changes''
-Load the entire USN Journal for this volume into the recent changes list. See [[support/everything/Recent changes|Recent changes]] for more information.
+;refs_include_usn_journal_in_recent_changes|''包含 USN 日志到最近变更''
+载入此分卷全部 USN 日志到最近变更列表。查阅[[support/everything/Recent changes|最近变更]]以了解更多信息。
 
-;refs_include_only|''Include only''
-semicolon delimited list of folders to include on this ReFS volume. Leave empty to include all folders.
+;refs_include_only|''仅包含''
+仅包含此 ReFS 分卷上分号分隔的文件夹列表到索引。留空则表示包含全部文件夹。
 
-;refs_monitor_changes|''Monitor changes''
-Keep the ReFS index of this ReFS volume up to date.
+;refs_monitor_changes|''监控变化''
+实时更新 ReFS 分卷索引。
 </dl>
 
-==Folders==
+==文件夹==
 [[File:support/everything/Everything.Options.Folders.png|alt=Everything Options Folders]]
 
-Contains settings for configuring folder indexes.
+包含文件夹索引配置。
 
 <dl>
-;folders_folders|''Folders''
-The list of folders to include in the Everything index. Can be used to index Window shares, NAS, CDRoms, DVDRoms, Fat and Fat32 volumes.
-To add a folder to the list, click Add.... 
-To remove a folder from the list click Remove....
-To update a folder in the list now, click Update Now.
-To update all folders in the list now, click Update All Now
+;folders_folders|''文件夹''
+包含到 Everything 索引中的文件夹列表。可以用于索引 Window shares、NAS、CDROM、DVDROM、Fat 和 Fat32 分卷。
+添加文件夹到列表，点击添加.... 
+从列表中移除文件夹，点击移除....
+更新列表中某一文件夹索引，点击立即重扫描。
+更新列表中全部文件夹索引，点击重扫描全部。
 
-;''Attempt to monitor changes''
-Attempt to monitor changes to the selected folder. 
+;''尝试监控变化''
+尝试监控选定文件夹变更。 
 
-;''Update''
-Choose an option for when to update the selected folder.
+;''重扫描周期''
+设定选定文件夹重扫描选项。
 
-See [[support/Everything/Folder Indexing|Folder Indexing]] for more information.
+查阅[[support/Everything/Folder Indexing|文件夹索引]]以获取更多信息。
 </dl>
 
-==File Lists==
+==文件列表==
 [[File:support/everything/Everything.Options.File.Lists.png|alt=Everything Options File Lists]]
 
-Contains settings for configuring file lists indexes.
+包含文件列表索引配置。
 
 <dl>
-;file_lists_file_lists|''File lists''
-The list of file lists to include in the Everything index.
-To add a file list to the list, click Add....
-To remove a file list from the list, click Remove.
+;file_lists_file_lists|''文件列表''
+列表中文件列表将被包含到 Everything 索引。
+添加文件列表到索引列表，点击添加....
+从索引列表中移除文件列表点击移除。
 
-Click the File List Editor button to open the file lists editor.
-The file list editor can create a new file list or edit an existing one.
+点击文件列表编辑器按钮以打开文件列表编辑器。
+文件列表编辑器可以创建新的文件列表或编辑已存在文件列表。
 
-See [[support/Everything/File lists|File lists]] for more information.
+查阅[[support/Everything/File lists|文件列表]]以获取更多信息。
 </dl>
 
-==Exclude==
+==排除列表==
 [[File:support/everything/Everything.Options.Exclude.png|alt=Everything Options Exclude]]
 
-Contains settings for exclude files and folders from the index.
+包含排除列表配置。
 
 <dl>
-;''Exclude hidden files and folders''
-Exclude files and folders that have the hidden attribute set.
+;''排除隐藏文件和文件夹''
+排除隐藏文件和文件夹。
 
-;''Exclude system files and folders''
-Exclude files and folders that have the system attribute set. 
+;''排除系统文件和文件夹''
+排除系统文件和文件夹。
 
-;''Exclude folders''
-A list of folders to exclude from the index.
-To add a folder to the list, click Add Folder....
-To add a wildcard filter to the list, click Add Filter....
-To add a regex filter to the list, click Add Filter.... and prefix your filter with regex:
-To remove a folder or filter from the list, click Remove.
+;''排除文件夹''
+索引排除文件夹列表。
+添加文件夹待排除列表，点击添加文件夹....
+添加通配符筛选器到排除列表，点击添加筛选器....
+添加正则筛选器到排除列表，点击添加筛选器....且设定筛选器正则表达式前缀：
+从排除列表移除文件夹或筛选器，点击移除。
 
-For example, to exclude the windows folders:
+例如，排除文件夹 windows：
 <ul>
-*Click Add Folder....
-*Type in:
+*点击添加文件夹....
+*输入：
 <pre>
 C:\Windows
 </pre>
-*Click OK.
+*点击确定。
 </ul>
 
-;''Include only files''
-A semicolon delimited wildcard filter list of files to include. Leave empty to include all files.
-For example, include only mp3 and mkv files:
+;''仅包含文件''
+分号分隔的通配符包含文件列表。留空则表示包含全部文件。
+例如，仅包含 mp3 和 mkv 文件：
 <pre>
 *.mp3;*.mkv
 </pre>
 
-Prefix a filter with regex: to enable regex.
-For example, to include only files starting with A-M:
+正则表达式前缀筛选器：启用正则表达式。
+例如，仅包含首字母为 A-M 的文件：
 <pre>
 regex:^[A-M]
 </pre>
 
 
-;''Exclude files''
-A semicolon delimited wildcard filter list of files to exclude. Leave empty to include all files.
-For example, exclude db files
+;''排除文件''
+分号分隔的通配符排除文件列表。留空则表示包含全部文件。
+例如，排除 db 文件：
 <pre>
 *.db
 </pre>
 </dl>
 
-Prefix a filter with regex: to enable regex.
+正则表达式前缀筛选器：启用正则表达式。
 
-==ETP/FTP Server==
+==ETP/FTP 服务器==
 [[File:support/everything/Everything.Options.ETP.FTP.Server.png|alt=Everything Options ETP/FTP Server]]
 
-Contains settings for configuring a ETP/FTP server to access your files remotely from Everything or a FTP client. For more information see [[support/everything/ETP|ETP/FTP Server]].
+包含 ETP/FTP 服务器设置，以配置通过 Everything 或 FTP 客户端远程访问您的文件。更多信息请查阅 [[support/everything/ETP|ETP/FTP 服务器]]。
 
 <dl>
-;''Enable ETP/FTP server''
-Enable the ETP/FTP server.
+;''启用 ETP/FTP 服务器''
+启用 ETP/FTP 服务器。
 
-;etp_ftp_server_bind_to_interfaces|''Bind to interfaces''
-Bind the listening socket to the specified interfaces. Use 127.0.0.1 to bind to the loopback adaptor. Only local connections can be made to the loopback adaptor. Leave empty to bind to all interfaces.
+;etp_ftp_server_bind_to_interfaces|''绑定到接口''
+绑定监听端口到指定接口。使用 127.0.0.1 以绑定环回网卡。仅仅本地连接可以作为环回网卡。留空则表示绑定到全部接口。
 
-;etp_ftp_server_listen_on_port|''Listen on port''
-Set the listening socket port. The ETP/FTP client must also connect on this port.
+;etp_ftp_server_listen_on_port|''服务器端口''
+设置监听端口。ETP/FTP 客户端必须通过此端口连接。
 
-;etp_ftp_server_username|''Username''
-The ETP/FTP username. The user must enter the correct username and password before performing an action. Leave empty to ignore the username. The username is sent as raw text.
+;etp_ftp_server_username|''用户名''
+ETP/FTP 用户名。用户必须输入正确的用户名和密码才可以执行操作。留空则表示忽略用户名。用户名以纯文本发送。
 
-;etp_ftp_server_password|''Password''
-The ETP/FTP password. The user must enter the correct username and password before performing an action. Leave empty to ignore the password. The password is sent as raw text.
+;etp_ftp_server_password|''密码''
+ETP/FTP 密码。用户必须输入正确的用户名和密码才可以执行操作。留空则表示忽略密码。密码以纯文本发送。
 
-;etp_ftp_server_enable_logging|''Enable logging''
-Log all ETP/FTP events to a log file.
+;etp_ftp_server_enable_logging|''启用 ETP/FTP 日志''
+记录全部 ETP/FTP 事件到日志文件。
 
-;etp_ftp_server_log_file|''Log file''
-The filename of the log file. Click Select to choose the log filename.
+;etp_ftp_server_log_file|''日志文件''
+日志文件名。点击选择以设置日志文件名。
 
-;etp_ftp_server_maximum_size|''Maximum size''
-The maximum size of the log file in KB. The log file is trimmed from the start when it is larger than this size.
+;etp_ftp_server_maximum_size|''最大大小''
+以 KB 设置日志文件最大大小。日志文件超出最大值后从头部移除超出部分。
 
-;etp_ftp_server_allow_file_download|''Allow file download''
-Allow files to be downloaded from the ETP/FTP server. Disable to only allow browsing.
+;etp_ftp_server_allow_file_download|''允许文件下载''
+允许通过 ETP/FTP 服务器下载文件。禁用则仅允许浏览。
 
-Use [[support/everything/multiple instances|multiple instances]] to create an ETP/FTP server with a custom index.
+使用[[support/everything/multiple instances|多实例]]以创建自定义索引的 ETP/FTP 服务器。
 
 </dl>
 
-==HTTP Server==
+==HTTP 服务器==
 [[File:support/everything/Everything.Options.HTTP.Server.png|alt=Everything Options HTTP Server]]
 
-Contains settings for configuring a HTTP server to access your files remotely from a web browser. For more information see [[support/everything/HTTP|HTTP Server]].
+包含 HTTP 服务器设置，以配置通过浏览器远程访问您的文件。更多信息请查阅 [[support/everything/HTTP|HTTP 服务器]]。
 
 <dl>
-;''Enable HTTP server''
-Enable the HTTP server.
+;''启用 HTTP 服务器''
+启用 HTTP 服务器。
 
-;http_server_bind_to_interfaces|''Bind to interfaces''
-Bind the listening socket to the specified interfaces. Use 127.0.0.1 to bind to the loopback adaptor. Only local connections can be made to the loopback adaptor. Leave empty to bind to all interfaces.
+;http_server_bind_to_interfaces|''绑定到接口''
+绑定监听端口到指定接口。使用 127.0.0.1 以绑定环回网卡。仅仅本地连接可以作为环回网卡。留空则表示绑定到全部接口。
 
-;http_server_listen_on_port|''Listen on port''
-Set the listening socket port. The web browser must also connect on this port.
+;http_server_listen_on_port|''服务器端口''
+设置监听端口。浏览器必须通过此端口连接。
 
-;http_server_username|''Username''
-The HTTP username. The user must enter the correct username and password before performing an action. Leave empty to ignore the username. The username is sent as raw text.
+;http_server_username|''用户名''
+HTTP 用户名。用户必须输入正确的用户名和密码才可以执行操作。留空则表示忽略用户名。用户名以纯文本发送。
 
-;http_server_password|''Password''
-The HTTP password. The user must enter the correct username and password before performing an action. Leave empty to ignore the password. The password is sent as raw text.
+;http_server_password|''密码''
+HTTP 密码。用户必须输入正确的用户名和密码才可以执行操作。留空则表示忽略密码。密码以纯文本发送。
 
-;http_server_enable_logging|''Enable logging''
-Log all HTTP events to a log file.
+;http_server_enable_logging|''启用 HTTP 服务器日志''
+记录全部 HTTP 事件到日志文件。
 
-;http_server_log_file|''Log file''
-The filename of the log file. Click Select to choose the log filename.
+;http_server_log_file|''日志文件''
+日志文件名。点击选择以设置日志文件名。
 
-;http_server_maximum_size|''Maximum size''
-The maximum size of the log file in KB. The log file is trimmed from the start when it is larger than this size.
+;http_server_maximum_size|''最大大小''
+以 KB 设置日志文件最大大小。日志文件超出最大值后从头部移除超出部分。
 
-;''Serve pages from''
-Select the folder to load HTTP files from. These files are not required to be in the index. Leave empty to server files from %APPDATA%\Everything\HTTP Server.
+;''服务器页面位置''
+设定载入 HTTP 文件的文件夹。这些文件无需在索引中。留空则表示使用 %APPDATA%\Everything\HTTP Server。
 
-;''Default page''
-Select the default page. Leave blank to show a list of volumes.
+;''默认页面''
+设置默认页面。留空则表示显示分卷列表。
 
-;http_server_allow_file_download|''Allow file download''
-Allow files to be downloaded from the HTTP server. Disable to only allow browsing.
+;http_server_allow_file_download|''允许文件下载''
+允许通过 HTTP 服务器下载文件。禁用此选项则仅允许浏览文件。
 
-Use [[support/everything/multiple instances|multiple instances]] to create an HTTP server with a custom index.
+使用[[support/everything/multiple instances|多实例]]以创建自定义索引 HTTP 服务器。
 
 </dl>
 
-==Where are settings stored==
-Settings are stored in your [[support/everything/INI|Everything.ini]].
+==设置文件存储位置==
+程序设置被保存在 [[support/everything/INI|Everything.ini]] 文件中。
 
-==Backup==
-To make a backup of all settings:
+==备份==
+创建全部设置备份：
 <ul>
-*In '''''Everything''''', type in the following search and press ENTER:
+*在 '''''"Everything"''''' 中，在搜索框输入以下内容并按下 ENTER：
 <pre>
 /config_save
 </pre>
-*Choose a filename and destination and click '''Save'''.
+*选择文件名和保存路径后点击'''保存'''。
 </ul>
 
-==Restore==
-To restore all settings:
+==恢复==
+从备份恢复全部设置：
 <ul>
-*In '''''Everything''''', type in the following search and press ENTER:
+*在 '''''"Everything"''''' 中，在搜索框输入以下内容并按下 ENTER：
 <pre>
 /config_load
 </pre>
-*Select a Everything.ini and click '''Open'''.
+*选择 Everything.ini 文件并点击'''打开'''。
 </ul>
 
-==Load defaults==
-Click the Restore defaults button in the bottom right to load the defaults for the current page.
-To reset all settings to their default values, see [[support/everything/ini#Restore default settings|Everything.ini]]
+==恢复默认==
+点击右下方恢复默认按钮以重置当前页面设置为默认。
+请查阅 [[support/everything/ini#恢复默认设置|Everything.ini]] 以重置全部设置为默认。
 
-==See also==
+==更多请查阅==
 <ul>
 *[[support/everything/ini|Everything.ini]]
 </ul>
