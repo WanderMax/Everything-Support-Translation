@@ -1,73 +1,73 @@
 =INI=
-The Everything.ini stores all the settings for Everything.
+文件 Everything.ini 保存有全部的 Everything 设置。
 <ul>
-*[[support/everything/ini#general_settings|General Settings]]
-*[[support/everything/ini#search_window_settings|Search Window Settings]]
-*[[support/everything/ini#search_settings|Search Settings]]
-*[[support/everything/ini#indexing|Indexing]]
+*[[support/everything/ini#general_settings|通用设置]]
+*[[support/everything/ini#search_window_settings|搜索窗口设置]]
+*[[support/everything/ini#search_settings|搜索设置]]
+*[[support/everything/ini#indexing|索引]]
 *[[support/everything/ini#etp|ETP]]
 *[[support/everything/ini#http|HTTP]]
-*[[support/everything/ini#keyboard|Keyboard]]
-*[[support/everything/ini#fonts_and_colors|Fonts and colors]]
-*[[support/everything/ini#hidden_settings|Hidden settings]]
+*[[support/everything/ini#keyboard|快捷键]]
+*[[support/everything/ini#fonts_and_colors|字体和颜色]]
+*[[support/everything/ini#hidden_settings|隐藏设置]]
 </ul>
 
-==Viewing and changing settings in Everything==
-Most of these settings can be changed from within Everything, in the [[support/everything/options|Everything Options]].
+==查看和变更 Everything 设置==
+大部分设置可以在 Everything 中通过 [[support/everything/options|Everything 选项]]变更。
 
-To show the current value for a setting in the status bar, type in the following search and press ENTER:
+在状态栏显示当前设置值，请在搜索框中输出以下并按下 ENTER：
 <pre>
 /<ini option>
 </pre>
-where <ini option> is one of the ini options below. Not all ini options are supported.
+其中 <ini option> 是以下 ini 选项中一种。并非支持全部 ini 选项。
 
-For example, to check the current value for the ini option '''snap''', type in the following search and press ENTER:
+例如，查看 ini 选项中 '''snap''' 设定值，请在搜索框中输出以下并按下 ENTER：
 <pre>
 /snap
 </pre>
 
-The current value is shown in the status bar for 3 seconds.
+当前设定值将在状态栏显示 3 秒。
 
 
-To change the value for a setting, type in the following search and press ENTER:
+更改设定值，请在搜索框中输出以下并按下 ENTER：
 <pre>
 /<ini option>=<value>
 </pre>
-where <ini option> is one of the ini options below and <value> is the new value. Not all ini options are supported.
+其中 <ini option> 是以下 ini 选项中一种，<value> 是其设定值。并非支持全部 ini 选项。
 
-For example, to enable the '''snap''' ini option, type in the following search and press ENTER:
+例如，想启用 ini 选项中 '''snap'''，请在搜索框中输出以下并按下 ENTER：
 <pre>
 /snap=1
 </pre>
 
-The new value is shown in the status bar for 3 seconds.
+新设定值将在状态栏显示 3 秒。
 
-==Editing the Everything.ini==
-The Everything.ini is located in:
+==编辑 Everything.ini==
+文件 Everything.ini 保存在：
 <pre>
 %APPDATA%\Everything
 </pre>
-If [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] is disabled, the Everything.ini is stored in the same location as Everything.exe.
+如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，文件 Everything.ini 将保存在 Everything.exe 同目录。
 
-The [[support/everything/options#Store settings and data in %APPDATA%\Everything|Store settings and data in %APPDATA%\Everything]] setting is stored in the Everything.ini in the same location as Everything.exe.
+设置[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 同样保存在 Everything.exe 同目录 Everything.ini 文件中。
 
-To open your Everything.ini file, type in the following search and press ENTER:
+打开 Everything.ini 文件，请在搜索框中输出以下并按下 ENTER：
 <pre>
 about:config
 </pre>
 
-'''The Everything.ini is automatically generated. Any changes made to the Everything.ini while Everything is running are lost when Everything exits.'''
+'''文件 Everything.ini 是自动生成的。Everything 运行过程中对 Everything.ini 的变更将丢失。'''
 
-Please exit "''Everything''" before making changes to the Everything.ini file.
+请退出 "''Everything''" 然后再更改 Everything.ini 文件。
 
-To exit Everything:
+退出 Everything：
 <ul>
-*Right click the Everything system tray icon and click Exit.
+*右键点击 Everything 系统托盘图标并点击退出。
 </ul>
 
-The Everything.ini should be opened and saved as UTF-8.
+Everything.ini 文件编码格式为 UTF-8。
 
-==Syntax==
+==语法==
 <pre>
 [section]
 key=value
@@ -77,11 +77,11 @@ key=value
 <pre>
 [Everything]
 </pre>
-This begins the Everything section.
-Only the Everything section is used.
+这是 Everything 区段起始语句。
+仅会应用 Everything 区段语法。
 
-==General Settings==
-General settings for Everything.
+==通用设置==
+Everything 通用设置。
 
 <dl>
 ;''app_data''
@@ -230,8 +230,8 @@ The width of the last search date column in pixels.
 The position of the last search date column.
 </dl>
 
-==Search Window Settings==
-settings that affect appearance.
+==搜索窗口设置==
+搜索窗口界面设置。
 
 <dl>
 ;''window_x''
@@ -576,8 +576,8 @@ The width of the column in pixels.
 Visibility of the column. Set to 1 to show. Set to 0 to hide.
 </dl>
 
-==Search Settings==
-Settings that affect the search.
+==搜索设置==
+搜索相关设置。
 
 <dl>
 ;''match_whole_word''
@@ -795,8 +795,8 @@ The thumbnail size in pixels.
 Show or hide the status bar. Set to 1 to show the status bar. Set to 0 to hide the status bar.
 </dl>
 
-==Indexing==
-settings that affect indexing.
+==索引==
+索引相关设置。
 
 <dl>
 ;''auto_include_fixed_volumes''
@@ -1033,7 +1033,7 @@ A comma separated list of folders to exclude. Set to an empty string to include 
 </dl>
 
 ==ETP==
-settings that affect the ETP server
+ETP 服务器相关设置。
 
 <dl>
 ;''etp_server_enabled''
@@ -1087,7 +1087,7 @@ Allow or disallow file downloading from the ETP server. Set to 1 to allow. Set t
 </dl>
 
 ==HTTP==
-Settings that affect the HTTP server
+HTTP 服务器相关设置。
 
 <dl>
 ;''http_server_enabled''
@@ -1127,8 +1127,8 @@ The number of bytes removed from the start of the HTTP server log when it exceed
 Allow or disallow file downloading from the HTTP server. Set to 1 to allow. Set to 0 to disallow.
 </dl>
 
-==Keyboard==
-Settings for hotkeys and keyboard shortcuts:
+==快捷键==
+键盘快捷键设置：
 
 <dl>
 ;''new_window_key''
@@ -1331,8 +1331,8 @@ Comma delimited list of keyboard shortcuts for the command. The LOBYTE is the vi
 |}
 </dl>
 
-==Fonts and colors==
-settings for fonts and colors.
+==字体和颜色==
+字体和颜色相关设置。
 
 <dl>
 ;''result_list_font''
@@ -1431,9 +1431,9 @@ The item's style, can be one of the following values:
 |}
 </dl>
 
-==Hidden settings==
-These settings are not available in the Everything UI.
-These settings are only available in the Everything.ini.
+==隐藏设置==
+隐藏设置无法通过 Everything 选项更改。
+隐藏设置仅存在于 Everything.ini 中。
 
 <dl>
 ;''allow_http_server''
@@ -2369,38 +2369,38 @@ Set to 1 to show text for all visible column types. Set to 0 to show the name on
 
 </dl>
 
-==Backup==
-To make a backup of all settings:
+==备份==
+备份全部设置：
 <ul>
-*In '''''Everything''''', type in the following search and press ENTER:
+*在 '''''Everything''''' 搜索框中输出以下并按下 ENTER：
 <pre>
 /config_save
 </pre>
-*Choose a filename and destination and click '''Save'''.
+*选择文件名和保存路径并点击'''保存'''。
 </ul>
 
-==Restore==
-To restore all settings:
+==恢复==
+恢复全部设置：
 <ul>
-*In '''''Everything''''', type in the following search and press ENTER:
+*在 '''''Everything''''' 搜索框中输出以下并按下 ENTER：
 <pre>
 /config_load
 </pre>
-*Select a Everything.ini and click '''Open'''.
+*选择 Everything.ini 文件并点击'''打开'''。
 </ul>
 
-==Restore default settings==
-To restore all the default settings in Everything:
+==恢复默认设置==
+恢复 Everything 默认设置：
 <ul>
-* Exit "''Everything''"
-* Delete the Everything.ini file in %APPDATA%\Everything
-* Restart Everything.
+* 退出 "''Everything''"
+* 删除 %APPDATA%\Everything 下 Everything.ini 文件
+* 重启 Everything。
 </ul>
 
-==Custom filename==
-Use Everything.exe [[support/everything/command line options#-config|-config]] <Everything.ini> to specify the filename of the Everything ini file.
+==自定义文件名==
+使用 Everything.exe [[support/everything/command line options#-config|-config]] <Everything.ini> 以指定自定义 Everything ini 文件名。
 
-==See also==
+==隐藏设置==
 <ul>
-*[[support/everything/options|Options]]
+*[[support/everything/options|选项]]
 </ul>
