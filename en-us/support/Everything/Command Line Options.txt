@@ -150,7 +150,7 @@ Everything.exe [filename] [options]
 ETP 连接类型。使用 [[#-connect|-connect]]。
 
 ;''-connect'' <[username[:password]@]host[:port]>
-连接 ETP 服务器
+连接 ETP 服务器。
 </dl>
 
 ==搜索==
