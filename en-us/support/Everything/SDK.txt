@@ -123,7 +123,7 @@ Everything SDK 通过 [[support/everything/SDK/IPC]] 提供 DLL 和 Lib 接口�
 <ul>
 *此 SDK 是一个基础的 [[support/Everything/SDK/IPC|IPC]] 包装器。
 *需要 "Everything" 未运行。
-*ANSI / Unicode 支持。
+*ANSI/Unicode 支持。
 *安全线程。
 *支持阻挡和非阻挡模式。
 *x86 和 x64 支持。
