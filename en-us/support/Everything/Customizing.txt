@@ -129,13 +129,13 @@ explorer
 *在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
 *点击'''上下文菜单''' 页面。
 *选择'''打开路径'''。
-*更改'''command''' 到：
+*更改 '''command''' 到：
 <pre>
 $exec("C:\ExternalFileManager\ExternalFileManager.exe" "%1")
 </pre>
 
 *其中 C:\ExternalFileManager\ExternalFileManager.exe 代表外部文件管理器完整路径。
-*使用 $$、$%、$( and $) 来转义 $、%、( and )。
+*使用 $$、$%、$( 和 $) 来转义 $、%、( 和 )。
 *查阅外部文件管理器帮助以获取命令行参数。
 *点击确定。
 </ul>
