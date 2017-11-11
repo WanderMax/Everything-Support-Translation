@@ -139,7 +139,7 @@ Everything.exe [filename] [options]
 打开文件列表。
 </dl>
 
-==ETP==
+==ETP 服务器==
 连接 ETP 服务器命令行选项。
 
 <dl>
@@ -210,7 +210,7 @@ ETP 连接类型。使用 [[#-connect|-connect]]。
 启用或禁用全字匹配。
 
 ;''-home''
-打开主页搜索。
+打开首页搜索。
 
 ;''-name-part'' <filename>
 搜索部分文件名。
@@ -422,6 +422,7 @@ Everything [[support/everything/Multiple Instances|实例]]名称。
 
 使用 ^ 以转义 \、&、|、>、< 和 ^。
 
+使用 """ 以转义字符 "。
 
 ==例子==
 搜索 ABC 或 123：
