@@ -1,14 +1,14 @@
 =索引=
 "''Everything''" 默认索引全部本地 NTFS 固定卷。
 
-索引可以在 [[support/everything/options#indexes|Everything 选项]]中自定义。
+索引可以在 [[support/everything/options#索引|Everything 选项]]中自定义。
 
 ==数据库存储位置==
 Everything 保存数据库到：
 <pre>
 %LOCALAPPDATA%\Everything\Everything.db
 </pre>
-如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据库到 %APPDATA%\Everything]] 选项，Everything.db 则保存到 Everything.exe 相同目录。
+如果禁用[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 选项，Everything.db 则保存到 Everything.exe 相同目录。
 
 设置数据库保存位置：
 <ul>
@@ -262,12 +262,12 @@ thumbs.db;desktop.ini;*.tmp
 
 ==更多请查阅==
 <ul>
-*[[support/Everything/options#Indexes|索引选项]]
+*[[support/Everything/options#索引|索引选项]]
 *[[support/Everything/options#NTFS|NTFS]]
-*[[support/Everything/options#Folders|文件夹索引选项]]
-*[[support/Everything/options#File Lists|文件列表选项]]
-*[[support/Everything/options#Exclude|排除选项]]
+*[[support/Everything/options#文件夹|文件夹索引选项]]
+*[[support/Everything/options#文件列表|文件列表选项]]
+*[[support/Everything/options#排除列表|排除选项]]
 *[[support/Everything/command line options#数据库|数据库命令行选项]]
-*[[support/Everything/ini#Indexing|索引 Everything.ini 选项]]
+*[[support/Everything/ini#索引|索引 Everything.ini 选项]]
 </ul>
 
