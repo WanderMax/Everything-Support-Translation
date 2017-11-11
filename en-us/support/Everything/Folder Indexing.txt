@@ -1,168 +1,126 @@
-=文件列表=
-Everything 文件列表(EFU) 推荐使用于离线文件或不会变动的文件，例如 CDROM、DVDROM 或只读 NAS。
-EFU 文件是包含文件名、大小、日期以及属性列表的逗号分隔值 (CSV) 文件。
-文件列表可以通过 Everything 打开或包含到 Everything 索引。
-文件列表可以被搜索并可以立即按大小、日期或属性排序。
+=文件夹索引=
+文件夹索引让 Everything 可以索引任何文件系统文件夹。
 
-==如何创建 EFU 文件列表？==
+索引的文件夹甚至可以离线但仍旧可以通过 Everything 索引。
+
+例如，通过文件夹索引您可以索引以下：
 <ul>
-*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''文件列表编辑器...'''。
-*在'''文件列表编辑器'''中，'''拖拽'''文件到列表以添加到文件列表。
-*您也可以从编辑菜单添加文件和文件夹。
-*添加完成后，打开'''文件'''菜单，点击'''保存'''。
+*网络分享或映射的网络分区。
+*FAT32 和其他分卷。
+*任何物理文件夹 。
 </ul>
 
-==如何从 Everything 导出 EFU 文件列表？==
-保存当前搜索为 EFU 文件列表
-<ul>
-*在 '''''"Everything"''''' 中，打开'''文件'''菜单，点击'''导出...'''。
-*更改'''保存类型'''为 '''EFU Everything File List (*.efu)'''。
-*输入文件名并点击'''确定'''。
-</ul>
+[[File:support/everything/everything.options.folders.server.downloads.png|alt=Everything Options Folders Network Share]]
 
-==如何从命令行创建 EFU 文件列表？==
-从命令行创建文件列表：
-<pre>
-Everything.exe -create-filelist <output-filename> <path-to-scan>
-</pre>
+==是否需要管理员权限或 Everything 服务才可以索引文件夹？==
+不，文件夹索引不需要管理员权限或 Everything 服务。
 
-结合 [[support/everything/command_line_options#-create-file-list-exclude-files|-create-file-list-exclude-files]] <filters> 以排除文件。
-结合 [[support/everything/command_line_options#-create-file-list-exclude-folders|-create-file-list-exclude-folders]] <filters> 以排除文件夹。
-结合 [[support/everything/command_line_options#-create-file-list-include-only-files|-create-file-list-include-only-files]] <filters> 以仅包含指定文件。
+==为什么索引这么慢？==
+文件夹索引使用 Windows 搜索相同的方式。
+这比 NTFS 索引慢多了。
+Everything 需要数分钟来扫描文件夹和其子文件夹以及文件。
 
-例子
-创建文件列表并排除 tmp 文件：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "*.tmp"
-</pre>
-
-创建文件列表并排除 lnk 和 thumbs.db 文件：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "*.lnk;thumbs.db"
-</pre>
-
-创建文件列表并排除 1033 文件夹：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "1033"
-</pre>
-
-创建文件列表并排除指定单个文件夹：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "c:\windows"
-</pre>
-
-创建文件列表并排除指定多个文件夹：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-folders "c:\windows;c:\program files;c:\program files (x86)"
-</pre>
-
-创建文件列表并仅包含指定文件：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-include-only-files "*.mp3;*.flac"
-</pre>
-
-排除文件可以使用正则表达式，例如，排除首字母为 A-M 的文件：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "regex:^^[A-M]"
-</pre>
-
-筛选器中使用 \ 来匹配路径 (正则表达式使用 \\)：
-<pre>
-Everything.exe -create-file-list "myfilelist.efu" "c:\" -create-file-list-exclude-files "c:\folder\a specific file.txt"
-</pre>
-
-==Everything 能否访问文件列表中文件？==
-Everything 仅能通过打开文件或右键点击文件才可以访问文件。
-文件大小、日期和属性由文件列表读取。
-
-
-==如何更改文件列表中所有文件分卷名？==
-<ul>
-*使用记事本打开文件列表。
-*按 '''Ctrl + H''' 以打开替换对话框。
-*更改'''查找'''为旧分卷名 (例如：D:)
-*更改'''替换'''为新分卷名 (例如：E:)
-*点击'''替换全部'''。
-*'''保存'''更改到文件列表。
-</ul>
-
-==能否在文件列表中使用相对路径？==
-能，文件名可以相对于文件列表路径。
-可以使用 . 和 .. 来代表文件列表位置的相对路径。
-您可以在文件名首位使用 \ 以指定相对于文件列表根目录的文件。
-以全路径指定文件名将覆盖相对文件名。
-
-==使用计划任务更新文件列表==
-使用计划任务每小时重建文件列表：
-<ul>
-*从开始->所有程序->附件->系统工具->任务计划程序以打开'''计划任务'''。
-*点击'''创建任务...'''。
-*设置'''任务名'''为 '''Everything File List'''。
-
-*点击'''触发器'''页面。
-*点击'''新建...'''。
-*选择'''一次'''。
-*选择'''重复任务间隔'''。
-*更改'''重复任务间隔'''为 '''1 小时'''。
-*更改'''持续时间'''为 '''无限期'''。
-*点击'''确定'''。
-
-*点击'''操作'''页面。
-*点击'''新建...'''.
-*选择启动程序。
-*点击浏览以选择 Everything.exe
-*设置'''添加参数'''为：
-<pre>
--create-filelist c:\filelist.efu c:\
-</pre>
-*点击'''确定'''。
-*点击'''确定'''。
-</ul>
-
-==包含文件列表到 the Everything 索引==
+==如何添加文件夹到 Everything 索引？==
 <ul>
 *在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
-*点击'''文件列表'''页面。
-*点击'''添加...'''以添加文件列表。
-*选择文件列表。
-*点击'''打开'''。
+*点击'''文件夹'''页面。
+*点击'''添加...'''。
+*选择文件夹以添加到 Everything 索引。
+*点击'''确定'''。
 *点击'''确定'''。
 </ul>
 
-==修改文件列表==
-"Everything" 将自动重载 Everything 索引中修改的文件列表。
-
-禁用自动重载：
+==如何添加网络分享目录到 Everything 索引？==
 <ul>
 *在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
-*打开'''文件列表'''页面。
-*选择停止监控的文件列表。
-*取消选择'''监控变更'''。
+*点击'''文件夹'''页面。
+*点击'''添加...'''。
+*选择网络分享目录以添加到 Everything 索引，例如：
+<pre>
+\\server\share
+</pre>
+*点击'''确定'''。
 *点击'''确定'''。
 </ul>
 
-==EFU 文件列表是什么格式？==
-EFU 文件是逗号分隔值 ([[http://en.wikipedia.org/wiki/Comma-separated_values|CSV]]) 文件。
-指定至少文件名分栏时需要标头。
-文件大小指定为字节。
-日期是十进制 FILETIMEs (1601 年 1 月 1 日 100-纳秒) 或 [[http://en.wikipedia.org/wiki/ISO_8601|ISO 8601]] 格式日期。
-属性可以为 0 或多个 [[http://msdn.microsoft.com/en-us/library/windows/desktop/gg258117%28v=vs.85%29.aspx|Windows 文件属性]]。
-EFU 文件是 UTF-8 编码。
-
-==用 Excel 打开文件列表==
-用 Excel 打开文件列表：
+==如何添加网络映射分区到 Everything 索引？==
 <ul>
-*在 '''Excel''' 中，打开'''数据'''菜单，选择'''导入外部数据'''子菜单并点击'''导入数据...'''。
-*选择导出的 csv 并点击'''打开'''。
-*更改'''文件来源'''为 '''65001 : Unicode (UTF-8)'''。
-*点击'''下一步'''。
-*选择'''逗号'''。
-*点击'''下一步'''。
-*点击'''完成'''。
-*点击'''确定'''以放置数据到已存在工作表 '''$A$1'''。
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*点击'''添加...'''。
+*选择网络映射分区。
+*点击'''确定'''。
+*点击'''确定'''。
 </ul>
 
-==更多请查阅==
+如果网络分区未列举在 Everything 中，请尝试以普通用户方式运行 Everything：
 <ul>
-*[[support/everything/folder indexing|文件夹索引]]
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''常规'''页面。
+*点击 '''Everything 服务'''。
+*取消选择'''以管理员方式运行'''。
+*点击'''确定'''。
+*重启 Everything (右键点击 Everything 图标并选择退出)。
 </ul>
+
+==如何启动时禁止 Everything 扫描文件夹==
+启动时禁止 Everything 扫描文件夹：
+<ul>
+*在 '''''"Everything"''''' 中，搜索框输入以下并按 '''ENTER'''：
+/[[support/everything/ini#folder_update_rescan_asap|folder_update_rescan_asap]]=0
+</ul>
+
+文件夹重扫描将在下个计划时间开始。
+
+==Everything 能否检测出此文件夹所有文件名变更？==
+几乎可以检测出此文件夹所有文件名变更。
+如果短时间内出现大量文件名变更时，某些变更将会无法检测。
+
+以上情况，请重建文件夹索引：
+<ul>
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*选择文件夹。
+*选择'''重新扫描全部'''。
+</ul>
+
+Everything 可以计划按时间或按周期来重扫描文件夹变更以防止丢失变更检测。
+
+自定义重扫描时间或周期：
+<ul>
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*选择文件夹。
+*选择以下任一选项：
+<ul>
+*以每天、每周某天或某个特定时间扫描。
+*以指定的小时或分钟周期扫描。
+*不自动扫描。
+</ul>
+</ul>
+
+==如何手动更新文件夹索引？==
+手动更新所有文件夹索引：
+<ul>
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*点击'''重扫描全部'''。
+*点击'''确定'''。
+</ul>
+
+手动更新单个文件夹索引：
+<ul>
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''文件夹'''页面。
+*选择单个文件夹并点击'''立即重扫描'''。
+*点击'''确定'''。
+</ul>
+
+==索引的文件夹离线或不存在时会出现什么情况？==
+文件夹索引将会保持不变。
+但是，强制重建索引将会显示此文件夹为空。
+
+Everything 将会在指定的时间或周期时继续重扫描此文件夹，但仅在文件夹存在时更新索引。
+
+离线文件夹图标和文件信息显示将在数秒后超时。
+您可以在文件夹存在时按 F5 来刷新缓存。
