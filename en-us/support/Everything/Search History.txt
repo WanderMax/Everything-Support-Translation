@@ -47,7 +47,7 @@
 <pre>
 %APPDATA%\Everything\Search History.csv
 </pre>
-如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，Search History.csv 将保存到 Everything.exe 相同目录。
+如果禁用[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，Search History.csv 将保存到 Everything.exe 相同目录。
 
 此文件将在关闭 Everything 搜索窗口时更新。
 
