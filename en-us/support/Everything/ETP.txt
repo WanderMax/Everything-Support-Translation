@@ -1,4 +1,4 @@
-=ETP=
+=ETP 服务器=
 Everything ETP/FTP 服务器让您可以从 Everything 客户端或 FTP 客户端中搜索和访问您的文件。
 
 ==启动 ETP/FTP 服务器==
@@ -13,7 +13,7 @@ Everything ETP/FTP 服务器让您可以从 Everything 客户端或 FTP 客户�
 请确认您共享分区在服务器上为分区名。
 例如，共享分区 C: 为：'''C'''
 
-请查阅 [[support/everything/ini/#etp_client_rewrite_patterns|ETP 路径重写]]以使用自定义共享。
+请查阅 [[support/everything/etp/#ETP 客户端路径重写|ETP 路径重写]]以使用自定义共享。
 
 ==连接 ETP 服务器==
 连接 ETP 服务器：
@@ -153,6 +153,46 @@ etp_client_rewrite_substitutions=\\server\music;"\\\\server\\Install Files"
 
 重写样式必须匹配服务器路径。这不会被链接类型影响。
 
+==以服务方式运行 ETP 服务器==
+
+以客户端服务方式运行 ETP 服务器(不要与 Everything 服务混淆)：
+<ul>
+*复制 Everything.exe t到空文件夹。
+*运行 Everything.exe
+*请确认已禁用[[support/everything/options/#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]。
+*请确认未安装 [[support/everything/options/#Everything 服务|Everything 服务]]。
+*配置[[support/everything/options#索引|索引]]。
+*配置[[support/everything/options/#ETP/FTP 服务器|ETP 服务器设置]]。
+*完全退出 Everything (右键点击 Everything 托盘图标并选择退出)。
+*打开命令行窗口，转到 Everything.exe
+*运行以下命令以安装客户端服务：
+<pre>
+Everything.exe -install-client-service
+</pre>
+此目录将安装并以客户端服务方式启动 Everything ETP 服务器。
+</ul>
+
+卸载 Everything 客户端服务：
+<ul>
+打开命令行窗口，转到 Everything.exe
+*运行以下命令以卸载客户端服务：
+<pre>
+Everything.exe -uninstall-client-service
+</pre>
+</ul>
+
+==自动连接到 ETP 服务器==
+
+启动 Everything 时自动连接到 ETP 服务器：
+<ul>
+*在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
+*点击'''首页'''页面。
+*更改'''索引'''为：'''ETP 服务器'''。
+*设置 '''ETP 服务器'''为：username:password@host:port
+*设置预设'''链接类型'''。
+*点击'''确定'''。
+</ul>
+
 ==疑难解答==
 无法启动 ETP 服务器：绑定失败 10048
 请确认没有已运行 FTP 服务器占用端口 21 或使用不同的 ETP 服务器端口。
@@ -170,8 +210,8 @@ etp_client_rewrite_substitutions=\\server\music;"\\\\server\\Install Files"
 ==更多请查阅==
 <ul>
 *[[support/everything/multiple instances|多实例]]
-*[[support/everything/command line options#etp|ETP/FTP 服务器命令行选项]]
-*[[support/everything/ini#etp|Everything.ini 中 ETP/FTP 服务器选项]]
-*[[support/everything/options#etp/ftp server|ETP/FTP 服务器选项]]
+*[[support/everything/command line options#ETP 服务器|ETP/FTP 服务器命令行选项]]
+*[[support/everything/ini#ETP 服务器|Everything.ini 中 ETP/FTP 服务器选项]]
+*[[support/everything/options#ETP/FTP 服务器|ETP/FTP 服务器选项]]
 *[[http://en.wikipedia.org/wiki/FTP]]
 </ul>
