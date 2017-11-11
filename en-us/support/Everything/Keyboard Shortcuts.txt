@@ -268,7 +268,7 @@ Everything 搜索窗口激活时使用的键盘快捷键。
 | 更改视图。
 |-
 | Alt + Home
-| 返回主页搜索。
+| 返回首页搜索。
 |-
 | Alt + Left Arrow<br>Back<br>Mouse back button
 | 转到上一个搜索。
