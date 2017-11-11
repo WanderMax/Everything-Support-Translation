@@ -1,15 +1,15 @@
-=INI=
+=INI 设置=
 文件 Everything.ini 保存有全部的 Everything 设置。
 <ul>
-*[[support/everything/ini#general_settings|通用设置]]
-*[[support/everything/ini#search_window_settings|搜索窗口设置]]
-*[[support/everything/ini#search_settings|搜索设置]]
-*[[support/everything/ini#indexing|索引]]
-*[[support/everything/ini#etp|ETP]]
-*[[support/everything/ini#http|HTTP]]
-*[[support/everything/ini#keyboard|快捷键]]
-*[[support/everything/ini#fonts_and_colors|字体和颜色]]
-*[[support/everything/ini#hidden_settings|隐藏设置]]
+*[[support/everything/ini#常规设置|常规设置]]
+*[[support/everything/ini#搜索窗口设置|搜索窗口设置]]
+*[[support/everything/ini#搜索设置|搜索设置]]
+*[[support/everything/ini#索引|索引]]
+*[[support/everything/ini#ETP 服务器|ETP 服务器]]
+*[[support/everything/ini#HTTP 服务器|HTTP 服务器]]
+*[[support/everything/ini#快捷键|快捷键]]
+*[[support/everything/ini#字体和颜色|字体和颜色]]
+*[[support/everything/ini#隐藏设置|隐藏设置]]
 </ul>
 
 ==查看和变更 Everything 设置==
@@ -47,9 +47,9 @@
 <pre>
 %APPDATA%\Everything
 </pre>
-如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，文件 Everything.ini 将保存在 Everything.exe 同目录。
+如果禁用[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，文件 Everything.ini 将保存在 Everything.exe 同目录。
 
-设置[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 同样保存在 Everything.exe 同目录 Everything.ini 文件中。
+设置[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 同样保存在 Everything.exe 同目录 Everything.ini 文件中。
 
 打开 Everything.ini 文件，请在搜索框中输出以下并按下 ENTER：
 <pre>
@@ -80,8 +80,8 @@ key=value
 这是 Everything 区段起始语句。
 仅会应用 Everything 区段语法。
 
-==通用设置==
-Everything 通用设置。
+==常规设置==
+Everything 常规设置。
 
 <dl>
 ;''app_data''
@@ -1032,7 +1032,7 @@ A comma separated list of update intervals types for each folder in the folders 
 A comma separated list of folders to exclude. Set to an empty string to include all folders.
 </dl>
 
-==ETP==
+==ETP 服务器==
 ETP 服务器相关设置。
 
 <dl>
@@ -1086,7 +1086,7 @@ The number of bytes removed from the start of the ETP server log when it exceeds
 Allow or disallow file downloading from the ETP server. Set to 1 to allow. Set to 0 to disallow.
 </dl>
 
-==HTTP==
+==HTTP 服务器==
 HTTP 服务器相关设置。
 
 <dl>
@@ -1183,6 +1183,10 @@ The modifier flags can be 0 or more of the following:
 ;''file_rename_keys''
 ;''file_run_as_keys''
 ;''file_exit_keys''
+;''file_copy_name_to_clipboard_keys''
+;''file_open_selection_and_do_not_close_everything_keys''
+;''file_open_most_run_keys''
+;''file_open_last_run_keys''
 ;''file_custom_verb_1_keys''
 ;''file_custom_verb_2_keys''
 ;''file_custom_verb_3_keys''
@@ -1195,13 +1199,26 @@ The modifier flags can be 0 or more of the following:
 ;''file_custom_verb_10_keys''
 ;''file_custom_verb_11_keys''
 ;''file_custom_verb_12_keys''
+;''indexes_folders_rescan_all_now_keys''
+;''indexes_force_rebuild_keys''
 ;''edit_cut_keys''
 ;''edit_copy_keys''
 ;''edit_paste_keys''
 ;''edit_select_all_keys''
 ;''edit_invert_selection_keys''
+;''edit_copy_to_folder_keys''
+;''edit_move_to_folder_keys''
+;''edit_advanced_advanced_copy_to_folder_keys''
+;''edit_advanced_advanced_move_to_folder_keys''
 ;''view_filters_keys''
+;''view_preview_keys''
 ;''view_status_bar_keys''
+;''view_details_keys''
+;''view_medium_thumbnails_keys''
+;''view_large_thumbnails_keys''
+;''view_extra_large_thumbnails_keys''
+;''view_increase_thumbnail_size_keys''
+;''view_decrease_thumbnail_size_keys''
 ;''view_window_size_small_keys''
 ;''view_window_size_medium_keys''
 ;''view_window_size_large_keys''
@@ -1212,6 +1229,7 @@ The modifier flags can be 0 or more of the following:
 ;''view_go_to_back_keys''
 ;''view_go_to_forward_keys''
 ;''view_go_to_home_keys''
+;''view_go_to_show_all_history_keys''
 ;''view_sort_by_name_keys''
 ;''view_sort_by_path_keys''
 ;''view_sort_by_size_keys''
@@ -1229,7 +1247,7 @@ The modifier flags can be 0 or more of the following:
 ;''view_sort_by_descending_keys''
 ;''view_refresh_keys''
 ;''view_fullscreen_keys''
-;''view_toggle_ltrrtl_keys''
+;''view_toggle_ltrrtl_direction_keys''
 ;''view_on_top_never_keys''
 ;''view_on_top_always_keys''
 ;''view_on_top_while_searching_keys''
@@ -1238,6 +1256,7 @@ The modifier flags can be 0 or more of the following:
 ;''search_match_path_keys''
 ;''search_match_diacritics_keys''
 ;''search_enable_regex_keys''
+;''search_advanced_search_keys''
 ;''search_add_to_filters_keys''
 ;''search_organize_filters_keys''
 ;''bookmarks_add_to_bookmarks_keys''
@@ -1254,6 +1273,7 @@ The modifier flags can be 0 or more of the following:
 ;''help_everything_website_keys''
 ;''help_check_for_updates_keys''
 ;''help_about_everything_keys''
+;''help_donate_keys''
 ;''search_edit_focus_search_edit_keys''
 ;''search_edit_delete_previous_word_keys''
 ;''search_edit_auto_complete_search_keys''
@@ -1284,6 +1304,8 @@ The modifier flags can be 0 or more of the following:
 ;''result_list_focus_start_of_list_extend_keys''
 ;''result_list_focus_end_of_list_extend_keys''
 ;''result_list_focus_result_list_keys''
+;''result_list_focus_highest_run_count_result_keys''
+;''result_list_focus_last_run_result_keys''
 ;''result_list_toggle_path_column_keys''
 ;''result_list_toggle_size_column_keys''
 ;''result_list_toggle_extension_column_keys''
@@ -1299,13 +1321,18 @@ The modifier flags can be 0 or more of the following:
 ;''result_list_size_all_columns_to_fit_keys''
 ;''result_list_size_result_list_to_fit_keys''
 ;''result_list_context_menu_keys''
-;''result_list_scroll_left_keys''
-;''result_list_scroll_right_keys''
-;''result_list_scroll_page_left_keys''
-;''result_list_scroll_page_right_keys''
+;''result_list_scroll_left_or_thumbnail_left_keys''
+;''result_list_scroll_right_or_thumbnail_right_keys''
+;''result_list_scroll_page_left_or_thumbnail_focus_left_keys''
+;''result_list_scroll_page_right_or_thumbnail_focus_right_keys''
+;''result_list_left_extend_keys''
+;''result_list_right_extend_keys''
+;''result_list_focus_left_extend_keys''
+;''result_list_focus_right_extend_keys''
 ;''result_list_select_focus_keys''
 ;''result_list_toggle_focus_selection_keys''
-;''result_list_copy_selection_to_clipboard_as_csv_keys''
+;''result_list_copy_as_csv_keys''
+;''preview_focus_preview_keys''
 Comma delimited list of keyboard shortcuts for the command. The LOBYTE is the virtual key. The HIBYTE can be 0 or more of the follow values:
 {|
 ! Flag
@@ -1883,7 +1910,7 @@ Can be one of the following values:
 |}
 
 ;''refs_file_id_extd_directory_info_buffer_size''
-The read buffer size for reading ReFS folders. Set to 0 to use the default buffer size (64k).
+The read buffer size in bytes for reading ReFS folders. Set to 0 to use the default buffer size (64k).
 
 ;''folder_update_thread_mode_background''
 Set the folder monitor thread to have low IO priority. 
@@ -2305,8 +2332,8 @@ Use the following color format: #RRGGBB
 ;''etp_client_rewrite_substitutions''
 A comma (,) separated list of ETP link rewrites.
 For example, on the ETP server you may have a folder D:\folder1 which is shared as \\ETPserver\folder1.
-Set the pattern to: "D:\folder1"
-set the substitution to: "\\ETPserver\folder1"
+Set the pattern to: "D:\\folder1"
+set the substitution to: "\\\\ETPserver\\folder1"
 
 ;''icons_only''
 Always display icons, never thumbnails.
@@ -2357,7 +2384,7 @@ Set to 1 to enable. Set to 0 to disable.
 The search command prefix. If convert_forward_slash_to_backslash is enabled, you may wish to change this to > or some other prefix.
 
 ;''auto_complete_search_command''
-Allow TAB to auto complete search commands. The search must current start with the search command prefix.
+Allow TAB to auto complete search commands. The search must currently start with the search command prefix.
 Set to 1 to enable. Set to 0 to disable.
 
 ;''listview_tooltips''
