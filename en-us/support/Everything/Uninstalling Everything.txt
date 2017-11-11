@@ -62,7 +62,7 @@ Everything 将在 %APPDATA%\Everything 创建以下文件：
 </ul>
 
 上述文件将在 Everything 卸载时被自动删除。
-如果禁用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]选项，以上文件将保存到 Everything.exe 相同目录。
+如果禁用[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]选项，以上文件将保存到 Everything.exe 相同目录。
 这些文件或许有不同的文件夹，如果使用了[[support/everything/multiple instances|多实例]]。
 如果使用了[[support/everything/multiple instances|命名实例]]且需要卸载，您必需通过 Everything.exe -uninstall -instance <Instance Name> 单独卸载每个实例。
 
