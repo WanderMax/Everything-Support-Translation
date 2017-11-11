@@ -1,4 +1,4 @@
-=HTTP=
+=HTTP 服务器=
 Everything HTTP 服务器时 Web 服务器允许您通过网络浏览器搜索和访问您的文件。
 
 ==启动 HTTP 服务器==
@@ -217,7 +217,7 @@ HTTP Server
 <pre>
 %APPDATA%\Everything
 </pre>
-*如果禁用[[support/everything/options#store_settings_and_data_in_appdata_everything|保存设置和数据到 %APPDATA%\Everything]] 选项，HTTP 服务器文件夹必须创建在 Everything.exe 相同目录。
+*如果禁用[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 选项，HTTP 服务器文件夹必须创建在 Everything.exe 相同目录。
 *在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''启动 HTTP 服务器'''。
 *下载以下文件到 HTTP 服务器文件夹：
 *[[/Everything-HTTP.Server.Files.zip]]
@@ -309,7 +309,7 @@ Everything 支持流媒体范围请求。
 ==更多请查阅==
 <ul>
 *[[support/everything/multiple instances|多实例]]
-*[[support/everything/ini#http|Everything.ini 中 HTTP 服务器选项]]
-*[[support/everything/options#http server|HTTP 服务器选项]]
+*[[support/everything/ini#HTTP 服务器|Everything.ini 中 HTTP 服务器选项]]
+*[[support/everything/options#HTTP 服务器|HTTP 服务器选项]]
 *[[http://en.wikipedia.org/wiki/HTTP]]
 </ul>
