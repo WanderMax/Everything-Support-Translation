@@ -8,7 +8,7 @@ Everything 选项包含了修改系统或 Everything 的设置项。
 
 选择以下任一''"页面"''：
 <ul>
-*[[#通用|通用]]
+*[[#常规|常规]]
 <ul>
 *[[#UI|UI]]
 *[[#首页|首页]]
@@ -32,7 +32,7 @@ Everything 选项包含了修改系统或 Everything 的设置项。
 *[[#HTTP 服务器|HTTP 服务器]]
 </ul>
 
-==通用==
+==常规==
 [[File:support/everything/Everything.Options.General.png|alt=Everything Options General]]
 
 包含有 ''Everything'' 安装向导中配置项。
@@ -392,7 +392,7 @@ Everything 选项包含了修改系统或 Everything 的设置项。
 | 字符 )。
 |}
 
-查阅[[support/everything/customizing#external_file_manager|自定义]]以获取更多信息。
+查阅[[support/everything/customizing#外部文件管理器|自定义]]以获取更多信息。
 </dl>
 
 ==字体和颜色==
@@ -481,7 +481,7 @@ Everything 选项包含了修改系统或 Everything 的设置项。
 
 ;''总是显示搜索建议''
 在输入搜索参数时显示建议搜索列表。
-可以通过禁用[[support/everything/options#search as you type|实时搜索]]以总是显示搜索建议。
+可以通过禁用[[support/everything/options#实时搜索|实时搜索]]以总是显示搜索建议。
 查阅 [[support/everything/ini#search_history_always_suggest|Everything.ini]] 以了解更多信息。
 
 ;''启用运行历史''
