@@ -92,6 +92,6 @@
 
 ==更多请查阅==
 <ul>
-*[[support/everything/options#results|结果选项]]
-*[[support/everything/options#fonts and colors|更改字体和颜色]]
+*[[support/everything/options#结果列表|结果选项]]
+*[[support/everything/options#字体和颜色|更改字体和颜色]]
 </ul>
