@@ -65,7 +65,7 @@ taskbar_notification_title_format=$t$i?{ ($i)}
 %APPDATA%\Everything\Everything.ico
 </pre>
 
-如果[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 选项已禁用，复制自定义图标文件 Everything.ico 到 Everything.exe 相同目录。
+如果[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]] 选项已禁用，复制自定义图标文件 Everything.ico 到 Everything.exe 相同目录。
 *退出 '''''Everything''''' (右键点击 Everything 系统托盘图标并点击退出)
 *重启 '''''Everything'''''。
 </ul>
@@ -253,10 +253,10 @@ time_format=
 查阅 [[support/everything/ini#translucent_selection_rectangle_border_color|translucent_selection_rectangle_border_color]] 以更改边框颜色。
 
 ==更改默认搜索和搜索设置==
-查阅[[support/everything/options#home|主页]]
+查阅[[support/everything/options#首页|首页]]
 
 ==字体和颜色==
-查阅[[support/everything/options#fonts_and_colors|字体和颜色]]以更改结果列表字体
+查阅[[support/everything/options#字体和颜色|字体和颜色]]以更改结果列表字体
 查阅 [[support/everything/ini#search_edit_font|search_edit_font_size]] 和 [[support/everything/ini#search_edit_font|search_edit_font_size]] 以更改搜索框字体。
 查阅 [[support/everything/ini#status_bar_font|status_bar_font]] 和 [[support/everything/ini#status_bar_font_size|status_bar_font_size]] 以更改状态栏字体。
 查阅 [[support/everything/ini#header_font|header_font]] 和 [[support/everything/ini#header_font_size|header_font_size]] 以更改结果列表标头字体。
