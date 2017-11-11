@@ -308,6 +308,8 @@
 <code>year</code>
 <code>month/year</code> 或 <code>year/month</code> 取决于本地设置
 <code>day/month/year</code>, <code>month/day/year</code> 或 <code>year/month/day</code> 取决于本地设置
+<code>YYYY[-MM[-DD[Thh[:mm[:ss[.sss]]]]]]</code>
+<code>YYYYMM[DD[Thh[mm[ss[.sss]]]]]</code>
 
 ;日期常数：
 <code>today</code>
@@ -580,14 +582,14 @@ size:>1gb sizedupe:
 *在 '''''"Everything"''''' 中，打开'''书签'''菜单, 点击'''管理书签...'''。
 </ul>
 
-==主页搜索==
-主页搜索是打开 Everything 搜索窗口时默认搜索。
-主页搜索可以通过快捷键 [[support/everything/keyboard_shortcuts#全局键盘快捷键|Alt + Home]] 激活。
+==首页搜索==
+首页搜索是打开 Everything 搜索窗口时默认搜索。
+首页搜索可以通过快捷键 [[support/everything/keyboard_shortcuts#全局键盘快捷键|Alt + Home]] 激活。
 
-更改主页搜索设置：
+更改首页搜索设置：
 <ul>
 *在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
-*点击[[support/Everything/Options#主页|'''主页''']]页面。
+*点击[[support/Everything/Options#首页|'''首页''']]页面。
 *设置搜索关键词、搜索选项、排序和视图选项。
 *点击'''确定'''。
 </ul>
@@ -675,7 +677,7 @@ foo
 | 显示 Everything 致谢对话框。
 |-
 | <code>about:home</code>
-| 打开[[support/Everything/Searching#主页搜索|主页搜索]]。
+| 打开[[support/Everything/Searching#首页搜索|首页搜索]]。
 |-
 | <code>about:licence<br>about:license</code>
 | 显示 Everything 许可证。
