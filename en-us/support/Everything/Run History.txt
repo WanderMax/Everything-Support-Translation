@@ -23,7 +23,7 @@ Everything 存储运行历史到：
 <pre>
 %APPDATA%\Everything\Run History.csv 
 </pre>
-如果启用[[support/everything/options#Store settings and data in %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，Run History.csv 将会保存到 Everything.exe 相同位置。
+如果启用[[support/everything/options#保存设置和数据到 %APPDATA%\Everything|保存设置和数据到 %APPDATA%\Everything]]，Run History.csv 将会保存到 Everything.exe 相同位置。
 
 ==搜索运行次数==
 使用 runcount：来搜索指定运行次数或运行次数范围。
@@ -54,7 +54,7 @@ daterun:yesterday
 设置默认以运行次数排序：
 <ul>
 *在 '''''"Everything"''''' 中，打开'''工具'''菜单，点击'''选项'''。
-*点击'''主页'''页面。
+*点击'''首页'''页面。
 *更改'''排序方式'''为'''运行次数 (降序)'''。
 *点击'''确定'''。
 </ul>
